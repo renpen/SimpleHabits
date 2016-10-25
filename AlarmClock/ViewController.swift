@@ -32,7 +32,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     }
     func permissionDenied()
     {
-                // Show something to the User, that he needs to accept the Calendar and redicrct him to the settings where he can change the settings
+                // Show something to the User, that he needs to accept the Calendar and redicrct him to the settings where he can change the settings.
     }
     
     func refreshPicker()
