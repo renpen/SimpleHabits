@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518E561DBF4D370039D1C3 /* CalendarTools.swift */; };
+		4B518E591DBFB6740039D1C3 /* TimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518E581DBFB6740039D1C3 /* TimeCalculator.swift */; };
+		4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518E5C1DBFC9060039D1C3 /* Travel.swift */; };
 		4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A171DBE08F2006E7C39 /* AppDelegate.swift */; };
 		4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A191DBE08F2006E7C39 /* ViewController.swift */; };
 		4B5B7A1D1DBE08F2006E7C39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		4B518E561DBF4D370039D1C3 /* CalendarTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTools.swift; sourceTree = "<group>"; };
+		4B518E581DBFB6740039D1C3 /* TimeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCalculator.swift; sourceTree = "<group>"; };
+		4B518E5C1DBFC9060039D1C3 /* Travel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		4B5B7A141DBE08F2006E7C39 /* AlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5B7A171DBE08F2006E7C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B5B7A191DBE08F2006E7C39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				4B5B7A261DBE08F2006E7C39 /* Info.plist */,
 				4B5B7A1E1DBE08F2006E7C39 /* AlarmClock.xcdatamodeld */,
 				4B518E561DBF4D370039D1C3 /* CalendarTools.swift */,
+				4B518E581DBFB6740039D1C3 /* TimeCalculator.swift */,
+				4B518E5C1DBFC9060039D1C3 /* Travel.swift */,
 			);
 			path = AlarmClock;
 			sourceTree = "<group>";
@@ -269,7 +275,9 @@
 				4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */,
 				4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */,
 				4B5B7A201DBE08F2006E7C39 /* AlarmClock.xcdatamodeld in Sources */,
+				4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */,
 				4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */,
+				4B518E591DBFB6740039D1C3 /* TimeCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

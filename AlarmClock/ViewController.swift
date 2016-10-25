@@ -10,11 +10,27 @@ import UIKit
 import EventKit
 
 class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
-
+    
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var pickShit: UIPickerView!
     @IBOutlet weak var pickLabel: UILabel!
     let eventStore = EKEventStore()
+    @IBOutlet weak var TravelTimeLabel: UILabel!
+    @IBOutlet weak var destination: UITextField!
+    @IBOutlet weak var source: UITextField!
+    @IBAction func calcTravel(_ sender: AnyObject) {
+    let travel = Travel()
+        travel.destionation = destination.text
+        travel.source = source.text
+        travel.calculateTime()
+        while true {
+            if(travel.isTravelTimeCalculated)
+            {
+                TravelTimeLabel.text = String(travel.travelTime!)
+                break
+            }
+        }
+    }
     let cTools = CalendarTools()
     var calendars : [EKCalendar] = []
     var events = [EKEvent]()
@@ -23,6 +39,11 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         cTools.checkPermission(sender: self)
         pickShit.dataSource = self;
         pickShit.delegate = self;
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    func dismissKeyboard(){
+        view.endEditing(true)
     }
     
     func permissionAccepted()
@@ -77,8 +98,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         pickLabel.text = title
         timeLabel.text = time
     }
-    
-
 
 }
 

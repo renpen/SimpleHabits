@@ -40,7 +40,6 @@ class CalendarTools {
 func getAllCalendar() -> [EKCalendar]
     {
         return eventStore.calendars(for: EKEntityType.event)
-    
     }
     
 func getNextWakeUpAppointment(calendar : EKCalendar) -> EKEvent?
