@@ -18,6 +18,8 @@
 		4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */; };
 		4B5B7A301DBE08F2006E7C39 /* AlarmClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A2F1DBE08F2006E7C39 /* AlarmClockTests.swift */; };
 		4B5B7A3B1DBE08F2006E7C39 /* AlarmClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A3A1DBE08F2006E7C39 /* AlarmClockUITests.swift */; };
+		4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3A36E1DC38EAD00250230 /* Alarm.swift */; };
+		7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10C0C345824A0B92EF68C43E /* Pods-AlarmClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.debug.xcconfig"; sourceTree = "<group>"; };
+		27A991DDFF7D5A2D527EF16E /* Pods-AlarmClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.release.xcconfig"; sourceTree = "<group>"; };
 		4B518E561DBF4D370039D1C3 /* CalendarTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTools.swift; sourceTree = "<group>"; };
 		4B518E581DBFB6740039D1C3 /* TimeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCalculator.swift; sourceTree = "<group>"; };
 		4B518E5C1DBFC9060039D1C3 /* Travel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 		4B5B7A361DBE08F2006E7C39 /* AlarmClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5B7A3A1DBE08F2006E7C39 /* AlarmClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmClockUITests.swift; sourceTree = "<group>"; };
 		4B5B7A3C1DBE08F2006E7C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BF3A36E1DC38EAD00250230 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EFA7B418BB99681466C3137 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10C0C345824A0B92EF68C43E /* Pods-AlarmClock.debug.xcconfig */,
+				27A991DDFF7D5A2D527EF16E /* Pods-AlarmClock.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4B5B7A0B1DBE08F2006E7C39 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +105,8 @@
 				4B5B7A2E1DBE08F2006E7C39 /* AlarmClockTests */,
 				4B5B7A391DBE08F2006E7C39 /* AlarmClockUITests */,
 				4B5B7A151DBE08F2006E7C39 /* Products */,
+				2EFA7B418BB99681466C3137 /* Pods */,
+				84555B74E28B4298BD04F9D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +133,7 @@
 				4B518E561DBF4D370039D1C3 /* CalendarTools.swift */,
 				4B518E581DBFB6740039D1C3 /* TimeCalculator.swift */,
 				4B518E5C1DBFC9060039D1C3 /* Travel.swift */,
+				4BF3A36E1DC38EAD00250230 /* Alarm.swift */,
 			);
 			path = AlarmClock;
 			sourceTree = "<group>";
@@ -137,6 +156,14 @@
 			path = AlarmClockUITests;
 			sourceTree = "<group>";
 		};
+		84555B74E28B4298BD04F9D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B5B7A3F1DBE08F2006E7C39 /* Build configuration list for PBXNativeTarget "AlarmClock" */;
 			buildPhases = (
+				5945D153A0D24954FEDF42F3 /* [CP] Check Pods Manifest.lock */,
 				4B5B7A101DBE08F2006E7C39 /* Sources */,
 				4B5B7A111DBE08F2006E7C39 /* Frameworks */,
 				4B5B7A121DBE08F2006E7C39 /* Resources */,
+				69B827080A88F3076D7D6C2B /* [CP] Embed Pods Frameworks */,
+				B8D797BFE387E0C47089F8A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +297,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5945D153A0D24954FEDF42F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69B827080A88F3076D7D6C2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8D797BFE387E0C47089F8A9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B5B7A101DBE08F2006E7C39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -277,6 +355,7 @@
 				4B5B7A201DBE08F2006E7C39 /* AlarmClock.xcdatamodeld in Sources */,
 				4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */,
 				4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */,
+				4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */,
 				4B518E591DBFB6740039D1C3 /* TimeCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +506,7 @@
 		};
 		4B5B7A401DBE08F2006E7C39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10C0C345824A0B92EF68C43E /* Pods-AlarmClock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TTL5L96WQ5;
@@ -440,6 +520,7 @@
 		};
 		4B5B7A411DBE08F2006E7C39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27A991DDFF7D5A2D527EF16E /* Pods-AlarmClock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TTL5L96WQ5;

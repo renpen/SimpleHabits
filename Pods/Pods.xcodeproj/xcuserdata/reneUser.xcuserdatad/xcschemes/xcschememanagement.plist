@@ -4,28 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AlarmClock.xcscheme</key>
+		<key>Pods-AlarmClock.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4B5B7A131DBE08F2006E7C39</key>
+		<key>BF28A6C8BDEB300A88F26411670445DA</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
-		<key>4B5B7A2A1DBE08F2006E7C39</key>
+		<key>DF153264DDB49F90A5E1FEAB2F02A01F</key>
 		<dict>
 			<key>primary</key>
-			<true />
-		</dict>
-		<key>4B5B7A351DBE08F2006E7C39</key>
-		<dict>
-			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 	</dict>
 </dict>

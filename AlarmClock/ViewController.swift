@@ -14,7 +14,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var pickShit: UIPickerView!
     @IBOutlet weak var pickLabel: UILabel!
-    let eventStore = EKEventStore()
     @IBOutlet weak var TravelTimeLabel: UILabel!
     @IBOutlet weak var destination: UITextField!
     @IBOutlet weak var source: UITextField!
@@ -31,6 +30,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
             }
         }
     }
+    let eventStore = EKEventStore()
     let cTools = CalendarTools()
     var calendars : [EKCalendar] = []
     var events = [EKEvent]()
