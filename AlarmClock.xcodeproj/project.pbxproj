@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518E561DBF4D370039D1C3 /* CalendarTools.swift */; };
-		4B518E591DBFB6740039D1C3 /* TimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518E581DBFB6740039D1C3 /* TimeCalculator.swift */; };
+		4B518E591DBFB6740039D1C3 /* MapKitTimeCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518E581DBFB6740039D1C3 /* MapKitTimeCalc.swift */; };
 		4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518E5C1DBFC9060039D1C3 /* Travel.swift */; };
 		4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A171DBE08F2006E7C39 /* AppDelegate.swift */; };
 		4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A191DBE08F2006E7C39 /* ViewController.swift */; };
@@ -43,7 +43,7 @@
 		10C0C345824A0B92EF68C43E /* Pods-AlarmClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.debug.xcconfig"; sourceTree = "<group>"; };
 		27A991DDFF7D5A2D527EF16E /* Pods-AlarmClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.release.xcconfig"; sourceTree = "<group>"; };
 		4B518E561DBF4D370039D1C3 /* CalendarTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTools.swift; sourceTree = "<group>"; };
-		4B518E581DBFB6740039D1C3 /* TimeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCalculator.swift; sourceTree = "<group>"; };
+		4B518E581DBFB6740039D1C3 /* MapKitTimeCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitTimeCalc.swift; sourceTree = "<group>"; };
 		4B518E5C1DBFC9060039D1C3 /* Travel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		4B5B7A141DBE08F2006E7C39 /* AlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5B7A171DBE08F2006E7C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				4B5B7A261DBE08F2006E7C39 /* Info.plist */,
 				4B5B7A1E1DBE08F2006E7C39 /* AlarmClock.xcdatamodeld */,
 				4B518E561DBF4D370039D1C3 /* CalendarTools.swift */,
-				4B518E581DBFB6740039D1C3 /* TimeCalculator.swift */,
+				4B518E581DBFB6740039D1C3 /* MapKitTimeCalc.swift */,
 				4B518E5C1DBFC9060039D1C3 /* Travel.swift */,
 				4BF3A36E1DC38EAD00250230 /* Alarm.swift */,
 			);
@@ -310,7 +310,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		69B827080A88F3076D7D6C2B /* [CP] Embed Pods Frameworks */ = {
@@ -356,7 +356,7 @@
 				4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */,
 				4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */,
 				4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */,
-				4B518E591DBFB6740039D1C3 /* TimeCalculator.swift in Sources */,
+				4B518E591DBFB6740039D1C3 /* MapKitTimeCalc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
