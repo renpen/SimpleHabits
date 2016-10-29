@@ -22,13 +22,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         travel.destionation = destination.text
         travel.source = source.text
         travel.calculateTime()
-        while true {
-            if(travel.isTravelTimeCalculated)
-            {
-                TravelTimeLabel.text = String(travel.travelTime!)
-                break
-            }
-        }
     }
     let eventStore = EKEventStore()
     let cTools = CalendarTools()
