@@ -13,8 +13,8 @@ class Travel{
     var source: String?
     var travelTime : Int?
     var extraMin = 0 //for extra minutes that you need to wake up, eat etc.
-    var isTravelTimeCalculated = false
-    var plistDict = InternalHelper.getProperties()
+    var calculatedGoogleJsonObject : GoogleDistanceMatrixObject?
+    var plistDict = InternalHelper.sharedInstance.getProperties()
     
     func completeToCalculate() -> Bool
     {
@@ -48,5 +48,10 @@ class Travel{
         {
             return GoogleApiTimeCalc()
         }
+    }
+    func calculationFinished()
+    {
+        //errorHandling if status not ok
+        print("FINISHED: " + (calculatedGoogleJsonObject?.durationText)!)
     }
 }

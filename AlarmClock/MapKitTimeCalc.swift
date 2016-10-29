@@ -49,7 +49,7 @@ class MapKitTimeCalc : TimeCalculator {
         direction.calculate { (response, error) in
             let intervall = (response?.routes[0].expectedTravelTime)!
             travel.travelTime? = Int(intervall.truncatingRemainder(dividingBy: 60)) + travel.extraMin
-            travel.isTravelTimeCalculated = true
+            //travel.isTravelTimeCalculated = true
         }
         
     }

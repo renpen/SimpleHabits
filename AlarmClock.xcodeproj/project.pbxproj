@@ -20,6 +20,8 @@
 		4B5B7A3B1DBE08F2006E7C39 /* AlarmClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A3A1DBE08F2006E7C39 /* AlarmClockUITests.swift */; };
 		4B64863C1DC41D9400634F84 /* GoogleApiTimeCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B64863B1DC41D9400634F84 /* GoogleApiTimeCalc.swift */; };
 		4B6486411DC4286900634F84 /* InternalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6486401DC4286900634F84 /* InternalHelper.swift */; };
+		4B9A22F21DC4A5B900933E2E /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A22F11DC4A5B900933E2E /* RestApiManager.swift */; };
+		4B9A22F51DC4A95200933E2E /* GoogleDistanceMatrixObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */; };
 		4B9DA18E1DC3CADF006B80B8 /* TimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9DA18D1DC3CADF006B80B8 /* TimeCalculator.swift */; };
 		4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9DA18F1DC3CC10006B80B8 /* Properties.plist */; };
 		4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3A36E1DC38EAD00250230 /* Alarm.swift */; };
@@ -65,6 +67,8 @@
 		4B5B7A3C1DBE08F2006E7C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B64863B1DC41D9400634F84 /* GoogleApiTimeCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApiTimeCalc.swift; sourceTree = "<group>"; };
 		4B6486401DC4286900634F84 /* InternalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalHelper.swift; sourceTree = "<group>"; };
+		4B9A22F11DC4A5B900933E2E /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
+		4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDistanceMatrixObject.swift; sourceTree = "<group>"; };
 		4B9DA18D1DC3CADF006B80B8 /* TimeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCalculator.swift; sourceTree = "<group>"; };
 		4B9DA18F1DC3CC10006B80B8 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
 		4BF3A36E1DC38EAD00250230 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		4B5B7A161DBE08F2006E7C39 /* AlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				4B9A22F31DC4A75A00933E2E /* JSONTools */,
 				4B6486431DC429D300634F84 /* AppBasics */,
 				4B6486421DC4299B00634F84 /* UI */,
 				4B64863D1DC41E7E00634F84 /* TravelCalculation */,
@@ -165,8 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				4B9DA18D1DC3CADF006B80B8 /* TimeCalculator.swift */,
-				4B518E581DBFB6740039D1C3 /* MapKitTimeCalc.swift */,
-				4B64863B1DC41D9400634F84 /* GoogleApiTimeCalc.swift */,
+				4B9A22F71DC4A97700933E2E /* MapKit */,
+				4B9A22F61DC4A96F00933E2E /* GoogleApi */,
 			);
 			name = TravelCalculation;
 			sourceTree = "<group>";
@@ -190,6 +195,31 @@
 				4B6486401DC4286900634F84 /* InternalHelper.swift */,
 			);
 			name = AppBasics;
+			sourceTree = "<group>";
+		};
+		4B9A22F31DC4A75A00933E2E /* JSONTools */ = {
+			isa = PBXGroup;
+			children = (
+				4B9A22F11DC4A5B900933E2E /* RestApiManager.swift */,
+			);
+			name = JSONTools;
+			sourceTree = "<group>";
+		};
+		4B9A22F61DC4A96F00933E2E /* GoogleApi */ = {
+			isa = PBXGroup;
+			children = (
+				4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */,
+				4B64863B1DC41D9400634F84 /* GoogleApiTimeCalc.swift */,
+			);
+			name = GoogleApi;
+			sourceTree = "<group>";
+		};
+		4B9A22F71DC4A97700933E2E /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				4B518E581DBFB6740039D1C3 /* MapKitTimeCalc.swift */,
+			);
+			name = MapKit;
 			sourceTree = "<group>";
 		};
 		84555B74E28B4298BD04F9D5 /* Frameworks */ = {
@@ -394,8 +424,10 @@
 				4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */,
 				4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */,
 				4B6486411DC4286900634F84 /* InternalHelper.swift in Sources */,
+				4B9A22F21DC4A5B900933E2E /* RestApiManager.swift in Sources */,
 				4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */,
 				4B64863C1DC41D9400634F84 /* GoogleApiTimeCalc.swift in Sources */,
+				4B9A22F51DC4A95200933E2E /* GoogleDistanceMatrixObject.swift in Sources */,
 				4B518E591DBFB6740039D1C3 /* MapKitTimeCalc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

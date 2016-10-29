@@ -10,8 +10,9 @@ import Foundation
 
 class InternalHelper
 {
-    static let propertiesName = "Properties"
-    static func getProperties() -> NSDictionary
+    static let sharedInstance = InternalHelper()
+    private let propertiesName = "Properties"
+    func getProperties() -> NSDictionary
     {
         let pathOfProperties = Bundle.main.path(forResource: propertiesName, ofType: "plist")
         return NSDictionary(contentsOfFile: pathOfProperties!)!
