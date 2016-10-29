@@ -18,10 +18,10 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     @IBOutlet weak var destination: UITextField!
     @IBOutlet weak var source: UITextField!
     @IBAction func calcTravel(_ sender: AnyObject) {
-    let travel = Travel()
-        travel.destionation = destination.text
+    var travel = InternalHelper.sharedInstance.getTravel()
+        travel.destination = destination.text
         travel.source = source.text
-        travel.calculateTime()
+        travel.calculateTravelTime()
     }
     let eventStore = EKEventStore()
     let cTools = CalendarTools()

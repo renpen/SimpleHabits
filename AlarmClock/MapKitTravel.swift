@@ -1,8 +1,8 @@
 //
-//  MapKitTimeCalc.swift
+//  MapKitTravel.swift
 //  AlarmClock
 //
-//  Created by ReneUser on 25.10.16.
+//  Created by ReneUser on 29.10.16.
 //  Copyright © 2016 ReneUser. All rights reserved.
 //
 
@@ -11,28 +11,33 @@ import CoreLocation
 import MapKit
 import EventKit
 
-class MapKitTimeCalc : TimeCalculator {
+class MapKitTravel: Travel {
+    var offset : Int?
+    var source : String?
+    var destination : String?
+    var departure_time: Int?
+    var transitmode : TransitMode?
+    var trafficModel: TrafficModel?
+    var mode : Mode?
     
-    func calculateOverallWakeUpTime(travel : Travel)
+    var travelTime = 0
+    func getTravelTimeInS() -> Int
     {
-        if(travel.completeToCalculate())
-        {
-            calcTravelTime(travel: travel)
-        }
-        else
-        {
-            //Throw Exeption here
-        }
+        return 0
     }
-    func calcTravelTime(travel: Travel)
+    func calculationFinished()
+    {
+        
+    }
+    func calculateTravelTime()
     {
         var longLatFrom : CLLocation?
         var longLatTo : CLLocation?
         let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(travel.source!, completionHandler: { (placemark, error) in
+        geocoder.geocodeAddressString(self.source!, completionHandler: { (placemark, error) in
             longLatFrom = (placemark?[0].location)!
         })
-        geocoder.geocodeAddressString(travel.destionation!, completionHandler: { (placemark, error) in
+        geocoder.geocodeAddressString(self.destination!, completionHandler: { (placemark, error) in
             longLatTo = (placemark?[0].location)!
             print("geocoder reached")
             print(error)
@@ -48,11 +53,9 @@ class MapKitTimeCalc : TimeCalculator {
         let direction = MKDirections(request: directionRequest)
         direction.calculate { (response, error) in
             let intervall = (response?.routes[0].expectedTravelTime)!
-            travel.travelTime? = Int(intervall.truncatingRemainder(dividingBy: 60)) + travel.extraMin
+            self.travelTime = Int(intervall.truncatingRemainder(dividingBy: 60))
             //travel.isTravelTimeCalculated = true
-        }
-        
     }
-    
-    
+
+    }
 }
