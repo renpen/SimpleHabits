@@ -19,6 +19,7 @@
 		4B5B7A301DBE08F2006E7C39 /* AlarmClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A2F1DBE08F2006E7C39 /* AlarmClockTests.swift */; };
 		4B5B7A3B1DBE08F2006E7C39 /* AlarmClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A3A1DBE08F2006E7C39 /* AlarmClockUITests.swift */; };
 		4B64863C1DC41D9400634F84 /* GoogleApiTimeCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B64863B1DC41D9400634F84 /* GoogleApiTimeCalc.swift */; };
+		4B6486411DC4286900634F84 /* InternalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6486401DC4286900634F84 /* InternalHelper.swift */; };
 		4B9DA18E1DC3CADF006B80B8 /* TimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9DA18D1DC3CADF006B80B8 /* TimeCalculator.swift */; };
 		4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9DA18F1DC3CC10006B80B8 /* Properties.plist */; };
 		4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3A36E1DC38EAD00250230 /* Alarm.swift */; };
@@ -63,6 +64,7 @@
 		4B5B7A3A1DBE08F2006E7C39 /* AlarmClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmClockUITests.swift; sourceTree = "<group>"; };
 		4B5B7A3C1DBE08F2006E7C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B64863B1DC41D9400634F84 /* GoogleApiTimeCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApiTimeCalc.swift; sourceTree = "<group>"; };
+		4B6486401DC4286900634F84 /* InternalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalHelper.swift; sourceTree = "<group>"; };
 		4B9DA18D1DC3CADF006B80B8 /* TimeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCalculator.swift; sourceTree = "<group>"; };
 		4B9DA18F1DC3CC10006B80B8 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
 		4BF3A36E1DC38EAD00250230 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
@@ -129,18 +131,14 @@
 		4B5B7A161DBE08F2006E7C39 /* AlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				4B6486431DC429D300634F84 /* AppBasics */,
+				4B6486421DC4299B00634F84 /* UI */,
 				4B64863D1DC41E7E00634F84 /* TravelCalculation */,
-				4B5B7A171DBE08F2006E7C39 /* AppDelegate.swift */,
-				4B5B7A191DBE08F2006E7C39 /* ViewController.swift */,
-				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
 				4B5B7A211DBE08F2006E7C39 /* Assets.xcassets */,
-				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
-				4B5B7A261DBE08F2006E7C39 /* Info.plist */,
 				4B5B7A1E1DBE08F2006E7C39 /* AlarmClock.xcdatamodeld */,
 				4B518E561DBF4D370039D1C3 /* CalendarTools.swift */,
 				4B518E5C1DBFC9060039D1C3 /* Travel.swift */,
 				4BF3A36E1DC38EAD00250230 /* Alarm.swift */,
-				4B9DA18F1DC3CC10006B80B8 /* Properties.plist */,
 			);
 			path = AlarmClock;
 			sourceTree = "<group>";
@@ -171,6 +169,27 @@
 				4B64863B1DC41D9400634F84 /* GoogleApiTimeCalc.swift */,
 			);
 			name = TravelCalculation;
+			sourceTree = "<group>";
+		};
+		4B6486421DC4299B00634F84 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4B5B7A191DBE08F2006E7C39 /* ViewController.swift */,
+				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
+				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		4B6486431DC429D300634F84 /* AppBasics */ = {
+			isa = PBXGroup;
+			children = (
+				4B9DA18F1DC3CC10006B80B8 /* Properties.plist */,
+				4B5B7A171DBE08F2006E7C39 /* AppDelegate.swift */,
+				4B5B7A261DBE08F2006E7C39 /* Info.plist */,
+				4B6486401DC4286900634F84 /* InternalHelper.swift */,
+			);
+			name = AppBasics;
 			sourceTree = "<group>";
 		};
 		84555B74E28B4298BD04F9D5 /* Frameworks */ = {
@@ -374,6 +393,7 @@
 				4B5B7A201DBE08F2006E7C39 /* AlarmClock.xcdatamodeld in Sources */,
 				4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */,
 				4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */,
+				4B6486411DC4286900634F84 /* InternalHelper.swift in Sources */,
 				4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */,
 				4B64863C1DC41D9400634F84 /* GoogleApiTimeCalc.swift in Sources */,
 				4B518E591DBFB6740039D1C3 /* MapKitTimeCalc.swift in Sources */,

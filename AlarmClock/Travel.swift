@@ -14,13 +14,7 @@ class Travel{
     var travelTime : Int?
     var extraMin = 0 //for extra minutes that you need to wake up, eat etc.
     var isTravelTimeCalculated = false
-    var plistDict : NSDictionary
-    
-    init() {
-        let pathOfProperties = Bundle.main.path(forResource: "Properties", ofType: "plist")
-        print(pathOfProperties)
-        plistDict = NSDictionary(contentsOfFile: pathOfProperties!)!
-    }
+    var plistDict = InternalHelper.getProperties()
     
     func completeToCalculate() -> Bool
     {
