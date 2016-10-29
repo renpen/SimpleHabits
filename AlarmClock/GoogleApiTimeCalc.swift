@@ -19,7 +19,7 @@ class GoogleApiTimeCalc: TimeCalculator {
     {
         RestApiManager.sharedInstance.request(url: properties["GoogleDistanceMatrixBaseUrl"] as! String + "?origins=Ludwig+Erhard+Allee+32+76131+Karlsruhe&destinations=Belgien"){ (json: JSON) in
             travel.calculatedGoogleJsonObject =  GoogleDistanceMatrixObject(json : json)
-            DispatchQueue.main.async(execute: {         //the thing toDo when the Request is finished
+            DispatchQueue.main.async(execute: {         //the thing that need toDo when the Request is finished
                 travel.calculationFinished()
             })
             }
