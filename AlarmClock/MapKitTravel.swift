@@ -12,6 +12,7 @@ import MapKit
 import EventKit
 
 class MapKitTravel: Travel {
+
     var offset : Int?
     var source : String?
     var destination : String?
@@ -29,7 +30,7 @@ class MapKitTravel: Travel {
     {
         
     }
-    func calculateTravelTime()
+    func calculateTravelTime(closure: @escaping (String) -> Void)
     {
         var longLatFrom : CLLocation?
         var longLatTo : CLLocation?

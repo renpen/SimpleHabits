@@ -21,7 +21,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     var travel = InternalHelper.sharedInstance.getTravel()
         travel.destination = destination.text
         travel.source = source.text
-        travel.calculateTravelTime()
+        travel.mode = Mode.walking
+        travel.calculateTravelTime(closure: {x in self.TravelTimeLabel.text? = x;print("closure arrived: \(x)")})
     }
     let eventStore = EKEventStore()
     let cTools = CalendarTools()

@@ -20,23 +20,56 @@ class GoogleDistanceMatrixTravel : Travel
     var trafficModel: TrafficModel?
     var mode : Mode?
     
+    private func isValid() -> Bool      //determine if the minimun that the request need is set
+    {
+    
+        return true
+    }
     func getTravelTimeInS() -> Int
     {
-        return calculatedJsonObject!.durationValue!
+        return calculatedJsonObject!.durationValue! + offset!
     }
     func calculationFinished()
     {
         print("FINSIHED: YEEEES " + (self.calculatedJsonObject?.durationText)!)
     }
-    func calculateTravelTime()
+    func calculateTravelTime(closure: @escaping (_ : String) -> Void)
     {
-        RestApiManager.sharedInstance.request(url: properties["GoogleDistanceMatrixBaseUrl"] as! String + "?origins=Ludwig+Erhard+Allee+32+76131+Karlsruhe&destinations=Belgien"){ (json: JSON) in
-            self.calculatedJsonObject =  GoogleDistanceMatrixObject(json : json)
-            DispatchQueue.main.async(execute: {         //the thing that need toDo when the Request is finished
-                self.calculationFinished()
-            })
+        if isValid()
+        {
+            RestApiManager.sharedInstance.request(url: generateUrl()){ (json: JSON) in
+                self.calculatedJsonObject =  GoogleDistanceMatrixObject(json : json)
+                DispatchQueue.main.async(execute: {         //the thing that need toDo when the Request is finished
+                    closure((self.calculatedJsonObject?.durationText)!)
+                })
+            }
         }
-
+        else{
+            //throw some kind of exception
+        }
+    }
+    
+    func generateUrl() -> String {
+        var url = properties["GoogleDistanceMatrixBaseUrl"] as! String
+        print(url)
+        url += "?origins=\(source!)&destinations=\(destination!)&key=\(properties["GoogleAPIKey"]!)"
+        if (departure_time != nil) {
+            url += "&departure_time=\(departure_time!)"
+        }
+        if (mode != nil)
+        {
+            url += "&mode=\(mode!)"
+                if (mode == .transit && (transitmode) != nil)
+                {
+                        url += "&transitmode=\(transitmode!)"
+                }
+                if (mode == .driving && (trafficModel) != nil && departure_time != nil)
+                {
+                    url += "&traffic_model=\(trafficModel!)"
+                }
+        }
+        print(url)
+        return url
     }
 
 }

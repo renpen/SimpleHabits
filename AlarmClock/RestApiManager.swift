@@ -23,8 +23,8 @@ class RestApiManager: NSObject {
     
     // MARK: Perform a GET Request
     private func makeHTTPGetRequest(path: String, onCompletion: @escaping ServiceResponse) {
-        let request = NSMutableURLRequest(url: NSURL(string: path)! as URL)
-        
+        var url = path.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let request = NSMutableURLRequest(url: NSURL(string: url!)! as URL)
         let session = URLSession.shared
         
         let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in

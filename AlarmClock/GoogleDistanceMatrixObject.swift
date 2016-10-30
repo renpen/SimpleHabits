@@ -14,6 +14,8 @@ class GoogleDistanceMatrixObject {
     var distanceValue: Int!
     var durationText : String!
     var durationValue: Int!
+    var durationInTrafficText : String!
+    var durationInTrafficValue: Int!
     var statusSearch : String!
     var statusRequest: String!      //it´s a difference if there is simple no search result or if there is something wrong with the Request
 
@@ -23,6 +25,8 @@ class GoogleDistanceMatrixObject {
         let response = json["rows"][0]["elements"][0]
         durationText = response["duration"]["text"].stringValue
         durationValue = response["duration"]["value"].intValue
+        durationInTrafficText = response["duration_in_traffic"]["text"].stringValue
+        durationInTrafficValue = response["duration_in_traffic"]["value"].intValue
         distanceText = response["distance"]["text"].stringValue
         distanceValue = response["distance"]["value"].intValue
         statusSearch = response["status"].stringValue

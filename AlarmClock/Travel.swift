@@ -18,7 +18,7 @@ protocol Travel {
     var departure_time: Int? {get set}       //for traffic calculation and ÖPNV // in s
     func getTravelTimeInS() -> Int
     func calculationFinished()
-    func calculateTravelTime()
+    func calculateTravelTime(closure: @escaping (_ : String)-> Void)
 }
 extension Travel {
     var properties : NSDictionary{
