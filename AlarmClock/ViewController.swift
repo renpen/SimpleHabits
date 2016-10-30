@@ -33,7 +33,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         cTools.checkPermission(sender: self)
         pickShit.dataSource = self;
         pickShit.delegate = self;
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     func dismissKeyboard(){

@@ -23,7 +23,7 @@ class RestApiManager: NSObject {
     
     // MARK: Perform a GET Request
     private func makeHTTPGetRequest(path: String, onCompletion: @escaping ServiceResponse) {
-        var url = path.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let url = path.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let request = NSMutableURLRequest(url: NSURL(string: url!)! as URL)
         let session = URLSession.shared
         
@@ -32,7 +32,7 @@ class RestApiManager: NSObject {
                 let json:JSON = JSON(data: jsonData)
                 onCompletion(json, error as NSError?)
             } else {
-                onCompletion(nil, error as NSError?)
+                onCompletion(JSON.null, error as NSError?)
             }
         })
         task.resume()
@@ -56,12 +56,12 @@ class RestApiManager: NSObject {
                     let json:JSON = JSON(data: jsonData)
                     onCompletion(json, nil)
                 } else {
-                    onCompletion(nil, error as NSError?)
+                    onCompletion(JSON.null, error as NSError?)
                 }
             })
             task.resume()
         } catch {
-            onCompletion(nil, nil)
+            onCompletion(JSON.null, nil)
         }
     }
 }
