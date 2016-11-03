@@ -14,7 +14,7 @@ typealias ServiceResponse = (JSON, NSError?) -> Void
 
 class RestApiManager: NSObject {
     static let sharedInstance = RestApiManager()
-    //test
+    //test//testtesttest
     func request(url : String, onCompletion: @escaping (JSON) -> Void) {
         makeHTTPGetRequest(path: url, onCompletion: { json, err in
             onCompletion(json as JSON)
