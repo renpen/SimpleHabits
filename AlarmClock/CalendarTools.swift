@@ -42,8 +42,12 @@ func getAllCalendar() -> [EKCalendar]
         return eventStore.calendars(for: EKEntityType.event)
     }
     
-func getNextWakeUpAppointment(calendar : EKCalendar) -> EKEvent?
+func getFirstAppointmentOneDayLater(calendar : EKCalendar) -> EKEvent?
     {
+        return getAppointmentOneDayLater(appointmentNumber: 0, calendar: calendar)
+    }
+func getAppointmentOneDayLater(appointmentNumber: Int,calendar : EKCalendar) -> EKEvent?
+{
         let todayDate = Date()
         var dateComponents = DateComponents()
         dateComponents.day = 1
@@ -60,8 +64,9 @@ func getNextWakeUpAppointment(calendar : EKCalendar) -> EKEvent?
         }
         else
         {
-            return events[0]
+            return events[appointmentNumber]
         }
+
     }
 }
 

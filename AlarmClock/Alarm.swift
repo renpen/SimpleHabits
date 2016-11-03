@@ -23,7 +23,7 @@ class Alarm
     
     func addAlarmToDatabase()
     {
-        
+        //test//testasd
     }
     func activateAlarm()
     {
@@ -32,6 +32,10 @@ class Alarm
     func deactivateAlarm()
     {
     
+    }
+    func deleteAlarmFromDatabase()
+    {
+        
     }
     
 }
