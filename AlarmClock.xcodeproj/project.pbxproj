@@ -28,8 +28,8 @@
 		4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9DA18F1DC3CC10006B80B8 /* Properties.plist */; };
 		4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3A36E1DC38EAD00250230 /* Alarm.swift */; };
 		7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */; };
-		B703447C1DCB74D900FEF291 /* Start Screen Background.png in Resources */ = {isa = PBXBuildFile; fileRef = B703447B1DCB74D900FEF291 /* Start Screen Background.png */; };
-		B70344801DCB7B2800FEF291 /* Logo Lanuchscreen without Background.png in Resources */ = {isa = PBXBuildFile; fileRef = B703447F1DCB7B2800FEF291 /* Logo Lanuchscreen without Background.png */; };
+		B70344831DCB7D8B00FEF291 /* Logo Lanuchscreen without Background.png in Resources */ = {isa = PBXBuildFile; fileRef = B70344811DCB7D8B00FEF291 /* Logo Lanuchscreen without Background.png */; };
+		B70344841DCB7D8B00FEF291 /* Start Screen Background.png in Resources */ = {isa = PBXBuildFile; fileRef = B70344821DCB7D8B00FEF291 /* Start Screen Background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +78,8 @@
 		4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDistanceMatrixObject.swift; sourceTree = "<group>"; };
 		4B9DA18F1DC3CC10006B80B8 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
 		4BF3A36E1DC38EAD00250230 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
-		B703447B1DCB74D900FEF291 /* Start Screen Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Start Screen Background.png"; path = "../../App UI Design/Exported Image Files/Start Screen Background.png"; sourceTree = "<group>"; };
-		B703447F1DCB7B2800FEF291 /* Logo Lanuchscreen without Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo Lanuchscreen without Background.png"; path = "../../App UI Design/Exported Image Files/Logo Lanuchscreen without Background.png"; sourceTree = "<group>"; };
+		B70344811DCB7D8B00FEF291 /* Logo Lanuchscreen without Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo Lanuchscreen without Background.png"; path = "../../App UI Design/Exported Image Files/Logo Lanuchscreen without Background.png"; sourceTree = "<group>"; };
+		B70344821DCB7D8B00FEF291 /* Start Screen Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Start Screen Background.png"; path = "../../App UI Design/Exported Image Files/Start Screen Background.png"; sourceTree = "<group>"; };
 		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -252,8 +252,8 @@
 		B703447A1DCB74BC00FEF291 /* Design Files */ = {
 			isa = PBXGroup;
 			children = (
-				B703447F1DCB7B2800FEF291 /* Logo Lanuchscreen without Background.png */,
-				B703447B1DCB74D900FEF291 /* Start Screen Background.png */,
+				B70344811DCB7D8B00FEF291 /* Logo Lanuchscreen without Background.png */,
+				B70344821DCB7D8B00FEF291 /* Start Screen Background.png */,
 			);
 			name = "Design Files";
 			sourceTree = "<group>";
@@ -370,11 +370,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */,
-				B70344801DCB7B2800FEF291 /* Logo Lanuchscreen without Background.png in Resources */,
 				4B5B7A221DBE08F2006E7C39 /* Assets.xcassets in Resources */,
+				B70344831DCB7D8B00FEF291 /* Logo Lanuchscreen without Background.png in Resources */,
 				4B5B7A1D1DBE08F2006E7C39 /* Main.storyboard in Resources */,
+				B70344841DCB7D8B00FEF291 /* Start Screen Background.png in Resources */,
 				4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */,
-				B703447C1DCB74D900FEF291 /* Start Screen Background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
