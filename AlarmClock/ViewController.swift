@@ -31,8 +31,13 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         cTools.checkPermission(sender: self)
-        pickShit.dataSource = self;
-        pickShit.delegate = self;
+        /*
+         
+         UI Picker for Calendars is removed!
+         
+        */
+        //pickShit.dataSource = self;
+        //pickShit.delegate = self;
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -52,7 +57,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     
     func refreshPicker()
     {
-        pickShit.reloadAllComponents()
+        //pickShit.reloadAllComponents()
     }
 
     override func didReceiveMemoryWarning() {
