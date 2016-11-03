@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Start Screen Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hyr-SX-MR5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG Start Screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="hyr-SX-MR5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jc7-ya-n9e">
@@ -99,19 +99,10 @@
                                 <rect key="frame" x="0.0" y="324" width="375" height="129"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Lanuchscreen without Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="5d4-bX-POf">
-                                <rect key="frame" x="87" y="28" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="PJ9-zx-pjK"/>
-                                    <constraint firstAttribute="height" constant="200" id="aeK-yQ-BXg"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hyr-SX-MR5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SZx-tf-EL9"/>
-                            <constraint firstItem="5d4-bX-POf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vvo-YM-g4E"/>
-                            <constraint firstItem="5d4-bX-POf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Yoh-F1-Msm"/>
                             <constraint firstAttribute="trailing" secondItem="hyr-SX-MR5" secondAttribute="trailing" id="jW0-ye-pJq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hyr-SX-MR5" secondAttribute="bottom" id="jzR-aF-0t7"/>
                             <constraint firstItem="hyr-SX-MR5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qTO-4t-AIj"/>
@@ -132,7 +123,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo Lanuchscreen without Background.png" width="1000" height="1000"/>
-        <image name="Start Screen Background.png" width="414" height="736"/>
+        <image name="BG Start Screen.png" width="414" height="736"/>
     </resources>
 </document>
