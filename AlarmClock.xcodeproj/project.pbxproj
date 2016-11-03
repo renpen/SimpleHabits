@@ -28,6 +28,8 @@
 		4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9DA18F1DC3CC10006B80B8 /* Properties.plist */; };
 		4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3A36E1DC38EAD00250230 /* Alarm.swift */; };
 		7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */; };
+		B70344971DCB7F9800FEF291 /* Logo Lanuchscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B70344951DCB7F9800FEF291 /* Logo Lanuchscreen.png */; };
+		B70344981DCB7F9800FEF291 /* BG Start Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B70344961DCB7F9800FEF291 /* BG Start Screen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDistanceMatrixObject.swift; sourceTree = "<group>"; };
 		4B9DA18F1DC3CC10006B80B8 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
 		4BF3A36E1DC38EAD00250230 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		B70344951DCB7F9800FEF291 /* Logo Lanuchscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo Lanuchscreen.png"; path = "Source Files/Logo Lanuchscreen.png"; sourceTree = SOURCE_ROOT; };
+		B70344961DCB7F9800FEF291 /* BG Start Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Start Screen.png"; path = "Source Files/BG Start Screen.png"; sourceTree = SOURCE_ROOT; };
 		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,6 +143,7 @@
 		4B5B7A161DBE08F2006E7C39 /* AlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				B70344791DCB74B300FEF291 /* Sources */,
 				4B9A22F31DC4A75A00933E2E /* JSONTools */,
 				4B6486431DC429D300634F84 /* AppBasics */,
 				4B6486421DC4299B00634F84 /* UI */,
@@ -234,6 +239,23 @@
 				D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B70344791DCB74B300FEF291 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B703447A1DCB74BC00FEF291 /* Design Files */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		B703447A1DCB74BC00FEF291 /* Design Files */ = {
+			isa = PBXGroup;
+			children = (
+				B70344951DCB7F9800FEF291 /* Logo Lanuchscreen.png */,
+				B70344961DCB7F9800FEF291 /* BG Start Screen.png */,
+			);
+			name = "Design Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,8 +369,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70344971DCB7F9800FEF291 /* Logo Lanuchscreen.png in Resources */,
 				4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */,
 				4B5B7A221DBE08F2006E7C39 /* Assets.xcassets in Resources */,
+				B70344981DCB7F9800FEF291 /* BG Start Screen.png in Resources */,
 				4B5B7A1D1DBE08F2006E7C39 /* Main.storyboard in Resources */,
 				4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */,
 			);
