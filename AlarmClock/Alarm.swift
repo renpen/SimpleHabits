@@ -23,7 +23,7 @@ class Alarm
     
     func addAlarmToDatabase()
     {
-        //test//testasd
+        
     }
     func activateAlarm()
     {
