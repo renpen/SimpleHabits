@@ -28,12 +28,12 @@
 		4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9DA18F1DC3CC10006B80B8 /* Properties.plist */; };
 		4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3A36E1DC38EAD00250230 /* Alarm.swift */; };
 		7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */; };
-		B70344971DCB7F9800FEF291 /* Logo Lanuchscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B70344951DCB7F9800FEF291 /* Logo Lanuchscreen.png */; };
-		B70344981DCB7F9800FEF291 /* BG Start Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B70344961DCB7F9800FEF291 /* BG Start Screen.png */; };
-		B739CBFB1DCBDCE400908E17 /* BG Creation Detail Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B739CBF71DCBDCE400908E17 /* BG Creation Detail Screen.png */; };
-		B739CBFC1DCBDCE400908E17 /* Discard Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B739CBF81DCBDCE400908E17 /* Discard Button.png */; };
-		B739CBFD1DCBDCE400908E17 /* Smart Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B739CBF91DCBDCE400908E17 /* Smart Alarm Button.png */; };
-		B739CBFE1DCBDCE400908E17 /* Standard Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B739CBFA1DCBDCE400908E17 /* Standard Alarm Button.png */; };
+		B726C0251DCC95EE00E3BB4A /* BG Creation Detail Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */; };
+		B726C0261DCC95EE00E3BB4A /* BG Start Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0241DCC95EE00E3BB4A /* BG Start Screen.png */; };
+		B726C0281DCC95F400E3BB4A /* Logo Lanuchscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0271DCC95F400E3BB4A /* Logo Lanuchscreen.png */; };
+		B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0291DCC95FD00E3BB4A /* Discard Button.png */; };
+		B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */; };
+		B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,12 +82,12 @@
 		4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDistanceMatrixObject.swift; sourceTree = "<group>"; };
 		4B9DA18F1DC3CC10006B80B8 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
 		4BF3A36E1DC38EAD00250230 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
-		B70344951DCB7F9800FEF291 /* Logo Lanuchscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo Lanuchscreen.png"; path = "Source Files/Logo Lanuchscreen.png"; sourceTree = SOURCE_ROOT; };
-		B70344961DCB7F9800FEF291 /* BG Start Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Start Screen.png"; path = "Source Files/BG Start Screen.png"; sourceTree = SOURCE_ROOT; };
-		B739CBF71DCBDCE400908E17 /* BG Creation Detail Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Creation Detail Screen.png"; path = "Source Files/BG Creation Detail Screen.png"; sourceTree = SOURCE_ROOT; };
-		B739CBF81DCBDCE400908E17 /* Discard Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Discard Button.png"; path = "Source Files/Discard Button.png"; sourceTree = SOURCE_ROOT; };
-		B739CBF91DCBDCE400908E17 /* Smart Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Smart Alarm Button.png"; path = "Source Files/Smart Alarm Button.png"; sourceTree = SOURCE_ROOT; };
-		B739CBFA1DCBDCE400908E17 /* Standard Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Standard Alarm Button.png"; path = "Source Files/Standard Alarm Button.png"; sourceTree = SOURCE_ROOT; };
+		B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Creation Detail Screen.png"; path = "Source Files/Backgrounds/BG Creation Detail Screen.png"; sourceTree = SOURCE_ROOT; };
+		B726C0241DCC95EE00E3BB4A /* BG Start Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Start Screen.png"; path = "Source Files/Backgrounds/BG Start Screen.png"; sourceTree = SOURCE_ROOT; };
+		B726C0271DCC95F400E3BB4A /* Logo Lanuchscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo Lanuchscreen.png"; path = "Source Files/Logo/Logo Lanuchscreen.png"; sourceTree = SOURCE_ROOT; };
+		B726C0291DCC95FD00E3BB4A /* Discard Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Discard Button.png"; path = "Source Files/Buttons/Discard Button.png"; sourceTree = SOURCE_ROOT; };
+		B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Smart Alarm Button.png"; path = "Source Files/Buttons/Smart Alarm Button.png"; sourceTree = SOURCE_ROOT; };
+		B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Standard Alarm Button.png"; path = "Source Files/Buttons/Standard Alarm Button.png"; sourceTree = SOURCE_ROOT; };
 		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -260,12 +260,12 @@
 		B703447A1DCB74BC00FEF291 /* Design Files */ = {
 			isa = PBXGroup;
 			children = (
-				B70344951DCB7F9800FEF291 /* Logo Lanuchscreen.png */,
-				B70344961DCB7F9800FEF291 /* BG Start Screen.png */,
-				B739CBF71DCBDCE400908E17 /* BG Creation Detail Screen.png */,
-				B739CBF81DCBDCE400908E17 /* Discard Button.png */,
-				B739CBF91DCBDCE400908E17 /* Smart Alarm Button.png */,
-				B739CBFA1DCBDCE400908E17 /* Standard Alarm Button.png */,
+				B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */,
+				B726C0241DCC95EE00E3BB4A /* BG Start Screen.png */,
+				B726C0271DCC95F400E3BB4A /* Logo Lanuchscreen.png */,
+				B726C0291DCC95FD00E3BB4A /* Discard Button.png */,
+				B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */,
+				B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */,
 			);
 			name = "Design Files";
 			sourceTree = "<group>";
@@ -381,14 +381,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B739CBFE1DCBDCE400908E17 /* Standard Alarm Button.png in Resources */,
-				B70344971DCB7F9800FEF291 /* Logo Lanuchscreen.png in Resources */,
-				B739CBFD1DCBDCE400908E17 /* Smart Alarm Button.png in Resources */,
+				B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */,
+				B726C0251DCC95EE00E3BB4A /* BG Creation Detail Screen.png in Resources */,
+				B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */,
+				B726C0281DCC95F400E3BB4A /* Logo Lanuchscreen.png in Resources */,
 				4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */,
+				B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */,
 				4B5B7A221DBE08F2006E7C39 /* Assets.xcassets in Resources */,
-				B739CBFC1DCBDCE400908E17 /* Discard Button.png in Resources */,
-				B739CBFB1DCBDCE400908E17 /* BG Creation Detail Screen.png in Resources */,
-				B70344981DCB7F9800FEF291 /* BG Start Screen.png in Resources */,
+				B726C0261DCC95EE00E3BB4A /* BG Start Screen.png in Resources */,
 				4B5B7A1D1DBE08F2006E7C39 /* Main.storyboard in Resources */,
 				4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */,
 			);
