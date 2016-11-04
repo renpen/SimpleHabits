@@ -1,0 +1,14 @@
+<atlassian-ide-plugin>
+  <project-configuration id="1">
+    <servers id="2">
+      <jira id="3">
+        <server-id id="4">a1587c74-1574-471f-8a19-20fde1237ae2</server-id>
+        <name>DHBW-Server</name>
+        <url>http://193.196.7.27:8080</url>
+        <shared>false</shared>
+        <useSessionCookies>true</useSessionCookies>
+      </jira>
+    </servers>
+    <default-jira-server reference="4" />
+  </project-configuration>
+</atlassian-ide-plugin>

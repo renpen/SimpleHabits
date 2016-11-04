@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlarmClock/ViewController.swift"
+            timestampString = "499535410.411556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlarmClock/ViewController.swift"
+            timestampString = "499033373.025378"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.ViewController.__deallocating_deinit"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/ViewController.swift"
+                  timestampString = "499000777.836353"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; AlarmClock.ViewController"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/ViewController.swift"
+                  timestampString = "499000777.84067"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.ViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; AlarmClock.ViewController"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/ViewController.swift"
+                  timestampString = "499000777.844777"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.ViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;AlarmClock.ViewController&gt;"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/ViewController.swift"
+                  timestampString = "499000777.848894"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;AlarmClock.ViewController&gt;"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/ViewController.swift"
+                  timestampString = "499000777.853017"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlarmClock/ViewController.swift"
+            timestampString = "499037406.881079"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.ViewController.pickShit.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIPickerView&gt;"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/ViewController.swift"
+                  timestampString = "499000777.862283"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.ViewController.pickShit.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIPickerView&gt;"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/ViewController.swift"
+                  timestampString = "499000777.86584"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; AlarmClock.ViewController"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/ViewController.swift"
+                  timestampString = "499000777.869058"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;AlarmClock.ViewController&gt;"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/ViewController.swift"
+                  timestampString = "499000777.871959"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlarmClock/TimeCalculator.swift"
+            timestampString = "499109701.677625"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlarmClock/Travel.swift"
+            timestampString = "499108139.613515"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlarmClock/ViewController.swift"
+            timestampString = "499535410.411556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlarmClock/TimeCalculator.swift"
+            timestampString = "499111882.113667"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.TimeCalculator.(calcTravelTime in _A94C1847110357BAB02C26382B2FECDB) (travel : AlarmClock.Travel) -&gt; ()"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/TimeCalculator.swift"
+                  timestampString = "499110850.355503"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1008">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.TimeCalculator.(calcTravelTime in _A94C1847110357BAB02C26382B2FECDB) (travel : AlarmClock.Travel) -&gt; ()"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/TimeCalculator.swift"
+                  timestampString = "499110850.358478"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "2004">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlarmClock/TimeCalculator.swift"
+            timestampString = "499111579.010318"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlarmClock/TimeCalculator.swift"
+            timestampString = "499111693.257827"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.TimeCalculator.(calcTravelTime in _A94C1847110357BAB02C26382B2FECDB) (travel : AlarmClock.Travel) -&gt; ()"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/TimeCalculator.swift"
+                  timestampString = "499112073.97402"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlarmClock.TimeCalculator.((calcTravelTime in _A94C1847110357BAB02C26382B2FECDB) (travel : AlarmClock.Travel) -&gt; ()).(closure #2)"
+                  moduleName = "AlarmClock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reneUser/Documents/Programming/SoftwareE/AlarmClock/AlarmClock/TimeCalculator.swift"
+                  timestampString = "499112073.976699"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlarmClock/Alarm.swift"
+            timestampString = "499356956.697484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init(travel:wakeUpTime:wakeUpTone:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
