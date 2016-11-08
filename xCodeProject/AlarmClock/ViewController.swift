@@ -24,6 +24,13 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         travel.mode = Mode.walking
         travel.calculateTravelTime(closure: {x in self.TravelTimeLabel.text? = x;print("closure arrived: \(x)")})
     }
+    
+    @IBAction func startSmartCreationTour(_ sender: Any) {
+        if let pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "SmartCreationTour") {
+            self.present(pageViewController, animated: true, completion: nil)
+        }
+    }
+    
     let eventStore = EKEventStore()
     let cTools = CalendarTools()
     var calendars : [EKCalendar] = []

@@ -34,6 +34,7 @@
 		B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0291DCC95FD00E3BB4A /* Discard Button.png */; };
 		B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */; };
 		B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */; };
+		B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		B726C0291DCC95FD00E3BB4A /* Discard Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Discard Button.png"; path = "Source Files/Buttons/Discard Button.png"; sourceTree = SOURCE_ROOT; };
 		B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Smart Alarm Button.png"; path = "Source Files/Buttons/Smart Alarm Button.png"; sourceTree = SOURCE_ROOT; };
 		B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Standard Alarm Button.png"; path = "Source Files/Buttons/Standard Alarm Button.png"; sourceTree = SOURCE_ROOT; };
+		B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTourPageViewController.swift; sourceTree = "<group>"; };
 		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -201,6 +203,7 @@
 				4B5B7A191DBE08F2006E7C39 /* ViewController.swift */,
 				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
 				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
+				B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 			files = (
 				4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */,
 				4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */,
+				B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */,
 				4B5B7A201DBE08F2006E7C39 /* AlarmClock.xcdatamodeld in Sources */,
 				4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */,
 				4B42BC021DC5061B00678BF0 /* TransitMode.swift in Sources */,
