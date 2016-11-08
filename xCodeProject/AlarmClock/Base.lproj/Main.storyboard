@@ -39,7 +39,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Smart Alarm Button.png"/>
                                 <connections>
-                                    <action selector="startSmartCreationTour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iqC-vd-9sI"/>
+                                    <segue destination="dCr-4b-Q7h" kind="show" id="V4a-22-hKv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQD-Rg-KSF">
@@ -70,6 +70,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-362.39999999999998" y="174.96251874062969"/>
+        </scene>
+        <!--Smart Tour Animation View-->
+        <scene sceneID="JjG-XC-bTa">
+            <objects>
+                <viewController id="dCr-4b-Q7h" customClass="SmartTourAnimationView" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bQ2-6n-ZHK"/>
+                        <viewControllerLayoutGuide type="bottom" id="IBa-Eq-y6a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vqq-aP-ZMV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Z1-m5-tye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="184"/>
         </scene>
         <!--Smart Tour Page View Controller-->
         <scene sceneID="stE-WH-Wbe">
