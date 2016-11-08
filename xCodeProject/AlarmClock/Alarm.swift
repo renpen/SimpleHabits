@@ -16,6 +16,7 @@ class Alarm
     var wakeUpTone : NSObject       //need to be determined how the Tone is designed SE technically.
     init(travel: Travel,wakeUpTime : Date,wakeUpTone : NSObject)
     {
+        //test//test
         self.travel = travel
         self.wakeUpTime = wakeUpTime
         self.wakeUpTone = wakeUpTone
