@@ -9,7 +9,6 @@
 import Foundation
 
 protocol Travel {
-    var offset : Int? {get set}      //for waking up, eating etc. // in s
     var source : String? {get set}
     var destination : String? {get set}
     var transitmode : TransitMode? {get set}
