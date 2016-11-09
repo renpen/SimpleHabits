@@ -50,6 +50,9 @@
                                 </constraints>
                                 <size key="titleShadowOffset" width="10" height="10"/>
                                 <state key="normal" title="Button" image="Standard Alarm Button.png"/>
+                                <connections>
+                                    <segue destination="w9t-vW-Oy5" kind="show" id="sji-Wy-xnG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,6 +76,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-362.39999999999998" y="174.96251874062969"/>
+        </scene>
+        <!--Function Testing View Controller-->
+        <scene sceneID="MJu-WC-n2S">
+            <objects>
+                <viewController id="w9t-vW-Oy5" customClass="FunctionTestingViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kea-Pq-sGh"/>
+                        <viewControllerLayoutGuide type="bottom" id="rAp-w3-XGt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fr9-fn-dvz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JbH-3B-4gP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="171"/>
         </scene>
         <!--Smart Tour Page View Controller-->
         <scene sceneID="stE-WH-Wbe">
