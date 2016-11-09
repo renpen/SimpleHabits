@@ -42,7 +42,7 @@ class SmartTourPageViewController: UIPageViewController, UIPageViewControllerDel
         self.dataSource = self
         
         if let firstView = viewArray.first {
-            setViewControllers([firstView], direction: .forward, animated: true, completion: nil)
+            setViewControllers([firstView], direction: .forward, animated: false, completion: nil)
         }
         
     }

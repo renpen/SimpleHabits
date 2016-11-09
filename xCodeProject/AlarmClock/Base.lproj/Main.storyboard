@@ -39,7 +39,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Smart Alarm Button.png"/>
                                 <connections>
-                                    <segue destination="dCr-4b-Q7h" kind="show" id="V4a-22-hKv"/>
+                                    <segue destination="xI5-fz-vrN" kind="show" id="P4Z-Yp-wcI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQD-Rg-KSF">
@@ -66,28 +66,13 @@
                             <constraint firstItem="hyr-SX-MR5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xwd-ih-ahb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="smartButton" destination="TLq-su-zgN" id="KrH-dU-xee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-362.39999999999998" y="174.96251874062969"/>
-        </scene>
-        <!--Smart Tour Animation View-->
-        <scene sceneID="JjG-XC-bTa">
-            <objects>
-                <viewController id="dCr-4b-Q7h" customClass="SmartTourAnimationView" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bQ2-6n-ZHK"/>
-                        <viewControllerLayoutGuide type="bottom" id="IBa-Eq-y6a"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vqq-aP-ZMV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Z1-m5-tye" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="697" y="184"/>
         </scene>
         <!--Smart Tour Page View Controller-->
         <scene sceneID="stE-WH-Wbe">
@@ -116,7 +101,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.23106943190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5t8-E5-MB4" firstAttribute="centerX" secondItem="dCR-di-5hF" secondAttribute="centerX" id="U2Z-yw-1Vl"/>
                             <constraint firstItem="5t8-E5-MB4" firstAttribute="top" secondItem="5Ib-b3-qe0" secondAttribute="bottom" constant="8" id="ZR1-XG-qrZ"/>
@@ -146,7 +131,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.23106943190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XXO-bP-2mo" firstAttribute="centerX" secondItem="Z6j-bX-T8W" secondAttribute="centerX" id="Xhm-05-y6B"/>
                             <constraint firstItem="XXO-bP-2mo" firstAttribute="top" secondItem="LEM-sR-K9d" secondAttribute="bottom" id="oNq-oi-eqa"/>
@@ -176,7 +161,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.23106943190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UBe-lJ-U9h" firstAttribute="top" secondItem="oHp-Of-4Xi" secondAttribute="bottom" id="DRl-k5-JcE"/>
                             <constraint firstItem="UBe-lJ-U9h" firstAttribute="centerX" secondItem="SPn-cH-IdY" secondAttribute="centerX" id="VbI-pY-zM5"/>
@@ -206,7 +191,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.23106943190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1qH-BB-pKg" firstAttribute="centerX" secondItem="eWh-gf-O2h" secondAttribute="centerX" id="NoZ-Tj-Dyb"/>
                             <constraint firstItem="1qH-BB-pKg" firstAttribute="top" secondItem="AVG-dS-9hd" secondAttribute="bottom" id="TvW-zo-O1t"/>
@@ -243,7 +228,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.23106943190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MnX-FW-MMl" firstAttribute="top" secondItem="slJ-Zn-6H9" secondAttribute="bottom" id="36R-Vo-QwB"/>
                             <constraint firstItem="TbW-Ki-fuM" firstAttribute="centerX" secondItem="Z4Z-cQ-ACg" secondAttribute="centerX" id="YhR-rP-aKo"/>
