@@ -68,7 +68,9 @@ class GoogleDistanceMatrixTravel : Travel
                     url += "&traffic_model=\(trafficModel!)"
                 }
         }
-        print(url)
+        var text = "bus"
+        let transit: TransitMode = TransitMode(rawValue: text)!
+        print(transit)
         return url
     }
 

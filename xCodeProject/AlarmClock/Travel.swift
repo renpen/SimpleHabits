@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 protocol Travel {
     var source : String? {get set}

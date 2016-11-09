@@ -11,11 +11,10 @@ import CoreData
 import UIKit
 
 class CoreDataHandler {
-    private let alarmEntityName = "Alarm"
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
-    func getAlarmObject() -> Alarm {
-        let alarm = NSEntityDescription.insertNewObject(forEntityName: alarmEntityName, into: managedObjectContext) as! Alarm
-        return alarm
+    func fabricateCoreDataObject(entityName: String) -> Any {
+        let object = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedObjectContext)
+        return object
     }
     func save() {
         do{
@@ -26,11 +25,7 @@ class CoreDataHandler {
             
         }
     }
-    func getAllAlarms() -> Array<Any>?
-    {
-        return getObjects(entityName: alarmEntityName)
-    }
-    func getAlarmByName(name:String) -> Alarm?
+    func getObjectByName(name:String) -> Alarm?
     {
         let pred = NSPredicate(format: "(name = %@)", name)
         var objects = getObjects(entityName: name, predicate: pred)
@@ -38,7 +33,6 @@ class CoreDataHandler {
             return objects?[0] as? Alarm
         }
         return nil
-        
     }
     private func getObjects(entityName: String,predicate: NSPredicate) -> Array<Any>?
     {
@@ -60,7 +54,7 @@ class CoreDataHandler {
         return nil
    
     }
-    private func getObjects(entityName: String)->Array<Any>?
+    func getObjects(entityName: String)->Array<Any>?
     {
         let entityDescription = getEntityDescirption(entityName: entityName)
         let request = NSFetchRequest<NSFetchRequestResult>()
@@ -81,5 +75,10 @@ class CoreDataHandler {
     private func getEntityDescirption(entityName: String) -> NSEntityDescription
     {
         return NSEntityDescription.entity(forEntityName: entityName, in: managedObjectContext)!
+    }
+    func deleteObject(entity : Any)
+    {
+        managedObjectContext.delete(entity as! NSManagedObject)
+        self.save()
     }
 }
