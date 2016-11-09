@@ -9,7 +9,34 @@
 import UIKit
 import EventKit
 
-class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate, UIViewControllerTransitioningDelegate {
+    
+    let transition = CircularTransition()
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = smartButton.center
+        transition.circleColor = UIColor.black
+        
+        return transition
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = smartButton.center
+        transition.circleColor = UIColor(red: 255/255, green: 147/255, blue: 59/255, alpha: 1.0)
+        
+        return transition
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destionationVC = segue.destination as!SmartTourPageViewController
+        destionationVC.transitioningDelegate = self
+        destionationVC.modalPresentationStyle = .custom
+    }
+    
+    
+    @IBOutlet weak var smartButton: UIButton!
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var pickShit: UIPickerView!

@@ -30,13 +30,13 @@
 		4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9DA18F1DC3CC10006B80B8 /* Properties.plist */; };
 		4BF3A36F1DC38EAD00250230 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3A36E1DC38EAD00250230 /* Alarm.swift */; };
 		7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */; };
+		B71AC3281DD33290000DED43 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AC3271DD33290000DED43 /* CircularTransition.swift */; };
 		B726C0251DCC95EE00E3BB4A /* BG Creation Detail Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */; };
 		B726C0261DCC95EE00E3BB4A /* BG Start Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0241DCC95EE00E3BB4A /* BG Start Screen.png */; };
 		B726C0281DCC95F400E3BB4A /* Logo Lanuchscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0271DCC95F400E3BB4A /* Logo Lanuchscreen.png */; };
 		B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0291DCC95FD00E3BB4A /* Discard Button.png */; };
 		B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */; };
 		B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */; };
-		B76643B91DD27EDA00D5A61A /* SmartTourAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76643B81DD27EDA00D5A61A /* SmartTourAnimationView.swift */; };
 		B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,13 +88,13 @@
 		4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDistanceMatrixObject.swift; sourceTree = "<group>"; };
 		4B9DA18F1DC3CC10006B80B8 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
 		4BF3A36E1DC38EAD00250230 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		B71AC3271DD33290000DED43 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Creation Detail Screen.png"; path = "Source Files/Backgrounds/BG Creation Detail Screen.png"; sourceTree = SOURCE_ROOT; };
 		B726C0241DCC95EE00E3BB4A /* BG Start Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Start Screen.png"; path = "Source Files/Backgrounds/BG Start Screen.png"; sourceTree = SOURCE_ROOT; };
 		B726C0271DCC95F400E3BB4A /* Logo Lanuchscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo Lanuchscreen.png"; path = "Source Files/Logo/Logo Lanuchscreen.png"; sourceTree = SOURCE_ROOT; };
 		B726C0291DCC95FD00E3BB4A /* Discard Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Discard Button.png"; path = "Source Files/Buttons/Discard Button.png"; sourceTree = SOURCE_ROOT; };
 		B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Smart Alarm Button.png"; path = "Source Files/Buttons/Smart Alarm Button.png"; sourceTree = SOURCE_ROOT; };
 		B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Standard Alarm Button.png"; path = "Source Files/Buttons/Standard Alarm Button.png"; sourceTree = SOURCE_ROOT; };
-		B76643B81DD27EDA00D5A61A /* SmartTourAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTourAnimationView.swift; sourceTree = "<group>"; };
 		B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTourPageViewController.swift; sourceTree = "<group>"; };
 		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -220,7 +220,7 @@
 				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
 				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
 				B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */,
-				B76643B81DD27EDA00D5A61A /* SmartTourAnimationView.swift */,
+				B71AC3271DD33290000DED43 /* CircularTransition.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -487,10 +487,10 @@
 				4B6053A61DD2826800877B7C /* AlarmSound.swift in Sources */,
 				4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */,
 				B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */,
-				B76643B91DD27EDA00D5A61A /* SmartTourAnimationView.swift in Sources */,
 				4B5B7A201DBE08F2006E7C39 /* AlarmClock.xcdatamodeld in Sources */,
 				4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */,
 				4B42BC021DC5061B00678BF0 /* TransitMode.swift in Sources */,
+				B71AC3281DD33290000DED43 /* CircularTransition.swift in Sources */,
 				4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */,
 				4B42BC081DC509C800678BF0 /* MapKitTravel.swift in Sources */,
 				4B6486411DC4286900634F84 /* InternalHelper.swift in Sources */,
