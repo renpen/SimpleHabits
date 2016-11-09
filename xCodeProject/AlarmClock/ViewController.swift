@@ -8,6 +8,7 @@
 
 import UIKit
 import EventKit
+import CoreData
 
 class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate, UIViewControllerTransitioningDelegate {
     
@@ -59,6 +60,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         cTools.checkPermission(sender: self)
+        var test = FunctionTest()           //for test purpose funciomalites
+        test.testSomething()
         /*
          
          UI Picker for Calendars is removed!
