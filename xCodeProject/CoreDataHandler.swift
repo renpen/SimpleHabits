@@ -11,7 +11,6 @@ import CoreData
 import UIKit
 
 class CoreDataHandler {
-    
     private let alarmEntityName = "Alarm"
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     func getAlarmObject() -> Alarm {
@@ -36,7 +35,7 @@ class CoreDataHandler {
         let pred = NSPredicate(format: "(name = %@)", name)
         var objects = getObjects(entityName: name, predicate: pred)
         if (objects != nil) {
-            return objects?[0] as! Alarm
+            return objects?[0] as? Alarm
         }
         return nil
         

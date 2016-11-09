@@ -60,7 +60,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         cTools.checkPermission(sender: self)
-        var test = FunctionTest()           //for test purpose funciomalites
+        let test = FunctionTest()           //for test purpose funciomalites
         test.testSomething()
         /*
          
