@@ -39,7 +39,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Smart Alarm Button.png"/>
                                 <connections>
-                                    <segue destination="xI5-fz-vrN" kind="show" id="P4Z-Yp-wcI"/>
+                                    <segue destination="xI5-fz-vrN" kind="show" identifier="SmartTourInitialize" id="P4Z-Yp-wcI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQD-Rg-KSF">

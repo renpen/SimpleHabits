@@ -31,9 +31,12 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destionationVC = segue.destination as!SmartTourPageViewController
-        destionationVC.transitioningDelegate = self
-        destionationVC.modalPresentationStyle = .custom
+        
+        if (segue.identifier == "SmartTourInitialize") {
+            let destionationVC = segue.destination as!SmartTourPageViewController
+            destionationVC.transitioningDelegate = self
+            destionationVC.modalPresentationStyle = .custom
+        }
     }
     
     
