@@ -12,7 +12,6 @@ import MapKit
 import EventKit
 
 class MapKitTravel: Travel {
-
     var offset : Int?
     var source : String?
     var destination : String?
@@ -20,6 +19,7 @@ class MapKitTravel: Travel {
     var transitmode : TransitMode?
     var trafficModel: TrafficModel?
     var mode : Mode?
+    var representingCoreDataObject : TravelC?
     
     var travelTime = 0
     func getTravelTimeInS() -> Int

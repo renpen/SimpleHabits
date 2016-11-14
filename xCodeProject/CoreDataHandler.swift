@@ -12,6 +12,7 @@ import UIKit
 
 class CoreDataHandler {
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
+    static let sharedInstance = CoreDataHandler()
     func fabricateCoreDataObject(entityName: String) -> Any {
         let object = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedObjectContext)
         return object
@@ -22,14 +23,14 @@ class CoreDataHandler {
         }
         catch
         {
-            
+            //toDo
         }
     }
-    func getObjectByName(name:String) -> Alarm?
+    func getAlarmByName(name:String) -> Alarm?
     {
         let pred = NSPredicate(format: "(name = %@)", name)
-        var objects = getObjects(entityName: name, predicate: pred)
-        if (objects != nil) {
+        var objects = getObjects(entityName: "Alarm", predicate: pred)
+        if (objects?.count != 0) {
             return objects?[0] as? Alarm
         }
         return nil
@@ -48,7 +49,7 @@ class CoreDataHandler {
         {
             
         }
-        if objects != nil{
+        if objects?.count != 0 {
             return objects!
         }
         return nil
@@ -67,7 +68,7 @@ class CoreDataHandler {
         {
             
         }
-        if objects != nil{
+        if objects?.count != 0{
             return objects!
         }
         return nil
@@ -80,5 +81,45 @@ class CoreDataHandler {
     {
         managedObjectContext.delete(entity as! NSManagedObject)
         self.save()
+    }
+    func fabricateTravelObject() -> Travel {
+        let travelC:TravelC = fabricateCoreDataObject(entityName: "TravelC") as! TravelC
+        var travel = InternalHelper.sharedInstance.getTravel()
+        travel.representingCoreDataObject = travelC
+        return travel
+        
+    }
+    func getTravelById(id: Int32) -> Travel? {
+        let pred = NSPredicate(format: "(id = %@)", String(id))
+        var objects = getObjects(entityName: "TravelC", predicate: pred)
+        if (objects?.count != 0) {
+            let travelC = objects?[0] as? TravelC
+            var travel = InternalHelper.sharedInstance.getTravel()
+            travel.setRepresentingCoreDataValues(coreDataTravel: travelC!)
+            return travel
+        }
+        return nil
+
+    }
+    func getNewTravelID () ->Int32
+    {
+        let entityDescription = getEntityDescirption(entityName: "TravelC")
+        let request = NSFetchRequest<NSFetchRequestResult>()
+        request.entity = entityDescription
+        request.fetchLimit = 1;
+        request.sortDescriptors = [NSSortDescriptor.init(key: "id", ascending: false)]
+        var objects : Array<Any>? = nil
+        do{
+            try objects = managedObjectContext.fetch(request)
+        }
+        catch
+        {
+            
+        }
+        if objects?.count != 0
+        {
+            return (objects![0] as! TravelC).id + 1
+        }
+        return 0
     }
 }

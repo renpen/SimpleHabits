@@ -11,17 +11,31 @@ import Foundation
 class FunctionTest {
     
     func testSomething() {
-        let cdh = CoreDataHandler()
-        let alarm = cdh.fabricateCoreDataObject(entityName: "Alarm") as! Alarm
-        alarm.name = "named alert"
-        cdh.save()
-        let alarm2 = cdh.fabricateCoreDataObject(entityName: "Alarm") as! Alarm
-        alarm2.name = "nemaed alert2"
-        cdh.save()
-        for savedAlarm in cdh.getObjects(entityName: "Alarm")! {
-            let alarm = savedAlarm as! Alarm
-            print(alarm.name)
+        let alarm = CoreDataHandler.sharedInstance.fabricateCoreDataObject(entityName: "Alarm") as! Alarm
+        alarm.name = "alertWithTravelData6"
+        alarm.travel?.destination = "Muenchen"
+        alarm.travel?.source = "Karlsruhe"
+        alarm.travel?.mode = Mode.driving
+        alarm.travel?.trafficModel = TrafficModel.best_guess
+        alarm.save()
+        let alarmCore = CoreDataHandler.sharedInstance.getAlarmByName(name: "alertWithTravelData6")
+        if let a = alarmCore?.travel?.destination
+        {
+            print(a)
         }
-    }
+        if let a = alarmCore?.travel?.source
+        {
+            print(a)
+        }
+        if let a = alarmCore?.travel?.mode
+        {
+            print(a)
+        }
+        if let a = alarmCore?.travel?.trafficModel
+        {
+            print(a)
+        }
+        
+        }
     
 }

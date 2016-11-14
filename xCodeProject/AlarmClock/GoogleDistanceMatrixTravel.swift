@@ -19,6 +19,7 @@ class GoogleDistanceMatrixTravel : Travel
     var transitmode : TransitMode?
     var trafficModel: TrafficModel?
     var mode : Mode?
+    var representingCoreDataObject : TravelC?
     
     private func isValid() -> Bool      //determine if the minimun that the request need is set
     {

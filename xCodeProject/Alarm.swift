@@ -15,4 +15,25 @@ public class Alarm: NSManagedObject {
     var activePattern : ActivePattern?
     var wakeUpTone : AlarmSound?
     
+    override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?)
+    {
+        super.init(entity: entity, insertInto: context)
+        print(self.travel_f_key)
+        if self.travel_f_key == 0
+        {
+            self.travel = CoreDataHandler.sharedInstance.fabricateTravelObject()
+            let id = CoreDataHandler.sharedInstance.getNewTravelID()
+            self.travel_f_key = id
+            self.travel?.representingCoreDataObject?.id = id
+        }
+        else
+        {
+            self.travel = CoreDataHandler.sharedInstance.getTravelById(id: travel_f_key)
+        }
+        
+    }
+    func save()
+    {
+        travel?.save() // the context will be saved, so that the travel and the alarmobject will be saved,too
+    }
 }

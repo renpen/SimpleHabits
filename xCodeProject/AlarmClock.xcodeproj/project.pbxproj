@@ -33,6 +33,8 @@
 		4B9A22F21DC4A5B900933E2E /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A22F11DC4A5B900933E2E /* RestApiManager.swift */; };
 		4B9A22F51DC4A95200933E2E /* GoogleDistanceMatrixObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */; };
 		4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9DA18F1DC3CC10006B80B8 /* Properties.plist */; };
+		4BED56E11DDA51CD007EAABB /* TravelC+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BED56DF1DDA51CD007EAABB /* TravelC+CoreDataClass.swift */; };
+		4BED56E21DDA51CD007EAABB /* TravelC+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BED56E01DDA51CD007EAABB /* TravelC+CoreDataProperties.swift */; };
 		7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */; };
 		B71AC3281DD33290000DED43 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AC3271DD33290000DED43 /* CircularTransition.swift */; };
 		B726C0251DCC95EE00E3BB4A /* BG Creation Detail Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */; };
@@ -97,6 +99,8 @@
 		4B9A22F11DC4A5B900933E2E /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDistanceMatrixObject.swift; sourceTree = "<group>"; };
 		4B9DA18F1DC3CC10006B80B8 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
+		4BED56DF1DDA51CD007EAABB /* TravelC+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TravelC+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BED56E01DDA51CD007EAABB /* TravelC+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TravelC+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B71AC3271DD33290000DED43 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Creation Detail Screen.png"; path = "Source Files/Backgrounds/BG Creation Detail Screen.png"; sourceTree = SOURCE_ROOT; };
 		B726C0241DCC95EE00E3BB4A /* BG Start Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Start Screen.png"; path = "Source Files/Backgrounds/BG Start Screen.png"; sourceTree = SOURCE_ROOT; };
@@ -226,6 +230,8 @@
 		4B64863D1DC41E7E00634F84 /* TravelCalculation */ = {
 			isa = PBXGroup;
 			children = (
+				4BED56DF1DDA51CD007EAABB /* TravelC+CoreDataClass.swift */,
+				4BED56E01DDA51CD007EAABB /* TravelC+CoreDataProperties.swift */,
 				4B518E5C1DBFC9060039D1C3 /* Travel.swift */,
 				4B42BC011DC5061B00678BF0 /* TransitMode.swift */,
 				4B42BBFF1DC505AC00678BF0 /* TrafficModel.swift */,
@@ -510,6 +516,7 @@
 				4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */,
 				4B14AEAC1DD35CD8000469BF /* FunctionTest.swift in Sources */,
 				B79C58E71DD3B1C50061C027 /* FunctionTestingViewController.swift in Sources */,
+				4BED56E11DDA51CD007EAABB /* TravelC+CoreDataClass.swift in Sources */,
 				4B6053A61DD2826800877B7C /* AlarmSound.swift in Sources */,
 				4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */,
 				B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */,
@@ -524,6 +531,7 @@
 				4B42BBFE1DC502E100678BF0 /* Mode.swift in Sources */,
 				4B14AE9E1DD339C8000469BF /* CoreDataHandler.swift in Sources */,
 				4B14AEAA1DD34268000469BF /* Alarm+CoreDataProperties.swift in Sources */,
+				4BED56E21DDA51CD007EAABB /* TravelC+CoreDataProperties.swift in Sources */,
 				4B9A22F21DC4A5B900933E2E /* RestApiManager.swift in Sources */,
 				4B6053A81DD282C400877B7C /* ActivePattern.swift in Sources */,
 				4B42BC001DC505AC00678BF0 /* TrafficModel.swift in Sources */,
