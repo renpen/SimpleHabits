@@ -46,15 +46,6 @@ class CreateCRUDViewController: UIViewController {
         alarm.travel?.trafficModel = TrafficModel.best_guess
         alarm.save()
         
-        self.clearUI()
-    }
-    
-    func clearUI() {
-        
-        nameTF.text = ""
-        DestinationTF.text = ""
-        sourceTF.text = ""
-        offsetTF.text = ""
-        
+        self.dismiss(animated: true, completion: nil)
     }
 }
