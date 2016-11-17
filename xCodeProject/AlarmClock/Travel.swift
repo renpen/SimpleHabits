@@ -52,7 +52,6 @@ extension Travel {
             mode = Mode(rawValue: coreDataTravel.mode!)
 
         }
-        
         departure_time = Int(coreDataTravel.departure_time)
         representingCoreDataObject = coreDataTravel
     }
