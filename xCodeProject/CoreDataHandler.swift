@@ -37,7 +37,7 @@ class CoreDataHandler {
     }
     func getAllAlarms() -> [Alarm]
     {
-        var alarms = getObjects(entityName: "Alarm")
+        let alarms = getObjects(entityName: "Alarm")
         if (alarms == nil) {
             return []
         }
@@ -96,10 +96,10 @@ class CoreDataHandler {
         if alarm != nil
         {
             let travelId = alarm?.travel_f_key
-            deleteObject(entity: alarm)
+            deleteObject(entity: alarm!)
             let travel = getTravelById(id: Int32(travelId!))
             if travel != nil {
-                deleteObject(entity: travel?.representingCoreDataObject)
+                deleteObject(entity: travel?.representingCoreDataObject!)
             }
         }
     }
