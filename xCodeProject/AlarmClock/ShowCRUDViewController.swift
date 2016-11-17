@@ -55,4 +55,14 @@ class ShowCRUDViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete
+        {
+            CoreDataHandler.sharedInstance.deleteAlarn(alarmName: alarms[indexPath.row].name)
+            loadAlarms()
+            tableView.reloadData()
+        }
+        
+    }
+
 }
