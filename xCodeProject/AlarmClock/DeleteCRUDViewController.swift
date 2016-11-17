@@ -25,14 +25,12 @@ class DeleteCRUDViewController: UIViewController {
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBOutlet weak var nameTF: UITextField!
+    
+    
+    @IBAction func deletePressed(_ sender: Any) {
+        CoreDataHandler.sharedInstance.deleteObject(entity: nameTF.text!)
     }
-    */
-
+    
 }

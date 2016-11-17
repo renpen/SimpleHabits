@@ -10,6 +10,14 @@ import UIKit
 
 class CreateCRUDViewController: UIViewController {
 
+    @IBOutlet weak var nameTF: UITextField!
+    
+    @IBOutlet weak var offsetTF: UITextField!
+    
+    @IBOutlet weak var sourceTF: UITextField!
+    
+    @IBOutlet weak var DestinationTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,14 +34,18 @@ class CreateCRUDViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func save(_ sender: Any) {
+        
+        
+        let alarm = CoreDataHandler.sharedInstance.fabricateCoreDataObject(entityName: "Alarm") as! Alarm
+        alarm.name = nameTF.text!
+        alarm.travel?.destination = DestinationTF.text!
+        alarm.travel?.source = sourceTF.text!
+        alarm.travel?.mode = Mode.driving
+        alarm.travel?.trafficModel = TrafficModel.best_guess
+        alarm.save()
+        
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
 }

@@ -12,8 +12,6 @@ class UpdateCRUDViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +23,17 @@ class UpdateCRUDViewController: UIViewController {
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var destinationTF: UITextField!
+    
+    @IBAction func updatePressed(_ sender: Any) {
+        let updateAlarm = CoreDataHandler.sharedInstance.getAlarmByName(name: nameTF.text!)
+        
+        updateAlarm?.travel?.destination = destinationTF.text!
+        
+        updateAlarm?.save()
+    }
+    
     /*
     // MARK: - Navigation
 

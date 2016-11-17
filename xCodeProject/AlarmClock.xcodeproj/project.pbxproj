@@ -44,6 +44,7 @@
 		B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */; };
 		B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */; };
 		B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */; };
+		B79B2DF91DDDF5400093CCE3 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B2DF81DDDF5400093CCE3 /* ShowTableViewCell.swift */; };
 		B79C58E71DD3B1C50061C027 /* FunctionTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */; };
 		B7BEDF961DDDC3F600E710AC /* CreateCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF951DDDC3F600E710AC /* CreateCRUDViewController.swift */; };
 		B7BEDF981DDDC40A00E710AC /* UpdateCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF971DDDC40A00E710AC /* UpdateCRUDViewController.swift */; };
@@ -113,6 +114,7 @@
 		B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Smart Alarm Button.png"; path = "Source Files/Buttons/Smart Alarm Button.png"; sourceTree = SOURCE_ROOT; };
 		B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Standard Alarm Button.png"; path = "Source Files/Buttons/Standard Alarm Button.png"; sourceTree = SOURCE_ROOT; };
 		B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTourPageViewController.swift; sourceTree = "<group>"; };
+		B79B2DF81DDDF5400093CCE3 /* ShowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTableViewCell.swift; sourceTree = "<group>"; };
 		B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionTestingViewController.swift; sourceTree = "<group>"; };
 		B7BEDF951DDDC3F600E710AC /* CreateCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCRUDViewController.swift; sourceTree = "<group>"; };
 		B7BEDF971DDDC40A00E710AC /* UpdateCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCRUDViewController.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				B7BEDF971DDDC40A00E710AC /* UpdateCRUDViewController.swift */,
 				B7BEDF991DDDC41700E710AC /* DeleteCRUDViewController.swift */,
 				B7BEDF9B1DDDC42A00E710AC /* ShowCRUDViewController.swift */,
+				B79B2DF81DDDF5400093CCE3 /* ShowTableViewCell.swift */,
 			);
 			name = CRUD;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				4B42BC081DC509C800678BF0 /* MapKitTravel.swift in Sources */,
 				B7BEDF981DDDC40A00E710AC /* UpdateCRUDViewController.swift in Sources */,
 				4B6486411DC4286900634F84 /* InternalHelper.swift in Sources */,
+				B79B2DF91DDDF5400093CCE3 /* ShowTableViewCell.swift in Sources */,
 				4B42BBFE1DC502E100678BF0 /* Mode.swift in Sources */,
 				4B14AE9E1DD339C8000469BF /* CoreDataHandler.swift in Sources */,
 				4B14AEAA1DD34268000469BF /* Alarm+CoreDataProperties.swift in Sources */,
