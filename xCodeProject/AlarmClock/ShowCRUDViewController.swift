@@ -8,10 +8,26 @@
 
 import UIKit
 
-class ShowCRUDViewController: UIViewController {
-
+class ShowCRUDViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var alarms = [Alarm]() {
+        didSet{
+            tableView.reloadData()
+        }
+    }
+    
+    func loadAlarms() {
+        alarms = CoreDataHandler.sharedInstance.getObjects(entityName: "Alarm") as! [Alarm]
+    }
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.loadAlarms()
+        tableView.dataSource = self
+        tableView.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -25,14 +41,18 @@ class ShowCRUDViewController: UIViewController {
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return alarms.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "alarms") as! ShowTableViewCell
+        
+        cell.alarmName!.text = alarms[indexPath.row].name
+        cell.alarmSource!.text = alarms[indexPath.row].travel?.source
+        cell.alarmDestination!.text = alarms[indexPath.row].travel?.destination
+        
+        return cell
+    }
 }
