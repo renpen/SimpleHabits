@@ -35,6 +35,14 @@ class CoreDataHandler {
         }
         return nil
     }
+    func getAllAlarms() -> [Any]?
+    {
+        var alarms = getObjects(entityName: "Alarm")
+        if (alarms?.count != 0) {
+            return (alarms as? [Alarm])!
+        }
+        return nil
+    }
     private func getObjects(entityName: String,predicate: NSPredicate) -> Array<Any>?
     {
         let entityDescription = getEntityDescirption(entityName: entityName)
@@ -55,7 +63,7 @@ class CoreDataHandler {
         return nil
    
     }
-    func getObjects(entityName: String)->Array<Any>?
+    private func getObjects(entityName: String)->Array<Any>?
     {
         let entityDescription = getEntityDescirption(entityName: entityName)
         let request = NSFetchRequest<NSFetchRequestResult>()
