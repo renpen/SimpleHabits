@@ -35,7 +35,7 @@ class CoreDataHandler {
         }
         return nil
     }
-    func getAllAlarms() -> [Any]?
+    func getAllAlarms() -> [Alarm]?
     {
         var alarms = getObjects(entityName: "Alarm")
         if (alarms?.count != 0) {
