@@ -35,13 +35,14 @@ class CoreDataHandler {
         }
         return nil
     }
-    func getAllAlarms() -> [Alarm]?
+    func getAllAlarms() -> [Alarm]
     {
         var alarms = getObjects(entityName: "Alarm")
-        if (alarms?.count != 0) {
-            return (alarms as? [Alarm])!
+        if (alarms == nil) {
+            return []
         }
-        return nil
+        return (alarms as? [Alarm])!
+
     }
     private func getObjects(entityName: String,predicate: NSPredicate) -> Array<Any>?
     {
