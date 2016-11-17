@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -88,12 +89,184 @@
                     <view key="view" contentMode="scaleToFill" id="fr9-fn-dvz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cf-eX-0ij">
+                                <rect key="frame" x="164" y="207" width="46" height="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <segue destination="gLC-iq-UlZ" kind="show" id="rTS-4g-Hg1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-V6-UPX">
+                                <rect key="frame" x="168" y="256" width="38" height="30"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <segue destination="Hfp-9H-Lv4" kind="show" id="dNj-g1-6zW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahQ-zg-g2h">
+                                <rect key="frame" x="162" y="305" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <segue destination="8JH-4W-nhK" kind="show" id="l3T-Mh-2uW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ay-h2-hO6">
+                                <rect key="frame" x="165" y="356" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <segue destination="8OP-50-sgi" kind="show" id="USt-EZ-Wfx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CRUD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFC-Lc-LMe">
+                                <rect key="frame" x="166" y="447" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4cf-eX-0ij" firstAttribute="top" secondItem="kea-Pq-sGh" secondAttribute="bottom" constant="187" id="6Ui-io-by3"/>
+                            <constraint firstItem="ahQ-zg-g2h" firstAttribute="centerX" secondItem="fr9-fn-dvz" secondAttribute="centerX" id="Bae-MD-HJb"/>
+                            <constraint firstItem="fwY-V6-UPX" firstAttribute="top" secondItem="4cf-eX-0ij" secondAttribute="bottom" constant="19" id="CvV-wE-9hd"/>
+                            <constraint firstItem="4cf-eX-0ij" firstAttribute="centerX" secondItem="fr9-fn-dvz" secondAttribute="centerX" id="Lwz-tt-s2Y"/>
+                            <constraint firstItem="OFC-Lc-LMe" firstAttribute="top" secondItem="6Ay-h2-hO6" secondAttribute="bottom" constant="61" id="ahs-DZ-WJx"/>
+                            <constraint firstItem="OFC-Lc-LMe" firstAttribute="centerX" secondItem="fr9-fn-dvz" secondAttribute="centerX" constant="2" id="dIv-hM-5YO"/>
+                            <constraint firstItem="6Ay-h2-hO6" firstAttribute="top" secondItem="ahQ-zg-g2h" secondAttribute="bottom" constant="21" id="fDs-FS-kBX"/>
+                            <constraint firstItem="ahQ-zg-g2h" firstAttribute="top" secondItem="fwY-V6-UPX" secondAttribute="bottom" constant="19" id="red-56-4Xk"/>
+                            <constraint firstItem="fwY-V6-UPX" firstAttribute="centerX" secondItem="fr9-fn-dvz" secondAttribute="centerX" id="w8U-rs-USy"/>
+                            <constraint firstItem="6Ay-h2-hO6" firstAttribute="centerX" secondItem="fr9-fn-dvz" secondAttribute="centerX" id="y1k-pG-hqw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbH-3B-4gP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="586" y="171"/>
+        </scene>
+        <!--ShowCRUD View Controller-->
+        <scene sceneID="Scs-U6-fTj">
+            <objects>
+                <viewController id="Hfp-9H-Lv4" customClass="ShowCRUDViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UYX-Bo-u7q"/>
+                        <viewControllerLayoutGuide type="bottom" id="srQ-H9-jXj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f4G-Qm-xyQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8w-FN-4Aa">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="Hfp-9H-Lv4" eventType="touchUpInside" id="gJ3-6c-ESX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w8w-FN-4Aa" firstAttribute="leading" secondItem="f4G-Qm-xyQ" secondAttribute="leadingMargin" id="G1H-Dj-lvI"/>
+                            <constraint firstItem="w8w-FN-4Aa" firstAttribute="top" secondItem="UYX-Bo-u7q" secondAttribute="bottom" id="Vp3-II-Xdz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9R-hf-xu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="609" y="-571"/>
+        </scene>
+        <!--UpdateCRUD View Controller-->
+        <scene sceneID="SZd-WC-gZF">
+            <objects>
+                <viewController id="8JH-4W-nhK" customClass="UpdateCRUDViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="scP-vj-b63"/>
+                        <viewControllerLayoutGuide type="bottom" id="wpL-bw-rfX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v7A-lC-Nbt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWD-za-L5E">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="8JH-4W-nhK" eventType="touchUpInside" id="wlO-A5-9Nw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LWD-za-L5E" firstAttribute="leading" secondItem="v7A-lC-Nbt" secondAttribute="leadingMargin" id="fWx-4W-D6S"/>
+                            <constraint firstItem="LWD-za-L5E" firstAttribute="top" secondItem="scP-vj-b63" secondAttribute="bottom" id="ty7-ov-r7i"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSj-TC-kGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="-577"/>
+        </scene>
+        <!--DeleteCRUD View Controller-->
+        <scene sceneID="Kny-WR-dVP">
+            <objects>
+                <viewController id="8OP-50-sgi" customClass="DeleteCRUDViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fg4-p1-0jx"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Qh-mz-5Ip"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PtR-mA-ph0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb0-WG-mUx">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="8OP-50-sgi" eventType="touchUpInside" id="UWO-39-nZq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hb0-WG-mUx" firstAttribute="top" secondItem="fg4-p1-0jx" secondAttribute="bottom" id="HXJ-Yh-dPW"/>
+                            <constraint firstItem="Hb0-WG-mUx" firstAttribute="leading" secondItem="PtR-mA-ph0" secondAttribute="leadingMargin" id="yMb-HN-Oin"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SwQ-tf-V24" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513" y="-571"/>
+        </scene>
+        <!--CreateCRUD View Controller-->
+        <scene sceneID="5Bp-k9-sgO">
+            <objects>
+                <viewController id="gLC-iq-UlZ" customClass="CreateCRUDViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IvO-ID-lFq"/>
+                        <viewControllerLayoutGuide type="bottom" id="KKU-0A-ADG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ELU-ib-lJF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cd-cv-7z1">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="gLC-iq-UlZ" eventType="touchUpInside" id="WvG-iQ-f4u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Cd-cv-7z1" firstAttribute="top" secondItem="IvO-ID-lFq" secondAttribute="bottom" id="Lnx-Mg-jdX"/>
+                            <constraint firstItem="0Cd-cv-7z1" firstAttribute="leading" secondItem="ELU-ib-lJF" secondAttribute="leadingMargin" id="b7b-FK-4jN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6f-D5-TQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671" y="170"/>
         </scene>
         <!--Smart Tour Page View Controller-->
         <scene sceneID="stE-WH-Wbe">

@@ -18,7 +18,6 @@ public class Alarm: NSManagedObject {
     override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?)
     {
         super.init(entity: entity, insertInto: context)
-        print(self.travel_f_key)
         if self.travel_f_key == 0
         {
             self.travel = CoreDataHandler.sharedInstance.fabricateTravelObject()
