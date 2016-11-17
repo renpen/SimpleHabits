@@ -32,6 +32,8 @@ class UpdateCRUDViewController: UIViewController {
         updateAlarm?.travel?.destination = destinationTF.text!
         
         updateAlarm?.save()
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*
