@@ -35,7 +35,9 @@ class FunctionTest {
         {
             print(a)
         }
-        
+        CoreDataHandler.sharedInstance.deleteAlarn(alarmName: alarm.name)
+       // let alarmDe  = CoreDataHandler.sharedInstance.getAlarmByName(name: "alertWithTravelData6")
+     //   print("gelöschter Name: " + (alarmDe?.name)!)
         }
     
 }

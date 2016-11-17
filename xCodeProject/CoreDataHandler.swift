@@ -82,6 +82,18 @@ class CoreDataHandler {
         managedObjectContext.delete(entity as! NSManagedObject)
         self.save()
     }
+    func deleteAlarn(alarmName: String) {
+        let alarm = getAlarmByName(name: alarmName)
+        if alarm != nil
+        {
+            let travelId = alarm?.travel_f_key
+            deleteObject(entity: alarm)
+            let travel = getTravelById(id: Int32(travelId!))
+            if travel != nil {
+                deleteObject(entity: travel?.representingCoreDataObject)
+            }
+        }
+    }
     func fabricateTravelObject() -> Travel {
         let travelC:TravelC = fabricateCoreDataObject(entityName: "TravelC") as! TravelC
         var travel = InternalHelper.sharedInstance.getTravel()
