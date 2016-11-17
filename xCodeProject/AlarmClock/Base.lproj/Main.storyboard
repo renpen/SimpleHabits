@@ -244,6 +244,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqf-UC-VuE">
                                 <rect key="frame" x="166" y="215" width="55" height="30"/>
                                 <state key="normal" title="Update!"/>
+                                <connections>
+                                    <action selector="updatePressed:" destination="8JH-4W-nhK" eventType="touchUpInside" id="xtR-5M-H1i"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Successfully updated Alarm! :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Q-0m-jmW">
                                 <rect key="frame" x="77" y="253" width="233" height="21"/>
@@ -272,6 +275,10 @@
                             <constraint firstItem="dsb-3W-1at" firstAttribute="centerX" secondItem="v7A-lC-Nbt" secondAttribute="centerX" id="z9q-U1-Jir"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="destinationTF" destination="dsb-3W-1at" id="Cb9-uW-EHd"/>
+                        <outlet property="nameTF" destination="fNR-No-f8J" id="DbL-XB-cnQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSj-TC-kGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -321,13 +328,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0s-HA-Rxb">
                                 <rect key="frame" x="165" y="169" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deletePressed:" destination="8OP-50-sgi" eventType="touchUpInside" id="mFY-33-qFF"/>
+                                </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Successfully deleted Alarm! :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3A-3C-XH0">
-                                <rect key="frame" x="77" y="215" width="227" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -337,14 +341,15 @@
                             <constraint firstItem="iFF-MS-4HZ" firstAttribute="centerX" secondItem="PtR-mA-ph0" secondAttribute="centerX" id="Dli-r2-dyF"/>
                             <constraint firstItem="Hb0-WG-mUx" firstAttribute="top" secondItem="fg4-p1-0jx" secondAttribute="bottom" id="HXJ-Yh-dPW"/>
                             <constraint firstItem="P0s-HA-Rxb" firstAttribute="top" secondItem="Cdt-8Q-e3M" secondAttribute="bottom" constant="8" id="IdA-Uc-ios"/>
-                            <constraint firstItem="C3A-3C-XH0" firstAttribute="centerX" secondItem="PtR-mA-ph0" secondAttribute="centerX" id="chL-7u-mr0"/>
                             <constraint firstItem="cLP-VI-dqL" firstAttribute="top" secondItem="iFF-MS-4HZ" secondAttribute="bottom" constant="49" id="h2l-r0-r4a"/>
                             <constraint firstItem="Cdt-8Q-e3M" firstAttribute="centerX" secondItem="PtR-mA-ph0" secondAttribute="centerX" id="lD6-cD-1gG"/>
                             <constraint firstItem="iFF-MS-4HZ" firstAttribute="top" secondItem="PtR-mA-ph0" secondAttribute="topMargin" constant="17" id="quM-ld-V9o"/>
-                            <constraint firstItem="C3A-3C-XH0" firstAttribute="top" secondItem="P0s-HA-Rxb" secondAttribute="bottom" constant="16" id="tHT-X9-4vq"/>
                             <constraint firstItem="Hb0-WG-mUx" firstAttribute="leading" secondItem="PtR-mA-ph0" secondAttribute="leadingMargin" id="yMb-HN-Oin"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTF" destination="Cdt-8Q-e3M" id="tb0-Xf-8lQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwQ-tf-V24" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -430,8 +435,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HG6-5b-2qI">
-                                <rect key="frame" x="169" y="358" width="31" height="30"/>
-                                <state key="normal" title="Safe"/>
+                                <rect key="frame" x="168" y="358" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savePressed:" destination="gLC-iq-UlZ" eventType="touchUpInside" id="lOF-lu-fCd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-Fe-IsO">
                                 <rect key="frame" x="160" y="215" width="54" height="21"/>
@@ -466,6 +474,13 @@
                             <constraint firstItem="pG3-WH-K3Y" firstAttribute="centerX" secondItem="ELU-ib-lJF" secondAttribute="centerX" id="zgA-CK-iT9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DestinationTF" destination="2an-xy-aFN" id="rIC-jy-rE4"/>
+                        <outlet property="nameTF" destination="F2j-2c-0uA" id="yJ1-y4-qkh"/>
+                        <outlet property="offsetTF" destination="pG3-WH-K3Y" id="Y7A-qt-O69"/>
+                        <outlet property="savePressed" destination="HG6-5b-2qI" id="bKe-Wj-f8m"/>
+                        <outlet property="sourceTF" destination="ufm-QG-pAV" id="8BT-bh-RU4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6f-D5-TQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
