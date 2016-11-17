@@ -35,7 +35,8 @@ class CreateCRUDViewController: UIViewController {
     }
     
     
-    @IBAction func savePressed(_ sender: Any) {
+    @IBAction func save(_ sender: Any) {
+        
         
         let alarm = CoreDataHandler.sharedInstance.fabricateCoreDataObject(entityName: "Alarm") as! Alarm
         alarm.name = nameTF.text!
@@ -53,6 +54,7 @@ class CreateCRUDViewController: UIViewController {
         nameTF.text = ""
         DestinationTF.text = ""
         sourceTF.text = ""
+        offsetTF.text = ""
         
     }
 }

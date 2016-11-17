@@ -169,15 +169,69 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jTr-5I-7cp">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="alarms" rowHeight="114" id="OEy-1U-eoA" customClass="ShowTableViewCell" customModule="AlarmClock" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="114"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OEy-1U-eoA" id="g2R-Qf-PQe">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="113"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEg-8b-iGM">
+                                                    <rect key="frame" x="22" y="14" width="94" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNz-Hn-yp8">
+                                                    <rect key="frame" x="22" y="43" width="54" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBe-xO-Xbr">
+                                                    <rect key="frame" x="22" y="72" width="87" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nEg-8b-iGM" firstAttribute="top" secondItem="g2R-Qf-PQe" secondAttribute="topMargin" constant="6" id="KhC-dl-Ci2"/>
+                                                <constraint firstItem="tBe-xO-Xbr" firstAttribute="leading" secondItem="g2R-Qf-PQe" secondAttribute="leadingMargin" constant="14" id="XQa-BW-sbU"/>
+                                                <constraint firstItem="jNz-Hn-yp8" firstAttribute="top" secondItem="nEg-8b-iGM" secondAttribute="bottom" constant="8" id="fGw-OG-MoL"/>
+                                                <constraint firstItem="tBe-xO-Xbr" firstAttribute="top" secondItem="jNz-Hn-yp8" secondAttribute="bottom" constant="8" id="sGr-LS-Gcw"/>
+                                                <constraint firstItem="nEg-8b-iGM" firstAttribute="leading" secondItem="g2R-Qf-PQe" secondAttribute="leadingMargin" constant="14" id="wnZ-2H-Wi2"/>
+                                                <constraint firstItem="jNz-Hn-yp8" firstAttribute="leading" secondItem="g2R-Qf-PQe" secondAttribute="leadingMargin" constant="14" id="zO8-10-1gD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="alarmDestination" destination="tBe-xO-Xbr" id="gEg-Js-zwc"/>
+                                            <outlet property="alarmName" destination="nEg-8b-iGM" id="e4e-E0-viN"/>
+                                            <outlet property="alarmSource" destination="jNz-Hn-yp8" id="tR8-w5-OuI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9j7-Ty-9dq" firstAttribute="centerX" secondItem="f4G-Qm-xyQ" secondAttribute="centerX" id="4WA-EN-SPl"/>
+                            <constraint firstItem="srQ-H9-jXj" firstAttribute="top" secondItem="jTr-5I-7cp" secondAttribute="bottom" constant="20" id="5E3-u3-6i0"/>
                             <constraint firstItem="w8w-FN-4Aa" firstAttribute="leading" secondItem="f4G-Qm-xyQ" secondAttribute="leadingMargin" id="G1H-Dj-lvI"/>
+                            <constraint firstItem="jTr-5I-7cp" firstAttribute="leading" secondItem="f4G-Qm-xyQ" secondAttribute="leadingMargin" id="IaH-8m-dcw"/>
                             <constraint firstItem="9j7-Ty-9dq" firstAttribute="top" secondItem="UYX-Bo-u7q" secondAttribute="bottom" id="R8G-Rh-VmP"/>
                             <constraint firstItem="w8w-FN-4Aa" firstAttribute="top" secondItem="UYX-Bo-u7q" secondAttribute="bottom" id="Vp3-II-Xdz"/>
+                            <constraint firstItem="jTr-5I-7cp" firstAttribute="top" secondItem="9j7-Ty-9dq" secondAttribute="bottom" constant="8" id="WOy-JK-yM3"/>
+                            <constraint firstItem="jTr-5I-7cp" firstAttribute="trailing" secondItem="f4G-Qm-xyQ" secondAttribute="trailingMargin" id="rHC-el-Dso"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="jTr-5I-7cp" id="lnV-mG-1zy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9R-hf-xu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -438,7 +492,7 @@
                                 <rect key="frame" x="168" y="358" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="savePressed:" destination="gLC-iq-UlZ" eventType="touchUpInside" id="lOF-lu-fCd"/>
+                                    <action selector="save:" destination="gLC-iq-UlZ" eventType="touchUpInside" id="ZsQ-GF-KS1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aM-Fe-IsO">
@@ -478,7 +532,6 @@
                         <outlet property="DestinationTF" destination="2an-xy-aFN" id="rIC-jy-rE4"/>
                         <outlet property="nameTF" destination="F2j-2c-0uA" id="yJ1-y4-qkh"/>
                         <outlet property="offsetTF" destination="pG3-WH-K3Y" id="Y7A-qt-O69"/>
-                        <outlet property="savePressed" destination="HG6-5b-2qI" id="bKe-Wj-f8m"/>
                         <outlet property="sourceTF" destination="ufm-QG-pAV" id="8BT-bh-RU4"/>
                     </connections>
                 </viewController>
