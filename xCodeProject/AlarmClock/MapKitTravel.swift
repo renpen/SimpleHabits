@@ -41,7 +41,7 @@ class MapKitTravel: Travel {
         geocoder.geocodeAddressString(self.destination!, completionHandler: { (placemark, error) in
             longLatTo = (placemark?[0].location)!
             print("geocoder reached")
-            print(error)
+            print(error!)
         })
         let mkplacemarkFrom = MKPlacemark(coordinate: (longLatFrom?.coordinate)!,addressDictionary: [:])
         let mkplacemarkTo = MKPlacemark(coordinate: (longLatTo?.coordinate)!,addressDictionary: [:])

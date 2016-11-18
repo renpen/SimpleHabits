@@ -35,13 +35,14 @@ class CoreDataHandler {
         }
         return nil
     }
-    func getAllAlarms() -> [Alarm]?
+    func getAllAlarms() -> [Alarm]
     {
-        var alarms = getObjects(entityName: "Alarm")
-        if (alarms?.count != 0) {
-            return (alarms as? [Alarm])!
+        let alarms = getObjects(entityName: "Alarm")
+        if (alarms == nil) {
+            return []
         }
-        return nil
+        return (alarms as? [Alarm])!
+
     }
     private func getObjects(entityName: String,predicate: NSPredicate) -> Array<Any>?
     {
@@ -95,10 +96,10 @@ class CoreDataHandler {
         if alarm != nil
         {
             let travelId = alarm?.travel_f_key
-            deleteObject(entity: alarm)
+            deleteObject(entity: alarm!)
             let travel = getTravelById(id: Int32(travelId!))
             if travel != nil {
-                deleteObject(entity: travel?.representingCoreDataObject)
+                deleteObject(entity: travel?.representingCoreDataObject!)
             }
         }
     }
