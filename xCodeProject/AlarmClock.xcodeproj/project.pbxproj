@@ -414,7 +414,7 @@
 				TargetAttributes = {
 					4B5B7A131DBE08F2006E7C39 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = TTL5L96WQ5;
+						DevelopmentTeam = WSVX5KDTA9;
 						ProvisioningStyle = Automatic;
 					};
 					4B5B7A2A1DBE08F2006E7C39 = {
@@ -721,7 +721,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TTL5L96WQ5;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WSVX5KDTA9;
 				INFOPLIST_FILE = AlarmClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.reneUser.AlarmClock;
@@ -736,7 +737,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TTL5L96WQ5;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WSVX5KDTA9;
 				INFOPLIST_FILE = AlarmClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.reneUser.AlarmClock;
