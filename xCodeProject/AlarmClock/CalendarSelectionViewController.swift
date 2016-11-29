@@ -59,6 +59,9 @@ class CalendarSelectionViewController: UIViewController, UIPickerViewDelegate, U
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print(calendarsNames[picker.selectedRow(inComponent: 0)])
+        let parentVC = self.parent as! SmartTourPageViewController
+        parentVC.alarmObject.calendar = calendarsNames[picker.selectedRow(inComponent: 0)]
+        let backgroundColor = UIColor(cgColor: calendars[picker.selectedRow(inComponent: 0)].cgColor)
+        parentVC.alarmObject.calendarColor = backgroundColor
     }
 }
