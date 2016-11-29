@@ -178,7 +178,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OEy-1U-eoA" id="g2R-Qf-PQe">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="113"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEg-8b-iGM">
@@ -469,10 +469,10 @@
             </objects>
             <point key="canvasLocation" x="-362" y="898"/>
         </scene>
-        <!--View Controller-->
+        <!--Calendar Selection View Controller-->
         <scene sceneID="fMm-Ub-GKS">
             <objects>
-                <viewController storyboardIdentifier="CalendarSelectionView" id="tV6-ht-Qm7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarSelectionView" id="tV6-ht-Qm7" customClass="CalendarSelectionViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Ib-b3-qe0"/>
                         <viewControllerLayoutGuide type="bottom" id="DxN-Jc-Wc5"/>
@@ -487,17 +487,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLi-aW-6Aw">
+                                <rect key="frame" x="16" y="108" width="343" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="fUc-ZD-Msa"/>
+                                    <constraint firstAttribute="width" constant="343" id="mMp-bY-ztt"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVX-7k-CF4">
+                                <rect key="frame" x="105" y="323" width="183" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Currently selected Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzF-NW-Jwr">
+                                <rect key="frame" x="89" y="294" width="214" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.23106943190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5t8-E5-MB4" firstAttribute="centerX" secondItem="dCR-di-5hF" secondAttribute="centerX" id="U2Z-yw-1Vl"/>
                             <constraint firstItem="5t8-E5-MB4" firstAttribute="top" secondItem="5Ib-b3-qe0" secondAttribute="bottom" constant="8" id="ZR1-XG-qrZ"/>
+                            <constraint firstItem="MLi-aW-6Aw" firstAttribute="centerX" secondItem="dCR-di-5hF" secondAttribute="centerX" id="afM-fa-GXM"/>
+                            <constraint firstItem="MLi-aW-6Aw" firstAttribute="top" secondItem="5t8-E5-MB4" secondAttribute="bottom" constant="59" id="oTX-qx-4Mr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayCalendarNameLabel" destination="wVX-7k-CF4" id="oV6-Nj-SPy"/>
+                        <outlet property="picker" destination="MLi-aW-6Aw" id="uWS-6a-ANa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0md-Xe-vYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79" y="1592"/>
+            <point key="canvasLocation" x="-79.200000000000003" y="1591.7541229385308"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bdJ-ir-Y5J">

@@ -50,6 +50,7 @@
 		B7BEDF981DDDC40A00E710AC /* UpdateCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF971DDDC40A00E710AC /* UpdateCRUDViewController.swift */; };
 		B7BEDF9A1DDDC41700E710AC /* DeleteCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF991DDDC41700E710AC /* DeleteCRUDViewController.swift */; };
 		B7BEDF9C1DDDC42A00E710AC /* ShowCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF9B1DDDC42A00E710AC /* ShowCRUDViewController.swift */; };
+		B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		B7BEDF971DDDC40A00E710AC /* UpdateCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCRUDViewController.swift; sourceTree = "<group>"; };
 		B7BEDF991DDDC41700E710AC /* DeleteCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteCRUDViewController.swift; sourceTree = "<group>"; };
 		B7BEDF9B1DDDC42A00E710AC /* ShowCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCRUDViewController.swift; sourceTree = "<group>"; };
+		B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSelectionViewController.swift; sourceTree = "<group>"; };
 		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -256,6 +258,7 @@
 		4B6486421DC4299B00634F84 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B7CEF75D1DED80E1003D45C5 /* CreationTour */,
 				4B5B7A191DBE08F2006E7C39 /* ViewController.swift */,
 				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
 				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
@@ -341,6 +344,14 @@
 				B79B2DF81DDDF5400093CCE3 /* ShowTableViewCell.swift */,
 			);
 			name = CRUD;
+			sourceTree = "<group>";
+		};
+		B7CEF75D1DED80E1003D45C5 /* CreationTour */ = {
+			isa = PBXGroup;
+			children = (
+				B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */,
+			);
+			name = CreationTour;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7BEDF961DDDC3F600E710AC /* CreateCRUDViewController.swift in Sources */,
+				B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */,
 				4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */,
 				4B14AEAC1DD35CD8000469BF /* FunctionTest.swift in Sources */,
 				B79C58E71DD3B1C50061C027 /* FunctionTestingViewController.swift in Sources */,
