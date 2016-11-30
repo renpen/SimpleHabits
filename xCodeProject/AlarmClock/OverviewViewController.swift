@@ -19,9 +19,10 @@ class OverviewViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let parentVC = self.parent as! SmartTourPageViewController
-        calendarLabel.text = parentVC.alarmObject.calendar
-        calendarLabel.backgroundColor = parentVC.alarmObject.calendarColor
+        calendarLabel.text = parentVC.alarmObject.calendar?.title
+        let backgroundColor = UIColor(cgColor: (parentVC.alarmObject.calendar?.cgColor)!)
         offsetLabel.text = String(parentVC.alarmObject.offset)
+        calendarLabel.backgroundColor = backgroundColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +33,7 @@ class OverviewViewController: UIViewController {
     @IBAction func savePressed(_ sender: Any) {
         let parentVC = self.parent as! SmartTourPageViewController
         let alarm = CoreDataHandler.sharedInstance.fabricateCoreDataObject(entityName: "Alarm") as! Alarm
-        alarm.name = parentVC.alarmObject.calendar //just for the time until there is an implementated way to save the selected calendar in core data
+        alarm.name = (parentVC.alarmObject.calendar?.title)! //just for the time until there is an implementated way to save the selected calendar in core data
         alarm.travel?.destination = "Karlsruhe"
         alarm.travel?.source = "München"
         alarm.travel?.mode = Mode.driving

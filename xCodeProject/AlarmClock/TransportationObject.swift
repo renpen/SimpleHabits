@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import EventKit
 
 class TransportationObject: NSObject {
     var offset: Int = 0
-    var calendar: String = ""
-    var calendarColor = UIColor()
+    var calendar: EKCalendar?
     var name: String = "Alarm 1"
 }
