@@ -20,6 +20,8 @@ class SmartTourPageViewController: UIPageViewController, UIPageViewControllerDel
             ]
     }()
     
+    var alarmObject = TransportationObject()
+    
     private func viewInstance(name: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
     }
