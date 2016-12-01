@@ -1,0 +1,73 @@
+% Präambel
+\documentclass[11pt,a4paper,oneside, 
+liststotoc, 					% Tabellen- und Abbildungsverzeichnis ins Inhaltsverzeichnis
+bibtotoc,						% Literaturverzeichnis ins Inhaltsverzeichnis aufnehmen
+titlepage, 						% Titlepage-Umgebung statt \maketitle
+headsepline, 					% horizontale Linie unter Kolumnentitel
+%abstracton,					% Überschrift beim Abstract einschalten, Abstract muss dazu in {abstract}-Umgebung stehen
+%DIV11,							% auskommentieren, um den Seitenspiegel zu vergrößern
+BCOR6mm,						% Bindekorrektur, die den Seitenspiegel um 6mm nach rechts verschiebt,
+]{article}		
+\usepackage{ucs} 				% Dokument in utf8-Codierung schreiben und speichern
+\usepackage[utf8x]{inputenc} 	% ermöglicht die direkte Eingabe von Umlauten
+\usepackage[ngerman]{babel} 	% deutsche Trennungsregeln und Übersetzung der festcodierten Überschriften
+\usepackage[T1]{fontenc} 		% Ausgabe aller zeichen in einer T1-Codierung (wichtig für die Ausgabe von Umlauten!)
+\usepackage{graphicx}  			% Einbinden von Grafiken erlauben
+\usepackage[format=hang,justification=centering,singlelinecheck=off]{caption}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+\usepackage{mathpazo} 			% Einstellung der verwendeten Schriftarten
+\usepackage{textcomp} 			% zum Einsatz von Eurozeichen u. a. Symbolen
+\usepackage{listings}			% Datstellung von Quellcode mit den Umgebungen {lstlisting}, \lstinline und \lstinputlisting
+\usepackage{xcolor} 			% einfache Verwendung von Farben in nahezu allen Farbmodellen
+\usepackage[intoc]{nomencl} 	% zur Erstellung des Abkürzungsberzeichnisses
+\usepackage{fancyhdr}			% Zusatzpaket zur Gestaltung von Fuß und Kopfzeilen
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\usepackage{acronym}
+\usepackage[paper=a4paper,left=0mm,right=0mm,top=2mm,bottom=0mm]{geometry}
+
+
+\begin{document}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\begin{tikzpicture}
+\umlclass[type=interface,y=-7,x=-0.4]{Travel}{+ source : String \\+ destination : String\\+ transitmode : TransitMode\\+ trafficModel: TrafficModel\\+ mode : Mode\\+ departureTime: Int}{+ getTravelTimeInS() : Int \\  + CalculationFinished() : Void \\ +  calculateTravelTime(success : ()) : Void}
+\umlclass[x=3,y=-1]{GoogleDistanzMatrixTravel}{- calculatedJsonObject: GoogleDistanceMatrixObject}{- isRequestValid():Bool\\ - generateRequestURL():String\\}
+\umlclass[y=-12.5,x=-3]{MapKitTravel}{}{- getGeocodeAdressString():String\\ - generateMapKitRequest():MKDirectionRequest\\}
+\umlclass[type=enum,y=-10,x=6]{Mode}{driving\\walking\\bycyling\\transit}{}
+\umlclass[type=enum,x=6,y=-6]{TrafficModel}{bestGuess\\pessimistic\\optimistic}{}
+\umlclass[type=enum,y=-3,x=-5.7]{TransitMode}{bus\\subway\\train\\tram\\rail}{}
+\umlclass[x=-6.5,y=3]{RestAPIManager}{\umlstatic{+ sharedInstance: RestAPIManager}}{+ request(url : String, onCompletion:  (JSON)): Void\\- makeHTTPGetRequest(path: String, onCompletion: ServiceResponse): Void}
+\umlclass[y=-17,x=4]{GoogleDistanzMatrixObject}{+ distanceText : String \\+ distanceValue: Int\\+  durationText : String\\+ durationValue: Int\\+ durationInTrafficText : String\\+ durationInTrafficValue: Int\\+ statusSearch : String\\+ statusRequest: String}{init(json:JSON)}
+\umlclass[x=-10,y=-5]{Alarm}{- alarmOptions:AlarmOptions\\- calendar:EKCalendar\\ - activePattern:ActivePattern\\}{- calculateAlarmTime():Void\\- calculateTravel():Void\\+ activateAlarm():Void\\+ deactiveAlarm():Void\\+ isAlarmValidToSet():Bool\\}
+\umlclass[x=-10]{AlarmController}{}{+ getActiveAlarms():[Alarm]\\+ getAlarm(name:String):Alarm\\+ getAllAlarms():[Alarm]}
+\umlclass[x=-4.65,y=-22]{CalendarTools}{- eventStore : EKEventStore}{+ requestPermission():Void\\- getPermission():Void\\+ getAllCalendar():[EKCalendar]\\+ getFirstAppointmentOneDayLater(appointmentNumber: Int,calendar: EKCalendar):EKEvent}
+\umlclass[y=-10,x=-10]{AlarmOptions}{+ calendarIdentifier:String\\+offSet:Int\\+ activePatternId: Int\\+ wakeUpSoundId:Int}{}
+\umlclass[y=-10,x=-6]{ActivePattern}{tbd}{tbd}
+\umlclass[y=-17,x=-8]{CoreDataHandler}{- managedObjectContext: ManagedObjectContext\\\umlstatic{+ sharedInstance: CoreDataHandler}}{+ fabricateCoreDataObject(entityName: String):Any\\+ save():Void\\+ getAlarmByName(name: String) : Alarm\\+ getAllAlarms: [Alarm]\\+ deleteObject(entity:Any):Void}
+
+\umlimpl{GoogleDistanzMatrixTravel}{Travel}
+\umlimpl{MapKitTravel}{Travel}
+\umlassoc{GoogleDistanzMatrixTravel}{GoogleDistanzMatrixObject}
+\umlassoc{Mode}{Travel}
+\umlassoc{TransitMode}{Travel}
+\umlassoc{TrafficModel}{Travel}
+\umlassoc{RestAPIManager}{GoogleDistanzMatrixTravel}
+\umlcompo{GoogleDistanzMatrixTravel}{GoogleDistanzMatrixObject}
+\umlaggreg{Alarm}{Travel}
+\umlaggreg{Alarm}{ActivePattern}
+\umlassoc{AlarmController}{Alarm}
+\umlassoc{CoreDataHandler}{AlarmOptions}
+\umlassoc{CalendarTools}{AlarmOptions}
+\umlcompo{Alarm}{AlarmOptions}
+
+\end{tikzpicture}
+
+
+\end{document}
+
+
