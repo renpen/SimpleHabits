@@ -13,7 +13,7 @@ let eventStore = EKEventStore()
 class CalendarTools {
     
 
-    func checkPermission(sender: ViewController)
+    func requestPermission(sender: ViewController)
     {
         let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
         switch(status)

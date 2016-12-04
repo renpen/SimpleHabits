@@ -62,7 +62,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     var events = [EKEvent]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        cTools.checkPermission(sender: self)
+        cTools.requestPermission(sender: self)
         let test = FunctionTest()           //for test purpose funciomalites
         test.testSomething()
         /*

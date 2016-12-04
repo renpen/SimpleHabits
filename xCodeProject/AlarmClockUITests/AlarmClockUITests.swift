@@ -31,6 +31,24 @@ class AlarmClockUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        
+        app.otherElements.containing(.image, identifier:"BG Start Screen.png").children(matching: .button).matching(identifier: "Button").element(boundBy: 0).tap()
+        
+        let app2 = app
+        app2.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "Birthdays")
+        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element(boundBy: 1)
+        app.staticTexts["Birthdays"] //läuft nur durch wenns existiert
+        element.swipeLeft()
+        element.swipeLeft()
+
+
+        
+        
+        
+        
+        
     }
     
 }
