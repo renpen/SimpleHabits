@@ -13,6 +13,7 @@ class ShowTableViewCell: UITableViewCell {
     @IBOutlet weak var alarmName: UILabel!
     @IBOutlet weak var alarmSource: UILabel!
     @IBOutlet weak var alarmDestination: UILabel!
+    @IBOutlet weak var offsetLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

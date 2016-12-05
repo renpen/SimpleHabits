@@ -52,6 +52,7 @@ class ShowCRUDViewController: UIViewController, UITableViewDelegate, UITableView
         cell.alarmName!.text = alarms[indexPath.row].name
         cell.alarmSource!.text = alarms[indexPath.row].travel?.source
         cell.alarmDestination!.text = alarms[indexPath.row].travel?.destination
+        cell.offsetLabel!.text = String(alarms[indexPath.row].offset)
         
         return cell
     }
