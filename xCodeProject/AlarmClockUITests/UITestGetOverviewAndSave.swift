@@ -1,14 +1,14 @@
 //
-//  AlarmClockUITests.swift
-//  AlarmClockUITests
+//  AlarmClockUITestGetOverviewAndSave.swift
+//  AlarmClock
 //
-//  Created by ReneUser on 24.10.16.
+//  Created by ReneUser on 05.12.16.
 //  Copyright © 2016 ReneUser. All rights reserved.
 //
 
 import XCTest
 
-class AlarmClockUITests: XCTestCase {
+class UITestGetOverviewAndSave: XCTestCase {        //This Testcase Includes also the Usecase for OffSetInput
         
     override func setUp() {
         super.setUp()
@@ -29,26 +29,22 @@ class AlarmClockUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
         let app = XCUIApplication()
-        
-        app.otherElements.containing(.image, identifier:"BG Start Screen.png").children(matching: .button).matching(identifier: "Button").element(boundBy: 0).tap()
-        
-        let app2 = app
-        app2.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "Birthdays")
+        let bgStartScreenPngElementsQuery = app.otherElements.containing(.image, identifier:"BG Start Screen.png")
+        bgStartScreenPngElementsQuery.children(matching: .button).matching(identifier: "Button").element(boundBy: 0).tap()
+        app.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "Birthdays")
         let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element(boundBy: 1)
-        app.staticTexts["Birthdays"] //läuft nur durch wenns existiert
         element.swipeLeft()
         element.swipeLeft()
+        element.tap()
+        app.textFields["30"].tap()
+        app.textFields[""].typeText("23")
+        element.swipeLeft()
+        element.swipeLeft()
+        element.swipeLeft()
+        XCTAssert(app.staticTexts["23"].exists)
+        XCTAssert(app.staticTexts["Birthdays"].exists)
+        app.buttons["Save"].tap()
 
-
-        
-        
-        
-        
-        
     }
-    
 }
