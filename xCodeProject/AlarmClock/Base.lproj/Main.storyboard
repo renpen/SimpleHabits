@@ -188,7 +188,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OEy-1U-eoA" id="g2R-Qf-PQe">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="114"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEg-8b-iGM">
@@ -278,7 +278,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd3-O9-nFI">
-                                <rect key="frame" x="138.5" y="20" width="98" height="36"/>
+                                <rect key="frame" x="139" y="20" width="98" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -290,7 +290,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkE-Dy-fJa">
-                                <rect key="frame" x="124.5" y="147" width="126" height="21"/>
+                                <rect key="frame" x="125" y="147" width="126" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="126" id="bzO-Qj-G0g"/>
                                 </constraints>
@@ -300,6 +300,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fNR-No-f8J">
                                 <rect key="frame" x="139" y="105" width="97" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="CRUDUpdateNameField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="gGw-f9-K9k"/>
                                 </constraints>
@@ -309,6 +310,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsb-3W-1at">
                                 <rect key="frame" x="139" y="171" width="97" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="CrudUpdateDestinationTextField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="4EP-bH-omL"/>
                                 </constraints>
@@ -373,7 +375,10 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F2j-2c-0uA">
-                                <rect key="frame" x="112.5" y="125" width="150" height="30"/>
+                                <rect key="frame" x="113" y="125" width="150" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="CrudNameTextField">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="654-eY-oWH"/>
                                 </constraints>
@@ -388,7 +393,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pG3-WH-K3Y">
-                                <rect key="frame" x="112.5" y="192" width="150" height="30"/>
+                                <rect key="frame" x="113" y="192" width="150" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="CrudOffSetTextField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="8Yd-5f-bKh"/>
                                 </constraints>
@@ -397,13 +403,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSC-bR-jLF">
-                                <rect key="frame" x="163.5" y="163" width="48" height="21"/>
+                                <rect key="frame" x="164" y="163" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufm-QG-pAV">
-                                <rect key="frame" x="112.5" y="259" width="150" height="30"/>
+                                <rect key="frame" x="113" y="259" width="150" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="CrudSourceTextField"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="TFR-bU-JSX"/>
                                 </constraints>
@@ -412,7 +419,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2an-xy-aFN">
-                                <rect key="frame" x="112.5" y="326" width="150" height="30"/>
+                                <rect key="frame" x="113" y="326" width="150" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="CrudDestinationTextField">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="2aO-Fu-bCd"/>
                                 </constraints>
@@ -421,7 +431,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVf-BA-Pw9">
-                                <rect key="frame" x="143.5" y="28" width="88" height="36"/>
+                                <rect key="frame" x="144" y="28" width="88" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -433,7 +443,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HG6-5b-2qI">
-                                <rect key="frame" x="170.5" y="373" width="34" height="30"/>
+                                <rect key="frame" x="171" y="373" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="save:" destination="gLC-iq-UlZ" eventType="touchUpInside" id="ZsQ-GF-KS1"/>

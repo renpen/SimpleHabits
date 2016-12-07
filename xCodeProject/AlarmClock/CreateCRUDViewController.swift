@@ -42,6 +42,7 @@ class CreateCRUDViewController: UIViewController {
         alarm.name = nameTF.text!
         alarm.travel?.destination = DestinationTF.text!
         alarm.travel?.source = sourceTF.text!
+        alarm.offset = Int16(offsetTF.text!)!
         alarm.travel?.mode = Mode.driving
         alarm.travel?.trafficModel = TrafficModel.best_guess
         alarm.save()

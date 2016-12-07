@@ -32,6 +32,7 @@
 		4B6053A61DD2826800877B7C /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6053A51DD2826800877B7C /* AlarmSound.swift */; };
 		4B6053A81DD282C400877B7C /* ActivePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6053A71DD282C400877B7C /* ActivePattern.swift */; };
 		4B6486411DC4286900634F84 /* InternalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6486401DC4286900634F84 /* InternalHelper.swift */; };
+		4B75D4891DF69F2700D54451 /* UITestCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B75D4881DF69F2700D54451 /* UITestCRUD.swift */; };
 		4B9A22F21DC4A5B900933E2E /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A22F11DC4A5B900933E2E /* RestApiManager.swift */; };
 		4B9A22F51DC4A95200933E2E /* GoogleDistanceMatrixObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */; };
 		4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9DA18F1DC3CC10006B80B8 /* Properties.plist */; };
@@ -109,6 +110,7 @@
 		4B6053A51DD2826800877B7C /* AlarmSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSound.swift; sourceTree = "<group>"; };
 		4B6053A71DD282C400877B7C /* ActivePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivePattern.swift; path = AlarmClock/ActivePattern.swift; sourceTree = "<group>"; };
 		4B6486401DC4286900634F84 /* InternalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalHelper.swift; sourceTree = "<group>"; };
+		4B75D4881DF69F2700D54451 /* UITestCRUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestCRUD.swift; sourceTree = "<group>"; };
 		4B9A22F11DC4A5B900933E2E /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		4B9A22F41DC4A95200933E2E /* GoogleDistanceMatrixObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDistanceMatrixObject.swift; sourceTree = "<group>"; };
 		4B9DA18F1DC3CC10006B80B8 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				4B5B7A3C1DBE08F2006E7C39 /* Info.plist */,
 				4B42311F1DF5F1C90024B625 /* UITestGetOverviewAndSave.swift */,
 				4B4231231DF5FDC10024B625 /* UITestStartSmartCreation.swift */,
+				4B75D4881DF69F2700D54451 /* UITestCRUD.swift */,
 			);
 			path = AlarmClockUITests;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				4B5B7A3B1DBE08F2006E7C39 /* UITestSelectOSCalendar.swift in Sources */,
 				4B4231241DF5FDC10024B625 /* UITestStartSmartCreation.swift in Sources */,
 				4B4231201DF5F1C90024B625 /* UITestGetOverviewAndSave.swift in Sources */,
+				4B75D4891DF69F2700D54451 /* UITestCRUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
