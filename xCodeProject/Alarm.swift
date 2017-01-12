@@ -4,6 +4,7 @@
 //
 //  Created by ReneUser on 09.11.16.
 //  Copyright © 2016 ReneUser. All rights reserved.
+//
 
 import Foundation
 import CoreData
