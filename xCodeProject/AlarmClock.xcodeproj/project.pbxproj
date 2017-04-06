@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12ED64561E962F2B0052253B /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12ED64551E962F2B0052253B /* bell.mp3 */; };
 		4B14AE9B1DD33996000469BF /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9A1DD33996000469BF /* AlarmController.swift */; };
 		4B14AE9E1DD339C8000469BF /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */; };
 		4B14AEA91DD34268000469BF /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AEA71DD34268000469BF /* Alarm.swift */; };
@@ -78,6 +79,7 @@
 
 /* Begin PBXFileReference section */
 		10C0C345824A0B92EF68C43E /* Pods-AlarmClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.debug.xcconfig"; sourceTree = "<group>"; };
+		12ED64551E962F2B0052253B /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = "../Source Files/Sounds/bell.mp3"; sourceTree = "<group>"; };
 		27A991DDFF7D5A2D527EF16E /* Pods-AlarmClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.release.xcconfig"; sourceTree = "<group>"; };
 		4B14AE9A1DD33996000469BF /* AlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
 		4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHandler.swift; path = ../CoreDataHandler.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 		B70344791DCB74B300FEF291 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				12ED64551E962F2B0052253B /* bell.mp3 */,
 				B703447A1DCB74BC00FEF291 /* Design Files */,
 			);
 			name = Sources;
@@ -443,8 +446,13 @@
 				TargetAttributes = {
 					4B5B7A131DBE08F2006E7C39 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = WSVX5KDTA9;
+						DevelopmentTeam = TTL5L96WQ5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					4B5B7A2A1DBE08F2006E7C39 = {
 						CreatedOnToolsVersion = 8.0;
@@ -488,6 +496,7 @@
 				B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */,
 				B726C0281DCC95F400E3BB4A /* Logo Lanuchscreen.png in Resources */,
 				4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */,
+				12ED64561E962F2B0052253B /* bell.mp3 in Resources */,
 				B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */,
 				4B5B7A221DBE08F2006E7C39 /* Assets.xcassets in Resources */,
 				B726C0261DCC95EE00E3BB4A /* BG Start Screen.png in Resources */,
@@ -758,7 +767,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WSVX5KDTA9;
+				DEVELOPMENT_TEAM = TTL5L96WQ5;
 				INFOPLIST_FILE = AlarmClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.reneUser.AlarmClock;
@@ -774,7 +783,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WSVX5KDTA9;
+				DEVELOPMENT_TEAM = TTL5L96WQ5;
 				INFOPLIST_FILE = AlarmClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.reneUser.AlarmClock;

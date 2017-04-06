@@ -39,8 +39,12 @@ class OverviewViewController: UIViewController {
         alarm.travel?.mode = Mode.driving
         alarm.travel?.trafficModel = TrafficModel.best_guess
         alarm.offset = Int16(parentVC.alarmObject.offset)
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let date = calendar.date(byAdding: .second, value: 10, to: currentDate)
+        alarm.wakeUpTime = date!;
+        AlarmController.sharedInstance.activate(alarm: alarm)
         alarm.save()
-        
         self.dismiss(animated: true, completion: nil)
     }
 }

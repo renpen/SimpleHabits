@@ -36,8 +36,6 @@ class CreateCRUDViewController: UIViewController {
     
     
     @IBAction func save(_ sender: Any) {
-        
-        
         let alarm = CoreDataHandler.sharedInstance.fabricateCoreDataObject(entityName: "Alarm") as! Alarm
         alarm.name = nameTF.text!
         alarm.travel?.destination = DestinationTF.text!
@@ -45,8 +43,7 @@ class CreateCRUDViewController: UIViewController {
         alarm.offset = Int16(offsetTF.text!)!
         alarm.travel?.mode = Mode.driving
         alarm.travel?.trafficModel = TrafficModel.best_guess
-        alarm.save()
-        
         self.dismiss(animated: true, completion: nil)
+        alarm.save()
     }
 }
