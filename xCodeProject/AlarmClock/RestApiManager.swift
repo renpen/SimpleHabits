@@ -26,7 +26,7 @@ class RestApiManager: NSObject {
         let url = path.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let request = NSMutableURLRequest(url: NSURL(string: url!)! as URL)
         let session = URLSession.shared
-        
+        print("URL: " + url!);
         let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
             if let jsonData = data {
                 let json:JSON = JSON(data: jsonData)

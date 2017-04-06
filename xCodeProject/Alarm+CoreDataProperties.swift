@@ -21,5 +21,6 @@ extension Alarm {
     @NSManaged public var wakeUpTime: Date
     @NSManaged public var wakeUpTone_f_key: Int32
     @NSManaged public var name: String
+    @NSManaged public var calendarIdentifier: String
 
 }

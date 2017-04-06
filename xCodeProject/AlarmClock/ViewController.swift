@@ -53,7 +53,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         travel.destination = destination.text
         travel.source = source.text
         travel.mode = Mode.walking
-        travel.calculateTravelTime(closure: {x in self.TravelTimeLabel.text? = x;print("closure arrived: \(x)")})
     }
     
     let eventStore = EKEventStore()

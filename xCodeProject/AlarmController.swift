@@ -11,7 +11,7 @@ import AVFoundation
 var player: AVAudioPlayer?
 class AlarmController {
     static let sharedInstance = AlarmController();
-    
+    var temp_alarm : Alarm?
     func activate(alarm: Alarm)
     {
         print("alarm set with date: " + alarm.wakeUpTime.description)
@@ -24,8 +24,24 @@ class AlarmController {
     }
     func calculateWakeUpTime(alarm:Alarm)
     {
+        self.temp_alarm = alarm;
+        alarm.travel?.calculateTravelTime(closure: setWakeUpTime)
         
     }
+    private func setWakeUpTime(travelTime : Int)
+    {
+        print("TravelTime: " + travelTime.description)
+        var alarm = temp_alarm
+        let calendarTools = CalendarTools.sharedInstance
+        let offset = alarm?.offset
+        let appointment = calendarTools.getFirstAppointmentOneDayLater(calendar: calendarTools.getCalendarByIdentifier(identifier: (alarm?.calendarIdentifier)!))
+        let calendarAPI = Calendar.current
+        print("Appointment: " + (appointment?.description)!)
+        var date = calendarAPI.date(byAdding: .minute, value: -(Int(offset!)), to: (appointment?.startDate)!)
+        date = calendarAPI.date(byAdding: .second, value: -(travelTime), to: date!)
+        alarm?.wakeUpTime = date!
+        activate(alarm: alarm!)
+        }
     @objc func playSound()
     {
         do {
