@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,15 +25,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG Start Screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="hyr-SX-MR5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Lanuchscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="bFA-JH-zHI">
-                                <rect key="frame" x="107" y="20" width="160" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="0ta-Gq-j6a"/>
-                                    <constraint firstAttribute="height" constant="160" id="bqr-bN-2YF"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLq-su-zgN">
-                                <rect key="frame" x="37" y="275" width="300" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLq-su-zgN">
+                                <rect key="frame" x="37" y="269" width="300" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="6l2-bL-WMg"/>
                                     <constraint firstAttribute="width" constant="300" id="BBw-Db-0zR"/>
@@ -43,17 +36,8 @@
                                     <segue destination="xI5-fz-vrN" kind="show" identifier="SmartTourInitialize" id="P4Z-Yp-wcI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQD-Rg-KSF">
-                                <rect key="frame" x="37" y="415" width="300" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="3fP-dT-DPO"/>
-                                    <constraint firstAttribute="width" constant="300" id="olK-M5-o2i"/>
-                                </constraints>
-                                <size key="titleShadowOffset" width="10" height="10"/>
-                                <state key="normal" title="Button" image="Standard Alarm Button.png"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFe-X0-P87">
-                                <rect key="frame" x="127" y="542" width="121" height="30"/>
+                                <rect key="frame" x="127" y="536" width="121" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121" id="Ynq-wM-PVs"/>
                                 </constraints>
@@ -69,17 +53,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TLq-su-zgN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="36e-ok-ohd"/>
-                            <constraint firstItem="bFA-JH-zHI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9fm-Jq-1js"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QFe-X0-P87" secondAttribute="bottom" constant="95" id="Acf-rW-dBf"/>
-                            <constraint firstItem="bFA-JH-zHI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Dug-im-OD3"/>
                             <constraint firstItem="QFe-X0-P87" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H96-8V-5FO"/>
-                            <constraint firstItem="iQD-Rg-KSF" firstAttribute="top" secondItem="TLq-su-zgN" secondAttribute="bottom" constant="40" id="T34-ay-gGY"/>
                             <constraint firstItem="hyr-SX-MR5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UCg-1E-dLv"/>
-                            <constraint firstItem="QFe-X0-P87" firstAttribute="top" secondItem="iQD-Rg-KSF" secondAttribute="bottom" constant="27" id="VbC-b8-l7S"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hyr-SX-MR5" secondAttribute="bottom" id="WKP-W1-VN7"/>
                             <constraint firstAttribute="trailing" secondItem="hyr-SX-MR5" secondAttribute="trailing" id="Z4m-Yn-RnJ"/>
-                            <constraint firstItem="iQD-Rg-KSF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lxu-xa-jco"/>
-                            <constraint firstItem="TLq-su-zgN" firstAttribute="top" secondItem="bFA-JH-zHI" secondAttribute="bottom" constant="95" id="qMQ-jz-Tnb"/>
                             <constraint firstItem="hyr-SX-MR5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xwd-ih-ahb"/>
                         </constraints>
                     </view>
@@ -769,8 +747,6 @@
     </scenes>
     <resources>
         <image name="BG Start Screen.png" width="414" height="736"/>
-        <image name="Logo Lanuchscreen.png" width="1000" height="1000"/>
         <image name="Smart Alarm Button.png" width="1800" height="600"/>
-        <image name="Standard Alarm Button.png" width="1800" height="600"/>
     </resources>
 </document>
