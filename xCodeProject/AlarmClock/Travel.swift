@@ -36,7 +36,7 @@ extension Travel {
         }
             representingCoreDataObject?.departure_time = Int32(departure_time!)
         
-        CoreDataHandler.sharedInstance.save()
+        TravelCoreDataHandler.sharedInstance.save()
     }
     mutating func setRepresentingCoreDataValues(coreDataTravel : TravelC)
     {

@@ -32,8 +32,7 @@ class OverviewViewController: UIViewController {
 
     @IBAction func savePressed(_ sender: Any) {
         let parentVC = self.parent as! SmartTourPageViewController
-        let alarm = CoreDataHandler.sharedInstance.fabricateCoreDataObject(entityName: "Alarm") as! Alarm
-        alarm.name = (parentVC.alarmObject.calendar?.title)! //just for the time until there is an implementated way to save the selected calendar in core data
+        let alarm = AlarmCoreDataHandler.sharedInstance.getSmartAlarm()
         alarm.travel?.destination = "DHBW Karlsruhe"
         alarm.travel?.source = "Ludwig-Erhard-Allee 32 76131 Karlsruhe"
         alarm.travel?.mode = Mode.bicycling
@@ -41,7 +40,7 @@ class OverviewViewController: UIViewController {
         alarm.offset = Int16(parentVC.alarmObject.offset)
         alarm.calendarIdentifier = (parentVC.alarmObject.calendar?.calendarIdentifier)!
         alarm.save()
-        AlarmController.sharedInstance.calculateWakeUpTime(alarm: alarm);
+        AlarmController.sharedInstance.calculateAndSetWakeUpTime(alarm: alarm);
         self.dismiss(animated: true, completion: nil)
     }
 }

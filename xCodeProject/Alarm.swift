@@ -20,14 +20,14 @@ public class Alarm: NSManagedObject {
         super.init(entity: entity, insertInto: context)
         if self.travel_f_key == 0
         {
-            self.travel = CoreDataHandler.sharedInstance.fabricateTravelObject()
-            let id = CoreDataHandler.sharedInstance.getNewTravelID()
+            self.travel = TravelCoreDataHandler.sharedInstance.fabricateTravelObject()
+            let id = TravelCoreDataHandler.sharedInstance.getNewTravelID()
             self.travel_f_key = id
             self.travel?.representingCoreDataObject?.id = id
         }
         else
         {
-            self.travel = CoreDataHandler.sharedInstance.getTravelById(id: travel_f_key)
+            self.travel = TravelCoreDataHandler.sharedInstance.getTravelById(id: travel_f_key)
         }
         
     }

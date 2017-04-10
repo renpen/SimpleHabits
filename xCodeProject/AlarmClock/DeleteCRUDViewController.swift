@@ -29,8 +29,8 @@ class DeleteCRUDViewController: UIViewController {
     @IBOutlet weak var nameTF: UITextField!
     
     
-    @IBAction func deletePressed(_ sender: Any) {
-        CoreDataHandler.sharedInstance.deleteObject(entity: nameTF.text!)
-    }
+//    @IBAction func deletePressed(_ sender: Any) {
+//        CoreDataHandler.sharedInstance.deleteObject(entity: nameTF.text!)
+//    }
     
 }

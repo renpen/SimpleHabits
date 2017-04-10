@@ -12,7 +12,6 @@ import UIKit
 
 class CoreDataHandler {
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
-    static let sharedInstance = CoreDataHandler()
     func fabricateCoreDataObject(entityName: String) -> Any {
         let object = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedObjectContext)
         return object
@@ -26,25 +25,8 @@ class CoreDataHandler {
             //toDo
         }
     }
-    func getAlarmByName(name:String) -> Alarm?
-    {
-        let pred = NSPredicate(format: "(name = %@)", name)
-        var objects = getObjects(entityName: "Alarm", predicate: pred)
-        if (objects?.count != 0) {
-            return objects?[0] as? Alarm
-        }
-        return nil
-    }
-    func getAllAlarms() -> [Alarm]
-    {
-        let alarms = getObjects(entityName: "Alarm")
-        if (alarms == nil) {
-            return []
-        }
-        return (alarms as? [Alarm])!
-
-    }
-    private func getObjects(entityName: String,predicate: NSPredicate) -> Array<Any>?
+    
+        internal func getObjects(entityName: String,predicate: NSPredicate) -> Array<Any>?
     {
         let entityDescription = getEntityDescirption(entityName: entityName)
         let request = NSFetchRequest<NSFetchRequestResult>()
@@ -64,7 +46,7 @@ class CoreDataHandler {
         return nil
    
     }
-    private func getObjects(entityName: String)->Array<Any>?
+    internal func getObjects(entityName: String)->Array<Any>?
     {
         let entityDescription = getEntityDescirption(entityName: entityName)
         let request = NSFetchRequest<NSFetchRequestResult>()
@@ -82,65 +64,20 @@ class CoreDataHandler {
         }
         return nil
     }
-    private func getEntityDescirption(entityName: String) -> NSEntityDescription
+    internal func getEntityDescirption(entityName: String) -> NSEntityDescription
     {
         return NSEntityDescription.entity(forEntityName: entityName, in: managedObjectContext)!
     }
-    func deleteObject(entity : Any)
+    internal func deleteObject(entity : Any)
     {
         managedObjectContext.delete(entity as! NSManagedObject)
         self.save()
     }
-    func deleteAlarn(alarmName: String) {
-        let alarm = getAlarmByName(name: alarmName)
-        if alarm != nil
-        {
-            let travelId = alarm?.travel_f_key
-            deleteObject(entity: alarm!)
-            let travel = getTravelById(id: Int32(travelId!))
-            if travel != nil {
-                deleteObject(entity: travel?.representingCoreDataObject!)
-            }
-        }
-    }
-    func fabricateTravelObject() -> Travel {
+       func fabricateTravelObject() -> Travel {
         let travelC:TravelC = fabricateCoreDataObject(entityName: "TravelC") as! TravelC
         var travel = InternalHelper.sharedInstance.getTravel()
         travel.representingCoreDataObject = travelC
         return travel
         
     }
-    func getTravelById(id: Int32) -> Travel? {
-        let pred = NSPredicate(format: "(id = %@)", String(id))
-        var objects = getObjects(entityName: "TravelC", predicate: pred)
-        if (objects?.count != 0) {
-            let travelC = objects?[0] as? TravelC
-            var travel = InternalHelper.sharedInstance.getTravel()
-            travel.setRepresentingCoreDataValues(coreDataTravel: travelC!)
-            return travel
-        }
-        return nil
-
     }
-    func getNewTravelID () ->Int32
-    {
-        let entityDescription = getEntityDescirption(entityName: "TravelC")
-        let request = NSFetchRequest<NSFetchRequestResult>()
-        request.entity = entityDescription
-        request.fetchLimit = 1;
-        request.sortDescriptors = [NSSortDescriptor.init(key: "id", ascending: false)]
-        var objects : Array<Any>? = nil
-        do{
-            try objects = managedObjectContext.fetch(request)
-        }
-        catch
-        {
-            
-        }
-        if objects?.count != 0
-        {
-            return (objects![0] as! TravelC).id + 1
-        }
-        return 0
-    }
-}

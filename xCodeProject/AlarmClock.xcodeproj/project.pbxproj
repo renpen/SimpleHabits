@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12DCFB921E9BEB5F007AA182 /* AlarmCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */; };
+		12DCFB941E9BEB6C007AA182 /* TravelCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFB931E9BEB6C007AA182 /* TravelCoreDataHandler.swift */; };
 		12ED64561E962F2B0052253B /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12ED64551E962F2B0052253B /* bell.mp3 */; };
 		4B14AE9B1DD33996000469BF /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9A1DD33996000469BF /* AlarmController.swift */; };
 		4B14AE9E1DD339C8000469BF /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */; };
 		4B14AEA91DD34268000469BF /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AEA71DD34268000469BF /* Alarm.swift */; };
 		4B14AEAA1DD34268000469BF /* Alarm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AEA81DD34268000469BF /* Alarm+CoreDataProperties.swift */; };
-		4B14AEAC1DD35CD8000469BF /* FunctionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AEAB1DD35CD8000469BF /* FunctionTest.swift */; };
 		4B4231201DF5F1C90024B625 /* UITestGetOverviewAndSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42311F1DF5F1C90024B625 /* UITestGetOverviewAndSave.swift */; };
 		4B4231241DF5FDC10024B625 /* UITestStartSmartCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4231231DF5FDC10024B625 /* UITestStartSmartCreation.swift */; };
 		4B42BBFE1DC502E100678BF0 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42BBFD1DC502E100678BF0 /* Mode.swift */; };
@@ -79,13 +80,14 @@
 
 /* Begin PBXFileReference section */
 		10C0C345824A0B92EF68C43E /* Pods-AlarmClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.debug.xcconfig"; sourceTree = "<group>"; };
+		12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmCoreDataHandler.swift; sourceTree = "<group>"; };
+		12DCFB931E9BEB6C007AA182 /* TravelCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCoreDataHandler.swift; sourceTree = "<group>"; };
 		12ED64551E962F2B0052253B /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = "../Source Files/Sounds/bell.mp3"; sourceTree = "<group>"; };
 		27A991DDFF7D5A2D527EF16E /* Pods-AlarmClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.release.xcconfig"; sourceTree = "<group>"; };
 		4B14AE9A1DD33996000469BF /* AlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
 		4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHandler.swift; path = ../CoreDataHandler.swift; sourceTree = "<group>"; };
 		4B14AEA71DD34268000469BF /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		4B14AEA81DD34268000469BF /* Alarm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alarm+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4B14AEAB1DD35CD8000469BF /* FunctionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionTest.swift; sourceTree = "<group>"; };
 		4B42311F1DF5F1C90024B625 /* UITestGetOverviewAndSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestGetOverviewAndSave.swift; sourceTree = "<group>"; };
 		4B4231231DF5FDC10024B625 /* UITestStartSmartCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestStartSmartCreation.swift; sourceTree = "<group>"; };
 		4B42BBFD1DC502E100678BF0 /* Mode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
@@ -165,6 +167,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12DCFB901E9BEB2D007AA182 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4B5B7A1E1DBE08F2006E7C39 /* AlarmClock.xcdatamodeld */,
+				4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */,
+				12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */,
+				12DCFB931E9BEB6C007AA182 /* TravelCoreDataHandler.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		2EFA7B418BB99681466C3137 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,12 +231,10 @@
 				4B6486421DC4299B00634F84 /* UI */,
 				4B64863D1DC41E7E00634F84 /* TravelCalculation */,
 				4B6053A41DD2821E00877B7C /* AlarmSound */,
+				12DCFB901E9BEB2D007AA182 /* CoreData */,
 				4B14AE991DD3391E000469BF /* Alarm */,
 				4B5B7A211DBE08F2006E7C39 /* Assets.xcassets */,
-				4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */,
-				4B5B7A1E1DBE08F2006E7C39 /* AlarmClock.xcdatamodeld */,
 				4B518E561DBF4D370039D1C3 /* CalendarTools.swift */,
-				4B14AEAB1DD35CD8000469BF /* FunctionTest.swift */,
 			);
 			path = AlarmClock;
 			sourceTree = "<group>";
@@ -577,8 +588,8 @@
 				B7BEDF961DDDC3F600E710AC /* CreateCRUDViewController.swift in Sources */,
 				B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */,
 				4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */,
-				4B14AEAC1DD35CD8000469BF /* FunctionTest.swift in Sources */,
 				B79C58E71DD3B1C50061C027 /* FunctionTestingViewController.swift in Sources */,
+				12DCFB941E9BEB6C007AA182 /* TravelCoreDataHandler.swift in Sources */,
 				4BED56E11DDA51CD007EAABB /* TravelC+CoreDataClass.swift in Sources */,
 				4B6053A61DD2826800877B7C /* AlarmSound.swift in Sources */,
 				4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */,
@@ -590,6 +601,7 @@
 				4B42BC021DC5061B00678BF0 /* TransitMode.swift in Sources */,
 				4B14AE9B1DD33996000469BF /* AlarmController.swift in Sources */,
 				B781AF041DEE1DD900F8EB1C /* OverviewViewController.swift in Sources */,
+				12DCFB921E9BEB5F007AA182 /* AlarmCoreDataHandler.swift in Sources */,
 				B71AC3281DD33290000DED43 /* CircularTransition.swift in Sources */,
 				4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */,
 				4B42BC081DC509C800678BF0 /* MapKitTravel.swift in Sources */,
