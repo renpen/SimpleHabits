@@ -39,7 +39,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         }
     }
     
-    @IBOutlet weak var alarmLogo: UILabel!
+    @IBOutlet weak var settingsButton: UIButton!
     
     let eventStore = EKEventStore()
     let cTools = CalendarTools()
@@ -47,7 +47,14 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     var events = [EKEvent]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        alarmLogo.text = "\u{f013}"
+        
+        settingsButton.backgroundColor = .clear
+        settingsButton.layer.cornerRadius = 5
+        settingsButton.layer.borderWidth = 1.5
+        settingsButton.layer.borderColor = UIColor.white.cgColor
+        settingsButton.setTitle("\u{f013}", for: .normal)
+        settingsButton.layer.cornerRadius = 0.5 * settingsButton.bounds.size.width
+        
         cTools.requestPermission(sender: self)
         let test = FunctionTest()           //for test purpose funciomalites
         test.testSomething()

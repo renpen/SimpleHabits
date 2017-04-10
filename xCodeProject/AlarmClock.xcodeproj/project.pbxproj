@@ -47,6 +47,7 @@
 		B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0291DCC95FD00E3BB4A /* Discard Button.png */; };
 		B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */; };
 		B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */; };
+		B76B80FD1E9BA91500649C1A /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B80FC1E9BA90E00649C1A /* fontawesome-webfont.ttf */; };
 		B781AF001DEE15F600F8EB1C /* TransportationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AEFF1DEE15F600F8EB1C /* TransportationObject.swift */; };
 		B781AF021DEE182600F8EB1C /* OffsetSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */; };
 		B781AF041DEE1DD900F8EB1C /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AF031DEE1DD900F8EB1C /* OverviewViewController.swift */; };
@@ -98,7 +99,7 @@
 		4B518E5C1DBFC9060039D1C3 /* Travel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		4B5B7A141DBE08F2006E7C39 /* AlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5B7A171DBE08F2006E7C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B5B7A191DBE08F2006E7C39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B5B7A191DBE08F2006E7C39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		4B5B7A1C1DBE08F2006E7C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B5B7A1F1DBE08F2006E7C39 /* AlarmClock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlarmClock.xcdatamodel; sourceTree = "<group>"; };
 		4B5B7A211DBE08F2006E7C39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 		B726C0291DCC95FD00E3BB4A /* Discard Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Discard Button.png"; path = "Source Files/Buttons/Discard Button.png"; sourceTree = SOURCE_ROOT; };
 		B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Smart Alarm Button.png"; path = "Source Files/Buttons/Smart Alarm Button.png"; sourceTree = SOURCE_ROOT; };
 		B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Standard Alarm Button.png"; path = "Source Files/Buttons/Standard Alarm Button.png"; sourceTree = SOURCE_ROOT; };
+		B76B80FC1E9BA90E00649C1A /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		B781AEFF1DEE15F600F8EB1C /* TransportationObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportationObject.swift; sourceTree = "<group>"; };
 		B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetSelectionViewController.swift; sourceTree = "<group>"; };
 		B781AF031DEE1DD900F8EB1C /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 		B703447A1DCB74BC00FEF291 /* Design Files */ = {
 			isa = PBXGroup;
 			children = (
+				B76B80FC1E9BA90E00649C1A /* fontawesome-webfont.ttf */,
 				B7D67D3D1E9B787C00C02B06 /* galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg */,
 				B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */,
 				B726C0241DCC95EE00E3BB4A /* BG Start Screen.png */,
@@ -449,7 +452,7 @@
 				TargetAttributes = {
 					4B5B7A131DBE08F2006E7C39 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = TTL5L96WQ5;
+						DevelopmentTeam = WSVX5KDTA9;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -494,6 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76B80FD1E9BA91500649C1A /* fontawesome-webfont.ttf in Resources */,
 				B7D67D3E1E9B787C00C02B06 /* galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg in Resources */,
 				B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */,
 				B726C0251DCC95EE00E3BB4A /* BG Creation Detail Screen.png in Resources */,
@@ -771,10 +775,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TTL5L96WQ5;
+				DEVELOPMENT_TEAM = WSVX5KDTA9;
 				INFOPLIST_FILE = AlarmClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.reneUser.AlarmClock;
+				PRODUCT_BUNDLE_IDENTIFIER = SimpleHabits.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -787,10 +791,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TTL5L96WQ5;
+				DEVELOPMENT_TEAM = WSVX5KDTA9;
 				INFOPLIST_FILE = AlarmClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.reneUser.AlarmClock;
+				PRODUCT_BUNDLE_IDENTIFIER = SimpleHabits.de;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

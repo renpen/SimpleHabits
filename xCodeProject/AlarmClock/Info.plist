@@ -4,10 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string></string>
-	</array>
 	<key>CFBundleDisplayName</key>
 	<string>AlarmClock</string>
 	<key>CFBundleExecutable</key>
@@ -28,6 +24,10 @@
 	<true/>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Für die Wecker-Funktion</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>fontawesome-webfont.ttf</string>
+	</array>
 	<key>UIApplicationExitsOnSuspend</key>
 	<true/>
 	<key>UIBackgroundModes</key>
