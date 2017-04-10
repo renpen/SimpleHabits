@@ -10,6 +10,9 @@
         <attribute name="wakeUpTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="wakeUpTone_f_key" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="Settings" representedClassName=".Settings" syncable="YES">
+        <attribute name="isStatusSmart" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="TravelC" representedClassName="TravelC" syncable="YES">
         <attribute name="departure_time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="destination" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,5 +25,6 @@
     <elements>
         <element name="Alarm" positionX="-63" positionY="-18" width="128" height="165"/>
         <element name="TravelC" positionX="-63" positionY="27" width="128" height="150"/>
+        <element name="Settings" positionX="-63" positionY="54" width="128" height="58"/>
     </elements>
 </model>
