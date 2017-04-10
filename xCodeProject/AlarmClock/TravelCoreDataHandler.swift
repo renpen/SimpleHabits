@@ -45,5 +45,13 @@ class TravelCoreDataHandler : CoreDataHandler
         }
         return 0
     }
+    internal func fabricateTravelObject() -> Travel {
+        let travelC:TravelC = fabricateCoreDataObject(entityName: "TravelC") as! TravelC
+        var travel = InternalHelper.sharedInstance.getTravel()
+        travel.representingCoreDataObject = travelC
+        return travel
+        
+    }
+
 
 }
