@@ -54,6 +54,9 @@
 		B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */; };
 		B79B2DF91DDDF5400093CCE3 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79B2DF81DDDF5400093CCE3 /* ShowTableViewCell.swift */; };
 		B79C58E71DD3B1C50061C027 /* FunctionTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */; };
+		B7B7B6E71E9BF6D20085E6BF /* Weather-PNG-Photos.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */; };
+		B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */; };
+		B7B7B6EB1E9BFF630085E6BF /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6EA1E9BFF630085E6BF /* Logo.png */; };
 		B7BEDF961DDDC3F600E710AC /* CreateCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF951DDDC3F600E710AC /* CreateCRUDViewController.swift */; };
 		B7BEDF981DDDC40A00E710AC /* UpdateCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF971DDDC40A00E710AC /* UpdateCRUDViewController.swift */; };
 		B7BEDF9A1DDDC41700E710AC /* DeleteCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF991DDDC41700E710AC /* DeleteCRUDViewController.swift */; };
@@ -134,6 +137,9 @@
 		B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTourPageViewController.swift; sourceTree = "<group>"; };
 		B79B2DF81DDDF5400093CCE3 /* ShowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTableViewCell.swift; sourceTree = "<group>"; };
 		B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionTestingViewController.swift; sourceTree = "<group>"; };
+		B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Weather-PNG-Photos.png"; sourceTree = "<group>"; };
+		B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bike-icon-md.png"; sourceTree = "<group>"; };
+		B7B7B6EA1E9BFF630085E6BF /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		B7BEDF951DDDC3F600E710AC /* CreateCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCRUDViewController.swift; sourceTree = "<group>"; };
 		B7BEDF971DDDC40A00E710AC /* UpdateCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCRUDViewController.swift; sourceTree = "<group>"; };
 		B7BEDF991DDDC41700E710AC /* DeleteCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteCRUDViewController.swift; sourceTree = "<group>"; };
@@ -346,6 +352,9 @@
 		B703447A1DCB74BC00FEF291 /* Design Files */ = {
 			isa = PBXGroup;
 			children = (
+				B7B7B6EA1E9BFF630085E6BF /* Logo.png */,
+				B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */,
+				B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */,
 				B76B80FC1E9BA90E00649C1A /* fontawesome-webfont.ttf */,
 				B7D67D3D1E9B787C00C02B06 /* galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg */,
 				B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */,
@@ -504,9 +513,12 @@
 				B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */,
 				B726C0281DCC95F400E3BB4A /* Logo Lanuchscreen.png in Resources */,
 				4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */,
+				B7B7B6E71E9BF6D20085E6BF /* Weather-PNG-Photos.png in Resources */,
+				B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */,
 				12ED64561E962F2B0052253B /* bell.mp3 in Resources */,
 				B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */,
 				4B5B7A221DBE08F2006E7C39 /* Assets.xcassets in Resources */,
+				B7B7B6EB1E9BFF630085E6BF /* Logo.png in Resources */,
 				B726C0261DCC95EE00E3BB4A /* BG Start Screen.png in Resources */,
 				4B5B7A1D1DBE08F2006E7C39 /* Main.storyboard in Resources */,
 				4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */,

@@ -39,7 +39,62 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         }
     }
     
+    
+    
+    
+    
+    
+    
     @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var settingsView: UIView!
+    @IBOutlet weak var WheaterImgView: UIImageView!
+    @IBOutlet weak var transportationImgView: UIImageView!
+    @IBOutlet weak var smartContainerView: UIView!
+    @IBOutlet weak var standardWheaterImgView: UIImageView!
+    @IBOutlet weak var standardContainerView: UIView!
+    @IBOutlet weak var alarmIcon: UILabel!
+    @IBOutlet weak var editButton: UIButton!
+    
+    var smartMode = true;
+    var activeWheatherView = UIImageView()
+    
+    @IBAction func settingsPressed(_ sender: Any) {
+        if (settingsView.alpha == 0) {
+            settingsButton.setTitle("\u{f00d}", for: .normal)
+            UIView.animate(withDuration: 0.5, animations: {
+                self.settingsView.alpha = 0.75
+            })
+        } else {
+            settingsButton.setTitle("\u{f013}", for: .normal)
+            UIView.animate(withDuration: 0.5, animations: {
+                self.settingsView.alpha = 0
+            })
+        }
+    }
+    
+    @IBAction func switchClicked(_ sender: Any) {
+        //temporary
+        if (smartMode){
+            smartContainerView.isHidden = true
+            standardContainerView.isHidden = false
+            editButton.isHidden = false
+            activeWheatherView = WheaterImgView
+        } else {
+            smartContainerView.isHidden = false
+            standardContainerView.isHidden = true
+            editButton.isHidden = true
+            activeWheatherView = standardWheaterImgView
+        }
+        smartMode = !smartMode
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     let eventStore = EKEventStore()
     let cTools = CalendarTools()
@@ -53,7 +108,15 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         settingsButton.layer.borderWidth = 1.5
         settingsButton.layer.borderColor = UIColor.white.cgColor
         settingsButton.setTitle("\u{f013}", for: .normal)
+        
+        editButton.setTitle("\u{f044}", for: .normal)
+        
+        
+        alarmIcon.text = "\u{f0f3}"
         settingsButton.layer.cornerRadius = 0.5 * settingsButton.bounds.size.width
+        
+        settingsView.layer.cornerRadius = 20
+        settingsView.clipsToBounds = true
         
         cTools.requestPermission(sender: self)
         let test = FunctionTest()           //for test purpose funciomalites
