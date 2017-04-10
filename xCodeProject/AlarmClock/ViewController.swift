@@ -39,12 +39,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         }
     }
     
-    
-    
-    
-    
-    
-    
+    var timer: Timer?
+
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var settingsView: UIView!
     @IBOutlet weak var WheaterImgView: UIImageView!
@@ -53,9 +49,12 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     @IBOutlet weak var standardWheaterImgView: UIImageView!
     @IBOutlet weak var standardContainerView: UIView!
     @IBOutlet weak var alarmIcon: UILabel!
+    @IBOutlet weak var alarmLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var clockLabel: UILabel!
     
     var smartMode = true;
+    var format = DateFormatter()
     var activeWheatherView = UIImageView()
     
     @IBAction func settingsPressed(_ sender: Any) {
@@ -88,29 +87,50 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         smartMode = !smartMode
     }
     
-    
-    
-    
-    
-    
-    
-    
+    func updateClock () {
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        var hourString = String(hour)
+        var length = 0;
+        length = hourString.characters.count
+        if (length == 1) {
+            hourString = "0" + hourString
+        }
+        length = 0;
+        var minutesString = String(minutes)
+        
+        length = minutesString.characters.count
+        
+        if (length == 0) {
+            minutesString = "0" + minutesString
+        }
+        var string = hourString + ":" + minutesString
+        clockLabel.text = string
+    }
     
     let eventStore = EKEventStore()
     let cTools = CalendarTools()
     var calendars : [EKCalendar] = []
     var events = [EKEvent]()
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
+        updateClock()
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+
+            self?.updateClock()
+            
+        }
+        
+        editButton.setTitle("\u{f044}", for: .normal)
         settingsButton.backgroundColor = .clear
         settingsButton.layer.cornerRadius = 5
         settingsButton.layer.borderWidth = 1.5
         settingsButton.layer.borderColor = UIColor.white.cgColor
         settingsButton.setTitle("\u{f013}", for: .normal)
-        
-        editButton.setTitle("\u{f044}", for: .normal)
-        
         
         alarmIcon.text = "\u{f0f3}"
         settingsButton.layer.cornerRadius = 0.5 * settingsButton.bounds.size.width

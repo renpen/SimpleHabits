@@ -57,6 +57,7 @@
 		B7B7B6E71E9BF6D20085E6BF /* Weather-PNG-Photos.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */; };
 		B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */; };
 		B7B7B6EB1E9BFF630085E6BF /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6EA1E9BFF630085E6BF /* Logo.png */; };
+		B7B7B6ED1E9C07CA0085E6BF /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6EC1E9C074D0085E6BF /* digital-7.ttf */; };
 		B7BEDF961DDDC3F600E710AC /* CreateCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF951DDDC3F600E710AC /* CreateCRUDViewController.swift */; };
 		B7BEDF981DDDC40A00E710AC /* UpdateCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF971DDDC40A00E710AC /* UpdateCRUDViewController.swift */; };
 		B7BEDF9A1DDDC41700E710AC /* DeleteCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF991DDDC41700E710AC /* DeleteCRUDViewController.swift */; };
@@ -140,6 +141,7 @@
 		B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Weather-PNG-Photos.png"; sourceTree = "<group>"; };
 		B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bike-icon-md.png"; sourceTree = "<group>"; };
 		B7B7B6EA1E9BFF630085E6BF /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		B7B7B6EC1E9C074D0085E6BF /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		B7BEDF951DDDC3F600E710AC /* CreateCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCRUDViewController.swift; sourceTree = "<group>"; };
 		B7BEDF971DDDC40A00E710AC /* UpdateCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCRUDViewController.swift; sourceTree = "<group>"; };
 		B7BEDF991DDDC41700E710AC /* DeleteCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteCRUDViewController.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				B7B7B6EA1E9BFF630085E6BF /* Logo.png */,
 				B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */,
 				B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */,
+				B7B7B6EC1E9C074D0085E6BF /* digital-7.ttf */,
 				B76B80FC1E9BA90E00649C1A /* fontawesome-webfont.ttf */,
 				B7D67D3D1E9B787C00C02B06 /* galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg */,
 				B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */,
@@ -506,6 +509,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B7B6ED1E9C07CA0085E6BF /* digital-7.ttf in Resources */,
 				B76B80FD1E9BA91500649C1A /* fontawesome-webfont.ttf in Resources */,
 				B7D67D3E1E9B787C00C02B06 /* galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg in Resources */,
 				B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */,
