@@ -113,7 +113,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="14:35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E74-Fu-BrA">
-                                <rect key="frame" x="36" y="232" width="302" height="125"/>
+                                <rect key="frame" x="6" y="232" width="362" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="170"/>
                                 <color key="textColor" red="0.23937450733199039" green="0.93065296904792927" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -89,24 +89,12 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     
     func updateClock () {
         let date = Date()
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        var hourString = String(hour)
-        var length = 0;
-        length = hourString.characters.count
-        if (length == 1) {
-            hourString = "0" + hourString
-        }
-        length = 0;
-        var minutesString = String(minutes)
         
-        length = minutesString.characters.count
+        var formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        var string = formatter.string(from: date)
+        print(string)
         
-        if (length == 0) {
-            minutesString = "0" + minutesString
-        }
-        var string = hourString + ":" + minutesString
         clockLabel.text = string
     }
     
