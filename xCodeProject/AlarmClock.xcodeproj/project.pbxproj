@@ -58,6 +58,7 @@
 		B7BEDF9A1DDDC41700E710AC /* DeleteCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF991DDDC41700E710AC /* DeleteCRUDViewController.swift */; };
 		B7BEDF9C1DDDC42A00E710AC /* ShowCRUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BEDF9B1DDDC42A00E710AC /* ShowCRUDViewController.swift */; };
 		B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */; };
+		B7D67D3E1E9B787C00C02B06 /* galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7D67D3D1E9B787C00C02B06 /* galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		B7BEDF991DDDC41700E710AC /* DeleteCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteCRUDViewController.swift; sourceTree = "<group>"; };
 		B7BEDF9B1DDDC42A00E710AC /* ShowCRUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCRUDViewController.swift; sourceTree = "<group>"; };
 		B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSelectionViewController.swift; sourceTree = "<group>"; };
+		B7D67D3D1E9B787C00C02B06 /* galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg"; sourceTree = "<group>"; };
 		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -342,6 +344,7 @@
 		B703447A1DCB74BC00FEF291 /* Design Files */ = {
 			isa = PBXGroup;
 			children = (
+				B7D67D3D1E9B787C00C02B06 /* galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg */,
 				B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */,
 				B726C0241DCC95EE00E3BB4A /* BG Start Screen.png */,
 				B726C0271DCC95F400E3BB4A /* Logo Lanuchscreen.png */,
@@ -491,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7D67D3E1E9B787C00C02B06 /* galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg in Resources */,
 				B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */,
 				B726C0251DCC95EE00E3BB4A /* BG Creation Detail Screen.png in Resources */,
 				B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */,

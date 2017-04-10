@@ -16,7 +16,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
-        transition.startingPoint = smartButton.center
+        //transition.startingPoint = smartButton.center
         transition.circleColor = UIColor.black
         
         return transition
@@ -24,7 +24,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
-        transition.startingPoint = smartButton.center
+        //transition.startingPoint = smartButton.center
         transition.circleColor = UIColor(red: 255/255, green: 147/255, blue: 59/255, alpha: 1.0)
         
         return transition
@@ -39,21 +39,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         }
     }
     
-    
-    @IBOutlet weak var smartButton: UIButton!
-    
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var pickShit: UIPickerView!
-    @IBOutlet weak var pickLabel: UILabel!
-    @IBOutlet weak var TravelTimeLabel: UILabel!
-    @IBOutlet weak var destination: UITextField!
-    @IBOutlet weak var source: UITextField!
-    @IBAction func calcTravel(_ sender: AnyObject) {
-    var travel = InternalHelper.sharedInstance.getTravel()
-        travel.destination = destination.text
-        travel.source = source.text
-        travel.mode = Mode.walking
-    }
+    @IBOutlet weak var alarmLogo: UILabel!
     
     let eventStore = EKEventStore()
     let cTools = CalendarTools()
@@ -61,16 +47,11 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     var events = [EKEvent]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        alarmLogo.text = "\u{f013}"
         cTools.requestPermission(sender: self)
         let test = FunctionTest()           //for test purpose funciomalites
         test.testSomething()
-        /*
-         
-         UI Picker for Calendars is removed!
-         
-        */
-        //pickShit.dataSource = self;
-        //pickShit.delegate = self;
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -127,8 +108,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
             dateFormatter.dateFormat = "HH-mm"
             time = dateFormatter.string(from: event!.startDate)
         }
-        pickLabel.text = title
-        timeLabel.text = time
+        //pickLabel.text = title
+        //timeLabel.text = time
     }
 
 }
