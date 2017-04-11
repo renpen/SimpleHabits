@@ -53,7 +53,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         travel.destination = destination.text
         travel.source = source.text
         travel.mode = Mode.walking
-        travel.calculateTravelTime(closure: {x in self.TravelTimeLabel.text? = x;print("closure arrived: \(x)")})
     }
     
     let eventStore = EKEventStore()
@@ -63,8 +62,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         cTools.requestPermission(sender: self)
-        let test = FunctionTest()           //for test purpose funciomalites
-        test.testSomething()
+//        let test = FunctionTest()           //for test purpose funciomalites
+//        test.testSomething()
         /*
          
          UI Picker for Calendars is removed!

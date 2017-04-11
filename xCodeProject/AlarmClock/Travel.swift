@@ -19,7 +19,7 @@ protocol Travel {
     var representingCoreDataObject : TravelC? {get set}
     func getTravelTimeInS() -> Int
     func calculationFinished()
-    func calculateTravelTime(closure: @escaping (_ : String)-> Void)
+    func calculateTravelTime(closure: @escaping (_ : Int)-> Void)
 }
 extension Travel {
     var properties : NSDictionary{
@@ -36,7 +36,7 @@ extension Travel {
         }
             representingCoreDataObject?.departure_time = Int32(departure_time!)
         
-        CoreDataHandler.sharedInstance.save()
+        TravelCoreDataHandler.sharedInstance.save()
     }
     mutating func setRepresentingCoreDataValues(coreDataTravel : TravelC)
     {

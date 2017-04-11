@@ -23,7 +23,6 @@ class GoogleDistanceMatrixTravel : Travel
     
     private func isValid() -> Bool      //determine if the minimun that the request need is set
     {
-    
         return true
     }
     func getTravelTimeInS() -> Int
@@ -34,14 +33,14 @@ class GoogleDistanceMatrixTravel : Travel
     {
         print("FINSIHED: YEEEES " + (self.calculatedJsonObject?.durationText)!)
     }
-    func calculateTravelTime(closure: @escaping (_ : String) -> Void)
+    func calculateTravelTime(closure: @escaping (_ : Int) -> Void)
     {
         if isValid()
         {
             RestApiManager.sharedInstance.request(url: generateUrl()){ (json: JSON) in
                 self.calculatedJsonObject =  GoogleDistanceMatrixObject(json : json)
                 DispatchQueue.main.async(execute: {         //the thing that need toDo when the Request is finished
-                    closure((self.calculatedJsonObject?.durationText)!)
+                    closure((self.calculatedJsonObject?.durationValue)!)
                 })
             }
         }
@@ -54,7 +53,7 @@ class GoogleDistanceMatrixTravel : Travel
         var url = properties["GoogleDistanceMatrixBaseUrl"] as! String
         print(url)
         url += "?origins=\(source!)&destinations=\(destination!)&key=\(properties["GoogleAPIKey"]!)"
-        if (departure_time != nil) {
+        if (departure_time != nil && departure_time! > 0) {
             url += "&departure_time=\(departure_time!)"
         }
         if (mode != nil)

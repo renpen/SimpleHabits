@@ -17,7 +17,7 @@ class ShowCRUDViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func loadAlarms() {
-        alarms = CoreDataHandler.sharedInstance.getAllAlarms() 
+        //alarms = CoreDataHandler.sharedInstance.getAllAlarms()
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -59,7 +59,7 @@ class ShowCRUDViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete
         {
-            CoreDataHandler.sharedInstance.deleteAlarn(alarmName: alarms[indexPath.row].name)
+            //CoreDataHandler.sharedInstance.deleteAlarn(alarmName: alarms[indexPath.row].name)
             loadAlarms()
             tableView.reloadData()
         }

@@ -27,13 +27,13 @@ class UpdateCRUDViewController: UIViewController {
     @IBOutlet weak var destinationTF: UITextField!
     
     @IBAction func updatePressed(_ sender: Any) {
-        let updateAlarm = CoreDataHandler.sharedInstance.getAlarmByName(name: nameTF.text!)
-        
-        updateAlarm?.travel?.destination = destinationTF.text!
-        
-        updateAlarm?.save()
-        
-        self.dismiss(animated: true, completion: nil)
+//        let updateAlarm = CoreDataHandler.sharedInstance.getAlarmByName(name: nameTF.text!)
+//        
+//        updateAlarm?.travel?.destination = destinationTF.text!
+//        
+//        updateAlarm?.save()
+//        
+//        self.dismiss(animated: true, completion: nil)
     }
     
     /*

@@ -11,6 +11,7 @@ import EventKit
 
 let eventStore = EKEventStore()
 class CalendarTools {
+    static let sharedInstance = CalendarTools()
     
 
     func requestPermission(sender: ViewController)
@@ -40,6 +41,11 @@ class CalendarTools {
 func getAllCalendar() -> [EKCalendar]
     {
         return eventStore.calendars(for: EKEntityType.event)
+        
+    }
+    func getCalendarByIdentifier(identifier: String) -> EKCalendar
+    {
+        return eventStore.calendar(withIdentifier: identifier)!
     }
     
 func getFirstAppointmentOneDayLater(calendar : EKCalendar) -> EKEvent?
