@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import AVFoundation
+
 
 class FileSound : AlarmSound
 {
-    var player: AVAudioPlayer?
     var fileName : String?
     var url : String?
     var source : String?
@@ -20,25 +19,8 @@ class FileSound : AlarmSound
     init() {
         source = SoundTypes.file.rawValue
     }
-    func playSound()
-    {
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-        } catch _ {
-            return print("error")
-        }
-        let url = Bundle.main.url(forResource: fileName, withExtension: "mp3")!
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            guard let player = player else { return }
-            player.prepareToPlay()
-            player.play()
-        } catch let error {
-            print("Play ERROR")
-            print(error.localizedDescription)
-        }
-
-        
+    func playSound() {
+        SoundPlayer.sharedInstance.playSound(fileName: self.fileName!)
     }
+    
 }

@@ -13,6 +13,8 @@
 		125F038C1E9D258100679997 /* AlarmSoundCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F038B1E9D258100679997 /* AlarmSoundCoreDataHandler.swift */; };
 		125F038E1E9D26A400679997 /* FileSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F038D1E9D26A400679997 /* FileSound.swift */; };
 		125F03911E9D29D100679997 /* SoundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03901E9D29D100679997 /* SoundTypes.swift */; };
+		125F03931E9D405400679997 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03921E9D405400679997 /* SoundManager.swift */; };
+		125F03951E9D409100679997 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03941E9D409100679997 /* SoundPlayer.swift */; };
 		12DCFB921E9BEB5F007AA182 /* AlarmCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */; };
 		12DCFB941E9BEB6C007AA182 /* TravelCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFB931E9BEB6C007AA182 /* TravelCoreDataHandler.swift */; };
 		12DCFBA41E9BF891007AA182 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFBA21E9BF891007AA182 /* Settings.swift */; };
@@ -94,6 +96,8 @@
 		125F038B1E9D258100679997 /* AlarmSoundCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSoundCoreDataHandler.swift; sourceTree = "<group>"; };
 		125F038D1E9D26A400679997 /* FileSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSound.swift; sourceTree = "<group>"; };
 		125F03901E9D29D100679997 /* SoundTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundTypes.swift; sourceTree = "<group>"; };
+		125F03921E9D405400679997 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		125F03941E9D409100679997 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmCoreDataHandler.swift; sourceTree = "<group>"; };
 		12DCFB931E9BEB6C007AA182 /* TravelCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCoreDataHandler.swift; sourceTree = "<group>"; };
 		12DCFBA21E9BF891007AA182 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = ../Settings.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				125F038D1E9D26A400679997 /* FileSound.swift */,
+				125F03921E9D405400679997 /* SoundManager.swift */,
 			);
 			name = FileSound;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				125F038F1E9D26AD00679997 /* FileSound */,
+				125F03941E9D409100679997 /* SoundPlayer.swift */,
 				125F03851E9D235400679997 /* AlarmSound+CoreDataClass.swift */,
 				125F03861E9D235400679997 /* AlarmSound+CoreDataProperties.swift */,
 				125F03891E9D23E600679997 /* AlarmSound.swift */,
@@ -634,6 +640,7 @@
 				4BED56E11DDA51CD007EAABB /* TravelC+CoreDataClass.swift in Sources */,
 				125F038E1E9D26A400679997 /* FileSound.swift in Sources */,
 				125F03911E9D29D100679997 /* SoundTypes.swift in Sources */,
+				125F03931E9D405400679997 /* SoundManager.swift in Sources */,
 				4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */,
 				12DCFBA41E9BF891007AA182 /* Settings.swift in Sources */,
 				125F038A1E9D23E600679997 /* AlarmSound.swift in Sources */,
@@ -664,6 +671,7 @@
 				4B9A22F21DC4A5B900933E2E /* RestApiManager.swift in Sources */,
 				4B6053A81DD282C400877B7C /* ActivePattern.swift in Sources */,
 				4B42BC001DC505AC00678BF0 /* TrafficModel.swift in Sources */,
+				125F03951E9D409100679997 /* SoundPlayer.swift in Sources */,
 				125F038C1E9D258100679997 /* AlarmSoundCoreDataHandler.swift in Sources */,
 				4B14AEA91DD34268000469BF /* Alarm.swift in Sources */,
 				4B42BC061DC5099000678BF0 /* GoogleDistanceMatrixTravel.swift in Sources */,
