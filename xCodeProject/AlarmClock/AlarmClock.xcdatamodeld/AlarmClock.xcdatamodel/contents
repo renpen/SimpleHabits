@@ -10,6 +10,12 @@
         <attribute name="wakeUpTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="wakeUpTone_f_key" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="AlarmSoundC" representedClassName=".AlarmSoundC" syncable="YES">
+        <attribute name="fileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Settings" representedClassName=".Settings" syncable="YES">
         <attribute name="isStatusSmart" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
@@ -24,7 +30,8 @@
     </entity>
     <elements>
         <element name="Alarm" positionX="-63" positionY="-18" width="128" height="165"/>
-        <element name="TravelC" positionX="-63" positionY="27" width="128" height="150"/>
         <element name="Settings" positionX="-63" positionY="54" width="128" height="58"/>
+        <element name="TravelC" positionX="-63" positionY="27" width="128" height="150"/>
+        <element name="AlarmSoundC" positionX="-63" positionY="54" width="128" height="105"/>
     </elements>
 </model>

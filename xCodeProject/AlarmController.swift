@@ -8,7 +8,6 @@
 
 import Foundation
 import AVFoundation
-var player: AVAudioPlayer?
 class AlarmController {
     static let sharedInstance = AlarmController();
     var timer : Timer?
@@ -79,6 +78,11 @@ class AlarmController {
         let offset = alarm?.offset
         let appointment = calendarTools.getFirstAppointmentUpToOneDayLater(calendar: calendarTools.getCalendarByIdentifier(identifier: (alarm?.calendarIdentifier)!))
         let calendarAPI = Calendar.current
+        if appointment == nil
+        {
+            print("Kein Appointment gefunden")
+            return
+        }
         print("Appointment: " + (appointment?.description)!)
         var date = calendarAPI.date(byAdding: .minute, value: -(Int(offset!)), to: (appointment?.startDate)!)
         date = calendarAPI.date(byAdding: .second, value: -(travelTime), to: date!)
@@ -88,23 +92,7 @@ class AlarmController {
     }
     @objc func playSound()
     {
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-        } catch _ {
-            return print("error")
-        }
-        print("test");
-            let url = Bundle.main.url(forResource: "bell", withExtension: "mp3")!
-            do {
-                player = try AVAudioPlayer(contentsOf: url)
-                guard let player = player else { return }
-                player.prepareToPlay()
-                player.play()
-            } catch let error {
-                print("Play ERROR")
-                print(error.localizedDescription)
-            }
+        temp_alarm?.wakeUpTone?.playSound()
     }
     
 }
