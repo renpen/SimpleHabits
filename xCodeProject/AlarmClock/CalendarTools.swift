@@ -48,12 +48,14 @@ func getAllCalendar() -> [EKCalendar]
         return eventStore.calendar(withIdentifier: identifier)!
     }
     
-func getFirstAppointmentOneDayLater(calendar : EKCalendar) -> EKEvent?
+func getFirstAppointmentUpToOneDayLater(calendar : EKCalendar) -> EKEvent?
     {
-        return getAppointmentOneDayLater(appointmentNumber: 0, calendar: calendar)
+        return getAppointmentUpToOneDayLater(appointmentNumber: 0, calendar: calendar)
     }
-func getAppointmentOneDayLater(appointmentNumber: Int,calendar : EKCalendar) -> EKEvent?
+    //
+func getAppointmentUpToOneDayLater(appointmentNumber: Int,calendar : EKCalendar) -> EKEvent?
 {
+        var appointmentNumber = appointmentNumber;
         let todayDate = Date()
         var dateComponents = DateComponents()
         dateComponents.day = 1
@@ -70,6 +72,10 @@ func getAppointmentOneDayLater(appointmentNumber: Int,calendar : EKCalendar) -> 
         }
         else
         {
+            //Schaue solange rein, bis du ein Event findest, welches kein AlldayEvent ist
+            while events[appointmentNumber].isAllDay{
+                appointmentNumber += 1
+            }
             return events[appointmentNumber]
         }
 

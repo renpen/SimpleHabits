@@ -35,4 +35,8 @@ public class Alarm: NSManagedObject {
     {
         travel?.save() // the context will be saved, so that the travel and the alarmobject will be saved,too
     }
+    func activate()
+    {
+        AlarmController.sharedInstance.calculateAndSetWakeUpTime(alarm: self)
+    }
 }
