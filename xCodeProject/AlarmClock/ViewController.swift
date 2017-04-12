@@ -17,6 +17,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     var popoverAlpha = 0.75
     var animationDuration = 0.5
 
+    @IBOutlet weak var alarmPicker: UIDatePicker!
+    
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var settingsView: UIView!
     @IBOutlet weak var WheaterImgView: UIImageView!
@@ -63,10 +65,17 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             self.alarmPickerView.alpha = 0
         })
         editButton.setTitle("\u{f044}", for: .normal)
-        standardAlarmSavedAfterEditing()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        let string = formatter.string(from: alarmPicker.date)
+        alarmLabel.text = string
+        
+        standardAlarmSavedAfterEditing(newAlarmString: string, newAlarmDate: alarmPicker.date)
     }
     
-    func standardAlarmSavedAfterEditing () {
+    func standardAlarmSavedAfterEditing (newAlarmString: String, newAlarmDate: Date) {
+        
         
     }
     
@@ -127,13 +136,12 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         
         updateClock()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            
             self?.updateClock()
             
         }
     }
     
-    func updateClock () {
+    func updateClock() {
         let date = Date()
         
         let formatter = DateFormatter()
@@ -148,7 +156,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         
         setClock()
         preloadUIChanges()
-
+        
         cTools.requestPermission(sender: self)
         let test = FunctionTest()           //for test purpose funciomalites
         test.testSomething()

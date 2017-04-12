@@ -88,7 +88,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ro-jw-Grm" userLabel="AlarmPicker">
-                                <rect key="frame" x="16" y="390" width="343" height="186"/>
+                                <rect key="frame" x="16" y="395" width="343" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="K7S-im-LrZ">
@@ -117,7 +117,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6:45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyF-jh-vr5">
-                                                <rect key="frame" x="81" y="3" width="79.5" height="52"/>
+                                                <rect key="frame" x="55" y="3" width="113" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="50"/>
                                                 <color key="textColor" red="0.23937450730000001" green="0.93065296900000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -135,7 +135,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lu-cy-TZn">
-                                                <rect key="frame" x="28" y="2" width="45" height="52"/>
+                                                <rect key="frame" x="19" y="2" width="45" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="40"/>
                                                 <color key="textColor" red="0.23937450730000001" green="0.93065296900000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -174,6 +174,7 @@
                         <outlet property="WheaterImgView" destination="EvJ-xi-tJp" id="Qew-Is-eBO"/>
                         <outlet property="alarmIcon" destination="4lu-cy-TZn" id="i4Z-jy-L1G"/>
                         <outlet property="alarmLabel" destination="eyF-jh-vr5" id="eDN-N6-N0T"/>
+                        <outlet property="alarmPicker" destination="K7S-im-LrZ" id="lAG-Vm-mn3"/>
                         <outlet property="alarmPickerView" destination="0ro-jw-Grm" id="brs-6Z-0Du"/>
                         <outlet property="backgroundImageView" destination="fXU-JC-ZfX" id="Cv1-uE-xyX"/>
                         <outlet property="clockLabel" destination="E74-Fu-BrA" id="KDU-Em-ABQ"/>
@@ -189,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-362.39999999999998" y="174.96251874062969"/>
+            <point key="canvasLocation" x="-366" y="169"/>
         </scene>
     </scenes>
     <resources>
