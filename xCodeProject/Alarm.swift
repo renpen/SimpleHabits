@@ -12,7 +12,6 @@ import CoreData
 @objc(Alarm)
 public class Alarm: NSManagedObject {
     var travel : Travel?
-    var activePattern : ActivePattern?
     var wakeUpTone : AlarmSound?
     
     override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?)

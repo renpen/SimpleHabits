@@ -42,7 +42,6 @@
 		4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */; };
 		4B5B7A301DBE08F2006E7C39 /* AlarmClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A2F1DBE08F2006E7C39 /* AlarmClockTests.swift */; };
 		4B5B7A3B1DBE08F2006E7C39 /* UITestSelectOSCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A3A1DBE08F2006E7C39 /* UITestSelectOSCalendar.swift */; };
-		4B6053A81DD282C400877B7C /* ActivePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6053A71DD282C400877B7C /* ActivePattern.swift */; };
 		4B6486411DC4286900634F84 /* InternalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6486401DC4286900634F84 /* InternalHelper.swift */; };
 		4B75D4891DF69F2700D54451 /* UITestCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B75D4881DF69F2700D54451 /* UITestCRUD.swift */; };
 		4B9A22F21DC4A5B900933E2E /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A22F11DC4A5B900933E2E /* RestApiManager.swift */; };
@@ -132,7 +131,6 @@
 		4B5B7A361DBE08F2006E7C39 /* AlarmClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5B7A3A1DBE08F2006E7C39 /* UITestSelectOSCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestSelectOSCalendar.swift; sourceTree = "<group>"; };
 		4B5B7A3C1DBE08F2006E7C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B6053A71DD282C400877B7C /* ActivePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActivePattern.swift; path = AlarmClock/ActivePattern.swift; sourceTree = "<group>"; };
 		4B6486401DC4286900634F84 /* InternalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalHelper.swift; sourceTree = "<group>"; };
 		4B75D4881DF69F2700D54451 /* UITestCRUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestCRUD.swift; sourceTree = "<group>"; };
 		4B9A22F11DC4A5B900933E2E /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 		4B14AE991DD3391E000469BF /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				4B6053A71DD282C400877B7C /* ActivePattern.swift */,
 				4B14AEA71DD34268000469BF /* Alarm.swift */,
 				4B14AEA81DD34268000469BF /* Alarm+CoreDataProperties.swift */,
 				4B14AE9A1DD33996000469BF /* AlarmController.swift */,
@@ -669,7 +666,6 @@
 				4BED56E21DDA51CD007EAABB /* TravelC+CoreDataProperties.swift in Sources */,
 				B7BEDF9A1DDDC41700E710AC /* DeleteCRUDViewController.swift in Sources */,
 				4B9A22F21DC4A5B900933E2E /* RestApiManager.swift in Sources */,
-				4B6053A81DD282C400877B7C /* ActivePattern.swift in Sources */,
 				4B42BC001DC505AC00678BF0 /* TrafficModel.swift in Sources */,
 				125F03951E9D409100679997 /* SoundPlayer.swift in Sources */,
 				125F038C1E9D258100679997 /* AlarmSoundCoreDataHandler.swift in Sources */,
