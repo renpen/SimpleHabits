@@ -49,16 +49,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             self.switchMode(mode: "smart")
         }
     }
-    
-    func updateClock () {
-        let date = Date()
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-        let string = formatter.string(from: date)
-        clockLabel.text = string
-    }
-    
+
     let eventStore = EKEventStore()
     let cTools = CalendarTools()
     var calendars : [EKCalendar] = []
@@ -85,19 +76,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         }
     }
     
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.orientationChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-        
-        updateClock()
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-
-            self?.updateClock()
-            
-        }
-        
+    func preloadUIChanges() {
         editButton.setTitle("\u{f044}", for: .normal)
         settingsButton.backgroundColor = .clear
         settingsButton.layer.cornerRadius = 5
@@ -110,7 +89,35 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         
         settingsView.layer.cornerRadius = 20
         settingsView.clipsToBounds = true
+    }
+    
+    func setClock () {
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.orientationChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
+        updateClock()
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            
+            self?.updateClock()
+            
+        }
+    }
+    
+    func updateClock () {
+        let date = Date()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        let string = formatter.string(from: date)
+        clockLabel.text = string
+    }
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        setClock()
+        preloadUIChanges()
+
         cTools.requestPermission(sender: self)
         let test = FunctionTest()           //for test purpose funciomalites
         test.testSomething()
@@ -126,6 +133,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     {
         calendars = cTools.getAllCalendar()
     }
+    
     func permissionDenied()
     {
         
@@ -134,35 +142,41 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     func switchMode(mode: String) {
         switch mode {
             case "smart":
-                UIView.animate(withDuration: 0.4, animations: {
-                    self.smartContainerView.isHidden = false
-                    self.standardContainerView.isHidden = true
-                    self.editButton.isHidden = true
-                })
+                hideSettingsForLandscape(input: false)
+                
+                self.smartContainerView.isHidden = false
+                self.standardContainerView.isHidden = true
+                self.editButton.isHidden = true
                 self.activeWheatherView = self.standardWheaterImgView
                 self.mode = mode
                 break
             case "standard":
-                UIView.animate(withDuration: 0.4, animations: {
-                    self.smartContainerView.isHidden = true
-                    self.standardContainerView.isHidden = false
-                    self.editButton.isHidden = false
-                })
+                hideSettingsForLandscape(input: false)
+                
+                self.smartContainerView.isHidden = true
+                self.standardContainerView.isHidden = false
+                self.editButton.isHidden = false
                 self.activeWheatherView = self.WheaterImgView
                 self.mode = mode
                 break
             case "landscape":
-                UIView.animate(withDuration: 0.4, animations: {
-                    self.smartContainerView.isHidden = true
-                    self.standardContainerView.isHidden = false
-                    self.editButton.isHidden = true
-                })
+                hideSettingsForLandscape(input: true)
+                
+                self.smartContainerView.isHidden = true
+                self.standardContainerView.isHidden = false
+                self.editButton.isHidden = true
                 self.activeWheatherView = self.WheaterImgView
                 self.inLandscape = true
             default:
                 print("Error in switchMode()")
         }
         
+    }
+    
+    func hideSettingsForLandscape (input: Bool) {
+        settingsButton.isHidden = input
+        settingsView.isHidden = input
+
     }
     
 }
