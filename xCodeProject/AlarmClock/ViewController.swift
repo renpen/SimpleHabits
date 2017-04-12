@@ -13,6 +13,9 @@ import CoreData
 class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     var timer: Timer?
+    
+    var popoverAlpha = 0.75
+    var animationDuration = 0.5
 
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var settingsView: UIView!
@@ -26,20 +29,45 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var clockLabel: UILabel!
 
+    @IBOutlet weak var alarmPickerView: UIView!
+    
     var activeWheatherView = UIImageView()
     
     @IBAction func settingsPressed(_ sender: Any) {
         if (settingsView.alpha == 0) {
             settingsButton.setTitle("\u{f00d}", for: .normal)
-            UIView.animate(withDuration: 0.5, animations: {
-                self.settingsView.alpha = 0.75
+            UIView.animate(withDuration: animationDuration, animations: {
+                self.settingsView.alpha = CGFloat(self.popoverAlpha)
             })
         } else {
             settingsButton.setTitle("\u{f013}", for: .normal)
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: animationDuration, animations: {
                 self.settingsView.alpha = 0
             })
         }
+    }
+    
+    @IBAction func editAlarmPressed(_ sender: Any) {
+        if alarmPickerView.alpha == 0 {
+            UIView.animate(withDuration: animationDuration, animations: {
+                self.alarmPickerView.alpha = CGFloat(self.popoverAlpha)
+            })
+            editButton.setTitle("\u{f0c7}", for: .normal)
+        } else {
+            closeAlarmEditing()
+        }
+    }
+    
+    func closeAlarmEditing () {
+        UIView.animate(withDuration: animationDuration, animations: {
+            self.alarmPickerView.alpha = 0
+        })
+        editButton.setTitle("\u{f044}", for: .normal)
+        standardAlarmSavedAfterEditing()
+    }
+    
+    func standardAlarmSavedAfterEditing () {
+        
     }
     
     @IBAction func switchClicked(_ sender: Any) {
@@ -78,14 +106,17 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     func preloadUIChanges() {
         editButton.setTitle("\u{f044}", for: .normal)
+        
         settingsButton.backgroundColor = .clear
         settingsButton.layer.cornerRadius = 5
         settingsButton.layer.borderWidth = 1.5
         settingsButton.layer.borderColor = UIColor.white.cgColor
         settingsButton.setTitle("\u{f013}", for: .normal)
+        settingsButton.layer.cornerRadius = 0.5 * settingsButton.bounds.size.width
         
         alarmIcon.text = "\u{f0f3}"
-        settingsButton.layer.cornerRadius = 0.5 * settingsButton.bounds.size.width
+        
+        alarmPickerView.layer.cornerRadius = 15
         
         settingsView.layer.cornerRadius = 20
         settingsView.clipsToBounds = true
