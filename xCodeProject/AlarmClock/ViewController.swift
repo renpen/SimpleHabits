@@ -102,9 +102,28 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     let cTools = CalendarTools()
     var calendars : [EKCalendar] = []
     var events = [EKEvent]()
+    
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    func orientationChanged() {
+        if(UIDeviceOrientationIsLandscape(UIDevice.current.orientation)){
+            backgroundImageView.image = UIImage(named:"landscapeBackground.jpg")
+        }
+        
+        if(UIDeviceOrientationIsPortrait(UIDevice.current.orientation)){
+            backgroundImageView.image = UIImage(named:"portaitBackground.jpg")
+        }
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: Selector("orientationChanged"), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
         updateClock()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
@@ -189,6 +208,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         //pickLabel.text = title
         //timeLabel.text = time
     }
+    
+    
 
 }
 

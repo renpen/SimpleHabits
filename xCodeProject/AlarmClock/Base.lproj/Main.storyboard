@@ -29,9 +29,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fXU-JC-ZfX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portaitBackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fXU-JC-ZfX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocI-NP-W05">
                                 <rect key="frame" x="162" y="597" width="50" height="50"/>
@@ -121,11 +120,18 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fXU-JC-ZfX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2D0-0k-wio"/>
+                            <constraint firstAttribute="trailing" secondItem="fXU-JC-ZfX" secondAttribute="trailing" id="aXl-Qh-iUq"/>
+                            <constraint firstItem="fXU-JC-ZfX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="frW-8P-kzI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fXU-JC-ZfX" secondAttribute="bottom" id="yah-x0-f1v"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="WheaterImgView" destination="EvJ-xi-tJp" id="Qew-Is-eBO"/>
                         <outlet property="alarmIcon" destination="4lu-cy-TZn" id="i4Z-jy-L1G"/>
                         <outlet property="alarmLabel" destination="eyF-jh-vr5" id="eDN-N6-N0T"/>
+                        <outlet property="backgroundImageView" destination="fXU-JC-ZfX" id="Cv1-uE-xyX"/>
                         <outlet property="clockLabel" destination="E74-Fu-BrA" id="KDU-Em-ABQ"/>
                         <outlet property="editButton" destination="QK2-QW-GAN" id="tFV-d8-W9O"/>
                         <outlet property="settingsButton" destination="ocI-NP-W05" id="eFw-ma-Bk4"/>
@@ -145,6 +151,6 @@
         <image name="Logo.png" width="837" height="935"/>
         <image name="Weather-PNG-Photos.png" width="512" height="512"/>
         <image name="bike-icon-md.png" width="300" height="300"/>
-        <image name="galaxy-and-planet-retina-wallpapers-iphone-5f5e9aed779689bdbdf07b083837b838-large-1409802.jpg" width="369" height="572"/>
+        <image name="portaitBackground.jpg" width="369" height="572"/>
     </resources>
 </document>
