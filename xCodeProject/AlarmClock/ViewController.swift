@@ -113,7 +113,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let event = cTools.getFirstAppointmentOneDayLater(calendar: calendars[row])
+        let event = cTools.getFirstAppointmentUpToOneDayLater(calendar: calendars[row])
         var title = ""
         var time = ""
         if event == nil{
