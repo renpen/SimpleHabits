@@ -17,7 +17,9 @@ class ShowCRUDViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func loadAlarms() {
-        //alarms = CoreDataHandler.sharedInstance.getAllAlarms()
+        let alarm = AlarmCoreDataHandler.sharedInstance.getSmartAlarm()
+        print(alarm.wakeUpTone?.fileName)
+        //alarms[0] = alarm;
     }
     
     @IBOutlet weak var tableView: UITableView!

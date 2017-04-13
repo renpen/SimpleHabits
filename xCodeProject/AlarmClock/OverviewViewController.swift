@@ -39,6 +39,11 @@ class OverviewViewController: UIViewController {
         alarm.travel?.trafficModel = TrafficModel.best_guess
         alarm.offset = Int16(parentVC.alarmObject.offset)
         alarm.calendarIdentifier = (parentVC.alarmObject.calendar?.calendarIdentifier)!
+        alarm.smartAlarm = true
+        var fileSound = FileSound()
+        fileSound.generateRepresentingCoreDataObject();
+        fileSound.fileName = "bla"
+        alarm.wakeUpTone = fileSound
         alarm.save()
         AlarmController.sharedInstance.calculateAndSetWakeUpTime(alarm: alarm);
         self.dismiss(animated: true, completion: nil)
