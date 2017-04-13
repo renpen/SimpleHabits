@@ -43,8 +43,8 @@ class AlarmSoundCoreDataHandler : CoreDataHandler
     internal func getAlarmSoundById(id: Int32) -> AlarmSound? {
         let pred = NSPredicate(format: "(id = %@)", String(id))
         var objects = getObjects(entityName: "AlarmSoundC", predicate: pred)
-        if (objects?.count != 0) {
-            let alarmSoundC = objects?[0] as? AlarmSoundC
+        if let objects = objects {
+            let alarmSoundC = objects[0] as? AlarmSoundC
             var alarmSound : AlarmSound?
             switch alarmSoundC?.source {
             case SoundTypes.appleMusic.rawValue?:

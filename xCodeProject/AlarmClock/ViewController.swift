@@ -34,6 +34,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var alarmPickerView: UIView!
     
     var activeWheatherView = UIImageView()
+    var settingsCD =  SettingsCoreDataHandler.sharedInstance.getSettings()
     
     @IBAction func settingsPressed(_ sender: Any) {
         if (settingsView.alpha == 0) {
@@ -82,6 +83,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     @IBAction func switchClicked(_ sender: Any) {
         if mode == "smart" {
             self.switchMode(mode: "standard")
+            
         } else if mode == "standard" {
             self.switchMode(mode: "smart")
         }
@@ -153,7 +155,14 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        if settingsCD.isStatusSmart
+        {
+            switchMode(mode: "smart")
+        }
+        else
+        {
+            switchMode(mode: "standard")
+        }
         setClock()
         preloadUIChanges()
         
@@ -193,6 +202,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
                 self.standardContainerView.isHidden = true
                 self.editButton.isHidden = true
                 self.activeWheatherView = self.standardWheaterImgView
+                self.settingsCD.isStatusSmart = true
+                self.settingsCD.save()
                 self.mode = mode
                 break
             case "standard":
@@ -202,6 +213,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
                 self.standardContainerView.isHidden = false
                 self.editButton.isHidden = false
                 self.activeWheatherView = self.WheaterImgView
+                self.settingsCD.isStatusSmart = false
+                self.settingsCD.save()
                 self.mode = mode
                 break
             case "landscape":

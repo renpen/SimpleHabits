@@ -11,5 +11,10 @@ import CoreData
 
 
 public class Settings: NSManagedObject {
+    
 
+    func save()
+    {
+        SettingsCoreDataHandler.sharedInstance.save()
+    }
 }
