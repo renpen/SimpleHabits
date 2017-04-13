@@ -63,7 +63,6 @@
 		B781AF021DEE182600F8EB1C /* OffsetSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */; };
 		B781AF041DEE1DD900F8EB1C /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AF031DEE1DD900F8EB1C /* OverviewViewController.swift */; };
 		B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */; };
-		B79C58E71DD3B1C50061C027 /* FunctionTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */; };
 		B7B7B6E71E9BF6D20085E6BF /* Weather-PNG-Photos.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */; };
 		B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */; };
 		B7B7B6EB1E9BFF630085E6BF /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6EA1E9BFF630085E6BF /* Logo.png */; };
@@ -153,7 +152,6 @@
 		B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetSelectionViewController.swift; sourceTree = "<group>"; };
 		B781AF031DEE1DD900F8EB1C /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTourPageViewController.swift; sourceTree = "<group>"; };
-		B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionTestingViewController.swift; sourceTree = "<group>"; };
 		B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Weather-PNG-Photos.png"; sourceTree = "<group>"; };
 		B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bike-icon-md.png"; sourceTree = "<group>"; };
 		B7B7B6EA1E9BFF630085E6BF /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
@@ -338,7 +336,6 @@
 				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
 				B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */,
 				B71AC3271DD33290000DED43 /* CircularTransition.swift */,
-				B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -635,7 +632,6 @@
 			files = (
 				B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */,
 				4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */,
-				B79C58E71DD3B1C50061C027 /* FunctionTestingViewController.swift in Sources */,
 				12DCFBA71E9BF91C007AA182 /* SettingsCoreDataHandler.swift in Sources */,
 				12DCFB941E9BEB6C007AA182 /* TravelCoreDataHandler.swift in Sources */,
 				4BED56E11DDA51CD007EAABB /* TravelC+CoreDataClass.swift in Sources */,

@@ -35,6 +35,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     var activeWheatherView = UIImageView()
     var settingsCD =  SettingsCoreDataHandler.sharedInstance.getSettings()
+    var alarmCDHandler = AlarmCoreDataHandler.sharedInstance
+    var alarmHandler = AlarmController.sharedInstance
     
     @IBAction func settingsPressed(_ sender: Any) {
         if (settingsView.alpha == 0) {
@@ -66,15 +68,53 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             self.alarmPickerView.alpha = 0
         })
         editButton.setTitle("\u{f044}", for: .normal)
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-        let string = formatter.string(from: alarmPicker.date)
-        alarmLabel.text = string
-        
-        standardAlarmSavedAfterEditing(newAlarmString: string, newAlarmDate: alarmPicker.date)
+        var alarmDate = alarmPicker.date
+        writeStandardAlarmTime(editedTime: alarmDate)
+        setAlarmLabel(alarmDate: alarmDate)
+       // standardAlarmSavedAfterEditing(newAlarmString: string, newAlarmDate: alarmPicker.date)
     }
     
+    func setAlarmLabel(alarmDate : Date?)
+    {
+        if let alarmDate = alarmDate {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            let string = formatter.string(from: alarmDate)
+            alarmLabel.text = string
+        }
+        
+    }
+    
+    func writeStandardAlarmTime(editedTime : Date)
+    {
+        var currentDate = Date()
+        var editedTime = editedTime
+        //when the currentTime bigger is than the edited time it implies that the alarm is for the next day, so it need to be added one day
+        if editedTime < currentDate
+        {
+            var dateComponents = DateComponents()
+            dateComponents.day = 1
+            let userCalendar = Calendar.current
+            editedTime = userCalendar.date(byAdding: dateComponents, to: editedTime, wrappingComponents: true)!
+        }
+        var standardAlarm = alarmCDHandler.getStandardAlarm()
+        standardAlarm.wakeUpTime = editedTime
+        if standardAlarm.wakeUpTone == nil{
+            writeAlarmSound(alarm: standardAlarm)
+        }
+        alarmHandler.calculateAndSetWakeUpTime(alarm: standardAlarm)
+        standardAlarm.save()
+    }
+    
+    func writeAlarmSound(alarm : Alarm)
+    {
+        var fileSound = FileSound()
+        fileSound.generateRepresentingCoreDataObject()
+        fileSound.fileName = "bell"
+        fileSound.save()
+        alarm.wakeUpTone = fileSound
+        alarm.save()
+    }
     func standardAlarmSavedAfterEditing (newAlarmString: String, newAlarmDate: Date) {
         
         
@@ -162,6 +202,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         else
         {
             switchMode(mode: "standard")
+            alarmHandler.calculateAndSetWakeUpTime(alarm: alarmCDHandler.getStandardAlarm())
+            
         }
         setClock()
         preloadUIChanges()
@@ -215,6 +257,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
                 self.activeWheatherView = self.WheaterImgView
                 self.settingsCD.isStatusSmart = false
                 self.settingsCD.save()
+                setAlarmLabel(alarmDate: alarmCDHandler.getStandardAlarm().wakeUpTime)
+                alarmHandler.calculateAndSetWakeUpTime(alarm: alarmCDHandler.getStandardAlarm())
                 self.mode = mode
                 break
             case "landscape":

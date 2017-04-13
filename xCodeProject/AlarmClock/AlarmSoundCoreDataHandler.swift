@@ -13,7 +13,7 @@ class AlarmSoundCoreDataHandler : CoreDataHandler
 {
     static let sharedInstance = AlarmSoundCoreDataHandler()
     
-    internal func getNewAlarmSoundID () ->Int32
+    private func getNewAlarmSoundID () ->Int32
     {
         let entityDescription = getEntityDescirption(entityName: "AlarmSoundC")
         let request = NSFetchRequest<NSFetchRequestResult>()
