@@ -12,49 +12,58 @@ class AlarmController {
     static let sharedInstance = AlarmController();
     var timer : Timer?
     var temp_alarm : Alarm?
-    private func setWakeUpTime(alarm: Alarm)
+    
+   
+    
+    /*
+ Falls der Alarm eine valide Wakeuptime hat geguckt ob es ein SmartAlarm ist oder nicht und dann entsprechend direkt der Timer gesetzt (bei einem StandardAlarm) oder noch weitere Berechnungen durchgeführt (tarvelTime beim SmartWecker)
+ 
+ */
+    func activate (alarm : Alarm)
     {
         if let wakeUpTime = alarm.wakeUpTime
         {
-            if wakeUpTime > Date()
+            var currentDate = Date()
+            if wakeUpTime > currentDate
             {
-                if timer != nil
-                {
-                    self.timer?.invalidate()
-                }
-                print("alarm set with date: " + wakeUpTime.description)
-                self.timer = Timer(fireAt: wakeUpTime, interval: 0, target: self, selector: #selector(playSound),userInfo: nil, repeats: false)
-                RunLoop.main.add(self.timer!, forMode: RunLoopMode.commonModes)
-
+                self.temp_alarm = alarm
+                setTimer(alarm: alarm)
             }
-            
+            else
+            {
+                deactivate(alarm: alarm)
+                if alarm.smartAlarm
+                {
+                        self.temp_alarm = alarm
+                        alarm.travel?.calculateTravelTime(closure: prepareSmartAlarm)
+                }
+            }
         }
-           }
+        else if alarm.smartAlarm
+        {
+            self.temp_alarm = alarm
+            alarm.travel?.calculateTravelTime(closure: prepareSmartAlarm)
+        }
+    }
+    private func setTimer(alarm : Alarm)
+    {
+        if timer != nil
+        {
+            self.timer?.invalidate()
+        }
+        print("alarm set with date: " + (alarm.wakeUpTime?.description)!)
+        self.timer = Timer(fireAt: alarm.wakeUpTime!, interval: 0, target: self, selector: #selector(playSound),userInfo: nil, repeats: false)
+        RunLoop.main.add(self.timer!, forMode: RunLoopMode.commonModes)
+
+    }
     func deactivate(alarm: Alarm)
     {
         //current design allows only one active alarm, so the deactivation doesn´t need to be realted to the alarm. Maybe in future we want to use more than one alarm at a time and then the alarm needed to as parameter to decide which alarm needed to be turned off
         if self.timer != nil
         {
             self.timer?.invalidate()
-            alarm.wakeUpTime = Date(timeIntervalSince1970: 0)
+            alarm.wakeUpTime = nil
             alarm.save()
-        }
-    }
-    func reactivate(alarm : Alarm) {
-        if !(alarm.wakeUpTime?.description.isEmpty)!
-        {
-            let currentDate = Date()
-            if alarm.wakeUpTime! > currentDate
-            {
-                if timer?.fireDate != alarm.wakeUpTime
-                {
-                    calculateAndSetWakeUpTime(alarm: alarm)
-                }
-            }
-            else
-            {
-                deactivate(alarm: alarm)
-            }
         }
     }
     func getActivatedAlarmDate() -> Date?
@@ -65,23 +74,16 @@ class AlarmController {
         }
         return (self.timer?.fireDate)!
     }
-    func calculateAndSetWakeUpTime(alarm:Alarm)
-    {
-        self.temp_alarm = alarm;
-        if alarm.smartAlarm
-        {
-            alarm.travel?.calculateTravelTime(closure: prepareSmartAlarm)
-        }
-        else
-        {
-            setWakeUpTime(alarm: alarm)
-        }
-        
-    }
     private func prepareSmartAlarm(travelTime : Int)
     {
-        print("TravelTime: " + travelTime.description)
         let alarm = temp_alarm
+        var travelTime = travelTime
+        if travelTime == nil
+        {
+            print("Keine Traveltimeberechnet")
+           travelTime = 0
+        }
+        print("TravelTime: " + travelTime.description)
         let calendarTools = CalendarTools.sharedInstance
         let offset = alarm?.offset
         let appointment = calendarTools.getFirstAppointmentUpToOneDayLater(calendar: calendarTools.getCalendarByIdentifier(identifier: (alarm?.calendarIdentifier)!))
@@ -96,7 +98,7 @@ class AlarmController {
         date = calendarAPI.date(byAdding: .second, value: -(travelTime), to: date!)
         alarm?.wakeUpTime = date!
         alarm?.save()
-        setWakeUpTime(alarm: alarm!)
+        setTimer(alarm: alarm!)
     }
     @objc func playSound()
     {

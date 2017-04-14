@@ -68,7 +68,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             self.alarmPickerView.alpha = 0
         })
         editButton.setTitle("\u{f044}", for: .normal)
-        var alarmDate = alarmPicker.date
+        let alarmDate = alarmPicker.date
         writeStandardAlarmTime(editedTime: alarmDate)
         setAlarmLabel(alarmDate: alarmDate)
        // standardAlarmSavedAfterEditing(newAlarmString: string, newAlarmDate: alarmPicker.date)
@@ -87,7 +87,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     func writeStandardAlarmTime(editedTime : Date)
     {
-        var currentDate = Date()
+        let currentDate = Date()
         var editedTime = editedTime
         //when the currentTime bigger is than the edited time it implies that the alarm is for the next day, so it need to be added one day
         if editedTime < currentDate
@@ -97,12 +97,12 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             let userCalendar = Calendar.current
             editedTime = userCalendar.date(byAdding: dateComponents, to: editedTime, wrappingComponents: true)!
         }
-        var standardAlarm = alarmCDHandler.getStandardAlarm()
+        let standardAlarm = alarmCDHandler.getStandardAlarm()
         standardAlarm.wakeUpTime = editedTime
         if standardAlarm.wakeUpTone == nil{
             writeAlarmSound(alarm: standardAlarm)
         }
-        alarmHandler.calculateAndSetWakeUpTime(alarm: standardAlarm)
+        standardAlarm.activate()
         standardAlarm.save()
     }
     
@@ -202,7 +202,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         else
         {
             switchMode(mode: "standard")
-            alarmHandler.calculateAndSetWakeUpTime(alarm: alarmCDHandler.getStandardAlarm())
+            alarmCDHandler.getStandardAlarm().activate()
             
         }
         setClock()
@@ -258,7 +258,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
                 self.settingsCD.isStatusSmart = false
                 self.settingsCD.save()
                 setAlarmLabel(alarmDate: alarmCDHandler.getStandardAlarm().wakeUpTime)
-                alarmHandler.calculateAndSetWakeUpTime(alarm: alarmCDHandler.getStandardAlarm())
+                alarmCDHandler.getStandardAlarm().activate()
                 self.mode = mode
                 break
             case "landscape":

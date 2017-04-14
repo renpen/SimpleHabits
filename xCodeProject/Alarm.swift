@@ -44,6 +44,6 @@ public class Alarm: NSManagedObject {
     }
     func activate()
     {
-        AlarmController.sharedInstance.calculateAndSetWakeUpTime(alarm: self)
+        AlarmController.sharedInstance.activate(alarm: self)
     }
 }
