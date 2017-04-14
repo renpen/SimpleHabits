@@ -88,7 +88,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     }
 
     let eventStore = EKEventStore()
-    let cTools = CalendarTools()
+    let cTools = CalendarTools.sharedInstance
+    let lTools = LocationTools.sharedInstance
     var calendars : [EKCalendar] = []
     var events = [EKEvent]()
     
@@ -156,8 +157,9 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         
         setClock()
         preloadUIChanges()
-        
         cTools.requestPermission(sender: self)
+        lTools.startLocating()
+        WeatherAPIHandler.sharedInstance.getWeatherForCurrentPosition(closure: doSomethingWithWeather)
 //        let test = FunctionTest()           //for test purpose funciomalites
 //        test.testSomething()
         /*
@@ -222,6 +224,11 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         settingsButton.isHidden = input
         settingsView.isHidden = input
 
+    }
+    
+    func doSomethingWithWeather(weather : Weather)
+    {
+        print(weather.icon);
     }
     
 }

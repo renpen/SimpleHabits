@@ -20,6 +20,10 @@
 		12DCFBA41E9BF891007AA182 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFBA21E9BF891007AA182 /* Settings.swift */; };
 		12DCFBA51E9BF891007AA182 /* Settings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFBA31E9BF891007AA182 /* Settings+CoreDataProperties.swift */; };
 		12DCFBA71E9BF91C007AA182 /* SettingsCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFBA61E9BF91C007AA182 /* SettingsCoreDataHandler.swift */; };
+		12E70DD51EA0F83C00D855FE /* WeatherAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E70DD41EA0F83C00D855FE /* WeatherAPIHandler.swift */; };
+		12E70DD71EA0F84800D855FE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E70DD61EA0F84800D855FE /* Weather.swift */; };
+		12E70DD91EA0FB6400D855FE /* LocationTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E70DD81EA0FB6400D855FE /* LocationTools.swift */; };
+		12E70DDB1EA108CF00D855FE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E70DDA1EA108CF00D855FE /* MapKit.framework */; };
 		12ED64561E962F2B0052253B /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12ED64551E962F2B0052253B /* bell.mp3 */; };
 		4B14AE9B1DD33996000469BF /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9A1DD33996000469BF /* AlarmController.swift */; };
 		4B14AE9E1DD339C8000469BF /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */; };
@@ -104,6 +108,10 @@
 		12DCFBA21E9BF891007AA182 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = ../Settings.swift; sourceTree = "<group>"; };
 		12DCFBA31E9BF891007AA182 /* Settings+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Settings+CoreDataProperties.swift"; path = "../Settings+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		12DCFBA61E9BF91C007AA182 /* SettingsCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoreDataHandler.swift; sourceTree = "<group>"; };
+		12E70DD41EA0F83C00D855FE /* WeatherAPIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPIHandler.swift; sourceTree = "<group>"; };
+		12E70DD61EA0F84800D855FE /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		12E70DD81EA0FB6400D855FE /* LocationTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTools.swift; sourceTree = "<group>"; };
+		12E70DDA1EA108CF00D855FE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		12ED64551E962F2B0052253B /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = "../Source Files/Sounds/bell.mp3"; sourceTree = "<group>"; };
 		27A991DDFF7D5A2D527EF16E /* Pods-AlarmClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.release.xcconfig"; sourceTree = "<group>"; };
 		4B14AE9A1DD33996000469BF /* AlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
@@ -168,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12E70DDB1EA108CF00D855FE /* MapKit.framework in Frameworks */,
 				7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +229,15 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		12E70DD31EA0F80A00D855FE /* WeatherApi */ = {
+			isa = PBXGroup;
+			children = (
+				12E70DD41EA0F83C00D855FE /* WeatherAPIHandler.swift */,
+				12E70DD61EA0F84800D855FE /* Weather.swift */,
+			);
+			name = WeatherApi;
+			sourceTree = "<group>";
+		};
 		2EFA7B418BB99681466C3137 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +283,7 @@
 		4B5B7A161DBE08F2006E7C39 /* AlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				12E70DD31EA0F80A00D855FE /* WeatherApi */,
 				B70344791DCB74B300FEF291 /* Sources */,
 				4B9A22F31DC4A75A00933E2E /* JSONTools */,
 				4B6486431DC429D300634F84 /* AppBasics */,
@@ -276,6 +295,7 @@
 				12DCFB991E9BF758007AA182 /* Settings */,
 				4B5B7A211DBE08F2006E7C39 /* Assets.xcassets */,
 				4B518E561DBF4D370039D1C3 /* CalendarTools.swift */,
+				12E70DD81EA0FB6400D855FE /* LocationTools.swift */,
 			);
 			path = AlarmClock;
 			sourceTree = "<group>";
@@ -382,6 +402,7 @@
 		84555B74E28B4298BD04F9D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				12E70DDA1EA108CF00D855FE /* MapKit.framework */,
 				D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */,
 			);
 			name = Frameworks;
@@ -503,6 +524,9 @@
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
 							};
 						};
 					};
@@ -643,12 +667,15 @@
 				125F03911E9D29D100679997 /* SoundTypes.swift in Sources */,
 				125F03931E9D405400679997 /* SoundManager.swift in Sources */,
 				4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */,
+				12E70DD51EA0F83C00D855FE /* WeatherAPIHandler.swift in Sources */,
 				12DCFBA41E9BF891007AA182 /* Settings.swift in Sources */,
 				125F038A1E9D23E600679997 /* AlarmSound.swift in Sources */,
 				B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */,
 				B781AF021DEE182600F8EB1C /* OffsetSelectionViewController.swift in Sources */,
 				4B5B7A201DBE08F2006E7C39 /* AlarmClock.xcdatamodeld in Sources */,
+				12E70DD71EA0F84800D855FE /* Weather.swift in Sources */,
 				4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */,
+				12E70DD91EA0FB6400D855FE /* LocationTools.swift in Sources */,
 				4B42BC021DC5061B00678BF0 /* TransitMode.swift in Sources */,
 				4B14AE9B1DD33996000469BF /* AlarmController.swift in Sources */,
 				B781AF041DEE1DD900F8EB1C /* OverviewViewController.swift in Sources */,
