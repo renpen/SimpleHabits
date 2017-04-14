@@ -14,7 +14,7 @@ class TravelCoreDataHandler : CoreDataHandler
     static let sharedInstance = TravelCoreDataHandler()
     internal func getTravelById(id: Int32) -> Travel? {
         let pred = NSPredicate(format: "(id = %@)", String(id))
-        var objects = getObjects(entityName: "TravelC", predicate: pred)
+        let objects = getObjects(entityName: "TravelC", predicate: pred)
         if let objects = objects {
             let travelC = objects[0] as? TravelC
             var travel = InternalHelper.sharedInstance.getTravel()

@@ -11,7 +11,7 @@ class SettingsCoreDataHandler : CoreDataHandler
 {
     static let sharedInstance = SettingsCoreDataHandler()
     func getSettings() -> Settings {
-        var objects = getObjects(entityName: "Settings")
+        let objects = getObjects(entityName: "Settings")
         if let objects = objects {
             return (objects[0] as? Settings)!
         }

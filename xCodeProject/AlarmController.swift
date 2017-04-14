@@ -23,7 +23,7 @@ class AlarmController {
     {
         if let wakeUpTime = alarm.wakeUpTime
         {
-            var currentDate = Date()
+            let currentDate = Date()
             if wakeUpTime > currentDate
             {
                 self.temp_alarm = alarm
