@@ -190,12 +190,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-366" y="169"/>
+            <point key="canvasLocation" x="-335" y="-137"/>
         </scene>
         <!--Standard-->
         <scene sceneID="p0Q-Mp-BvP">
             <objects>
-                <viewController id="DIS-ri-EsP" userLabel="Standard" sceneMemberID="viewController">
+                <viewController id="DIS-ri-EsP" userLabel="Standard" customClass="StandardTabViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VOI-jE-Jm8"/>
                         <viewControllerLayoutGuide type="bottom" id="Hkf-Ry-M5I"/>
@@ -214,6 +214,9 @@
                                         <state key="normal" title="Night Mode">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="DEw-h4-P4h" kind="show" id="LHg-yD-Qcc"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Standard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbO-Tg-q0P">
                                         <rect key="frame" x="138" y="28" width="99" height="21"/>
@@ -318,10 +321,44 @@
             </objects>
             <point key="canvasLocation" x="1556" y="1719"/>
         </scene>
+        <!--Standard Night Mode View Controller-->
+        <scene sceneID="Gal-OX-6us">
+            <objects>
+                <viewController id="DEw-h4-P4h" customClass="StandardNightModeViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RaB-DP-7aW"/>
+                        <viewControllerLayoutGuide type="bottom" id="TGq-ne-SUk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sEV-yL-z5r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portaitBackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eCW-eH-4Fu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkN-oO-r0H">
+                                <rect key="frame" x="118" y="318" width="139" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Leave Night Mode">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leaveNightMode:" destination="DEw-h4-P4h" eventType="touchUpInside" id="SLd-lA-nEO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ajt-5Y-trc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2596" y="2085.6071964017992"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="Dl6-oz-fWC">
             <objects>
-                <viewController id="P2B-sh-hGR" userLabel="Settings" sceneMemberID="viewController">
+                <viewController id="P2B-sh-hGR" userLabel="Settings" customClass="SettingsTabViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M5e-MQ-m0R"/>
                         <viewControllerLayoutGuide type="bottom" id="gre-gY-q7x"/>
@@ -353,10 +390,10 @@
             </objects>
             <point key="canvasLocation" x="1074" y="1036"/>
         </scene>
-        <!--View Controller-->
+        <!--Custom Sound Sources View Controller-->
         <scene sceneID="YjG-eO-TtY">
             <objects>
-                <viewController id="CxR-GY-1Jk" sceneMemberID="viewController">
+                <viewController id="CxR-GY-1Jk" customClass="CustomSoundSourcesViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U3j-wL-IBi"/>
                         <viewControllerLayoutGuide type="bottom" id="yHT-bU-fWz"/>
@@ -364,13 +401,6 @@
                     <view key="view" contentMode="scaleToFill" id="PRj-aH-x3G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gF-TK-vS1">
-                                <rect key="frame" x="161" y="318" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="dismiss"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -381,7 +411,7 @@
         <!--Smart-->
         <scene sceneID="QCG-6X-21J">
             <objects>
-                <viewController id="Zgf-fk-sTD" userLabel="Smart" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="Zgf-fk-sTD" userLabel="Smart" customClass="SmartTabViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1cl-UY-wEi"/>
                         <viewControllerLayoutGuide type="bottom" id="iPA-yO-C1G"/>
@@ -400,6 +430,9 @@
                                         <state key="normal" title="Night Mode">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="0xp-FG-KL2" kind="show" id="jNa-AX-0tL"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njJ-Hx-Pd1">
                                         <rect key="frame" x="138" y="27" width="99" height="21"/>
@@ -559,6 +592,40 @@
             </objects>
             <point key="canvasLocation" x="1556" y="341.37931034482762"/>
         </scene>
+        <!--Smart Night Mode View Controller-->
+        <scene sceneID="T7m-tx-pYz">
+            <objects>
+                <viewController id="0xp-FG-KL2" customClass="SmartNightModeViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fTM-cM-jTd"/>
+                        <viewControllerLayoutGuide type="bottom" id="4vl-8Z-nkd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BK5-00-ie8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portaitBackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AGC-bT-wM2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3Q-hy-2ZO">
+                                <rect key="frame" x="99" y="318" width="134" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Leave Night Mode">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leaveNightMode:" destination="0xp-FG-KL2" eventType="touchUpInside" id="eqL-XW-Uu7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FN8-A3-8mK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2564" y="241.52923538230885"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wif-Hr-adT">
             <objects>
@@ -584,7 +651,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DvR-c8-fbS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Smart" id="hNZ-R6-goE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KoQ-ef-leR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KoQ-ef-leR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -603,7 +670,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rOm-SK-yoT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Standard" id="2YF-Kk-kXt"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wRa-Jd-nqc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wRa-Jd-nqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -624,6 +691,6 @@
         <image name="portaitBackground.jpg" width="369" height="572"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xwb-zv-rqe"/>
+        <segue reference="eRW-Mc-RVW"/>
     </inferredMetricsTieBreakers>
 </document>
