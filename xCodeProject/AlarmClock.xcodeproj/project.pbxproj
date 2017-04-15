@@ -68,6 +68,8 @@
 		B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */; };
 		B7B7B6EB1E9BFF630085E6BF /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6EA1E9BFF630085E6BF /* Logo.png */; };
 		B7B7B6ED1E9C07CA0085E6BF /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6EC1E9C074D0085E6BF /* digital-7.ttf */; };
+		B7C82C0D1EA23E0F003E912A /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C82C0C1EA23E0F003E912A /* DesignableView.swift */; };
+		B7C82C0F1EA23FED003E912A /* Settings-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C82C0E1EA23FED003E912A /* Settings-50.png */; };
 		B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */; };
 		B7D67D3E1E9B787C00C02B06 /* portaitBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7D67D3D1E9B787C00C02B06 /* portaitBackground.jpg */; };
 /* End PBXBuildFile section */
@@ -158,6 +160,8 @@
 		B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bike-icon-md.png"; sourceTree = "<group>"; };
 		B7B7B6EA1E9BFF630085E6BF /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		B7B7B6EC1E9C074D0085E6BF /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		B7C82C0C1EA23E0F003E912A /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		B7C82C0E1EA23FED003E912A /* Settings-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-50.png"; sourceTree = "<group>"; };
 		B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSelectionViewController.swift; sourceTree = "<group>"; };
 		B7D67D3D1E9B787C00C02B06 /* portaitBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portaitBackground.jpg; sourceTree = "<group>"; };
 		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,6 +336,8 @@
 		4B6486421DC4299B00634F84 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B7C82C0E1EA23FED003E912A /* Settings-50.png */,
+				B7C82C0B1EA23DB1003E912A /* Designables */,
 				B7CEF75D1DED80E1003D45C5 /* CreationTour */,
 				4B5B7A191DBE08F2006E7C39 /* ViewController.swift */,
 				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
@@ -414,6 +420,14 @@
 				B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */,
 			);
 			name = "Design Files";
+			sourceTree = "<group>";
+		};
+		B7C82C0B1EA23DB1003E912A /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				B7C82C0C1EA23E0F003E912A /* DesignableView.swift */,
+			);
+			name = Designables;
 			sourceTree = "<group>";
 		};
 		B7CEF75D1DED80E1003D45C5 /* CreationTour */ = {
@@ -553,6 +567,7 @@
 				B726C0281DCC95F400E3BB4A /* Logo Lanuchscreen.png in Resources */,
 				4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */,
 				B7B7B6E71E9BF6D20085E6BF /* Weather-PNG-Photos.png in Resources */,
+				B7C82C0F1EA23FED003E912A /* Settings-50.png in Resources */,
 				B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */,
 				12ED64561E962F2B0052253B /* bell.mp3 in Resources */,
 				B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */,
@@ -641,6 +656,7 @@
 				4BED56E11DDA51CD007EAABB /* TravelC+CoreDataClass.swift in Sources */,
 				125F038E1E9D26A400679997 /* FileSound.swift in Sources */,
 				125F03911E9D29D100679997 /* SoundTypes.swift in Sources */,
+				B7C82C0D1EA23E0F003E912A /* DesignableView.swift in Sources */,
 				125F03931E9D405400679997 /* SoundManager.swift in Sources */,
 				4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */,
 				12DCFBA41E9BF891007AA182 /* Settings.swift in Sources */,
