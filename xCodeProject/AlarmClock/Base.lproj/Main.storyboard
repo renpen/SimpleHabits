@@ -270,6 +270,9 @@
                                         <rect key="frame" x="8" y="125" width="106" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Custom Source"/>
+                                        <connections>
+                                            <segue destination="CxR-GY-1Jk" kind="show" id="eRW-Mc-RVW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92021534969999996" green="0.92021534969999996" blue="0.92021534969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -309,11 +312,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Standard" id="2YF-Kk-kXt"/>
+                    <navigationItem key="navigationItem" id="tAD-6F-Ygy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heh-qD-tu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="616.79999999999995" y="1437.9310344827588"/>
+            <point key="canvasLocation" x="1556" y="1719"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Dl6-oz-fWC">
@@ -348,7 +351,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjr-8i-EDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1468" y="928"/>
+            <point key="canvasLocation" x="1074" y="1036"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YjG-eO-TtY">
+            <objects>
+                <viewController id="CxR-GY-1Jk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U3j-wL-IBi"/>
+                        <viewControllerLayoutGuide type="bottom" id="yHT-bU-fWz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PRj-aH-x3G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gF-TK-vS1">
+                                <rect key="frame" x="161" y="318" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="dismiss"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ov4-bX-jFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2596" y="1036"/>
         </scene>
         <!--Smart-->
         <scene sceneID="QCG-6X-21J">
@@ -441,10 +469,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgM-Yx-ho9">
-                                        <rect key="frame" x="41" y="18" width="285" height="83"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92021534974093266" green="0.92021534974093266" blue="0.92021534974093266" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -503,6 +527,9 @@
                                         <rect key="frame" x="8" y="106" width="106" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Custom Source"/>
+                                        <connections>
+                                            <segue destination="CxR-GY-1Jk" kind="show" id="xwb-zv-rqe"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alarm Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFc-gA-N5E">
                                         <rect key="frame" x="8" y="8" width="99" height="21"/>
@@ -511,6 +538,10 @@
                                         <color key="textColor" red="0.61597229389999997" green="0.62388906440000003" blue="0.72686609459999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dgM-Yx-ho9">
+                                        <rect key="frame" x="90" y="27" width="285" height="83"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92021534974093266" green="0.92021534974093266" blue="0.92021534974093266" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -522,11 +553,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Smart" id="hNZ-R6-goE"/>
+                    <navigationItem key="navigationItem" id="cKR-Hj-2j2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSL-jr-Adb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="616.79999999999995" y="341.37931034482762"/>
+            <point key="canvasLocation" x="1556" y="341.37931034482762"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wif-Hr-adT">
@@ -538,14 +569,52 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Zgf-fk-sTD" kind="relationship" relationship="viewControllers" id="wrE-4q-sfZ"/>
-                        <segue destination="DIS-ri-EsP" kind="relationship" relationship="viewControllers" id="Cct-7V-gD5"/>
+                        <segue destination="DvR-c8-fbS" kind="relationship" relationship="viewControllers" id="wrE-4q-sfZ"/>
+                        <segue destination="rOm-SK-yoT" kind="relationship" relationship="viewControllers" id="Cct-7V-gD5"/>
                         <segue destination="P2B-sh-hGR" kind="relationship" relationship="viewControllers" id="L9c-0r-hGl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQA-7T-S7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-334" y="852"/>
+        </scene>
+        <!--Smart-->
+        <scene sceneID="Wjv-8k-zCd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DvR-c8-fbS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Smart" id="hNZ-R6-goE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KoQ-ef-leR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zgf-fk-sTD" kind="relationship" relationship="rootViewController" id="MDc-hc-eYX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1l-Vd-fBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616.79999999999995" y="341.37931034482762"/>
+        </scene>
+        <!--Standard-->
+        <scene sceneID="msC-hY-7io">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rOm-SK-yoT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Standard" id="2YF-Kk-kXt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wRa-Jd-nqc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DIS-ri-EsP" kind="relationship" relationship="rootViewController" id="Pi9-6c-eD4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYs-ih-l3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="1719"/>
         </scene>
     </scenes>
     <resources>
@@ -554,4 +623,7 @@
         <image name="bike-icon-md.png" width="300" height="300"/>
         <image name="portaitBackground.jpg" width="369" height="572"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xwb-zv-rqe"/>
+    </inferredMetricsTieBreakers>
 </document>
