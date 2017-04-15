@@ -19,6 +19,7 @@ class AlarmCoreDataHandler : CoreDataHandler
         {
             alarm = self.fabricateCoreDataObject(entityName: "Alarm") as! Alarm
             alarm?.name = self.smartAlarmName;
+            alarm?.smartAlarm = true
             alarm?.save()
         }
         return alarm!
@@ -29,6 +30,7 @@ class AlarmCoreDataHandler : CoreDataHandler
         {
             alarm = self.fabricateCoreDataObject(entityName: "Alarm") as! Alarm
             alarm?.name = self.standardAlarm;
+            alarm?.smartAlarm = false;
             alarm?.save()
         }
         return alarm!

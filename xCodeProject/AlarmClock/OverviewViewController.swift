@@ -45,7 +45,7 @@ class OverviewViewController: UIViewController {
         fileSound.fileName = "bla"
         alarm.wakeUpTone = fileSound
         alarm.save()
-        AlarmController.sharedInstance.calculateAndSetWakeUpTime(alarm: alarm);
+        AlarmController.sharedInstance.activate(alarm: alarm);
         self.dismiss(animated: true, completion: nil)
     }
 }
