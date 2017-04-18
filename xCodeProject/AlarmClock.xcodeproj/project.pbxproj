@@ -62,6 +62,7 @@
 		B75783451EA6A3A40018632F /* AlarmListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75783441EA6A3A40018632F /* AlarmListViewController.swift */; };
 		B75783471EA6A3BC0018632F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75783461EA6A3BC0018632F /* SettingsViewController.swift */; };
 		B75783491EA6A3D80018632F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75783481EA6A3D80018632F /* HomeScreenViewController.swift */; };
+		B757834B1EA6ABAC0018632F /* menuContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757834A1EA6ABAC0018632F /* menuContentViewController.swift */; };
 		B76B80FD1E9BA91500649C1A /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B80FC1E9BA90E00649C1A /* fontawesome-webfont.ttf */; };
 		B781AF001DEE15F600F8EB1C /* TransportationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AEFF1DEE15F600F8EB1C /* TransportationObject.swift */; };
 		B781AF021DEE182600F8EB1C /* OffsetSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */; };
@@ -158,6 +159,7 @@
 		B75783441EA6A3A40018632F /* AlarmListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmListViewController.swift; sourceTree = "<group>"; };
 		B75783461EA6A3BC0018632F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B75783481EA6A3D80018632F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		B757834A1EA6ABAC0018632F /* menuContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuContentViewController.swift; sourceTree = "<group>"; };
 		B76B80FC1E9BA90E00649C1A /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		B781AEFF1DEE15F600F8EB1C /* TransportationObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportationObject.swift; sourceTree = "<group>"; };
 		B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetSelectionViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				B7CEF75D1DED80E1003D45C5 /* CreationTour */,
 				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
 				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
+				B757834A1EA6ABAC0018632F /* menuContentViewController.swift */,
 				B75783441EA6A3A40018632F /* AlarmListViewController.swift */,
 				B75783461EA6A3BC0018632F /* SettingsViewController.swift */,
 				B75783481EA6A3D80018632F /* HomeScreenViewController.swift */,
@@ -525,7 +528,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ReneUser;
 				TargetAttributes = {
 					4B5B7A131DBE08F2006E7C39 = {
@@ -707,6 +710,7 @@
 				125F03951E9D409100679997 /* SoundPlayer.swift in Sources */,
 				125F038C1E9D258100679997 /* AlarmSoundCoreDataHandler.swift in Sources */,
 				4B14AEA91DD34268000469BF /* Alarm.swift in Sources */,
+				B757834B1EA6ABAC0018632F /* menuContentViewController.swift in Sources */,
 				4B42BC061DC5099000678BF0 /* GoogleDistanceMatrixTravel.swift in Sources */,
 				4B9A22F51DC4A95200933E2E /* GoogleDistanceMatrixObject.swift in Sources */,
 			);
