@@ -10,12 +10,17 @@ import UIKit
 
 class menuContentViewController: UITableViewController {
 
+    @IBOutlet weak var AlarmsLogo: UILabel!
+    @IBOutlet weak var settingsLogo: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.separatorStyle = .none
         
         // Do any additional setup after loading the view.
+        
+        AlarmsLogo.text = "\u{f017}"
+        settingsLogo.text = "\u{f1de}"
     }
 
     override func didReceiveMemoryWarning() {
