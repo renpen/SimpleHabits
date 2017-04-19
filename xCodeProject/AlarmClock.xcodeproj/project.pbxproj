@@ -75,6 +75,7 @@
 		B7B7B6ED1E9C07CA0085E6BF /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6EC1E9C074D0085E6BF /* digital-7.ttf */; };
 		B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */; };
 		B7D67D3E1E9B787C00C02B06 /* portaitBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7D67D3D1E9B787C00C02B06 /* portaitBackground.jpg */; };
+		B7D89C951EA7526D002BE067 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D89C941EA7526D002BE067 /* Clock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +173,7 @@
 		B7B7B6EC1E9C074D0085E6BF /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSelectionViewController.swift; sourceTree = "<group>"; };
 		B7D67D3D1E9B787C00C02B06 /* portaitBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portaitBackground.jpg; sourceTree = "<group>"; };
+		B7D89C941EA7526D002BE067 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -436,6 +438,7 @@
 				B75783401EA69C690018632F /* SWRevealViewController.h */,
 				B75783411EA69C690018632F /* SWRevealViewController.m */,
 				B757833F1EA69C680018632F /* AlarmClock-Bridging-Header.h */,
+				B7D89C941EA7526D002BE067 /* Clock.swift */,
 			);
 			name = "Used Files";
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				4B9A22F21DC4A5B900933E2E /* RestApiManager.swift in Sources */,
 				4B42BC001DC505AC00678BF0 /* TrafficModel.swift in Sources */,
 				125F03951E9D409100679997 /* SoundPlayer.swift in Sources */,
+				B7D89C951EA7526D002BE067 /* Clock.swift in Sources */,
 				125F038C1E9D258100679997 /* AlarmSoundCoreDataHandler.swift in Sources */,
 				4B14AEA91DD34268000469BF /* Alarm.swift in Sources */,
 				B757834B1EA6ABAC0018632F /* menuContentViewController.swift in Sources */,

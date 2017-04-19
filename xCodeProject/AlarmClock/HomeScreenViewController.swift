@@ -11,6 +11,9 @@ import UIKit
 class HomeScreenViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var clockLabel: UILabel!
+    
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,8 @@ class HomeScreenViewController: UIViewController {
             
             menuButton.addTarget(revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         }
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.orientationChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+
         // Do any additional setup after loading the view.
     }
 
@@ -29,16 +33,8 @@ class HomeScreenViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func orientationChanged () {
+        
     }
-    */
-
 }
