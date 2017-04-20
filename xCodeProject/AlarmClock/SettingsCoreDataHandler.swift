@@ -11,16 +11,12 @@ class SettingsCoreDataHandler : CoreDataHandler
 {
     static let sharedInstance = SettingsCoreDataHandler()
     func getSettings() -> Settings {
-        var objects = getObjects(entityName: "Settings")
-        if (objects?.count != 0) {
-            return (objects?[0] as? Settings)!
+        let objects = getObjects(entityName: "Settings")
+        if let objects = objects {
+            return (objects[0] as? Settings)!
         }
         let settings = self.fabricateCoreDataObject(entityName: "Settings") as! Settings
         save()
         return settings
     }
-    func saveCoreDate()
-    {
-            super.save()
-    }
-}
+   }

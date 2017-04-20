@@ -2,11 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>GoogleDistanceMatrixBaseUrl</key>
-	<string>https://maps.googleapis.com/maps/api/distancematrix/json</string>
 	<key>TravelCalculationAPI</key>
 	<integer>1</integer>
+	<key>GoogleDistanceMatrixBaseUrl</key>
+	<string>https://maps.googleapis.com/maps/api/distancematrix/json</string>
 	<key>GoogleAPIKey</key>
 	<string>AIzaSyBIHVLCzG1Lqujh9wHUHRixmLO5VpZ2w58</string>
+	<key>OpenWeatherMapAPIKey</key>
+	<string>03d0c57b898012e93ddbdc7523f0c819</string>
+	<key>OpenWeatherMapBaseUrl</key>
+	<string>http://api.openweathermap.org/data/2.5/weather</string>
 </dict>
 </plist>

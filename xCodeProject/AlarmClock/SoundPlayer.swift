@@ -16,6 +16,7 @@ class SoundPlayer
     var player: AVAudioPlayer?
     func playSound(fileName : String)
     {
+        player?.volume = 1.0
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)

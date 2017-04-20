@@ -34,6 +34,9 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var alarmPickerView: UIView!
     
     var activeWheatherView = UIImageView()
+    var settingsCD =  SettingsCoreDataHandler.sharedInstance.getSettings()
+    var alarmCDHandler = AlarmCoreDataHandler.sharedInstance
+    var alarmHandler = AlarmController.sharedInstance
     
     @IBAction func settingsPressed(_ sender: Any) {
         if (settingsView.alpha == 0) {
@@ -65,15 +68,53 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             self.alarmPickerView.alpha = 0
         })
         editButton.setTitle("\u{f044}", for: .normal)
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-        let string = formatter.string(from: alarmPicker.date)
-        alarmLabel.text = string
-        
-        standardAlarmSavedAfterEditing(newAlarmString: string, newAlarmDate: alarmPicker.date)
+        let alarmDate = alarmPicker.date
+        writeStandardAlarmTime(editedTime: alarmDate)
+        setAlarmLabel(alarmDate: alarmDate)
+       // standardAlarmSavedAfterEditing(newAlarmString: string, newAlarmDate: alarmPicker.date)
     }
     
+    func setAlarmLabel(alarmDate : Date?)
+    {
+        if let alarmDate = alarmDate {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            let string = formatter.string(from: alarmDate)
+            alarmLabel.text = string
+        }
+        
+    }
+    
+    func writeStandardAlarmTime(editedTime : Date)
+    {
+        let currentDate = Date()
+        var editedTime = editedTime
+        //when the currentTime bigger is than the edited time it implies that the alarm is for the next day, so it need to be added one day
+        if editedTime < currentDate
+        {
+            var dateComponents = DateComponents()
+            dateComponents.day = 1
+            let userCalendar = Calendar.current
+            editedTime = userCalendar.date(byAdding: dateComponents, to: editedTime, wrappingComponents: true)!
+        }
+        let standardAlarm = alarmCDHandler.getStandardAlarm()
+        standardAlarm.wakeUpTime = editedTime
+        if standardAlarm.wakeUpTone == nil{
+            writeAlarmSound(alarm: standardAlarm)
+        }
+        standardAlarm.activate()
+        standardAlarm.save()
+    }
+    
+    func writeAlarmSound(alarm : Alarm)
+    {
+        var fileSound = FileSound()
+        fileSound.generateRepresentingCoreDataObject()
+        fileSound.fileName = "bell"
+        fileSound.save()
+        alarm.wakeUpTone = fileSound
+        alarm.save()
+    }
     func standardAlarmSavedAfterEditing (newAlarmString: String, newAlarmDate: Date) {
         
         
@@ -82,13 +123,15 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     @IBAction func switchClicked(_ sender: Any) {
         if mode == "smart" {
             self.switchMode(mode: "standard")
+            
         } else if mode == "standard" {
             self.switchMode(mode: "smart")
         }
     }
 
     let eventStore = EKEventStore()
-    let cTools = CalendarTools()
+    let cTools = CalendarTools.sharedInstance
+    let lTools = LocationTools.sharedInstance
     var calendars : [EKCalendar] = []
     var events = [EKEvent]()
     
@@ -153,11 +196,21 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        if settingsCD.isStatusSmart
+        {
+            switchMode(mode: "smart")
+        }
+        else
+        {
+            switchMode(mode: "standard")
+            alarmCDHandler.getStandardAlarm().activate()
+            
+        }
         setClock()
         preloadUIChanges()
-        
         cTools.requestPermission(sender: self)
+        lTools.startLocating()
+        WeatherAPIHandler.sharedInstance.getWeatherForCurrentPosition(closure: doSomethingWithWeather)
 //        let test = FunctionTest()           //for test purpose funciomalites
 //        test.testSomething()
         /*
@@ -193,6 +246,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
                 self.standardContainerView.isHidden = true
                 self.editButton.isHidden = true
                 self.activeWheatherView = self.standardWheaterImgView
+                self.settingsCD.isStatusSmart = true
+                self.settingsCD.save()
                 self.mode = mode
                 break
             case "standard":
@@ -202,6 +257,10 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
                 self.standardContainerView.isHidden = false
                 self.editButton.isHidden = false
                 self.activeWheatherView = self.WheaterImgView
+                self.settingsCD.isStatusSmart = false
+                self.settingsCD.save()
+                setAlarmLabel(alarmDate: alarmCDHandler.getStandardAlarm().wakeUpTime)
+                alarmCDHandler.getStandardAlarm().activate()
                 self.mode = mode
                 break
             case "landscape":
@@ -222,6 +281,11 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         settingsButton.isHidden = input
         settingsView.isHidden = input
 
+    }
+    
+    func doSomethingWithWeather(weather : Weather)
+    {
+        print(weather.icon);
     }
     
 }

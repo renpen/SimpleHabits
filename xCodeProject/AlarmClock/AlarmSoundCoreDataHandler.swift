@@ -13,7 +13,7 @@ class AlarmSoundCoreDataHandler : CoreDataHandler
 {
     static let sharedInstance = AlarmSoundCoreDataHandler()
     
-    internal func getNewAlarmSoundID () ->Int32
+    private func getNewAlarmSoundID () ->Int32
     {
         let entityDescription = getEntityDescirption(entityName: "AlarmSoundC")
         let request = NSFetchRequest<NSFetchRequestResult>()
@@ -42,9 +42,9 @@ class AlarmSoundCoreDataHandler : CoreDataHandler
     
     internal func getAlarmSoundById(id: Int32) -> AlarmSound? {
         let pred = NSPredicate(format: "(id = %@)", String(id))
-        var objects = getObjects(entityName: "AlarmSoundC", predicate: pred)
-        if (objects?.count != 0) {
-            let alarmSoundC = objects?[0] as? AlarmSoundC
+        let objects = getObjects(entityName: "AlarmSoundC", predicate: pred)
+        if let objects = objects {
+            let alarmSoundC = objects[0] as? AlarmSoundC
             var alarmSound : AlarmSound?
             switch alarmSoundC?.source {
             case SoundTypes.appleMusic.rawValue?:

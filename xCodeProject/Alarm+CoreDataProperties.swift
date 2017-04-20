@@ -17,7 +17,7 @@ extension Alarm {
     }
     @NSManaged public var offset: Int16
     @NSManaged public var travel_f_key: Int32
-    @NSManaged public var wakeUpTime: Date
+    @NSManaged public var wakeUpTime: Date?
     @NSManaged public var wakeUpTone_f_key: Int32
     @NSManaged public var name: String
     @NSManaged public var smartAlarm: Bool

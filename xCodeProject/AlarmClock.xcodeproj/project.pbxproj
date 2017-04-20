@@ -20,6 +20,10 @@
 		12DCFBA41E9BF891007AA182 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFBA21E9BF891007AA182 /* Settings.swift */; };
 		12DCFBA51E9BF891007AA182 /* Settings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFBA31E9BF891007AA182 /* Settings+CoreDataProperties.swift */; };
 		12DCFBA71E9BF91C007AA182 /* SettingsCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFBA61E9BF91C007AA182 /* SettingsCoreDataHandler.swift */; };
+		12E70DD51EA0F83C00D855FE /* WeatherAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E70DD41EA0F83C00D855FE /* WeatherAPIHandler.swift */; };
+		12E70DD71EA0F84800D855FE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E70DD61EA0F84800D855FE /* Weather.swift */; };
+		12E70DD91EA0FB6400D855FE /* LocationTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E70DD81EA0FB6400D855FE /* LocationTools.swift */; };
+		12E70DDB1EA108CF00D855FE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E70DDA1EA108CF00D855FE /* MapKit.framework */; };
 		12ED64561E962F2B0052253B /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12ED64551E962F2B0052253B /* bell.mp3 */; };
 		4B14AE9B1DD33996000469BF /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9A1DD33996000469BF /* AlarmController.swift */; };
 		4B14AE9E1DD339C8000469BF /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */; };
@@ -63,11 +67,18 @@
 		B781AF021DEE182600F8EB1C /* OffsetSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */; };
 		B781AF041DEE1DD900F8EB1C /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AF031DEE1DD900F8EB1C /* OverviewViewController.swift */; };
 		B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */; };
-		B79C58E71DD3B1C50061C027 /* FunctionTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */; };
 		B7B7B6E71E9BF6D20085E6BF /* Weather-PNG-Photos.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */; };
 		B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */; };
 		B7B7B6EB1E9BFF630085E6BF /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6EA1E9BFF630085E6BF /* Logo.png */; };
 		B7B7B6ED1E9C07CA0085E6BF /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6EC1E9C074D0085E6BF /* digital-7.ttf */; };
+		B7C82C0D1EA23E0F003E912A /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C82C0C1EA23E0F003E912A /* DesignableView.swift */; };
+		B7C82C0F1EA23FED003E912A /* Settings-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C82C0E1EA23FED003E912A /* Settings-50.png */; };
+		B7C82C131EA24408003E912A /* SmartTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C82C121EA24408003E912A /* SmartTabViewController.swift */; };
+		B7C82C151EA24433003E912A /* StandardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C82C141EA24433003E912A /* StandardTabViewController.swift */; };
+		B7C82C171EA24462003E912A /* SettingsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C82C161EA24462003E912A /* SettingsTabViewController.swift */; };
+		B7C82C1A1EA244B7003E912A /* CustomSoundSourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C82C191EA244B7003E912A /* CustomSoundSourcesViewController.swift */; };
+		B7C82C1D1EA244EB003E912A /* SmartNightModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C82C1C1EA244EB003E912A /* SmartNightModeViewController.swift */; };
+		B7C82C1F1EA24520003E912A /* StandardNightModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C82C1E1EA24520003E912A /* StandardNightModeViewController.swift */; };
 		B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */; };
 		B7D67D3E1E9B787C00C02B06 /* portaitBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7D67D3D1E9B787C00C02B06 /* portaitBackground.jpg */; };
 /* End PBXBuildFile section */
@@ -104,6 +115,10 @@
 		12DCFBA21E9BF891007AA182 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = ../Settings.swift; sourceTree = "<group>"; };
 		12DCFBA31E9BF891007AA182 /* Settings+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Settings+CoreDataProperties.swift"; path = "../Settings+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		12DCFBA61E9BF91C007AA182 /* SettingsCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoreDataHandler.swift; sourceTree = "<group>"; };
+		12E70DD41EA0F83C00D855FE /* WeatherAPIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPIHandler.swift; sourceTree = "<group>"; };
+		12E70DD61EA0F84800D855FE /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		12E70DD81EA0FB6400D855FE /* LocationTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTools.swift; sourceTree = "<group>"; };
+		12E70DDA1EA108CF00D855FE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		12ED64551E962F2B0052253B /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = "../Source Files/Sounds/bell.mp3"; sourceTree = "<group>"; };
 		27A991DDFF7D5A2D527EF16E /* Pods-AlarmClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.release.xcconfig"; sourceTree = "<group>"; };
 		4B14AE9A1DD33996000469BF /* AlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
@@ -153,11 +168,18 @@
 		B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetSelectionViewController.swift; sourceTree = "<group>"; };
 		B781AF031DEE1DD900F8EB1C /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTourPageViewController.swift; sourceTree = "<group>"; };
-		B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionTestingViewController.swift; sourceTree = "<group>"; };
 		B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Weather-PNG-Photos.png"; sourceTree = "<group>"; };
 		B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bike-icon-md.png"; sourceTree = "<group>"; };
 		B7B7B6EA1E9BFF630085E6BF /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		B7B7B6EC1E9C074D0085E6BF /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		B7C82C0C1EA23E0F003E912A /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		B7C82C0E1EA23FED003E912A /* Settings-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-50.png"; sourceTree = "<group>"; };
+		B7C82C121EA24408003E912A /* SmartTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTabViewController.swift; sourceTree = "<group>"; };
+		B7C82C141EA24433003E912A /* StandardTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardTabViewController.swift; sourceTree = "<group>"; };
+		B7C82C161EA24462003E912A /* SettingsTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTabViewController.swift; sourceTree = "<group>"; };
+		B7C82C191EA244B7003E912A /* CustomSoundSourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSoundSourcesViewController.swift; sourceTree = "<group>"; };
+		B7C82C1C1EA244EB003E912A /* SmartNightModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartNightModeViewController.swift; sourceTree = "<group>"; };
+		B7C82C1E1EA24520003E912A /* StandardNightModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardNightModeViewController.swift; sourceTree = "<group>"; };
 		B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSelectionViewController.swift; sourceTree = "<group>"; };
 		B7D67D3D1E9B787C00C02B06 /* portaitBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portaitBackground.jpg; sourceTree = "<group>"; };
 		D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12E70DDB1EA108CF00D855FE /* MapKit.framework in Frameworks */,
 				7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +243,15 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		12E70DD31EA0F80A00D855FE /* WeatherApi */ = {
+			isa = PBXGroup;
+			children = (
+				12E70DD41EA0F83C00D855FE /* WeatherAPIHandler.swift */,
+				12E70DD61EA0F84800D855FE /* Weather.swift */,
+			);
+			name = WeatherApi;
+			sourceTree = "<group>";
+		};
 		2EFA7B418BB99681466C3137 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +297,7 @@
 		4B5B7A161DBE08F2006E7C39 /* AlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				12E70DD31EA0F80A00D855FE /* WeatherApi */,
 				B70344791DCB74B300FEF291 /* Sources */,
 				4B9A22F31DC4A75A00933E2E /* JSONTools */,
 				4B6486431DC429D300634F84 /* AppBasics */,
@@ -276,6 +309,7 @@
 				12DCFB991E9BF758007AA182 /* Settings */,
 				4B5B7A211DBE08F2006E7C39 /* Assets.xcassets */,
 				4B518E561DBF4D370039D1C3 /* CalendarTools.swift */,
+				12E70DD81EA0FB6400D855FE /* LocationTools.swift */,
 			);
 			path = AlarmClock;
 			sourceTree = "<group>";
@@ -332,13 +366,13 @@
 		4B6486421DC4299B00634F84 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B7CEF75D1DED80E1003D45C5 /* CreationTour */,
-				4B5B7A191DBE08F2006E7C39 /* ViewController.swift */,
+				B7C82C101EA2435A003E912A /* old */,
+				B7C82C0B1EA23DB1003E912A /* Designables */,
 				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
 				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
-				B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */,
-				B71AC3271DD33290000DED43 /* CircularTransition.swift */,
-				B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */,
+				B7C82C1B1EA244D5003E912A /* Night Mode */,
+				B7C82C181EA2449E003E912A /* CustomAlarmSoundSources */,
+				B7C82C111EA243BC003E912A /* TabbarViewControllers */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -382,6 +416,7 @@
 		84555B74E28B4298BD04F9D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				12E70DDA1EA108CF00D855FE /* MapKit.framework */,
 				D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */,
 			);
 			name = Frameworks;
@@ -399,6 +434,7 @@
 		B703447A1DCB74BC00FEF291 /* Design Files */ = {
 			isa = PBXGroup;
 			children = (
+				B7C82C0E1EA23FED003E912A /* Settings-50.png */,
 				B7B7B6EA1E9BFF630085E6BF /* Logo.png */,
 				B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */,
 				B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */,
@@ -414,6 +450,53 @@
 				B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */,
 			);
 			name = "Design Files";
+			sourceTree = "<group>";
+		};
+		B7C82C0B1EA23DB1003E912A /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				B7C82C0C1EA23E0F003E912A /* DesignableView.swift */,
+			);
+			name = Designables;
+			sourceTree = "<group>";
+		};
+		B7C82C101EA2435A003E912A /* old */ = {
+			isa = PBXGroup;
+			children = (
+				B7CEF75D1DED80E1003D45C5 /* CreationTour */,
+				4B5B7A191DBE08F2006E7C39 /* ViewController.swift */,
+				B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */,
+				B71AC3271DD33290000DED43 /* CircularTransition.swift */,
+				B79C58E61DD3B1C50061C027 /* FunctionTestingViewController.swift */,
+			);
+			name = old;
+			sourceTree = "<group>";
+		};
+		B7C82C111EA243BC003E912A /* TabbarViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7C82C121EA24408003E912A /* SmartTabViewController.swift */,
+				B7C82C141EA24433003E912A /* StandardTabViewController.swift */,
+				B7C82C161EA24462003E912A /* SettingsTabViewController.swift */,
+			);
+			name = TabbarViewControllers;
+			sourceTree = "<group>";
+		};
+		B7C82C181EA2449E003E912A /* CustomAlarmSoundSources */ = {
+			isa = PBXGroup;
+			children = (
+				B7C82C191EA244B7003E912A /* CustomSoundSourcesViewController.swift */,
+			);
+			name = CustomAlarmSoundSources;
+			sourceTree = "<group>";
+		};
+		B7C82C1B1EA244D5003E912A /* Night Mode */ = {
+			isa = PBXGroup;
+			children = (
+				B7C82C1C1EA244EB003E912A /* SmartNightModeViewController.swift */,
+				B7C82C1E1EA24520003E912A /* StandardNightModeViewController.swift */,
+			);
+			name = "Night Mode";
 			sourceTree = "<group>";
 		};
 		B7CEF75D1DED80E1003D45C5 /* CreationTour */ = {
@@ -504,6 +587,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
 						};
 					};
 					4B5B7A2A1DBE08F2006E7C39 = {
@@ -553,6 +639,7 @@
 				B726C0281DCC95F400E3BB4A /* Logo Lanuchscreen.png in Resources */,
 				4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */,
 				B7B7B6E71E9BF6D20085E6BF /* Weather-PNG-Photos.png in Resources */,
+				B7C82C0F1EA23FED003E912A /* Settings-50.png in Resources */,
 				B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */,
 				12ED64561E962F2B0052253B /* bell.mp3 in Resources */,
 				B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */,
@@ -635,29 +722,38 @@
 			files = (
 				B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */,
 				4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */,
-				B79C58E71DD3B1C50061C027 /* FunctionTestingViewController.swift in Sources */,
 				12DCFBA71E9BF91C007AA182 /* SettingsCoreDataHandler.swift in Sources */,
 				12DCFB941E9BEB6C007AA182 /* TravelCoreDataHandler.swift in Sources */,
 				4BED56E11DDA51CD007EAABB /* TravelC+CoreDataClass.swift in Sources */,
 				125F038E1E9D26A400679997 /* FileSound.swift in Sources */,
 				125F03911E9D29D100679997 /* SoundTypes.swift in Sources */,
+				B7C82C1A1EA244B7003E912A /* CustomSoundSourcesViewController.swift in Sources */,
+				B7C82C0D1EA23E0F003E912A /* DesignableView.swift in Sources */,
+				B7C82C151EA24433003E912A /* StandardTabViewController.swift in Sources */,
 				125F03931E9D405400679997 /* SoundManager.swift in Sources */,
 				4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */,
+				12E70DD51EA0F83C00D855FE /* WeatherAPIHandler.swift in Sources */,
 				12DCFBA41E9BF891007AA182 /* Settings.swift in Sources */,
 				125F038A1E9D23E600679997 /* AlarmSound.swift in Sources */,
+				B7C82C131EA24408003E912A /* SmartTabViewController.swift in Sources */,
 				B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */,
 				B781AF021DEE182600F8EB1C /* OffsetSelectionViewController.swift in Sources */,
 				4B5B7A201DBE08F2006E7C39 /* AlarmClock.xcdatamodeld in Sources */,
+				12E70DD71EA0F84800D855FE /* Weather.swift in Sources */,
 				4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */,
+				12E70DD91EA0FB6400D855FE /* LocationTools.swift in Sources */,
 				4B42BC021DC5061B00678BF0 /* TransitMode.swift in Sources */,
+				B7C82C1D1EA244EB003E912A /* SmartNightModeViewController.swift in Sources */,
 				4B14AE9B1DD33996000469BF /* AlarmController.swift in Sources */,
 				B781AF041DEE1DD900F8EB1C /* OverviewViewController.swift in Sources */,
 				12DCFBA51E9BF891007AA182 /* Settings+CoreDataProperties.swift in Sources */,
 				12DCFB921E9BEB5F007AA182 /* AlarmCoreDataHandler.swift in Sources */,
 				B71AC3281DD33290000DED43 /* CircularTransition.swift in Sources */,
 				4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */,
+				B7C82C171EA24462003E912A /* SettingsTabViewController.swift in Sources */,
 				125F03871E9D235400679997 /* AlarmSound+CoreDataClass.swift in Sources */,
 				4B42BC081DC509C800678BF0 /* MapKitTravel.swift in Sources */,
+				B7C82C1F1EA24520003E912A /* StandardNightModeViewController.swift in Sources */,
 				4B6486411DC4286900634F84 /* InternalHelper.swift in Sources */,
 				B781AF001DEE15F600F8EB1C /* TransportationObject.swift in Sources */,
 				4B42BBFE1DC502E100678BF0 /* Mode.swift in Sources */,
