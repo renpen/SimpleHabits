@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class WeatherAPIHandler
+public class WeatherAPIHandler
 {
     static let sharedInstance = WeatherAPIHandler()
     let locationTools = LocationTools.sharedInstance
@@ -39,7 +39,7 @@ class WeatherAPIHandler
     {
         getWeatherForCurrentPosition(closure: temp_closure!)
     }
-    private func getWeather(long : Double,lat: Double,closure: @escaping (_ : Weather) -> Void)
+    func getWeather(long : Double,lat: Double,closure: @escaping (_ : Weather) -> Void)
     {
         let url = generateUrl(long: long, lat: lat)
         restApiManager.request(url: url){ (json: JSON) in
