@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1212F3CA1EAD175B006C36E5 /* TravelCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212F3C91EAD175B006C36E5 /* TravelCalculation.swift */; };
+		1212F3CD1EAD179E006C36E5 /* TravelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212F3CC1EAD179E006C36E5 /* TravelAPI.swift */; };
 		125F03871E9D235400679997 /* AlarmSound+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03851E9D235400679997 /* AlarmSound+CoreDataClass.swift */; };
 		125F03881E9D235400679997 /* AlarmSound+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03861E9D235400679997 /* AlarmSound+CoreDataProperties.swift */; };
 		125F038A1E9D23E600679997 /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03891E9D23E600679997 /* AlarmSound.swift */; };
@@ -16,6 +18,7 @@
 		125F03931E9D405400679997 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03921E9D405400679997 /* SoundManager.swift */; };
 		125F03951E9D409100679997 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03941E9D409100679997 /* SoundPlayer.swift */; };
 		1290A6CF1EA913B900B7A6E6 /* WeatherTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1290A6CE1EA913B900B7A6E6 /* WeatherTesting.swift */; };
+		12AF0F7F1EAD1315005D6064 /* TravelCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AF0F7E1EAD1315005D6064 /* TravelCoreData.swift */; };
 		12DCFB921E9BEB5F007AA182 /* AlarmCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */; };
 		12DCFB941E9BEB6C007AA182 /* TravelCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFB931E9BEB6C007AA182 /* TravelCoreDataHandler.swift */; };
 		12DCFBA41E9BF891007AA182 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFBA21E9BF891007AA182 /* Settings.swift */; };
@@ -98,6 +101,8 @@
 
 /* Begin PBXFileReference section */
 		10C0C345824A0B92EF68C43E /* Pods-AlarmClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.debug.xcconfig"; sourceTree = "<group>"; };
+		1212F3C91EAD175B006C36E5 /* TravelCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCalculation.swift; sourceTree = "<group>"; };
+		1212F3CC1EAD179E006C36E5 /* TravelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelAPI.swift; sourceTree = "<group>"; };
 		125F03851E9D235400679997 /* AlarmSound+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AlarmSound+CoreDataClass.swift"; path = "../AlarmSound+CoreDataClass.swift"; sourceTree = "<group>"; };
 		125F03861E9D235400679997 /* AlarmSound+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AlarmSound+CoreDataProperties.swift"; path = "../AlarmSound+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		125F03891E9D23E600679997 /* AlarmSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSound.swift; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 		125F03921E9D405400679997 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		125F03941E9D409100679997 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		1290A6CE1EA913B900B7A6E6 /* WeatherTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTesting.swift; sourceTree = "<group>"; };
+		12AF0F7E1EAD1315005D6064 /* TravelCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCoreData.swift; sourceTree = "<group>"; };
 		12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmCoreDataHandler.swift; sourceTree = "<group>"; };
 		12DCFB931E9BEB6C007AA182 /* TravelCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCoreDataHandler.swift; sourceTree = "<group>"; };
 		12DCFBA21E9BF891007AA182 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = ../Settings.swift; sourceTree = "<group>"; };
@@ -204,6 +210,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1212F3CB1EAD1766006C36E5 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				12AF0F7E1EAD1315005D6064 /* TravelCoreData.swift */,
+				1212F3C91EAD175B006C36E5 /* TravelCalculation.swift */,
+				1212F3CC1EAD179E006C36E5 /* TravelAPI.swift */,
+			);
+			name = Travel;
+			sourceTree = "<group>";
+		};
 		125F038F1E9D26AD00679997 /* FileSound */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +324,7 @@
 		4B5B7A2E1DBE08F2006E7C39 /* AlarmClockTests */ = {
 			isa = PBXGroup;
 			children = (
+				1212F3CB1EAD1766006C36E5 /* Travel */,
 				1290A6CE1EA913B900B7A6E6 /* WeatherTesting.swift */,
 				4B5B7A311DBE08F2006E7C39 /* Info.plist */,
 				12ECFBF31EACEAFF00EFD93A /* AlarmCoreData.swift */,
@@ -762,7 +779,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				12ECFBF41EACEAFF00EFD93A /* AlarmCoreData.swift in Sources */,
+				1212F3CD1EAD179E006C36E5 /* TravelAPI.swift in Sources */,
 				1290A6CF1EA913B900B7A6E6 /* WeatherTesting.swift in Sources */,
+				12AF0F7F1EAD1315005D6064 /* TravelCoreData.swift in Sources */,
+				1212F3CA1EAD175B006C36E5 /* TravelCalculation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
