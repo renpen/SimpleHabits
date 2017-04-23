@@ -36,7 +36,6 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     var activeWheatherView = UIImageView()
     var settingsCD =  SettingsCoreDataHandler.sharedInstance.getSettings()
     var alarmCDHandler = AlarmCoreDataHandler.sharedInstance
-    var alarmHandler = AlarmController.sharedInstance
     
     @IBAction func settingsPressed(_ sender: Any) {
         if (settingsView.alpha == 0) {
@@ -97,7 +96,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             let userCalendar = Calendar.current
             editedTime = userCalendar.date(byAdding: dateComponents, to: editedTime, wrappingComponents: true)!
         }
-        let standardAlarm = alarmCDHandler.getStandardAlarm()
+        let standardAlarm = alarmCDHandler.fabricateAlarm()
         standardAlarm.wakeUpTime = editedTime
         if standardAlarm.wakeUpTone == nil{
             writeAlarmSound(alarm: standardAlarm)
@@ -203,7 +202,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         else
         {
             switchMode(mode: "standard")
-            alarmCDHandler.getStandardAlarm().activate()
+            //alarmCDHandler.
             
         }
         setClock()
@@ -259,8 +258,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
                 self.activeWheatherView = self.WheaterImgView
                 self.settingsCD.isStatusSmart = false
                 self.settingsCD.save()
-                setAlarmLabel(alarmDate: alarmCDHandler.getStandardAlarm().wakeUpTime)
-                alarmCDHandler.getStandardAlarm().activate()
+//                setAlarmLabel(alarmDate: alarmCDHandler.getStandardAlarm().wakeUpTime)
+//                alarmCDHandler.getStandardAlarm().activate()
                 self.mode = mode
                 break
             case "landscape":

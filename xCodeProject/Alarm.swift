@@ -13,6 +13,7 @@ import CoreData
 public class Alarm: NSManagedObject {
     var travel : Travel?
     var wakeUpTone : AlarmSound?
+    var timer : Timer?
     
     override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?)
     {
@@ -44,6 +45,66 @@ public class Alarm: NSManagedObject {
     }
     func activate()
     {
-        AlarmController.sharedInstance.activate(alarm: self)
+        self.isActivated = true;
+        self.save()
+        if smartAlarm {
+            self.travel?.calculateTravelTime(closure: prepareSmartAlarm)
+        }
+        else
+        {
+            setTimer();
+        }
     }
+    func deactivate()
+    {
+            self.timer?.invalidate()
+            self.isActivated = false
+        save();
+    }
+    func setTimer()
+    {
+        if timer != nil
+        {
+            self.timer?.invalidate()
+        }
+        print("alarm set with date: " + (self.wakeUpTime?.description)!)
+        self.timer = Timer(fireAt: self.wakeUpTime!, interval: 0, target: self, selector: #selector(playSound),userInfo: nil, repeats: false)
+        RunLoop.main.add(self.timer!, forMode: RunLoopMode.commonModes)
+        
+    }
+    private func prepareSmartAlarm(travelTime : Int)
+    {
+        var travelTime = travelTime
+        if travelTime == nil
+        {
+            print("Keine Traveltimeberechnet")
+            travelTime = 0
+        }
+        print("TravelTime: " + travelTime.description)
+        let calendarTools = CalendarTools.sharedInstance
+        let offset = self.offset
+        let appointment = calendarTools.getFirstAppointmentUpToOneDayLater(calendar: calendarTools.getCalendarByIdentifier(identifier: (self.calendarIdentifier)))
+        let calendarAPI = Calendar.current
+        if appointment == nil
+        {
+            print("Kein Appointment gefunden")
+            return
+        }
+        print("Appointment: " + (appointment?.description)!)
+        var date = calendarAPI.date(byAdding: .minute, value: -(Int(offset)), to: (appointment?.startDate)!)
+        date = calendarAPI.date(byAdding: .second, value: -(travelTime), to: date!)
+        wakeUpTime = date!
+        save()
+        self.setTimer()
+    }
+
+    
+    @objc func playSound()
+    {
+        print("Sound abspielen")
+        print(self.description)
+        print(self.wakeUpTone?.fileName)
+        self.wakeUpTone?.playSound()
+    }
+
 }

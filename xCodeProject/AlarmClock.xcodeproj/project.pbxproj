@@ -25,8 +25,8 @@
 		12E70DD71EA0F84800D855FE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E70DD61EA0F84800D855FE /* Weather.swift */; };
 		12E70DD91EA0FB6400D855FE /* LocationTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E70DD81EA0FB6400D855FE /* LocationTools.swift */; };
 		12E70DDB1EA108CF00D855FE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E70DDA1EA108CF00D855FE /* MapKit.framework */; };
+		12ECFBF41EACEAFF00EFD93A /* AlarmCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ECFBF31EACEAFF00EFD93A /* AlarmCoreData.swift */; };
 		12ED64561E962F2B0052253B /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12ED64551E962F2B0052253B /* bell.mp3 */; };
-		4B14AE9B1DD33996000469BF /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9A1DD33996000469BF /* AlarmController.swift */; };
 		4B14AE9E1DD339C8000469BF /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */; };
 		4B14AEA91DD34268000469BF /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AEA71DD34268000469BF /* Alarm.swift */; };
 		4B14AEAA1DD34268000469BF /* Alarm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AEA81DD34268000469BF /* Alarm+CoreDataProperties.swift */; };
@@ -116,9 +116,9 @@
 		12E70DD61EA0F84800D855FE /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		12E70DD81EA0FB6400D855FE /* LocationTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTools.swift; sourceTree = "<group>"; };
 		12E70DDA1EA108CF00D855FE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		12ECFBF31EACEAFF00EFD93A /* AlarmCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmCoreData.swift; sourceTree = "<group>"; };
 		12ED64551E962F2B0052253B /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = "../Source Files/Sounds/bell.mp3"; sourceTree = "<group>"; };
 		27A991DDFF7D5A2D527EF16E /* Pods-AlarmClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.release.xcconfig"; sourceTree = "<group>"; };
-		4B14AE9A1DD33996000469BF /* AlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
 		4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHandler.swift; path = ../CoreDataHandler.swift; sourceTree = "<group>"; };
 		4B14AEA71DD34268000469BF /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		4B14AEA81DD34268000469BF /* Alarm+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alarm+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -258,7 +258,6 @@
 			children = (
 				4B14AEA71DD34268000469BF /* Alarm.swift */,
 				4B14AEA81DD34268000469BF /* Alarm+CoreDataProperties.swift */,
-				4B14AE9A1DD33996000469BF /* AlarmController.swift */,
 			);
 			name = Alarm;
 			path = ..;
@@ -311,6 +310,7 @@
 			children = (
 				1290A6CE1EA913B900B7A6E6 /* WeatherTesting.swift */,
 				4B5B7A311DBE08F2006E7C39 /* Info.plist */,
+				12ECFBF31EACEAFF00EFD93A /* AlarmCoreData.swift */,
 			);
 			path = AlarmClockTests;
 			sourceTree = "<group>";
@@ -731,7 +731,6 @@
 				12E70DD91EA0FB6400D855FE /* LocationTools.swift in Sources */,
 				4B42BC021DC5061B00678BF0 /* TransitMode.swift in Sources */,
 				B7C82C1D1EA244EB003E912A /* SmartNightModeViewController.swift in Sources */,
-				4B14AE9B1DD33996000469BF /* AlarmController.swift in Sources */,
 				B781AF041DEE1DD900F8EB1C /* OverviewViewController.swift in Sources */,
 				12DCFBA51E9BF891007AA182 /* Settings+CoreDataProperties.swift in Sources */,
 				12DCFB921E9BEB5F007AA182 /* AlarmCoreDataHandler.swift in Sources */,
@@ -762,6 +761,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12ECFBF41EACEAFF00EFD93A /* AlarmCoreData.swift in Sources */,
 				1290A6CF1EA913B900B7A6E6 /* WeatherTesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
