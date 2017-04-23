@@ -28,7 +28,7 @@ public class WeatherAPIHandler
             temp_closure = closure
             var dateComponents = DateComponents()
             dateComponents.second = 1
-            var calendar = Calendar.current
+            let calendar = Calendar.current
             var currentDate = Date()
             currentDate = calendar.date(byAdding: dateComponents, to: currentDate)!
             let timer = Timer(fireAt: currentDate, interval: 0, target: self, selector: #selector(tryAgain),userInfo: nil, repeats: false)

@@ -31,7 +31,7 @@ class OverviewViewController: UIViewController {
     }
 
     @IBAction func savePressed(_ sender: Any) {
-        let parentVC = self.parent as! SmartTourPageViewController
+//        let parentVC = self.parent as! SmartTourPageViewController
 ////        let alarm = AlarmCoreDataHandler.sharedInstance.getSmartAlarm()
 //        alarm.travel?.destination = "DHBW Karlsruhe"
 //        alarm.travel?.source = "Ludwig-Erhard-Allee 32 76131 Karlsruhe"
