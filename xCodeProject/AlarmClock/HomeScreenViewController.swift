@@ -12,6 +12,7 @@ class HomeScreenViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var clockLabel: UILabel!
+    @IBOutlet weak var alarmLabel: Clock!
     
     var timer: Timer?
     
@@ -27,8 +28,13 @@ class HomeScreenViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.orientationChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
 
         // Do any additional setup after loading the view.
+        setAlarmAndLabel()
     }
-
+    
+    func setAlarmAndLabel () {
+        alarmLabel.text = "6:45"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -36,5 +42,9 @@ class HomeScreenViewController: UIViewController {
 
     func orientationChanged () {
         
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 }
