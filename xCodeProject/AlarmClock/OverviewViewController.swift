@@ -31,21 +31,21 @@ class OverviewViewController: UIViewController {
     }
 
     @IBAction func savePressed(_ sender: Any) {
-        let parentVC = self.parent as! SmartTourPageViewController
-        let alarm = AlarmCoreDataHandler.sharedInstance.getSmartAlarm()
-        alarm.travel?.destination = "DHBW Karlsruhe"
-        alarm.travel?.source = "Ludwig-Erhard-Allee 32 76131 Karlsruhe"
-        alarm.travel?.mode = Mode.bicycling
-        alarm.travel?.trafficModel = TrafficModel.best_guess
-        alarm.offset = Int16(parentVC.alarmObject.offset)
-        alarm.calendarIdentifier = (parentVC.alarmObject.calendar?.calendarIdentifier)!
-        alarm.smartAlarm = true
-        var fileSound = FileSound()
-        fileSound.generateRepresentingCoreDataObject();
-        fileSound.fileName = "bla"
-        alarm.wakeUpTone = fileSound
-        alarm.save()
-        AlarmController.sharedInstance.activate(alarm: alarm);
+//        let parentVC = self.parent as! SmartTourPageViewController
+////        let alarm = AlarmCoreDataHandler.sharedInstance.getSmartAlarm()
+//        alarm.travel?.destination = "DHBW Karlsruhe"
+//        alarm.travel?.source = "Ludwig-Erhard-Allee 32 76131 Karlsruhe"
+//        alarm.travel?.mode = Mode.bicycling
+//        alarm.travel?.trafficModel = TrafficModel.best_guess
+//        alarm.offset = Int16(parentVC.alarmObject.offset)
+//        alarm.calendarIdentifier = (parentVC.alarmObject.calendar?.calendarIdentifier)!
+//        alarm.smartAlarm = true
+//        var fileSound = FileSound()
+//        fileSound.generateRepresentingCoreDataObject();
+//        fileSound.fileName = "bla"
+//        alarm.wakeUpTone = fileSound
+//        alarm.save()
+////        AlarmController.sharedInstance.activate(alarm: alarm);
         self.dismiss(animated: true, completion: nil)
     }
 }
