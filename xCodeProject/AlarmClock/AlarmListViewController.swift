@@ -31,9 +31,16 @@ class AlarmListViewController: UITableViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        let tmp = tmpAlarm()
+        var tmp = tmpAlarm()
         tmp.wakeUpTime = Date()
         tmp.name = "My Alarm"
+        tmp.isSmart = false
+        tmp.active = false
+        alarms.append(tmp)
+        
+        tmp = tmpAlarm()
+        tmp.wakeUpTime = Date()
+        tmp.name = "Aufstehen"
         alarms.append(tmp)
         tableView.reloadData()
     }
@@ -58,7 +65,7 @@ class AlarmListViewController: UITableViewController {
         vc.alarmId = alarms[indexPath.row].id
         vc.name = alarms[indexPath.row].name
         
-        //self.present(vc, animated: true, completion: nil)
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,9 +82,9 @@ class AlarmListViewController: UITableViewController {
         cell.wakeUpTimeLabel.text = formatter.string(from: wakeUpTime)
         
         if (alarms[indexPath.row].isSmart) {
-            cell.smartImage.image = UIImage(named: "")
+            cell.smartImage.backgroundColor = .white
         } else {
-            cell.smartImage.image = UIImage(named: "")
+            cell.smartImage.backgroundColor = .red
         }
         
         return cell
