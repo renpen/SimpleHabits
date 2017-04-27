@@ -23,7 +23,11 @@ class GoogleDistanceMatrixTravel : Travel
     
     private func isValid() -> Bool      //determine if the minimun that the request need is set
     {
-        return true
+        if(offset != nil && source != nil && destination != nil && mode != nil)
+        {
+            return true
+        }
+        return false
     }
     func getTravelTimeInS() -> Int
     {
@@ -45,7 +49,8 @@ class GoogleDistanceMatrixTravel : Travel
             }
         }
         else{
-            //throw some kind of exception
+            closure(0)
+            //throw some kind of exception TODO
         }
     }
     

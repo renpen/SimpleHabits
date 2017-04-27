@@ -50,9 +50,25 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let alarm = alarmCoreDataHandler.fabricateAlarm()
         alarm.name = nameTF.text!
         alarm.smartAlarm = modeSwitch.isOn
+        
+        //THIS IF ONLY FOR MOCKUP NEED TO BE REPLACED WITH THE CORRET DATE ON THE UI
+        if !modeSwitch.isOn {
+            let currentDate = Date()
+            let calendarAPI = Calendar.current
+            var date = calendarAPI.date(byAdding: .minute, value: 1, to: currentDate)
+            alarm.wakeUpTime = date
+
+        }
+        
+        //THIS IS ONLY FOR MOCKUP NEED TO BE REPLACED WITH THE CORRECT ALARMSOUND ON THE UI
+        var sound = FileSound()
+        sound.generateRepresentingCoreDataObject()
+        sound.fileName = "bell"
+        alarm.wakeUpTone = sound
+        
+        
         // Mode muss noch gesetzt werden ... . TODO
         // -> modeSwitch.isOn here ;)
-        
         switch transportationSB.selectedSegmentIndex {
         case 1:
             alarm.travel?.mode = Mode.bicycling

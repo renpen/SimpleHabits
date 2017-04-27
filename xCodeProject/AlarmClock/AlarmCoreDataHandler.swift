@@ -58,6 +58,7 @@ class AlarmCoreDataHandler : CoreDataHandler
     }
     func deleteAlarm(alarmID: Int32) {
         let alarm = getAlarmByID(id: alarmID)
+        alarm?.deactivate()
         if alarm != nil
         {
             let travelId = alarm?.travel_f_key

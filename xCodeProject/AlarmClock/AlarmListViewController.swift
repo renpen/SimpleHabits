@@ -72,7 +72,6 @@ class AlarmListViewController: UITableViewController {
             cell.changeColor()
             return cell
         }
-
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -81,7 +80,8 @@ class AlarmListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
-            //remove alarm from coredata here
+            let alarm = alarms[indexPath.row]
+            AlarmCoreDataHandler.sharedInstance.deleteAlarm(alarmID: alarm.id)
             alarms = self.fetchAlarms()
             tableView.reloadData()
         }

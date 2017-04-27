@@ -24,11 +24,13 @@ public class CustomViewCell : UITableViewCell
     func changeColor () {
         if (activeSwitch.isOn) {
             activeSwitch.onTintColor = onColor
+            alarm?.activate()
         } else {
             /*For off state*/
             activeSwitch.tintColor = offColor
             activeSwitch.layer.cornerRadius = 16
             activeSwitch.backgroundColor = offColor
+            alarm?.deactivate()
         }
         alarm?.isActivated = activeSwitch.isOn
         alarm?.save()
