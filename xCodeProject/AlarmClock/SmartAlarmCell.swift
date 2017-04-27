@@ -1,29 +1,33 @@
 //
-//  AlarmCell.swift
+//  SmartAlarmCell.swift
 //  AlarmClock
 //
-//  Created by Benedikt Bosshammer on 24.04.17.
+//  Created by Benedikt Bosshammer on 27.04.17.
 //  Copyright © 2017 ReneUser. All rights reserved.
 //
 
 import UIKit
 
-class AlarmCell: UITableViewCell {
-    
-    @IBOutlet weak var wakeUpTimeLabel: UILabel!
-    @IBOutlet weak var alarmNameLabel: UILabel!
+class SmartAlarmCell: UITableViewCell {
+
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var activeSwitch: UISwitch!
     
     var onColor = UIColor(red:1.00, green:0.53, blue:0.04, alpha:1.0)
     var offColor = UIColor(red:0.67, green:0.67, blue:0.67, alpha:1.0)
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
     @IBAction func switchChanged(_ sender: Any) {
         changeColor()
         //change the isActive status here!
-    }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        changeColor()
     }
     
     func changeColor () {
@@ -37,5 +41,4 @@ class AlarmCell: UITableViewCell {
             activeSwitch.backgroundColor = offColor
         }
     }
-    
 }

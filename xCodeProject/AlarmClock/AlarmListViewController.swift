@@ -18,7 +18,6 @@ class AlarmListViewController: UITableViewController {
     }
     
     var alarms:[Alarm] = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,11 +26,10 @@ class AlarmListViewController: UITableViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //fetch core data here!
+        alarms = self.fetchAlarms()
         tableView.reloadData()
     }
     
@@ -54,28 +52,40 @@ class AlarmListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let alarm = alarms[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell") as! AlarmCell
         
-        cell.activeSwitch.isOn = alarm.isActivated // s.o
+        let cell:AlarmCell
+        let smartCell:SmartAlarmCell
         
-        cell.alarmNameLabel.text = alarm.name
-        let wakeUpTime = alarm.wakeUpTime
-        
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "HH:mm"
-        cell.wakeUpTimeLabel.text = "Platzhalter"
         if (alarm.smartAlarm) {
-            cell.smartImage.backgroundColor = .white
+            smartCell = tableView.dequeueReusableCell(withIdentifier: "smartAlarmCell") as! SmartAlarmCell
+            smartCell.name.text = alarm.name
+            smartCell.changeColor()
+            return smartCell
         } else {
-            cell.smartImage.backgroundColor = .red
+            cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell") as! AlarmCell
+            cell.activeSwitch.isOn = alarm.isActivated // s.o
+            cell.alarmNameLabel.text = alarm.name
+            cell.wakeUpTimeLabel.text = "Platzhalter"
+            cell.changeColor()
+            return cell
         }
-        
-        return cell
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            //remove alarm from coredata here
+            alarms = self.fetchAlarms()
+            tableView.reloadData()
+        }
+    }
+    
+    func fetchAlarms() -> [Alarm]{
+        return AlarmCoreDataHandler.sharedInstance.getAllAlarms()
     }
 
 }

@@ -16,12 +16,33 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var transportationSB: UISegmentedControl!
     @IBOutlet weak var calendarPicker: UIPickerView!
     @IBOutlet weak var alarmSoundButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var wakeupTimeButton: UIButton!
+    
+    @IBAction func wakeupTimePressed(_ sender: Any) {
+        
+    }
     
     var userCalendars: [EKCalendar?] = []
     let calendarTools = CalendarTools.sharedInstance
     let alarmCoreDataHandler = AlarmCoreDataHandler.sharedInstance
     
+    @IBAction func modeSwitched(_ sender: Any) {
+        if modeSwitch.isOn {
+            wakeupTimeButton.isEnabled = false
+            wakeupTimeButton.alpha = 0.5
+        } else {
+            wakeupTimeButton.isEnabled = true
+            wakeupTimeButton.alpha = 1
+        }
+    }
+    
     @IBAction func alarmSoundButtonPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveAlarmPressed(_ sender: Any) {
@@ -30,6 +51,8 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         alarm.name = nameTF.text!
         alarm.smartAlarm = modeSwitch.isOn
         // Mode muss noch gesetzt werden ... . TODO
+        // -> modeSwitch.isOn here ;)
+        
         switch transportationSB.selectedSegmentIndex {
         case 1:
             alarm.travel?.mode = Mode.bicycling
@@ -45,6 +68,8 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         alarm.travel?.destination = "blablaBlubber"
         alarm.calendarIdentifier = (userCalendars[calendarPicker.selectedRow(inComponent: 0)]?.calendarIdentifier)!
         alarm.save()
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -54,9 +79,21 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         calendarPicker.setValue(UIColor.white, forKeyPath: "textColor")
         
+        saveButton.layer.cornerRadius = 10
+        alarmSoundButton.layer.cornerRadius = 10
+        wakeupTimeButton.layer.cornerRadius = 10
+        
         calendarTools.requestPermission(sender: self)
         // Do any additional setup after loading the view.
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     func permissionGiven() {
         userCalendars = calendarTools.getAllCalendar()
         calendarPicker.reloadAllComponents()
