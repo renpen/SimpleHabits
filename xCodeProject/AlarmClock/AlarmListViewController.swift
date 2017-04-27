@@ -20,6 +20,11 @@ class AlarmListViewController: UITableViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    @IBAction func addAlarm(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "addAlarm")
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
     var alarms:[tmpAlarm] = []
     
     override func viewDidLoad() {

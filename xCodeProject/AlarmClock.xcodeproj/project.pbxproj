@@ -59,6 +59,7 @@
 		B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */; };
 		B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */; };
 		B74115631E9E025200929BF1 /* landscapeBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B74115621E9E025200929BF1 /* landscapeBackground.jpg */; };
+		B742BA571EB1F4B200CEEAFF /* CreateAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742BA561EB1F4B200CEEAFF /* CreateAlarmViewController.swift */; };
 		B75783421EA69C690018632F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75783411EA69C690018632F /* SWRevealViewController.m */; };
 		B75783451EA6A3A40018632F /* AlarmListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75783441EA6A3A40018632F /* AlarmListViewController.swift */; };
 		B75783471EA6A3BC0018632F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75783461EA6A3BC0018632F /* SettingsViewController.swift */; };
@@ -157,6 +158,7 @@
 		B726C02A1DCC95FD00E3BB4A /* Smart Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Smart Alarm Button.png"; path = "Source Files/Buttons/Smart Alarm Button.png"; sourceTree = SOURCE_ROOT; };
 		B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Standard Alarm Button.png"; path = "Source Files/Buttons/Standard Alarm Button.png"; sourceTree = SOURCE_ROOT; };
 		B74115621E9E025200929BF1 /* landscapeBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = landscapeBackground.jpg; sourceTree = "<group>"; };
+		B742BA561EB1F4B200CEEAFF /* CreateAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAlarmViewController.swift; sourceTree = "<group>"; };
 		B757833F1EA69C680018632F /* AlarmClock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlarmClock-Bridging-Header.h"; sourceTree = "<group>"; };
 		B75783401EA69C690018632F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		B75783411EA69C690018632F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				B757833F1EA69C680018632F /* AlarmClock-Bridging-Header.h */,
 				B70162BA1EA899780014EDCF /* Clock.swift */,
 				B7D639CE1EAE489D00739EEA /* AlarmCell.swift */,
+				B742BA561EB1F4B200CEEAFF /* CreateAlarmViewController.swift */,
 			);
 			name = "Used Files";
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				125F03951E9D409100679997 /* SoundPlayer.swift in Sources */,
 				B70162BB1EA899780014EDCF /* Clock.swift in Sources */,
 				125F038C1E9D258100679997 /* AlarmSoundCoreDataHandler.swift in Sources */,
+				B742BA571EB1F4B200CEEAFF /* CreateAlarmViewController.swift in Sources */,
 				B7D639D11EAE5A2700739EEA /* AlarmDetailsViewController.swift in Sources */,
 				4B14AEA91DD34268000469BF /* Alarm.swift in Sources */,
 				B757834B1EA6ABAC0018632F /* menuContentViewController.swift in Sources */,
