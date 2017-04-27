@@ -10,7 +10,7 @@ import UIKit
 import EventKit
 import CoreData
 
-class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class ViewController: UIViewController, UIViewControllerTransitioningDelegate, CalendarViewController {
     
     var timer: Timer?
     
@@ -225,15 +225,12 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     func dismissKeyboard(){
         view.endEditing(true)
     }
-    
-    func permissionAccepted()
-    {
+     func permissionGiven() {
         calendars = cTools.getAllCalendar()
     }
-    
-    func permissionDenied()
-    {
-        
+
+     func permissionDeied() {
+        //TODO
     }
     
     func switchMode(mode: String) {

@@ -14,7 +14,7 @@ class CalendarTools {
     static let sharedInstance = CalendarTools()
     
 
-    func requestPermission(sender: ViewController)
+    func requestPermission(sender: CalendarViewController)
     {
         let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
         switch(status)
@@ -23,17 +23,17 @@ class CalendarTools {
             // First Run
             getPermission(sender: sender)
         case EKAuthorizationStatus.authorized:
-            sender.permissionAccepted()
+            sender.permissionGiven()
         case EKAuthorizationStatus.denied,EKAuthorizationStatus.restricted :
-            sender.permissionDenied()
+            sender.permissionDeied()
     }
 }
 
-    private func getPermission(sender: ViewController)
+    private func getPermission(sender: CalendarViewController)
     {
         eventStore.requestAccess(to: EKEntityType.event, completion: { (accesGranted, error) in
             if accesGranted == true {
-                sender.permissionAccepted()     //the Permission asking is asynchronous, so we need to handle it this way when the permission is granted
+                sender.permissionGiven()     //the Permission asking is asynchronous, so we need to handle it this way when the permission is granted
             }
         })
     }

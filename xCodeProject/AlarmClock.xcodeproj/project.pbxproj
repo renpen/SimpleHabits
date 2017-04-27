@@ -17,6 +17,7 @@
 		125F03911E9D29D100679997 /* SoundTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03901E9D29D100679997 /* SoundTypes.swift */; };
 		125F03931E9D405400679997 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03921E9D405400679997 /* SoundManager.swift */; };
 		125F03951E9D409100679997 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03941E9D409100679997 /* SoundPlayer.swift */; };
+		126D055B1EB200F100655FD8 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D055A1EB200F100655FD8 /* CalendarViewController.swift */; };
 		1290A6CF1EA913B900B7A6E6 /* WeatherTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1290A6CE1EA913B900B7A6E6 /* WeatherTesting.swift */; };
 		12AF0F7F1EAD1315005D6064 /* TravelCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AF0F7E1EAD1315005D6064 /* TravelCoreData.swift */; };
 		12DCFB921E9BEB5F007AA182 /* AlarmCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */; };
@@ -111,6 +112,7 @@
 		125F03901E9D29D100679997 /* SoundTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundTypes.swift; sourceTree = "<group>"; };
 		125F03921E9D405400679997 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		125F03941E9D409100679997 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		126D055A1EB200F100655FD8 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		1290A6CE1EA913B900B7A6E6 /* WeatherTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTesting.swift; sourceTree = "<group>"; };
 		12AF0F7E1EAD1315005D6064 /* TravelCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCoreData.swift; sourceTree = "<group>"; };
 		12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmCoreDataHandler.swift; sourceTree = "<group>"; };
@@ -229,6 +231,15 @@
 			name = FileSound;
 			sourceTree = "<group>";
 		};
+		126D05591EB200DC00655FD8 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				4B518E561DBF4D370039D1C3 /* CalendarTools.swift */,
+				126D055A1EB200F100655FD8 /* CalendarViewController.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
 		12DCFB901E9BEB2D007AA182 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +315,7 @@
 		4B5B7A161DBE08F2006E7C39 /* AlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				126D05591EB200DC00655FD8 /* Calendar */,
 				12E70DD31EA0F80A00D855FE /* WeatherApi */,
 				B70344791DCB74B300FEF291 /* Sources */,
 				4B9A22F31DC4A75A00933E2E /* JSONTools */,
@@ -315,7 +327,6 @@
 				4B14AE991DD3391E000469BF /* Alarm */,
 				12DCFB991E9BF758007AA182 /* Settings */,
 				4B5B7A211DBE08F2006E7C39 /* Assets.xcassets */,
-				4B518E561DBF4D370039D1C3 /* CalendarTools.swift */,
 				12E70DD81EA0FB6400D855FE /* LocationTools.swift */,
 			);
 			path = AlarmClock;
@@ -724,6 +735,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				126D055B1EB200F100655FD8 /* CalendarViewController.swift in Sources */,
 				B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */,
 				4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */,
 				12DCFBA71E9BF91C007AA182 /* SettingsCoreDataHandler.swift in Sources */,
