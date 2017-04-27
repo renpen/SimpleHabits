@@ -12,7 +12,6 @@ import EventKit
 let eventStore = EKEventStore()
 class CalendarTools {
     static let sharedInstance = CalendarTools()
-    
 
     func requestPermission(sender: CalendarViewController)
     {

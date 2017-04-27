@@ -8,14 +8,6 @@
 
 import UIKit
 
-class tmpAlarm: NSObject {
-    var wakeUpTime:Date = Date()
-    var active:Bool = true
-    var name:String = ""
-    var isSmart:Bool = true
-    var id = "1"
-}
-
 class AlarmListViewController: UITableViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -25,7 +17,7 @@ class AlarmListViewController: UITableViewController {
         self.present(vc!, animated: true, completion: nil)
     }
     
-    var alarms:[tmpAlarm] = []
+    var alarms:[Alarm] = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +27,6 @@ class AlarmListViewController: UITableViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
-        var tmp = tmpAlarm()
-        tmp.wakeUpTime = Date()
-        tmp.name = "My Alarm"
-        tmp.isSmart = false
-        tmp.active = false
-        alarms.append(tmp)
-        
-        tmp = tmpAlarm()
-        tmp.wakeUpTime = Date()
-        tmp.name = "Aufstehen"
-        alarms.append(tmp)
         tableView.reloadData()
     }
     
@@ -67,26 +47,24 @@ class AlarmListViewController: UITableViewController {
         let sb = self.storyboard
         let vc = sb?.instantiateViewController(withIdentifier: "alarmDetailsVC") as! AlarmDetailsViewController
         
-        vc.alarmId = alarms[indexPath.row].id
+        vc.alarmId = String(alarms[indexPath.row].id)
         vc.name = alarms[indexPath.row].name
-        
         self.present(vc, animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let alarm = alarms[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell") as! AlarmCell
         
-        cell.activeSwitch.isOn = alarms[indexPath.row].active // s.o
+        cell.activeSwitch.isOn = alarm.isActivated // s.o
         
-        cell.alarmNameLabel.text = alarms[indexPath.row].name
-        let wakeUpTime = alarms[indexPath.row].wakeUpTime
+        cell.alarmNameLabel.text = alarm.name
+        let wakeUpTime = alarm.wakeUpTime
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-        cell.wakeUpTimeLabel.text = formatter.string(from: wakeUpTime)
-        
-        if (alarms[indexPath.row].isSmart) {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "HH:mm"
+        cell.wakeUpTimeLabel.text = "Platzhalter"
+        if (alarm.smartAlarm) {
             cell.smartImage.backgroundColor = .white
         } else {
             cell.smartImage.backgroundColor = .red

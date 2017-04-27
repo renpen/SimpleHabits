@@ -17,6 +17,7 @@ class HomeScreenViewController: UIViewController {
     var timer: Timer?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.backgroundColor = UIColor.clear
