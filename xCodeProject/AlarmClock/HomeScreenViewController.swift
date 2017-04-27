@@ -33,7 +33,14 @@ class HomeScreenViewController: UIViewController {
     }
     
     func setAlarmAndLabel () {
-        alarmLabel.text = "6:45"
+        let alarms = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        for alarm in alarms {
+            if alarm.isActivated {
+                alarmLabel.text = formatter.string(from: alarm.wakeUpTime!)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
