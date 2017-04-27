@@ -65,7 +65,6 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         default:
             alarm.travel?.mode = Mode.driving
         }
-        alarm.travel?.destination = "blablaBlubber"
         alarm.calendarIdentifier = (userCalendars[calendarPicker.selectedRow(inComponent: 0)]?.calendarIdentifier)!
         alarm.save()
         

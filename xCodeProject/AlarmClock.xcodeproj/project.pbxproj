@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120915941EB2774100EF0C85 /* CustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120915931EB2774100EF0C85 /* CustomViewCell.swift */; };
 		1212F3CA1EAD175B006C36E5 /* TravelCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212F3C91EAD175B006C36E5 /* TravelCalculation.swift */; };
 		1212F3CD1EAD179E006C36E5 /* TravelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212F3CC1EAD179E006C36E5 /* TravelAPI.swift */; };
 		125F03871E9D235400679997 /* AlarmSound+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03851E9D235400679997 /* AlarmSound+CoreDataClass.swift */; };
@@ -107,6 +108,7 @@
 
 /* Begin PBXFileReference section */
 		10C0C345824A0B92EF68C43E /* Pods-AlarmClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.debug.xcconfig"; sourceTree = "<group>"; };
+		120915931EB2774100EF0C85 /* CustomViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewCell.swift; sourceTree = "<group>"; };
 		1212F3C91EAD175B006C36E5 /* TravelCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCalculation.swift; sourceTree = "<group>"; };
 		1212F3CC1EAD179E006C36E5 /* TravelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelAPI.swift; sourceTree = "<group>"; };
 		125F03851E9D235400679997 /* AlarmSound+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AlarmSound+CoreDataClass.swift"; path = "../AlarmSound+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				B7D639CE1EAE489D00739EEA /* AlarmCell.swift */,
 				B7F5FC181EB2609900C981CE /* SmartAlarmCell.swift */,
 				B742BA561EB1F4B200CEEAFF /* CreateAlarmViewController.swift */,
+				120915931EB2774100EF0C85 /* CustomViewCell.swift */,
 			);
 			name = "Used Files";
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				125F03881E9D235400679997 /* AlarmSound+CoreDataProperties.swift in Sources */,
 				4BED56E21DDA51CD007EAABB /* TravelC+CoreDataProperties.swift in Sources */,
 				4B9A22F21DC4A5B900933E2E /* RestApiManager.swift in Sources */,
+				120915941EB2774100EF0C85 /* CustomViewCell.swift in Sources */,
 				4B42BC001DC505AC00678BF0 /* TrafficModel.swift in Sources */,
 				125F03951E9D409100679997 /* SoundPlayer.swift in Sources */,
 				B70162BB1EA899780014EDCF /* Clock.swift in Sources */,

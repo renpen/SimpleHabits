@@ -58,11 +58,14 @@ class AlarmListViewController: UITableViewController {
         
         if (alarm.smartAlarm) {
             smartCell = tableView.dequeueReusableCell(withIdentifier: "smartAlarmCell") as! SmartAlarmCell
+            smartCell.alarm = alarm
             smartCell.name.text = alarm.name
+            smartCell.activeSwitch.isOn = alarm.isActivated
             smartCell.changeColor()
             return smartCell
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell") as! AlarmCell
+            cell.alarm = alarm
             cell.activeSwitch.isOn = alarm.isActivated // s.o
             cell.alarmNameLabel.text = alarm.name
             cell.wakeUpTimeLabel.text = "Platzhalter"
