@@ -18,10 +18,7 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var alarmSoundButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var wakeupTimeButton: UIButton!
-    
-    @IBAction func wakeupTimePressed(_ sender: Any) {
-        
-    }
+    @IBOutlet weak var wakeTimeLabel: UILabel!
     
     var userCalendars: [EKCalendar?] = []
     let calendarTools = CalendarTools.sharedInstance
@@ -55,7 +52,7 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         if !modeSwitch.isOn {
             let currentDate = Date()
             let calendarAPI = Calendar.current
-            var date = calendarAPI.date(byAdding: .minute, value: 1, to: currentDate)
+            let date = calendarAPI.date(byAdding: .minute, value: 1, to: currentDate)
             alarm.wakeUpTime = date
 
         }
@@ -97,6 +94,7 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         saveButton.layer.cornerRadius = 10
         alarmSoundButton.layer.cornerRadius = 10
         wakeupTimeButton.layer.cornerRadius = 10
+        self.wakeTimeViewInitialChanges()
         
         calendarTools.requestPermission(sender: self)
         // Do any additional setup after loading the view.
@@ -126,6 +124,44 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return userCalendars.count
+    }
+    
+    // Control for hidden WakeTime View!
+    
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var wakeTimeContentView: UIView!
+    @IBOutlet weak var closeWakeTime: UIButton!
+    @IBOutlet weak var wakeTimePicker: UIDatePicker!
+    @IBOutlet weak var setWakeTimeLabel: UILabel!
+    
+    @IBAction func wakeupTimePressed(_ sender: Any) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.blurView.alpha = 1.0
+        })
+    }
+    
+    @IBAction func closePressed(_ sender: Any) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.blurView.alpha = 0
+            self.wakeTimeLabel.text = self.setWakeTimeLabel.text
+        })
+    }
+    
+    func wakeTimeViewEntered() {
+        self.wakeTimePickerChanged()
+    }
+    
+    func wakeTimeViewInitialChanges() {
+        wakeTimePicker.addTarget(self, action: #selector(self.wakeTimePickerChanged), for: UIControlEvents.valueChanged)
+        wakeTimeContentView.layer.cornerRadius = 15
+    }
+    
+    func wakeTimePickerChanged() {
+        var formattedString = ""
+        var dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        formattedString = dateFormatter.string(from: wakeTimePicker.date)
+        setWakeTimeLabel.text = formattedString
     }
     
 }
