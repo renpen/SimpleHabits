@@ -48,13 +48,8 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         alarm.name = nameTF.text!
         alarm.smartAlarm = modeSwitch.isOn
         
-        //THIS IF ONLY FOR MOCKUP NEED TO BE REPLACED WITH THE CORRET DATE ON THE UI
         if !modeSwitch.isOn {
-            let currentDate = Date()
-            let calendarAPI = Calendar.current
-            let date = calendarAPI.date(byAdding: .minute, value: 1, to: currentDate)
-            alarm.wakeUpTime = date
-
+          alarm.wakeUpTime = wakeTimePicker.date
         }
         
         //THIS IS ONLY FOR MOCKUP NEED TO BE REPLACED WITH THE CORRECT ALARMSOUND ON THE UI

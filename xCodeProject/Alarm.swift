@@ -52,6 +52,7 @@ public class Alarm: NSManagedObject {
         }
         else
         {
+            validateWakeUpTime()
             setTimer();
         }
     }
@@ -105,6 +106,18 @@ public class Alarm: NSManagedObject {
         print(self.description)
         print(self.wakeUpTone?.fileName)
         self.wakeUpTone?.playSound()
+    }
+    
+    func validateWakeUpTime() {
+        //falls die wakeUpTime schon abgelaufen ist
+        if (wakeUpTime! < Date())
+        {
+            let calendarAPI = Calendar.current
+            var date = calendarAPI.date(byAdding: .day, value: 1, to: wakeUpTime!)
+            wakeUpTime = date!
+            validateWakeUpTime()
+
+        }
     }
 
 }

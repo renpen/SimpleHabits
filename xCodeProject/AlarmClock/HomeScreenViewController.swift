@@ -30,6 +30,12 @@ class HomeScreenViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setAlarmAndLabel()
+        let alarms = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
+        for alarm in alarms {
+            if alarm.isActivated {
+                alarm.activate()
+            }
+        }
     }
     
     func setAlarmAndLabel () {
