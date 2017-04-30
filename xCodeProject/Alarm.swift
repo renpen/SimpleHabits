@@ -117,6 +117,7 @@ public class Alarm: NSManagedObject {
             wakeUpTime = date!
             validateWakeUpTime()
         }
+        save()
     }
 
 }
