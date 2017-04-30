@@ -28,9 +28,13 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         if modeSwitch.isOn {
             wakeupTimeButton.isEnabled = false
             wakeupTimeButton.alpha = 0.5
+            calendarPicker.isHidden = false
+            transportationSB.isHidden = false
         } else {
             wakeupTimeButton.isEnabled = true
             wakeupTimeButton.alpha = 1
+            calendarPicker.isHidden = true
+            transportationSB.isHidden = true
         }
     }
     
