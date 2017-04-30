@@ -39,16 +39,37 @@ class HomeScreenViewController: UIViewController {
     }
     
     func setAlarmAndLabel () {
-        let alarms = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
+        let date = getNextAciveAlarmDate()
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
+        var alarmLabelText = "---"
+        if date != nil {
+            alarmLabelText = formatter.string(from: date!)
+        }
+        alarmLabel.text = alarmLabelText
+        
+    }
+    private func getNextAciveAlarmDate() -> Date?
+    {
+        let alarms = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
+        var nextDate : Date?
         for alarm in alarms {
+            alarm.validateWakeUpTime()
             if alarm.isActivated {
-                alarmLabel.text = formatter.string(from: alarm.wakeUpTime!)
+                if nextDate == nil
+                {
+                    nextDate = alarm.wakeUpTime!
+                }
+                else if nextDate! > alarm.wakeUpTime!
+                {
+                    nextDate = alarm.wakeUpTime!
+                }
             }
         }
+        return nextDate
+
+        
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         print("home entered")
     }

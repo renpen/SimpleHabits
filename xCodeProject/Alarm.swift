@@ -116,7 +116,6 @@ public class Alarm: NSManagedObject {
             var date = calendarAPI.date(byAdding: .day, value: 1, to: wakeUpTime!)
             wakeUpTime = date!
             validateWakeUpTime()
-
         }
     }
 
