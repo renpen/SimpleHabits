@@ -54,8 +54,7 @@ class HomeScreenViewController: UIViewController {
         let alarms = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
         var nextDate : Date?
         for alarm in alarms {
-            if !alarm.smartAlarm {
-                
+            if alarm.wakeUpTime != nil  {
             alarm.validateWakeUpTime()
             if alarm.isActivated {
                 if nextDate == nil
