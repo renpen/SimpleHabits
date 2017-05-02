@@ -34,8 +34,7 @@ class HomeScreenViewController: UIViewController {
         LocationTools.sharedInstance.startLocating()
         setAlarmAndLabel()
         activateAllAlarms()
-        CurrentWeather.sharedInstance.startRequesting()
-        CurrentWeather.sharedInstance.registerWeatherChangeHandler(closure: setWeather)
+        CurrentWeather.sharedInstance.startRequesting(closure: setWeather)
     }
     
     func activateAllAlarms()

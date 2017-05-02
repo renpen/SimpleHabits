@@ -22,7 +22,8 @@ public class CurrentWeather
         timer?.fire()
     }
 
-    func startRequesting() {
+    func startRequesting(closure : @escaping (Weather) -> Void) {
+        self.closure = closure
         if timer == nil {
             repeatWeatherRequests()
         }
@@ -42,10 +43,5 @@ public class CurrentWeather
         if (closure != nil && self.weather != nil){
             closure!(weather!)
         }
-    }
-    
-    func registerWeatherChangeHandler(closure : @escaping (Weather) -> Void)
-    {
-        self.closure = closure
     }
 }
