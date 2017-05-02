@@ -75,7 +75,6 @@ class HomeScreenViewController: UIViewController {
                 }
             }
         }
-     
     }
            return nextDate
     }

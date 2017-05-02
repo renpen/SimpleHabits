@@ -49,7 +49,6 @@ public class WeatherAPIHandler
             })
         }
     }
-    
     private func generateUrl(long:Double,lat:Double) -> String
     {
         let baseUrl = properties["OpenWeatherMapBaseUrl"] as! String
