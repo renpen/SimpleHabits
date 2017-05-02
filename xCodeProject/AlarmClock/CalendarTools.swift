@@ -75,6 +75,9 @@ func getAppointmentUpToOneDayLater(appointmentNumber: Int,calendar : EKCalendar)
             while events[appointmentNumber].isAllDay{
                 appointmentNumber += 1
             }
+            while events[appointmentNumber].startDate < Date() {
+                appointmentNumber += 1;
+            }
             return events[appointmentNumber]
         }
 

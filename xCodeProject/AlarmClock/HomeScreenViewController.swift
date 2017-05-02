@@ -54,6 +54,8 @@ class HomeScreenViewController: UIViewController {
         let alarms = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
         var nextDate : Date?
         for alarm in alarms {
+            if !alarm.smartAlarm {
+                
             alarm.validateWakeUpTime()
             if alarm.isActivated {
                 if nextDate == nil
@@ -66,9 +68,9 @@ class HomeScreenViewController: UIViewController {
                 }
             }
         }
-        return nextDate
-
-        
+     
+    }
+           return nextDate
     }
     override func viewWillAppear(_ animated: Bool) {
         print("home entered")

@@ -57,7 +57,7 @@ class AlarmListViewController: UITableViewController {
         let smartCell:SmartAlarmCell
         var formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
-        var wakeTime = formatter.string(from: alarm.wakeUpTime!)
+        
         
         if (alarm.smartAlarm) {
             smartCell = tableView.dequeueReusableCell(withIdentifier: "smartAlarmCell") as! SmartAlarmCell
@@ -67,6 +67,7 @@ class AlarmListViewController: UITableViewController {
             smartCell.changeColor()
             return smartCell
         } else {
+            var wakeTime = formatter.string(from: alarm.wakeUpTime!)
             cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell") as! AlarmCell
             cell.alarm = alarm
             cell.activeSwitch.isOn = alarm.isActivated // s.o
