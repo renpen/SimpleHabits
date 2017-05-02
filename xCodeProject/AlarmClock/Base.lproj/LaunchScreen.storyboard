@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,24 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG Start Screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="pzU-Hm-Zgx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartBG" translatesAutoresizingMaskIntoConstraints="NO" id="pzU-Hm-Zgx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Lanuchscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="wiS-Gi-aEY">
-                                <rect key="frame" x="-13" y="133" width="400" height="400"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="OMs-iR-XYq"/>
-                                    <constraint firstAttribute="width" constant="400" id="U73-1m-4Ph"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="pzU-Hm-Zgx" secondAttribute="bottom" id="8DS-q9-fbU"/>
                             <constraint firstAttribute="trailing" secondItem="pzU-Hm-Zgx" secondAttribute="trailing" id="98T-fv-Pme"/>
-                            <constraint firstItem="wiS-Gi-aEY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="By4-nb-iMn"/>
                             <constraint firstItem="pzU-Hm-Zgx" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="JzE-1i-yDU"/>
-                            <constraint firstItem="wiS-Gi-aEY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YOM-V8-KIl"/>
                             <constraint firstItem="pzU-Hm-Zgx" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="gep-iQ-sGT"/>
                         </constraints>
                     </view>
@@ -49,7 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BG Start Screen.png" width="414" height="736"/>
-        <image name="Logo Lanuchscreen.png" width="1000" height="1000"/>
+        <image name="StartBG" width="1349" height="2417"/>
     </resources>
 </document>
