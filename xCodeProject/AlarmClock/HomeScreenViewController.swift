@@ -14,6 +14,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var clockLabel: UILabel!
     @IBOutlet weak var alarmLabel: Clock!
     @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var weatherImageView: UIImageView!
     
     var timer: Timer?
     
@@ -35,7 +36,7 @@ class HomeScreenViewController: UIViewController {
         activateAllAlarms()
         CurrentWeather.sharedInstance.startRequesting()
         CurrentWeather.sharedInstance.registerWeatherChangeHandler(closure: setWeather)
-            }
+    }
     
     func activateAllAlarms()
     {
@@ -97,6 +98,7 @@ class HomeScreenViewController: UIViewController {
     
     func setWeather(weather : Weather)
     {
+        self.weatherImageView.image = UIImage(named: weather.icon)
         self.weatherLabel.text = "\(weather.temp) C"
     }
 }
