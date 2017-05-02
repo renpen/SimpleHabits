@@ -21,6 +21,25 @@
 		126D055B1EB200F100655FD8 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126D055A1EB200F100655FD8 /* CalendarViewController.swift */; };
 		1290A6CF1EA913B900B7A6E6 /* WeatherTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1290A6CE1EA913B900B7A6E6 /* WeatherTesting.swift */; };
 		12AF0F7F1EAD1315005D6064 /* TravelCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AF0F7E1EAD1315005D6064 /* TravelCoreData.swift */; };
+		12CC2F1D1EB904F800D3FAB5 /* 01d.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F0A1EB904F800D3FAB5 /* 01d.png */; };
+		12CC2F1E1EB904F800D3FAB5 /* 02d.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F0B1EB904F800D3FAB5 /* 02d.png */; };
+		12CC2F1F1EB904F800D3FAB5 /* 03d.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F0C1EB904F800D3FAB5 /* 03d.png */; };
+		12CC2F201EB904F800D3FAB5 /* 04d.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F0D1EB904F800D3FAB5 /* 04d.png */; };
+		12CC2F211EB904F800D3FAB5 /* 09d.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F0E1EB904F800D3FAB5 /* 09d.png */; };
+		12CC2F221EB904F800D3FAB5 /* 10d.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F0F1EB904F800D3FAB5 /* 10d.png */; };
+		12CC2F231EB904F800D3FAB5 /* 11d.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F101EB904F800D3FAB5 /* 11d.png */; };
+		12CC2F241EB904F800D3FAB5 /* 13d.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F111EB904F800D3FAB5 /* 13d.png */; };
+		12CC2F251EB904F800D3FAB5 /* 50d.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F121EB904F800D3FAB5 /* 50d.png */; };
+		12CC2F261EB904F800D3FAB5 /* 50n.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F131EB904F800D3FAB5 /* 50n.png */; };
+		12CC2F271EB904F800D3FAB5 /* 13n.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F141EB904F800D3FAB5 /* 13n.png */; };
+		12CC2F281EB904F800D3FAB5 /* 11n.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F151EB904F800D3FAB5 /* 11n.png */; };
+		12CC2F291EB904F800D3FAB5 /* 10n.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F161EB904F800D3FAB5 /* 10n.png */; };
+		12CC2F2A1EB904F800D3FAB5 /* 09n.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F171EB904F800D3FAB5 /* 09n.png */; };
+		12CC2F2B1EB904F800D3FAB5 /* 04n.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F181EB904F800D3FAB5 /* 04n.png */; };
+		12CC2F2C1EB904F800D3FAB5 /* 03n.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F191EB904F800D3FAB5 /* 03n.png */; };
+		12CC2F2D1EB904F800D3FAB5 /* 02n.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F1A1EB904F800D3FAB5 /* 02n.png */; };
+		12CC2F2E1EB904F800D3FAB5 /* 01n.png in Resources */ = {isa = PBXBuildFile; fileRef = 12CC2F1B1EB904F800D3FAB5 /* 01n.png */; };
+		12CC2F301EB906AB00D3FAB5 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC2F2F1EB906AB00D3FAB5 /* CurrentWeather.swift */; };
 		12DCFB921E9BEB5F007AA182 /* AlarmCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */; };
 		12DCFB941E9BEB6C007AA182 /* TravelCoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFB931E9BEB6C007AA182 /* TravelCoreDataHandler.swift */; };
 		12DCFBA41E9BF891007AA182 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCFBA21E9BF891007AA182 /* Settings.swift */; };
@@ -122,6 +141,25 @@
 		126D055A1EB200F100655FD8 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		1290A6CE1EA913B900B7A6E6 /* WeatherTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTesting.swift; sourceTree = "<group>"; };
 		12AF0F7E1EAD1315005D6064 /* TravelCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCoreData.swift; sourceTree = "<group>"; };
+		12CC2F0A1EB904F800D3FAB5 /* 01d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 01d.png; path = "Source Files/WeatherIcons/01d.png"; sourceTree = "<group>"; };
+		12CC2F0B1EB904F800D3FAB5 /* 02d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 02d.png; path = "Source Files/WeatherIcons/02d.png"; sourceTree = "<group>"; };
+		12CC2F0C1EB904F800D3FAB5 /* 03d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 03d.png; path = "Source Files/WeatherIcons/03d.png"; sourceTree = "<group>"; };
+		12CC2F0D1EB904F800D3FAB5 /* 04d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 04d.png; path = "Source Files/WeatherIcons/04d.png"; sourceTree = "<group>"; };
+		12CC2F0E1EB904F800D3FAB5 /* 09d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 09d.png; path = "Source Files/WeatherIcons/09d.png"; sourceTree = "<group>"; };
+		12CC2F0F1EB904F800D3FAB5 /* 10d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10d.png; path = "Source Files/WeatherIcons/10d.png"; sourceTree = "<group>"; };
+		12CC2F101EB904F800D3FAB5 /* 11d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 11d.png; path = "Source Files/WeatherIcons/11d.png"; sourceTree = "<group>"; };
+		12CC2F111EB904F800D3FAB5 /* 13d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 13d.png; path = "Source Files/WeatherIcons/13d.png"; sourceTree = "<group>"; };
+		12CC2F121EB904F800D3FAB5 /* 50d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 50d.png; path = "Source Files/WeatherIcons/50d.png"; sourceTree = "<group>"; };
+		12CC2F131EB904F800D3FAB5 /* 50n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 50n.png; path = "Source Files/WeatherIcons/50n.png"; sourceTree = "<group>"; };
+		12CC2F141EB904F800D3FAB5 /* 13n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 13n.png; path = "Source Files/WeatherIcons/13n.png"; sourceTree = "<group>"; };
+		12CC2F151EB904F800D3FAB5 /* 11n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 11n.png; path = "Source Files/WeatherIcons/11n.png"; sourceTree = "<group>"; };
+		12CC2F161EB904F800D3FAB5 /* 10n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 10n.png; path = "Source Files/WeatherIcons/10n.png"; sourceTree = "<group>"; };
+		12CC2F171EB904F800D3FAB5 /* 09n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 09n.png; path = "Source Files/WeatherIcons/09n.png"; sourceTree = "<group>"; };
+		12CC2F181EB904F800D3FAB5 /* 04n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 04n.png; path = "Source Files/WeatherIcons/04n.png"; sourceTree = "<group>"; };
+		12CC2F191EB904F800D3FAB5 /* 03n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 03n.png; path = "Source Files/WeatherIcons/03n.png"; sourceTree = "<group>"; };
+		12CC2F1A1EB904F800D3FAB5 /* 02n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 02n.png; path = "Source Files/WeatherIcons/02n.png"; sourceTree = "<group>"; };
+		12CC2F1B1EB904F800D3FAB5 /* 01n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 01n.png; path = "Source Files/WeatherIcons/01n.png"; sourceTree = "<group>"; };
+		12CC2F2F1EB906AB00D3FAB5 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		12DCFB911E9BEB5F007AA182 /* AlarmCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmCoreDataHandler.swift; sourceTree = "<group>"; };
 		12DCFB931E9BEB6C007AA182 /* TravelCoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCoreDataHandler.swift; sourceTree = "<group>"; };
 		12DCFBA21E9BF891007AA182 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = ../Settings.swift; sourceTree = "<group>"; };
@@ -252,6 +290,32 @@
 			name = Calendar;
 			sourceTree = "<group>";
 		};
+		12CC2F1C1EB904F800D3FAB5 /* WeatherIcons */ = {
+			isa = PBXGroup;
+			children = (
+				12CC2F0A1EB904F800D3FAB5 /* 01d.png */,
+				12CC2F0B1EB904F800D3FAB5 /* 02d.png */,
+				12CC2F0C1EB904F800D3FAB5 /* 03d.png */,
+				12CC2F0D1EB904F800D3FAB5 /* 04d.png */,
+				12CC2F0E1EB904F800D3FAB5 /* 09d.png */,
+				12CC2F0F1EB904F800D3FAB5 /* 10d.png */,
+				12CC2F101EB904F800D3FAB5 /* 11d.png */,
+				12CC2F111EB904F800D3FAB5 /* 13d.png */,
+				12CC2F121EB904F800D3FAB5 /* 50d.png */,
+				12CC2F131EB904F800D3FAB5 /* 50n.png */,
+				12CC2F141EB904F800D3FAB5 /* 13n.png */,
+				12CC2F151EB904F800D3FAB5 /* 11n.png */,
+				12CC2F161EB904F800D3FAB5 /* 10n.png */,
+				12CC2F171EB904F800D3FAB5 /* 09n.png */,
+				12CC2F181EB904F800D3FAB5 /* 04n.png */,
+				12CC2F191EB904F800D3FAB5 /* 03n.png */,
+				12CC2F1A1EB904F800D3FAB5 /* 02n.png */,
+				12CC2F1B1EB904F800D3FAB5 /* 01n.png */,
+			);
+			name = WeatherIcons;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		12DCFB901E9BEB2D007AA182 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +343,7 @@
 			children = (
 				12E70DD41EA0F83C00D855FE /* WeatherAPIHandler.swift */,
 				12E70DD61EA0F84800D855FE /* Weather.swift */,
+				12CC2F2F1EB906AB00D3FAB5 /* CurrentWeather.swift */,
 			);
 			name = WeatherApi;
 			sourceTree = "<group>";
@@ -456,6 +521,7 @@
 		B70344791DCB74B300FEF291 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				12CC2F1C1EB904F800D3FAB5 /* WeatherIcons */,
 				12ED64551E962F2B0052253B /* bell.mp3 */,
 				B703447A1DCB74BC00FEF291 /* Design Files */,
 			);
@@ -639,25 +705,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12CC2F261EB904F800D3FAB5 /* 50n.png in Resources */,
 				B7B7B6ED1E9C07CA0085E6BF /* digital-7.ttf in Resources */,
 				B76B80FD1E9BA91500649C1A /* fontawesome-webfont.ttf in Resources */,
 				B7D67D3E1E9B787C00C02B06 /* portaitBackground.jpg in Resources */,
 				B74115631E9E025200929BF1 /* landscapeBackground.jpg in Resources */,
+				12CC2F231EB904F800D3FAB5 /* 11d.png in Resources */,
+				12CC2F2D1EB904F800D3FAB5 /* 02n.png in Resources */,
+				12CC2F2A1EB904F800D3FAB5 /* 09n.png in Resources */,
 				B726C02E1DCC95FD00E3BB4A /* Standard Alarm Button.png in Resources */,
 				B726C0251DCC95EE00E3BB4A /* BG Creation Detail Screen.png in Resources */,
 				B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */,
+				12CC2F291EB904F800D3FAB5 /* 10n.png in Resources */,
 				B726C0281DCC95F400E3BB4A /* Logo Lanuchscreen.png in Resources */,
 				4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */,
 				B7B7B6E71E9BF6D20085E6BF /* Weather-PNG-Photos.png in Resources */,
 				B7C82C0F1EA23FED003E912A /* Settings-50.png in Resources */,
+				12CC2F241EB904F800D3FAB5 /* 13d.png in Resources */,
+				12CC2F1D1EB904F800D3FAB5 /* 01d.png in Resources */,
+				12CC2F1E1EB904F800D3FAB5 /* 02d.png in Resources */,
 				B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */,
 				12ED64561E962F2B0052253B /* bell.mp3 in Resources */,
+				12CC2F271EB904F800D3FAB5 /* 13n.png in Resources */,
+				12CC2F211EB904F800D3FAB5 /* 09d.png in Resources */,
+				12CC2F2B1EB904F800D3FAB5 /* 04n.png in Resources */,
+				12CC2F1F1EB904F800D3FAB5 /* 03d.png in Resources */,
 				B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */,
+				12CC2F2E1EB904F800D3FAB5 /* 01n.png in Resources */,
 				4B5B7A221DBE08F2006E7C39 /* Assets.xcassets in Resources */,
 				B7B7B6EB1E9BFF630085E6BF /* Logo.png in Resources */,
 				B726C0261DCC95EE00E3BB4A /* BG Start Screen.png in Resources */,
+				12CC2F251EB904F800D3FAB5 /* 50d.png in Resources */,
 				4B5B7A1D1DBE08F2006E7C39 /* Main.storyboard in Resources */,
+				12CC2F201EB904F800D3FAB5 /* 04d.png in Resources */,
+				12CC2F281EB904F800D3FAB5 /* 11n.png in Resources */,
+				12CC2F2C1EB904F800D3FAB5 /* 03n.png in Resources */,
 				4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */,
+				12CC2F221EB904F800D3FAB5 /* 10d.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +815,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				126D055B1EB200F100655FD8 /* CalendarViewController.swift in Sources */,
+				12CC2F301EB906AB00D3FAB5 /* CurrentWeather.swift in Sources */,
 				B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */,
 				4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */,
 				12DCFBA71E9BF91C007AA182 /* SettingsCoreDataHandler.swift in Sources */,

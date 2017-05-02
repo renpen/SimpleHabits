@@ -67,13 +67,13 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         // -> modeSwitch.isOn here ;)
         switch transportationSB.selectedSegmentIndex {
         case 1:
-            alarm.travel?.mode = Mode.bicycling
-        case 2:
             alarm.travel?.mode = Mode.driving
-            //TODO
-//        case 3:
-//        case 4:
-//        case 5:
+        case 2:
+            alarm.travel?.mode = Mode.walking
+        case 3:
+            alarm.travel?.mode = Mode.bicycling
+        case 4:
+            alarm.travel?.mode = Mode.transit
         default:
             alarm.travel?.mode = Mode.driving
         }

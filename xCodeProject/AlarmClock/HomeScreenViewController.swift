@@ -13,6 +13,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var clockLabel: UILabel!
     @IBOutlet weak var alarmLabel: Clock!
+    @IBOutlet weak var weatherLabel: UILabel!
     
     var timer: Timer?
     
@@ -29,7 +30,15 @@ class HomeScreenViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.orientationChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
 
         // Do any additional setup after loading the view.
+        LocationTools.sharedInstance.startLocating()
         setAlarmAndLabel()
+        activateAllAlarms()
+        CurrentWeather.sharedInstance.startRequesting()
+        CurrentWeather.sharedInstance.registerWeatherChangeHandler(closure: setWeather)
+            }
+    
+    func activateAllAlarms()
+    {
         let alarms = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
         for alarm in alarms {
             if alarm.isActivated {
@@ -37,7 +46,6 @@ class HomeScreenViewController: UIViewController {
             }
         }
     }
-    
     func setAlarmAndLabel () {
         let date = getNextAciveAlarmDate()
         let formatter = DateFormatter()
@@ -86,5 +94,9 @@ class HomeScreenViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    func setWeather(weather : Weather)
+    {
+        self.weatherLabel.text = "\(weather.temp) C"
     }
 }
