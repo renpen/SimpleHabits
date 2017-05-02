@@ -95,6 +95,7 @@ class HomeScreenViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
     func setWeather(weather : Weather)
     {
         self.weatherLabel.text = "\(weather.temp) C"

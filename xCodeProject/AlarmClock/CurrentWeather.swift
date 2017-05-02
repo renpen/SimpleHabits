@@ -16,8 +16,10 @@ public class CurrentWeather
     static let sharedInstance = CurrentWeather()
     private func repeatWeatherRequests() {
         //frage jede Stunde das Wetter neu ab und setzte es entsprechend als InstanzVariable neu
-        timer = Timer(timeInterval: 10, target: self, selector: #selector(requestWeather),userInfo: nil, repeats: true)
+        timer = Timer(timeInterval: 1*60*60, target: self, selector: #selector(requestWeather),userInfo: nil, repeats: true)
         RunLoop.main.add(timer!, forMode: RunLoopMode.commonModes)
+        //fire the time the first time
+        timer?.fire()
     }
 
     func startRequesting() {
