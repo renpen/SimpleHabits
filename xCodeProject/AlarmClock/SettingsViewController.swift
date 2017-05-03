@@ -31,27 +31,42 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
         homeLocationMapView.layer.cornerRadius = 10
         defaultDestinationMapView.layer.cornerRadius = 10
         
-        homeLocationMapView.delegate = self
-        
-        print(LocationTools.sharedInstance.currentLat!)
-        print(LocationTools.sharedInstance.currentLong!)
-        
-        let center = CLLocationCoordinate2D(latitude: LocationTools.sharedInstance.currentLat!, longitude: LocationTools.sharedInstance.currentLong!)
-        
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        
-        homeLocationMapView.setRegion(region, animated: false)
+        self.initialMkSetup()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
+    }
+    
+    func initialMkSetup() {
+        homeLocationMapView.delegate = self
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: LocationTools.sharedInstance.currentLat!, longitude: LocationTools.sharedInstance.currentLong!)
+        
+        homeLocationMapView.addAnnotation(annotation)
+        
+        let center = CLLocationCoordinate2D(latitude: LocationTools.sharedInstance.currentLat!, longitude: LocationTools.sharedInstance.currentLong!)
+        
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+        
+        homeLocationMapView.setRegion(region, animated: false)
+        
     }
     
     func dismissKeyboard() {
         view.endEditing(true)
     }
     
+    func getMorningTimeInMinutes() -> Int {
+        let tfValue = Int(offsetTextField.text!)
+        if timeUnitSegmentedControl.selectedSegmentIndex == 0 {
+            return tfValue! * 60
+        } else {
+            return tfValue!
+        }
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
-        // TBD: implement a save logic for settings here!
     }
     
 }
