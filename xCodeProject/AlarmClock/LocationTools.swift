@@ -30,6 +30,6 @@ class LocationTools : NSObject, CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         currentLat = locValue.latitude
-        currentLong = locValue.latitude
+        currentLong = locValue.longitude
     }
 }
