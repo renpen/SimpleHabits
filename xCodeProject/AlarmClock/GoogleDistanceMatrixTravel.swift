@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class GoogleDistanceMatrixTravel : Travel
 {
-    var offset : Int?
+    var offset : Int = 0
     var calculatedJsonObject: GoogleDistanceMatrixObject?
     var departure_time : Int?
     var source : String?
@@ -23,7 +23,7 @@ class GoogleDistanceMatrixTravel : Travel
     
     private func isValid() -> Bool      //determine if the minimun that the request need is set
     {
-        if(offset != nil && source != nil && destination != nil && mode != nil)
+        if(source != nil && destination != nil && mode != nil)
         {
             return true
         }
@@ -31,7 +31,7 @@ class GoogleDistanceMatrixTravel : Travel
     }
     func getTravelTimeInS() -> Int
     {
-        return calculatedJsonObject!.durationValue! + offset!
+        return calculatedJsonObject!.durationValue! + offset
     }
     func calculationFinished()
     {
@@ -41,6 +41,7 @@ class GoogleDistanceMatrixTravel : Travel
     {
         if isValid()
         {
+            print(generateUrl())
             RestApiManager.sharedInstance.request(url: generateUrl()){ (json: JSON) in
                 self.calculatedJsonObject =  GoogleDistanceMatrixObject(json : json)
                 DispatchQueue.main.async(execute: {         //the thing that need toDo when the Request is finished
@@ -49,6 +50,7 @@ class GoogleDistanceMatrixTravel : Travel
             }
         }
         else{
+            print("IS NOT VALID")
             closure(0)
             //throw some kind of exception TODO
         }
