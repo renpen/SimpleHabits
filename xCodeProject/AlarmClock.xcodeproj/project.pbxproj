@@ -570,7 +570,7 @@
 				TargetAttributes = {
 					4B5B7A131DBE08F2006E7C39 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = TTL5L96WQ5;
+						DevelopmentTeam = WSVX5KDTA9;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -920,10 +920,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TTL5L96WQ5;
+				DEVELOPMENT_TEAM = WSVX5KDTA9;
 				INFOPLIST_FILE = AlarmClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SimpleHabits.de5;
+				PRODUCT_BUNDLE_IDENTIFIER = SimpleHabits.de4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AlarmClock/AlarmClock-Bridging-Header.h";
@@ -940,10 +940,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TTL5L96WQ5;
+				DEVELOPMENT_TEAM = WSVX5KDTA9;
 				INFOPLIST_FILE = AlarmClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = SimpleHabits.de5;
+				PRODUCT_BUNDLE_IDENTIFIER = SimpleHabits.de4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AlarmClock/AlarmClock-Bridging-Header.h";
