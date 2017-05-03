@@ -632,22 +632,6 @@
             </objects>
             <point key="canvasLocation" x="959" y="1212"/>
         </scene>
-        <!--Standard-->
-        <scene sceneID="msC-hY-7io">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rOm-SK-yoT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Standard" id="2YF-Kk-kXt"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wRa-Jd-nqc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HYs-ih-l3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-156" y="2690"/>
-        </scene>
     </scenes>
     <resources>
         <image name="burger" width="25" height="25"/>

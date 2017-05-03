@@ -36,9 +36,14 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
         print(LocationTools.sharedInstance.currentLat!)
         print(LocationTools.sharedInstance.currentLong!)
         
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: LocationTools.sharedInstance.currentLat!, longitude: LocationTools.sharedInstance.currentLong!)
+        
+        homeLocationMapView.addAnnotation(annotation)
+        
         let center = CLLocationCoordinate2D(latitude: LocationTools.sharedInstance.currentLat!, longitude: LocationTools.sharedInstance.currentLong!)
         
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
         
         homeLocationMapView.setRegion(region, animated: false)
         
@@ -48,6 +53,15 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
     
     func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func getMorningTimeInMinutes() -> Int {
+        let tfValue = Int(offsetTextField.text!)
+        if timeUnitSegmentedControl.selectedSegmentIndex == 0 {
+            return tfValue! * 60
+        } else {
+            return tfValue!
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
