@@ -17,24 +17,27 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var calendarPicker: UIPickerView!
     @IBOutlet weak var alarmSoundButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var wakeupTimeButton: UIButton!
-    @IBOutlet weak var wakeTimeLabel: UILabel!
+    @IBOutlet weak var smartControlsView: UIView!
+    @IBOutlet weak var standardControlsView: UIView!
+    @IBOutlet weak var wakeTimePicker: UIDatePicker!
     
     var userCalendars: [EKCalendar?] = []
     let calendarTools = CalendarTools.sharedInstance
     let alarmCoreDataHandler = AlarmCoreDataHandler.sharedInstance
     
+    var wakeUpTime:String = ""
+    
     @IBAction func modeSwitched(_ sender: Any) {
         if modeSwitch.isOn {
-            wakeupTimeButton.isEnabled = false
-            wakeupTimeButton.alpha = 0.5
-            calendarPicker.isHidden = false
-            transportationSB.isHidden = false
+            UIView.animate(withDuration: 0.4, animations: {
+                self.smartControlsView.alpha = 1
+                self.standardControlsView.alpha = 0
+            })
         } else {
-            wakeupTimeButton.isEnabled = true
-            wakeupTimeButton.alpha = 1
-            calendarPicker.isHidden = true
-            transportationSB.isHidden = true
+            UIView.animate(withDuration: 0.4, animations: {
+                self.smartControlsView.alpha = 0
+                self.standardControlsView.alpha = 1
+            })
         }
     }
     
@@ -56,15 +59,16 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
           alarm.wakeUpTime = wakeTimePicker.date
         }
         
+        // fill wakeUpTime initially
+        wakeTimePickerChanged()
+        
+        
         //THIS IS ONLY FOR MOCKUP NEED TO BE REPLACED WITH THE CORRECT ALARMSOUND ON THE UI
         var sound = FileSound()
         sound.generateRepresentingCoreDataObject()
         sound.fileName = "bell"
         alarm.wakeUpTone = sound
         
-        
-        // Mode muss noch gesetzt werden ... . TODO
-        // -> modeSwitch.isOn here ;)
         switch transportationSB.selectedSegmentIndex {
         case 1:
             alarm.travel?.mode = Mode.driving
@@ -90,13 +94,11 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         calendarPicker.setValue(UIColor.white, forKeyPath: "textColor")
         
-        saveButton.layer.cornerRadius = 10
         alarmSoundButton.layer.cornerRadius = 10
-        wakeupTimeButton.layer.cornerRadius = 10
-        self.wakeTimeViewInitialChanges()
-        
         calendarTools.requestPermission(sender: self)
         // Do any additional setup after loading the view.
+        
+        wakeTimePicker.addTarget(self, action: #selector(self.wakeTimePickerChanged), for: UIControlEvents.valueChanged)
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -125,42 +127,13 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         return userCalendars.count
     }
     
-    // Control for hidden WakeTime View!
-    
-    @IBOutlet weak var blurView: UIVisualEffectView!
-    @IBOutlet weak var wakeTimeContentView: UIView!
-    @IBOutlet weak var closeWakeTime: UIButton!
-    @IBOutlet weak var wakeTimePicker: UIDatePicker!
-    @IBOutlet weak var setWakeTimeLabel: UILabel!
-    
-    @IBAction func wakeupTimePressed(_ sender: Any) {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.blurView.alpha = 1.0
-        })
-    }
-    
-    @IBAction func closePressed(_ sender: Any) {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.blurView.alpha = 0
-            self.wakeTimeLabel.text = self.setWakeTimeLabel.text
-        })
-    }
-    
-    func wakeTimeViewEntered() {
-        self.wakeTimePickerChanged()
-    }
-    
-    func wakeTimeViewInitialChanges() {
-        wakeTimePicker.addTarget(self, action: #selector(self.wakeTimePickerChanged), for: UIControlEvents.valueChanged)
-        wakeTimeContentView.layer.cornerRadius = 15
-    }
-    
     func wakeTimePickerChanged() {
         var formattedString = ""
-        var dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .short
         formattedString = dateFormatter.string(from: wakeTimePicker.date)
-        setWakeTimeLabel.text = formattedString
+        wakeUpTime = formattedString
+        print(wakeUpTime)
     }
     
 }
