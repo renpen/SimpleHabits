@@ -31,10 +31,14 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
         homeLocationMapView.layer.cornerRadius = 10
         defaultDestinationMapView.layer.cornerRadius = 10
         
-        homeLocationMapView.delegate = self
+        self.initialMkSetup()
         
-        print(LocationTools.sharedInstance.currentLat!)
-        print(LocationTools.sharedInstance.currentLong!)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func initialMkSetup() {
+        homeLocationMapView.delegate = self
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: LocationTools.sharedInstance.currentLat!, longitude: LocationTools.sharedInstance.currentLong!)
@@ -47,8 +51,6 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
         
         homeLocationMapView.setRegion(region, animated: false)
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-        view.addGestureRecognizer(tap)
     }
     
     func dismissKeyboard() {
@@ -65,7 +67,6 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        // TBD: implement a save logic for settings here!
     }
     
 }

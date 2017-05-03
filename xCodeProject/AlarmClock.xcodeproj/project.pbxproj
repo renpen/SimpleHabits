@@ -44,7 +44,6 @@
 		4B518E571DBF4D370039D1C3 /* CalendarTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518E561DBF4D370039D1C3 /* CalendarTools.swift */; };
 		4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B518E5C1DBFC9060039D1C3 /* Travel.swift */; };
 		4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A171DBE08F2006E7C39 /* AppDelegate.swift */; };
-		4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A191DBE08F2006E7C39 /* ViewController.swift */; };
 		4B5B7A1D1DBE08F2006E7C39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */; };
 		4B5B7A201DBE08F2006E7C39 /* AlarmClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B7A1E1DBE08F2006E7C39 /* AlarmClock.xcdatamodeld */; };
 		4B5B7A221DBE08F2006E7C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B7A211DBE08F2006E7C39 /* Assets.xcassets */; };
@@ -57,7 +56,6 @@
 		4BED56E21DDA51CD007EAABB /* TravelC+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BED56E01DDA51CD007EAABB /* TravelC+CoreDataProperties.swift */; };
 		7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */; };
 		B70162BB1EA899780014EDCF /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70162BA1EA899780014EDCF /* Clock.swift */; };
-		B71AC3281DD33290000DED43 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71AC3271DD33290000DED43 /* CircularTransition.swift */; };
 		B726C0251DCC95EE00E3BB4A /* BG Creation Detail Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */; };
 		B726C0261DCC95EE00E3BB4A /* BG Start Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0241DCC95EE00E3BB4A /* BG Start Screen.png */; };
 		B726C0281DCC95F400E3BB4A /* Logo Lanuchscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B726C0271DCC95F400E3BB4A /* Logo Lanuchscreen.png */; };
@@ -72,10 +70,8 @@
 		B75783491EA6A3D80018632F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75783481EA6A3D80018632F /* HomeScreenViewController.swift */; };
 		B757834B1EA6ABAC0018632F /* menuContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B757834A1EA6ABAC0018632F /* menuContentViewController.swift */; };
 		B76B80FD1E9BA91500649C1A /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B76B80FC1E9BA90E00649C1A /* fontawesome-webfont.ttf */; };
-		B781AF001DEE15F600F8EB1C /* TransportationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AEFF1DEE15F600F8EB1C /* TransportationObject.swift */; };
-		B781AF021DEE182600F8EB1C /* OffsetSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */; };
-		B781AF041DEE1DD900F8EB1C /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B781AF031DEE1DD900F8EB1C /* OverviewViewController.swift */; };
-		B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */; };
+		B798549A1EBA4B8300A527BF /* SelectAlarmSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79854991EBA4B8300A527BF /* SelectAlarmSoundViewController.swift */; };
+		B798549C1EBA4B9B00A527BF /* StandardSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798549B1EBA4B9B00A527BF /* StandardSourceViewController.swift */; };
 		B7B7B6E71E9BF6D20085E6BF /* Weather-PNG-Photos.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */; };
 		B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */; };
 		B7B7B6EB1E9BFF630085E6BF /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7B7B6EA1E9BFF630085E6BF /* Logo.png */; };
@@ -83,7 +79,6 @@
 		B7C82C0D1EA23E0F003E912A /* (null) in Sources */ = {isa = PBXBuildFile; };
 		B7C82C0F1EA23FED003E912A /* Settings-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C82C0E1EA23FED003E912A /* Settings-50.png */; };
 		B7C82C151EA24433003E912A /* (null) in Sources */ = {isa = PBXBuildFile; };
-		B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */; };
 		B7D639CF1EAE489D00739EEA /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D639CE1EAE489D00739EEA /* AlarmCell.swift */; };
 		B7D639D11EAE5A2700739EEA /* AlarmDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D639D01EAE5A2700739EEA /* AlarmDetailsViewController.swift */; };
 		B7D67D3E1E9B787C00C02B06 /* portaitBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7D67D3D1E9B787C00C02B06 /* portaitBackground.jpg */; };
@@ -148,7 +143,6 @@
 		4B518E5C1DBFC9060039D1C3 /* Travel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
 		4B5B7A141DBE08F2006E7C39 /* AlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5B7A171DBE08F2006E7C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B5B7A191DBE08F2006E7C39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		4B5B7A1C1DBE08F2006E7C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B5B7A1F1DBE08F2006E7C39 /* AlarmClock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlarmClock.xcdatamodel; sourceTree = "<group>"; };
 		4B5B7A211DBE08F2006E7C39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -165,7 +159,6 @@
 		4BED56DF1DDA51CD007EAABB /* TravelC+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TravelC+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4BED56E01DDA51CD007EAABB /* TravelC+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TravelC+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B70162BA1EA899780014EDCF /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
-		B71AC3271DD33290000DED43 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		B726C0231DCC95EE00E3BB4A /* BG Creation Detail Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Creation Detail Screen.png"; path = "Source Files/Backgrounds/BG Creation Detail Screen.png"; sourceTree = SOURCE_ROOT; };
 		B726C0241DCC95EE00E3BB4A /* BG Start Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BG Start Screen.png"; path = "Source Files/Backgrounds/BG Start Screen.png"; sourceTree = SOURCE_ROOT; };
 		B726C0271DCC95F400E3BB4A /* Logo Lanuchscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo Lanuchscreen.png"; path = "Source Files/Logo/Logo Lanuchscreen.png"; sourceTree = SOURCE_ROOT; };
@@ -182,16 +175,13 @@
 		B75783481EA6A3D80018632F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		B757834A1EA6ABAC0018632F /* menuContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuContentViewController.swift; sourceTree = "<group>"; };
 		B76B80FC1E9BA90E00649C1A /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
-		B781AEFF1DEE15F600F8EB1C /* TransportationObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportationObject.swift; sourceTree = "<group>"; };
-		B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetSelectionViewController.swift; sourceTree = "<group>"; };
-		B781AF031DEE1DD900F8EB1C /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
-		B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartTourPageViewController.swift; sourceTree = "<group>"; };
+		B79854991EBA4B8300A527BF /* SelectAlarmSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAlarmSoundViewController.swift; sourceTree = "<group>"; };
+		B798549B1EBA4B9B00A527BF /* StandardSourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardSourceViewController.swift; sourceTree = "<group>"; };
 		B7B7B6E61E9BF6D20085E6BF /* Weather-PNG-Photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Weather-PNG-Photos.png"; sourceTree = "<group>"; };
 		B7B7B6E81E9BF70D0085E6BF /* bike-icon-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bike-icon-md.png"; sourceTree = "<group>"; };
 		B7B7B6EA1E9BFF630085E6BF /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		B7B7B6EC1E9C074D0085E6BF /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		B7C82C0E1EA23FED003E912A /* Settings-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-50.png"; sourceTree = "<group>"; };
-		B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSelectionViewController.swift; sourceTree = "<group>"; };
 		B7D639CE1EAE489D00739EEA /* AlarmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
 		B7D639D01EAE5A2700739EEA /* AlarmDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDetailsViewController.swift; sourceTree = "<group>"; };
 		B7D67D3D1E9B787C00C02B06 /* portaitBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portaitBackground.jpg; sourceTree = "<group>"; };
@@ -397,15 +387,13 @@
 		4B6486421DC4299B00634F84 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B75783431EA6A3820018632F /* old */,
+				B79854981EBA4B5A00A527BF /* AlarmCreation */,
 				B757833E1EA69C330018632F /* Used Files */,
-				B7CEF75D1DED80E1003D45C5 /* CreationTour */,
 				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
 				B7D639D01EAE5A2700739EEA /* AlarmDetailsViewController.swift */,
 				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
 				B757834A1EA6ABAC0018632F /* menuContentViewController.swift */,
 				B75783441EA6A3A40018632F /* AlarmListViewController.swift */,
-				B742BA561EB1F4B200CEEAFF /* CreateAlarmViewController.swift */,
 				B75783461EA6A3BC0018632F /* SettingsViewController.swift */,
 				B75783481EA6A3D80018632F /* HomeScreenViewController.swift */,
 			);
@@ -501,25 +489,14 @@
 			name = "Used Files";
 			sourceTree = "<group>";
 		};
-		B75783431EA6A3820018632F /* old */ = {
+		B79854981EBA4B5A00A527BF /* AlarmCreation */ = {
 			isa = PBXGroup;
 			children = (
-				4B5B7A191DBE08F2006E7C39 /* ViewController.swift */,
-				B78CB0451DD1EC62002CAFFE /* SmartTourPageViewController.swift */,
-				B71AC3271DD33290000DED43 /* CircularTransition.swift */,
+				B742BA561EB1F4B200CEEAFF /* CreateAlarmViewController.swift */,
+				B79854991EBA4B8300A527BF /* SelectAlarmSoundViewController.swift */,
+				B798549B1EBA4B9B00A527BF /* StandardSourceViewController.swift */,
 			);
-			name = old;
-			sourceTree = "<group>";
-		};
-		B7CEF75D1DED80E1003D45C5 /* CreationTour */ = {
-			isa = PBXGroup;
-			children = (
-				B7CEF75E1DED8131003D45C5 /* CalendarSelectionViewController.swift */,
-				B781AEFF1DEE15F600F8EB1C /* TransportationObject.swift */,
-				B781AF011DEE182600F8EB1C /* OffsetSelectionViewController.swift */,
-				B781AF031DEE1DD900F8EB1C /* OverviewViewController.swift */,
-			);
-			name = CreationTour;
+			name = AlarmCreation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -733,10 +710,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B798549C1EBA4B9B00A527BF /* StandardSourceViewController.swift in Sources */,
 				126D055B1EB200F100655FD8 /* CalendarViewController.swift in Sources */,
 				12CC2F301EB906AB00D3FAB5 /* CurrentWeather.swift in Sources */,
-				B7CEF75F1DED8131003D45C5 /* CalendarSelectionViewController.swift in Sources */,
-				4B5B7A1A1DBE08F2006E7C39 /* ViewController.swift in Sources */,
 				12DCFBA71E9BF91C007AA182 /* SettingsCoreDataHandler.swift in Sources */,
 				12DCFB941E9BEB6C007AA182 /* TravelCoreDataHandler.swift in Sources */,
 				4BED56E11DDA51CD007EAABB /* TravelC+CoreDataClass.swift in Sources */,
@@ -750,26 +726,21 @@
 				12E70DD51EA0F83C00D855FE /* WeatherAPIHandler.swift in Sources */,
 				12DCFBA41E9BF891007AA182 /* Settings.swift in Sources */,
 				125F038A1E9D23E600679997 /* AlarmSound.swift in Sources */,
-				B78CB0461DD1EC62002CAFFE /* SmartTourPageViewController.swift in Sources */,
 				B75783491EA6A3D80018632F /* HomeScreenViewController.swift in Sources */,
-				B781AF021DEE182600F8EB1C /* OffsetSelectionViewController.swift in Sources */,
 				4B5B7A201DBE08F2006E7C39 /* AlarmClock.xcdatamodeld in Sources */,
 				12E70DD71EA0F84800D855FE /* Weather.swift in Sources */,
 				4B518E5D1DBFC9070039D1C3 /* Travel.swift in Sources */,
 				12E70DD91EA0FB6400D855FE /* LocationTools.swift in Sources */,
 				B7F5FC191EB2609900C981CE /* SmartAlarmCell.swift in Sources */,
 				4B42BC021DC5061B00678BF0 /* TransitMode.swift in Sources */,
-				B781AF041DEE1DD900F8EB1C /* OverviewViewController.swift in Sources */,
 				12DCFBA51E9BF891007AA182 /* Settings+CoreDataProperties.swift in Sources */,
 				12DCFB921E9BEB5F007AA182 /* AlarmCoreDataHandler.swift in Sources */,
-				B71AC3281DD33290000DED43 /* CircularTransition.swift in Sources */,
 				4B5B7A181DBE08F2006E7C39 /* AppDelegate.swift in Sources */,
 				B75783471EA6A3BC0018632F /* SettingsViewController.swift in Sources */,
 				125F03871E9D235400679997 /* AlarmSound+CoreDataClass.swift in Sources */,
 				4B42BC081DC509C800678BF0 /* MapKitTravel.swift in Sources */,
 				B75783451EA6A3A40018632F /* AlarmListViewController.swift in Sources */,
 				4B6486411DC4286900634F84 /* InternalHelper.swift in Sources */,
-				B781AF001DEE15F600F8EB1C /* TransportationObject.swift in Sources */,
 				B75783421EA69C690018632F /* SWRevealViewController.m in Sources */,
 				4B42BBFE1DC502E100678BF0 /* Mode.swift in Sources */,
 				4B14AE9E1DD339C8000469BF /* CoreDataHandler.swift in Sources */,
@@ -785,6 +756,7 @@
 				B742BA571EB1F4B200CEEAFF /* CreateAlarmViewController.swift in Sources */,
 				B7D639D11EAE5A2700739EEA /* AlarmDetailsViewController.swift in Sources */,
 				4B14AEA91DD34268000469BF /* Alarm.swift in Sources */,
+				B798549A1EBA4B8300A527BF /* SelectAlarmSoundViewController.swift in Sources */,
 				B757834B1EA6ABAC0018632F /* menuContentViewController.swift in Sources */,
 				4B42BC061DC5099000678BF0 /* GoogleDistanceMatrixTravel.swift in Sources */,
 				4B9A22F51DC4A95200933E2E /* GoogleDistanceMatrixObject.swift in Sources */,
