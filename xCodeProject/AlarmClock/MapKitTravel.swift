@@ -30,7 +30,7 @@ class MapKitTravel: Travel {
     {
         
     }
-    func calculateTravelTime(closure: @escaping (Int) -> Void)
+    func calculateTravelTime(arrivalTime : Int, closure: @escaping (Int) -> Void)
     {
         var longLatFrom : CLLocation?
         var longLatTo : CLLocation?

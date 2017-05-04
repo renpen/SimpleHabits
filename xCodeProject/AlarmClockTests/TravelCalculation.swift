@@ -33,7 +33,7 @@ class TravelCalculation: XCTestCase {
         let alarmID = TravelAPI.sharedInstance.createAlarmWithTravel()
         let alarm = AlarmCoreDataHandler.sharedInstance.getAlarmByID(id: alarmID)
         alarm?.travel?.source = "Ludwig Erhard Allee 32 76131 Karlsruhe"
-        alarm?.travel?.calculateTravelTime(closure: testTravel)
+        alarm?.travel?.calculateTravelTime(arrivalTime: Int(Date().timeIntervalSince1970),closure: testTravel)
         waitForExpectations(timeout: 10) { error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
