@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Alarm" representedClassName="Alarm" syncable="YES">
         <attribute name="calendarIdentifier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isActivated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="offset" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="smartAlarm" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="travel_f_key" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="wakeUpTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -18,7 +17,11 @@
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Settings" representedClassName=".Settings" syncable="YES">
-        <attribute name="isStatusSmart" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="defaultDestLat" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="defaultDestLong" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="defaultSourceLat" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="defaultSourceLong" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="offsetInMin" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="TravelC" representedClassName="TravelC" syncable="YES">
         <attribute name="departure_time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -30,9 +33,9 @@
         <attribute name="transitmode" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Alarm" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="Alarm" positionX="-63" positionY="-18" width="128" height="165"/>
         <element name="AlarmSoundC" positionX="-63" positionY="54" width="128" height="105"/>
-        <element name="Settings" positionX="-63" positionY="54" width="128" height="58"/>
+        <element name="Settings" positionX="-63" positionY="54" width="128" height="120"/>
         <element name="TravelC" positionX="-63" positionY="27" width="128" height="150"/>
     </elements>
 </model>
