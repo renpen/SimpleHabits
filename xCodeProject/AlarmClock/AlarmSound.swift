@@ -34,6 +34,7 @@ extension AlarmSound {
     mutating func generateRepresentingCoreDataObject()
     {
         representingCoreDataObject = AlarmSoundCoreDataHandler.sharedInstance.fabricateAlarmSoundCObject();
+        save()
     }
     
 }

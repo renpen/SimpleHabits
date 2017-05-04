@@ -33,6 +33,14 @@
 		12E70DDB1EA108CF00D855FE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E70DDA1EA108CF00D855FE /* MapKit.framework */; };
 		12ECFBF41EACEAFF00EFD93A /* AlarmCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ECFBF31EACEAFF00EFD93A /* AlarmCoreData.swift */; };
 		12ED64561E962F2B0052253B /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12ED64551E962F2B0052253B /* bell.mp3 */; };
+		12F713CE1EBB5AF100B05D0A /* Licences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12F713CD1EBB5AF100B05D0A /* Licences.plist */; };
+		12F713E41EBB64D500B05D0A /* Alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12F713DD1EBB64D500B05D0A /* Alarm.mp3 */; };
+		12F713E51EBB64D500B05D0A /* Meadowlark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12F713DE1EBB64D500B05D0A /* Meadowlark.mp3 */; };
+		12F713E61EBB64D500B05D0A /* Foghorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12F713DF1EBB64D500B05D0A /* Foghorn.mp3 */; };
+		12F713E71EBB64D500B05D0A /* Submarine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12F713E01EBB64D500B05D0A /* Submarine.mp3 */; };
+		12F713E81EBB64D500B05D0A /* Guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12F713E11EBB64D500B05D0A /* Guitar.mp3 */; };
+		12F713E91EBB64D500B05D0A /* Church.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12F713E21EBB64D500B05D0A /* Church.mp3 */; };
+		12F713EA1EBB64D500B05D0A /* Horn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 12F713E31EBB64D500B05D0A /* Horn.mp3 */; };
 		4B14AE9E1DD339C8000469BF /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */; };
 		4B14AEA91DD34268000469BF /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AEA71DD34268000469BF /* Alarm.swift */; };
 		4B14AEAA1DD34268000469BF /* Alarm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14AEA81DD34268000469BF /* Alarm+CoreDataProperties.swift */; };
@@ -130,6 +138,14 @@
 		12E70DDA1EA108CF00D855FE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		12ECFBF31EACEAFF00EFD93A /* AlarmCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmCoreData.swift; sourceTree = "<group>"; };
 		12ED64551E962F2B0052253B /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = "../Source Files/Sounds/bell.mp3"; sourceTree = "<group>"; };
+		12F713CD1EBB5AF100B05D0A /* Licences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Licences.plist; sourceTree = "<group>"; };
+		12F713DD1EBB64D500B05D0A /* Alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Alarm.mp3; path = "Source Files/Sounds/Alarm.mp3"; sourceTree = SOURCE_ROOT; };
+		12F713DE1EBB64D500B05D0A /* Meadowlark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Meadowlark.mp3; path = "Source Files/Sounds/Meadowlark.mp3"; sourceTree = SOURCE_ROOT; };
+		12F713DF1EBB64D500B05D0A /* Foghorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Foghorn.mp3; path = "Source Files/Sounds/Foghorn.mp3"; sourceTree = SOURCE_ROOT; };
+		12F713E01EBB64D500B05D0A /* Submarine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Submarine.mp3; path = "Source Files/Sounds/Submarine.mp3"; sourceTree = SOURCE_ROOT; };
+		12F713E11EBB64D500B05D0A /* Guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Guitar.mp3; path = "Source Files/Sounds/Guitar.mp3"; sourceTree = SOURCE_ROOT; };
+		12F713E21EBB64D500B05D0A /* Church.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Church.mp3; path = "Source Files/Sounds/Church.mp3"; sourceTree = SOURCE_ROOT; };
+		12F713E31EBB64D500B05D0A /* Horn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Horn.mp3; path = "Source Files/Sounds/Horn.mp3"; sourceTree = SOURCE_ROOT; };
 		27A991DDFF7D5A2D527EF16E /* Pods-AlarmClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.release.xcconfig"; sourceTree = "<group>"; };
 		4B14AE9D1DD339C8000469BF /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHandler.swift; path = ../CoreDataHandler.swift; sourceTree = "<group>"; };
 		4B14AEA71DD34268000469BF /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
@@ -274,6 +290,22 @@
 				12CC2F2F1EB906AB00D3FAB5 /* CurrentWeather.swift */,
 			);
 			name = WeatherApi;
+			sourceTree = "<group>";
+		};
+		12F713CC1EBB5ABB00B05D0A /* SoundFiles */ = {
+			isa = PBXGroup;
+			children = (
+				12F713DD1EBB64D500B05D0A /* Alarm.mp3 */,
+				12F713DE1EBB64D500B05D0A /* Meadowlark.mp3 */,
+				12F713DF1EBB64D500B05D0A /* Foghorn.mp3 */,
+				12F713E01EBB64D500B05D0A /* Submarine.mp3 */,
+				12F713E11EBB64D500B05D0A /* Guitar.mp3 */,
+				12F713E21EBB64D500B05D0A /* Church.mp3 */,
+				12F713E31EBB64D500B05D0A /* Horn.mp3 */,
+				12ED64551E962F2B0052253B /* bell.mp3 */,
+				12F713CD1EBB5AF100B05D0A /* Licences.plist */,
+			);
+			name = SoundFiles;
 			sourceTree = "<group>";
 		};
 		2EFA7B418BB99681466C3137 /* Pods */ = {
@@ -448,7 +480,7 @@
 		B70344791DCB74B300FEF291 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				12ED64551E962F2B0052253B /* bell.mp3 */,
+				12F713CC1EBB5ABB00B05D0A /* SoundFiles */,
 				B703447A1DCB74BC00FEF291 /* Design Files */,
 			);
 			name = Sources;
@@ -619,6 +651,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F713E61EBB64D500B05D0A /* Foghorn.mp3 in Resources */,
 				B7B7B6ED1E9C07CA0085E6BF /* digital-7.ttf in Resources */,
 				B76B80FD1E9BA91500649C1A /* fontawesome-webfont.ttf in Resources */,
 				B7D67D3E1E9B787C00C02B06 /* portaitBackground.jpg in Resources */,
@@ -627,16 +660,23 @@
 				B726C0251DCC95EE00E3BB4A /* BG Creation Detail Screen.png in Resources */,
 				B726C02D1DCC95FD00E3BB4A /* Smart Alarm Button.png in Resources */,
 				B726C0281DCC95F400E3BB4A /* Logo Lanuchscreen.png in Resources */,
+				12F713E81EBB64D500B05D0A /* Guitar.mp3 in Resources */,
+				12F713E71EBB64D500B05D0A /* Submarine.mp3 in Resources */,
 				4B5B7A251DBE08F2006E7C39 /* LaunchScreen.storyboard in Resources */,
 				B7B7B6E71E9BF6D20085E6BF /* Weather-PNG-Photos.png in Resources */,
+				12F713E91EBB64D500B05D0A /* Church.mp3 in Resources */,
 				B7C82C0F1EA23FED003E912A /* Settings-50.png in Resources */,
 				B7B7B6E91E9BF70D0085E6BF /* bike-icon-md.png in Resources */,
 				12ED64561E962F2B0052253B /* bell.mp3 in Resources */,
 				B726C02C1DCC95FD00E3BB4A /* Discard Button.png in Resources */,
+				12F713EA1EBB64D500B05D0A /* Horn.mp3 in Resources */,
 				4B5B7A221DBE08F2006E7C39 /* Assets.xcassets in Resources */,
+				12F713E41EBB64D500B05D0A /* Alarm.mp3 in Resources */,
 				B7B7B6EB1E9BFF630085E6BF /* Logo.png in Resources */,
 				B726C0261DCC95EE00E3BB4A /* BG Start Screen.png in Resources */,
 				4B5B7A1D1DBE08F2006E7C39 /* Main.storyboard in Resources */,
+				12F713E51EBB64D500B05D0A /* Meadowlark.mp3 in Resources */,
+				12F713CE1EBB5AF100B05D0A /* Licences.plist in Resources */,
 				4B9DA1901DC3CC10006B80B8 /* Properties.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

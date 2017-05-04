@@ -16,6 +16,10 @@ class FileSound : AlarmSound
     var source : String?
     var representingCoreDataObject : AlarmSoundC?
     
+    init(fileName : String) {
+         self.fileName = fileName
+        source = SoundTypes.file.rawValue
+    }
     init() {
         source = SoundTypes.file.rawValue
     }
