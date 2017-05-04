@@ -21,13 +21,20 @@ class GoogleDistanceMatrixTravel : Travel
     var mode : Mode?
     var representingCoreDataObject : TravelC?
     
+    let settings = SettingsCoreDataHandler.sharedInstance.getSettings()
+    
     private func isValid() -> Bool      //determine if the minimun that the request need is set
     {
-        if(source != nil && destination != nil && mode != nil)
-        {
-            return true
+        if mode == nil {
+            return false
         }
-        return false
+        if destination == nil && destination == "" && settings.defaultDestLat == nil && settings.defaultDestLong == nil {
+            return false
+        }
+        if source == nil && source == "" && settings.defaultSourceLat == nil && settings.defaultSourceLong == nil {
+            return false
+        }
+        return true
     }
     func getTravelTimeInS() -> Int
     {
@@ -58,7 +65,16 @@ class GoogleDistanceMatrixTravel : Travel
     
     func generateUrl() -> String {
         var url = properties["GoogleDistanceMatrixBaseUrl"] as! String
-        print(url)
+        var destination = self.destination
+        var source = self.source
+        if destination == nil || destination == ""
+        {
+            destination = "\(settings.defaultDestLat),\(settings.defaultDestLong)"
+        }
+        if source == nil || source == ""
+        {
+            source = "\(settings.defaultSourceLat),\(settings.defaultSourceLong)"
+        }
         url += "?origins=\(source!)&destinations=\(destination!)&key=\(properties["GoogleAPIKey"]!)"
         if (departure_time != nil && departure_time! > 0) {
             url += "&departure_time=\(departure_time!)"
