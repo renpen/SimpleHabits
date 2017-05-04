@@ -25,9 +25,9 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     let calendarTools = CalendarTools.sharedInstance
     let alarmCoreDataHandler = AlarmCoreDataHandler.sharedInstance
     
-    var alarmSound:String = ""
-    
     var wakeUpTime:String = ""
+    
+    var selectedSound = FileSound()
     
     @IBAction func modeSwitched(_ sender: Any) {
         if modeSwitch.isOn {
@@ -61,15 +61,14 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
           alarm.wakeUpTime = wakeTimePicker.date
         }
         
+        //Default value for sound if none gets selected!
+        selectedSound.fileName = "bell"        
+        selectedSound.generateRepresentingCoreDataObject()
+
         // fill wakeUpTime initially
         wakeTimePickerChanged()
         
-        
-        //THIS IS ONLY FOR MOCKUP NEED TO BE REPLACED WITH THE CORRECT ALARMSOUND ON THE UI
-        var sound = FileSound()
-        sound.generateRepresentingCoreDataObject()
-        sound.fileName = "bell"
-        alarm.wakeUpTone = sound
+        alarm.wakeUpTone = selectedSound
         
         switch transportationSB.selectedSegmentIndex {
         case 0:
@@ -132,8 +131,7 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBAction func unwindToVC(segue: UIStoryboardSegue) {
         if (segue.identifier == "unwindStandardSource") {
             let vc = segue.source as! StandardSourceViewController
-            alarmSound = vc.selectedSound
-            print(alarmSound)
+            selectedSound = vc.selectedSound
         }
     }
     

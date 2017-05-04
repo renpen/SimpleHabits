@@ -16,7 +16,7 @@ class StandardSourceViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     var sounds:[String] = SoundManager.sounds
     
-    var selectedSound:String = "bell"
+    var selectedSound:FileSound = FileSound()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +30,8 @@ class StandardSourceViewController: UIViewController, UIPickerViewDelegate, UIPi
     }
     @IBAction func saveButtonPressed(_ sender: Any) {
         let soundFile = sounds[soundPickerView.selectedRow(inComponent: 0)]
-        var sound = FileSound(fileName: soundFile)
-        sound.generateRepresentingCoreDataObject()
+        var selectedSound = FileSound(fileName: soundFile)
+        selectedSound.generateRepresentingCoreDataObject()
         // Im createAlarmController muss jetzt nur noch alarm.alarmSound = sound: alarm.save() gemacht werden und das MOCKUP in der Methode saveAlarmPressed entfernt werden
         
     }
