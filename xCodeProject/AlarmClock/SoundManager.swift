@@ -10,5 +10,5 @@ import Foundation
 
 class SoundManager
 {
-    let sounds = ["bell"]
+   static let sounds = ["bell","Alarm","Meadowlark","Foghorn","Submarine","Guitar","Church","Horn"]
 }
