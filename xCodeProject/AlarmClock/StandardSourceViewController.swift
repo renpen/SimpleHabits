@@ -22,18 +22,22 @@ class StandardSourceViewController: UIViewController, UIPickerViewDelegate, UIPi
         super.viewDidLoad()
         soundPickerView.delegate = self
         soundPickerView.dataSource = self
+        
+        let soundFile = sounds[soundPickerView.selectedRow(inComponent: 0)]
+        selectedSound = FileSound(fileName: soundFile)
+        selectedSound.generateRepresentingCoreDataObject()
+        
         self.initialChanges()
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    @IBAction func saveButtonPressed(_ sender: Any) {
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let soundFile = sounds[soundPickerView.selectedRow(inComponent: 0)]
-        var selectedSound = FileSound(fileName: soundFile)
+        selectedSound = FileSound(fileName: soundFile)
         selectedSound.generateRepresentingCoreDataObject()
-        // Im createAlarmController muss jetzt nur noch alarm.alarmSound = sound: alarm.save() gemacht werden und das MOCKUP in der Methode saveAlarmPressed entfernt werden
-        
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {

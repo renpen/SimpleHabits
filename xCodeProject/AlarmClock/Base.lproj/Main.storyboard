@@ -644,7 +644,6 @@
                                 </state>
                                 <connections>
                                     <action selector="saveAlarmPressed:" destination="y1D-8z-lha" eventType="touchUpInside" id="bqk-jJ-nlo"/>
-                                    <action selector="saveButtonPressed:" destination="49C-l8-kUi" eventType="touchUpInside" id="Uua-ZM-98W"/>
                                     <segue destination="3vU-uj-XCD" kind="unwind" identifier="unwindStandardSource" unwindAction="unwindToVCWithSegue:" id="S7g-97-9vz"/>
                                 </connections>
                             </button>
@@ -677,7 +676,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="vH6-DK-q2y" id="haP-Lh-P2b"/>
-                        <outlet property="saveButton" destination="vH6-DK-q2y" id="SDJ-Dh-DbE"/>
+                        <outlet property="saveButton" destination="vH6-DK-q2y" id="hSF-08-cgx"/>
                         <outlet property="soundPickerView" destination="Ykj-ea-LDs" id="3Wc-cD-H2g"/>
                     </connections>
                 </viewController>
