@@ -76,6 +76,7 @@ public class Alarm: NSManagedObject {
     private func prepareSmartAlarm(travelTime : Int)
     {
         var travelTime = travelTime
+        let settings = SettingsCoreDataHandler.sharedInstance.getSettings()
         if travelTime == nil
         {
             print("Keine Traveltimeberechnet")
@@ -83,7 +84,7 @@ public class Alarm: NSManagedObject {
         }
         print("TravelTime: " + travelTime.description)
         let calendarTools = CalendarTools.sharedInstance
-        let offset = self.offset
+        let offset = settings.offsetInMin
         let appointment = calendarTools.getFirstAppointmentUpToOneDayLater(calendar: calendarTools.getCalendarByIdentifier(identifier: (self.calendarIdentifier)))
         let calendarAPI = Calendar.current
         if appointment == nil

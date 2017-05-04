@@ -70,13 +70,13 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         alarm.wakeUpTone = sound
         
         switch transportationSB.selectedSegmentIndex {
-        case 1:
+        case 0:
             alarm.travel?.mode = Mode.driving
-        case 2:
+        case 1:
             alarm.travel?.mode = Mode.walking
-        case 3:
+        case 2:
             alarm.travel?.mode = Mode.bicycling
-        case 4:
+        case 3:
             alarm.travel?.mode = Mode.transit
         default:
             alarm.travel?.mode = Mode.driving

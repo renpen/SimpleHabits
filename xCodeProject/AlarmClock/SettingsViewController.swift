@@ -19,6 +19,7 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var offsetTextField: UITextField!
     @IBOutlet weak var defaultDestinationMapView: MKMapView!
     
+    let settings = SettingsCoreDataHandler.sharedInstance.getSettings()
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -35,6 +36,7 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        offsetTextField.text = String(settings.offsetInMin)
     }
     
     func initialMkSetup() {
@@ -57,8 +59,8 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
         view.endEditing(true)
     }
     
-    func getMorningTimeInMinutes() -> Int {
-        let tfValue = Int(offsetTextField.text!)
+    func getMorningTimeInMinutes() -> Int16 {
+        let tfValue = Int16(offsetTextField.text!)
         if timeUnitSegmentedControl.selectedSegmentIndex == 0 {
             return tfValue! * 60
         } else {
@@ -67,6 +69,32 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        let offset = getMorningTimeInMinutes()
+        settings.offsetInMin = offset
+        let home = getHomeCoord()
+        // GIBT NOCH KEINE ANNOTATION AUF DER MAP -> MOCK
+//        let dest = getDestCoord()
+        settings.defaultSourceLat = home.latitude
+        settings.defaultSourceLong = home.longitude
+//      settings.defaultDestLong = dest.longitude
+//      settings.defaultDestLat = dest.latitude
+        
+        //MOCK
+        settings.defaultDestLat = 49.02632
+        settings.defaultDestLong = 8.3832513
+        
+        
+        settings.save()
+    }
+    
+    func getHomeCoord() -> CLLocationCoordinate2D
+    {
+        return homeLocationMapView.annotations[0].coordinate
+    }
+    
+    func getDestCoord() -> CLLocationCoordinate2D
+    {
+        return defaultDestinationMapView.annotations[0].coordinate
     }
     
 }
