@@ -16,7 +16,7 @@ class StandardSourceViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     var sounds:[String] = SoundManager.sounds
     
-    var selectedSound:FileSound = FileSound()
+    var selectedSound : AlarmSound?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class StandardSourceViewController: UIViewController, UIPickerViewDelegate, UIPi
         
         let soundFile = sounds[soundPickerView.selectedRow(inComponent: 0)]
         selectedSound = FileSound(fileName: soundFile)
-        selectedSound.generateRepresentingCoreDataObject()
+        selectedSound?.generateRepresentingCoreDataObject()
         
         self.initialChanges()
     }
@@ -36,8 +36,8 @@ class StandardSourceViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let soundFile = sounds[soundPickerView.selectedRow(inComponent: 0)]
-        selectedSound = FileSound(fileName: soundFile)
-        selectedSound.generateRepresentingCoreDataObject()
+        selectedSound?.fileName = soundFile
+        selectedSound?.save()
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
