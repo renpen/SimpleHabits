@@ -25,6 +25,8 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     let calendarTools = CalendarTools.sharedInstance
     let alarmCoreDataHandler = AlarmCoreDataHandler.sharedInstance
     
+    var alarmSound:String = ""
+    
     var wakeUpTime:String = ""
     
     @IBAction func modeSwitched(_ sender: Any) {
@@ -125,6 +127,14 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return userCalendars.count
+    }
+    
+    @IBAction func unwindToVC(segue: UIStoryboardSegue) {
+        if (segue.identifier == "unwindStandardSource") {
+            let vc = segue.source as! StandardSourceViewController
+            alarmSound = vc.selectedSound
+            print(alarmSound)
+        }
     }
     
     func wakeTimePickerChanged() {

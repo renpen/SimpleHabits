@@ -16,6 +16,8 @@ class StandardSourceViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     var sounds:[String] = ["bell", "tone2", "tone3"]
     
+    var selectedSound:String = "bell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         soundPickerView.delegate = self
