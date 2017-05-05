@@ -18,6 +18,7 @@ class AlarmListViewController: UITableViewController {
     }
     
     var alarms:[Alarm] = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,13 +42,31 @@ class AlarmListViewController: UITableViewController {
         return alarms.count
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "smartEditing" {
+             print("smart")
+        } else if segue.identifier == "standardEditing" {
+            print("standard")
+        }
+    }
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = self.storyboard
-        let vc = sb?.instantiateViewController(withIdentifier: "alarmDetailsVC") as! AlarmDetailsViewController
         
-        vc.alarmId = String(alarms[indexPath.row].id)
-        vc.name = alarms[indexPath.row].name
-        self.present(vc, animated: true, completion: nil)
+        let cell = tableView.cellForRow(at: indexPath) as! CustomViewCell
+        
+        if cell.reuseIdentifier! == "alarmCell" {
+            let vc = sb?.instantiateViewController(withIdentifier: "standardEditing") as! StandardAlarmEditingViewController
+            vc.alarm = cell.alarm
+            self.present(vc, animated: true, completion: nil)
+            
+        } else if cell.reuseIdentifier! == "smartAlarmCell" {
+            let vc = sb?.instantiateViewController(withIdentifier: "smartEditing") as! SmartAlarmEditingViewController
+            vc.alarm = cell.alarm
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,7 +74,7 @@ class AlarmListViewController: UITableViewController {
         
         let cell:AlarmCell
         let smartCell:SmartAlarmCell
-        var formatter = DateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         
         
@@ -67,7 +86,7 @@ class AlarmListViewController: UITableViewController {
             smartCell.changeColor()
             return smartCell
         } else {
-            var wakeTime = formatter.string(from: alarm.wakeUpTime!)
+            let wakeTime = formatter.string(from: alarm.wakeUpTime!)
             cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell") as! AlarmCell
             cell.alarm = alarm
             cell.activeSwitch.isOn = alarm.isActivated // s.o

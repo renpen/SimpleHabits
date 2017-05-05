@@ -93,8 +93,6 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         calendarPicker.dataSource = self
         calendarPicker.delegate = self
         
-        calendarPicker.setValue(UIColor.white, forKeyPath: "textColor")
-        
         alarmSoundButton.layer.cornerRadius = 10
         calendarTools.requestPermission(sender: self)
         // Do any additional setup after loading the view.
