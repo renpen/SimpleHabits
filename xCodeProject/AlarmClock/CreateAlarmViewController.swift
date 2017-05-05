@@ -27,7 +27,7 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     var wakeUpTime:String = ""
     
-    var selectedSound = FileSound()
+    var selectedSound : AlarmSound?
     
     @IBAction func modeSwitched(_ sender: Any) {
         if modeSwitch.isOn {
@@ -62,8 +62,10 @@ class CreateAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         }
         
         //Default value for sound if none gets selected!
-        selectedSound.fileName = "bell"        
-        selectedSound.generateRepresentingCoreDataObject()
+        if selectedSound == nil {
+            selectedSound = FileSound(fileName: "bell")
+            selectedSound?.generateRepresentingCoreDataObject()
+        }
 
         // fill wakeUpTime initially
         wakeTimePickerChanged()

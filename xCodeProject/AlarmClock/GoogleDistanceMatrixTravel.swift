@@ -21,6 +21,8 @@ class GoogleDistanceMatrixTravel : Travel
     var mode : Mode?
     var representingCoreDataObject : TravelC?
     
+    var arrivalTime : Int?
+    
     let settings = SettingsCoreDataHandler.sharedInstance.getSettings()
     
     private func isValid() -> Bool      //determine if the minimun that the request need is set
@@ -44,8 +46,9 @@ class GoogleDistanceMatrixTravel : Travel
     {
         print("FINSIHED: YEEEES " + (self.calculatedJsonObject?.durationText)!)
     }
-    func calculateTravelTime(closure: @escaping (_ : Int) -> Void)
+    func calculateTravelTime(arrivalTime : Int, closure: @escaping (_ : Int) -> Void)
     {
+        self.arrivalTime = arrivalTime
         if isValid()
         {
             print(generateUrl())
@@ -78,6 +81,9 @@ class GoogleDistanceMatrixTravel : Travel
         url += "?origins=\(source!)&destinations=\(destination!)&key=\(properties["GoogleAPIKey"]!)"
         if (departure_time != nil && departure_time! > 0) {
             url += "&departure_time=\(departure_time!)"
+        }
+        if arrivalTime != nil {
+            url += "&arrival_time=\(arrivalTime!)"
         }
         if (mode != nil)
         {

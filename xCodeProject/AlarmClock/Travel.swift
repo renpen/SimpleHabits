@@ -19,7 +19,7 @@ protocol Travel {
     var representingCoreDataObject : TravelC? {get set}
     func getTravelTimeInS() -> Int
     func calculationFinished()
-    func calculateTravelTime(closure: @escaping (_ : Int)-> Void)
+    func calculateTravelTime(arrivalTime : Int, closure: @escaping (_ : Int)-> Void)
 }
 extension Travel {
     var properties : NSDictionary{

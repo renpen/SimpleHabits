@@ -8,12 +8,15 @@
 
 import Foundation
 import CoreData
+import EventKit
 
 @objc(Alarm)
 public class Alarm: NSManagedObject {
     var travel : Travel?
     var wakeUpTone : AlarmSound?
     var timer : Timer?
+    
+    var smartAppointment : EKEvent?
     
     override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?)
     {
@@ -48,7 +51,8 @@ public class Alarm: NSManagedObject {
         self.isActivated = true;
         self.save()
         if smartAlarm {
-            self.travel?.calculateTravelTime(closure: prepareSmartAlarm)
+            setSmartAppointment()
+            self.travel?.calculateTravelTime(arrivalTime : Int((self.smartAppointment?.startDate.timeIntervalSince1970)!),closure: prepareSmartAlarm)
         }
         else
         {
@@ -83,21 +87,24 @@ public class Alarm: NSManagedObject {
             travelTime = 0
         }
         print("TravelTime: " + travelTime.description)
-        let calendarTools = CalendarTools.sharedInstance
         let offset = settings.offsetInMin
-        let appointment = calendarTools.getFirstAppointmentUpToOneDayLater(calendar: calendarTools.getCalendarByIdentifier(identifier: (self.calendarIdentifier)))
         let calendarAPI = Calendar.current
-        if appointment == nil
+        if smartAppointment == nil
         {
             print("Kein Appointment gefunden")
             return
         }
-        print("Appointment: " + (appointment?.description)!)
-        var date = calendarAPI.date(byAdding: .minute, value: -(Int(offset)), to: (appointment?.startDate)!)
+        print("Appointment: " + (smartAppointment?.description)!)
+        var date = calendarAPI.date(byAdding: .minute, value: -(Int(offset)), to: (smartAppointment?.startDate)!)
         date = calendarAPI.date(byAdding: .second, value: -(travelTime), to: date!)
         wakeUpTime = date!
         save()
         self.setTimer()
+    }
+    private func setSmartAppointment()
+    {
+        let calendarTools = CalendarTools.sharedInstance
+        smartAppointment = calendarTools.getFirstAppointmentUpToOneDayLater(calendar: calendarTools.getCalendarByIdentifier(identifier: (self.calendarIdentifier)))
     }
 
     
