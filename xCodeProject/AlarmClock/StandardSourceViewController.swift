@@ -8,11 +8,12 @@
 
 import UIKit
 
-class StandardSourceViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class StandardSourceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var soundPickerView: UIPickerView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var selectedSoundLabel: UILabel!
     
     var sounds:[String] = SoundManager.sounds
     
@@ -20,36 +21,42 @@ class StandardSourceViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        soundPickerView.delegate = self
-        soundPickerView.dataSource = self
         
-        let soundFile = sounds[soundPickerView.selectedRow(inComponent: 0)]
-        selectedSound = FileSound(fileName: soundFile)
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        selectedSound = FileSound(fileName: "bell")
         selectedSound?.generateRepresentingCoreDataObject()
+        selectedSoundLabel.text = selectedSound?.fileName
+        
+        
         
         self.initialChanges()
     }
     
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedSound = FileSound(fileName: sounds[indexPath.row])
+        selectedSound?.generateRepresentingCoreDataObject()
+        selectedSoundLabel.text = selectedSound?.fileName
+        
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let soundFile = sounds[soundPickerView.selectedRow(inComponent: 0)]
-        selectedSound?.fileName = soundFile
-        selectedSound?.save()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "fileSoundCell") as! FileSoundCell
+        cell.soundName.text = sounds[indexPath.row]
+        return cell
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return sounds.count
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return sounds[row]
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sounds.count
+    }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func initialChanges() {
