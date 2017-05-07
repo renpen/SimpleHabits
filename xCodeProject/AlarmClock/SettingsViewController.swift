@@ -22,6 +22,7 @@ class SettingsViewController: UIViewController, MKMapViewDelegate {
     let settings = SettingsCoreDataHandler.sharedInstance.getSettings()
     override func viewDidLoad() {
         super.viewDidLoad()
+        timeUnitSegmentedControl.selectedSegmentIndex = 1;
     
         if revealViewController() != nil {
             menuButton.target = revealViewController()
