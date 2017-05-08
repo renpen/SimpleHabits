@@ -428,8 +428,8 @@
 				B70BCFF01EBCD9C900E0551F /* Basic Flow */,
 				B70BCFEB1EBCD92A00E0551F /* AlarmEditing */,
 				B79854981EBA4B5A00A527BF /* AlarmCreation */,
-				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
 				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
+				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";

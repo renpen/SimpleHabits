@@ -40,15 +40,28 @@ class SmartAlarmEditingViewController: UIViewController, UIPickerViewDelegate, U
         
         //just to get it work for now.. switch case enum -> swift / Xcode pain!
         
-        let x = alarm.travel?.mode?.rawValue
-        if x == "driving" {
-            transportationSegmented.selectedSegmentIndex = 0
-        } else if x == "walking" {
-            transportationSegmented.selectedSegmentIndex = 1
-        } else if x == "bycycling" {
-            transportationSegmented.selectedSegmentIndex = 2
-        } else if x == "transit" {
-            transportationSegmented.selectedSegmentIndex = 3
+        if let travel = alarm.travel {
+            if let mode = travel.mode {
+                switch mode {
+                case .driving:
+                    transportationSegmented.selectedSegmentIndex = 0
+                    break;
+                case .walking:
+                    transportationSegmented.selectedSegmentIndex = 1
+                    break;
+                case .bicycling:
+                    transportationSegmented.selectedSegmentIndex = 2
+                    break;
+                case .transit:
+                    transportationSegmented.selectedSegmentIndex = 3
+                    break;
+                default:
+                    transportationSegmented.selectedSegmentIndex = 0
+                    break;
+                }
+
+            }
+            
         }
     }
     

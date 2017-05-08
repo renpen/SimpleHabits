@@ -9,5 +9,5 @@
 import Foundation
 
 enum Mode :String {
-    case driving = "driving",walking = "walking",bicycling = "bycycling",transit = "transit"
+    case driving = "driving",walking = "walking",bicycling = "bicycling",transit = "transit"
 }
