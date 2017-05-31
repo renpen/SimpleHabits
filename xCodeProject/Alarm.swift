@@ -104,7 +104,7 @@ public class Alarm: NSManagedObject {
     private func setSmartAppointment()
     {
         let calendarTools = CalendarTools.sharedInstance
-        smartAppointment = calendarTools.getFirstAppointmentUpToOneDayLater(calendar: calendarTools.getCalendarByIdentifier(identifier: (self.calendarIdentifier)))
+        smartAppointment = calendarTools.getFirstAppointmentUpToOneDayLater(calendar: calendarTools.getCalendarByIdentifier(identifier: (self.calendarIdentifier))!)
     }
 
     

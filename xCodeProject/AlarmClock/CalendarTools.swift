@@ -42,9 +42,19 @@ func getAllCalendar() -> [EKCalendar]
         return eventStore.calendars(for: EKEntityType.event)
         
     }
-    func getCalendarByIdentifier(identifier: String) -> EKCalendar
+    func getCalendarByIdentifier1(identifier: String) -> EKCalendar
     {
         return eventStore.calendar(withIdentifier: identifier)!
+    }
+    func getCalendarByIdentifier(identifier: String) -> EKCalendar?
+    {
+        let calendars = getAllCalendar()
+        for calendar in calendars {
+            if calendar.calendarIdentifier == identifier {
+                return calendar
+            }
+        }
+        return nil
     }
     
 func getFirstAppointmentUpToOneDayLater(calendar : EKCalendar) -> EKEvent?
@@ -58,6 +68,7 @@ func getAppointmentUpToOneDayLater(appointmentNumber: Int,calendar : EKCalendar)
         let todayDate = Date()
         var dateComponents = DateComponents()
         dateComponents.day = 1
+    dateComponents.month = 1
         let userCalendar = Calendar.current
         let to = userCalendar.date(byAdding: dateComponents, to: todayDate, wrappingComponents: true)
         let eventsPredicate = eventStore.predicateForEvents(withStart: todayDate,end: to!,calendars: [calendar])
