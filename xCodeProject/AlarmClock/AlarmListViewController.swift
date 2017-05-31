@@ -30,7 +30,7 @@ class AlarmListViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        alarms = self.fetchAlarms()
+        alarms = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
         tableView.reloadData()
     }
     
@@ -105,13 +105,9 @@ class AlarmListViewController: UITableViewController {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             let alarm = alarms[indexPath.row]
             AlarmCoreDataHandler.sharedInstance.deleteAlarm(alarmID: alarm.id)
-            alarms = self.fetchAlarms()
+            alarms = AlarmCoreDataHandler.sharedInstance.getAllAlarms()
             tableView.reloadData()
         }
-    }
-    
-    func fetchAlarms() -> [Alarm]{
-        return AlarmCoreDataHandler.sharedInstance.getAllAlarms()
     }
 
 }
