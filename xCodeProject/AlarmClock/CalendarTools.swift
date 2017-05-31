@@ -42,20 +42,20 @@ func getAllCalendar() -> [EKCalendar]
         return eventStore.calendars(for: EKEntityType.event)
         
     }
-    func getCalendarByIdentifier1(identifier: String) -> EKCalendar
+    func getCalendarByIdentifier(identifier: String) -> EKCalendar
     {
         return eventStore.calendar(withIdentifier: identifier)!
     }
-    func getCalendarByIdentifier(identifier: String) -> EKCalendar?
-    {
-        let calendars = getAllCalendar()
-        for calendar in calendars {
-            if calendar.calendarIdentifier == identifier {
-                return calendar
-            }
-        }
-        return nil
-    }
+//    func getCalendarByIdentifier1(identifier: String) -> EKCalendar?
+//    {
+//        let calendars = getAllCalendar()
+//        for calendar in calendars {
+//            if calendar.calendarIdentifier == identifier {
+//                return calendar
+//            }
+//        }
+//        return nil
+//    }
     
 func getFirstAppointmentUpToOneDayLater(calendar : EKCalendar) -> EKEvent?
     {
