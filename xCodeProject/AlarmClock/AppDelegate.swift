@@ -13,12 +13,37 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var auth = SPTAuth()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        auth.redirectURL = URL(string: "AlarmClock://returnAfterLogin")
+        auth.sessionUserDefaultsKey = "Current Session"
         // Override point for customization after application launch.
         return true
     }
-
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        print("Handle URL in AppDelegate reached")
+        if auth.canHandle(auth.redirectURL) {
+                print("Auth can Handle redirectURL")
+            auth.handleAuthCallback(withTriggeredAuthURL: url, callback: {
+                (error,session) in
+                print("callback from HandleAuthCallback reached")
+                if error != nil{
+                    print("Error with Spotify in AppDelegate: \(error)")
+                }
+                let userDefaults = UserDefaults.standard
+                let sessionData = NSKeyedArchiver.archivedData(withRootObject: session)
+                userDefaults.set(sessionData, forKey: "SpotifySession")
+                userDefaults.synchronize()
+                print("NotificationCenter fires Post")
+                NotificationCenter.default.post(name: Notification.Name("loginSuccessfull"), object: nil)
+            })
+            return true
+        }
+        return false
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

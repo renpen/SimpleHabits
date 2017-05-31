@@ -33,4 +33,9 @@ class SelectAlarmSoundViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func spotifyPressed(_ sender: Any) {
+        let spotifyCore = SpotifyCore.sharedInstance
+        spotifyCore.setup()
+        spotifyCore.spotifyAuth()
+    }
 }

@@ -10,6 +10,11 @@
 		120915941EB2774100EF0C85 /* CustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120915931EB2774100EF0C85 /* CustomViewCell.swift */; };
 		1212F3CA1EAD175B006C36E5 /* TravelCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212F3C91EAD175B006C36E5 /* TravelCalculation.swift */; };
 		1212F3CD1EAD179E006C36E5 /* TravelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212F3CC1EAD179E006C36E5 /* TravelAPI.swift */; };
+		1239B4531EC0C9CB0013BFEE /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1239B4501EC0C9CB0013BFEE /* SpotifyAudioPlayback.framework */; };
+		1239B4541EC0C9CB0013BFEE /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1239B4511EC0C9CB0013BFEE /* SpotifyAuthentication.framework */; };
+		1239B4551EC0C9CB0013BFEE /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1239B4521EC0C9CB0013BFEE /* SpotifyMetadata.framework */; };
+		1239B45F1EC0CB610013BFEE /* SpotifyCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239B45E1EC0CB610013BFEE /* SpotifyCore.swift */; };
+		1239B4601EC0D1E90013BFEE /* AlarmClock-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = B757833F1EA69C680018632F /* AlarmClock-Bridging-Header.h */; };
 		125F03871E9D235400679997 /* AlarmSound+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03851E9D235400679997 /* AlarmSound+CoreDataClass.swift */; };
 		125F03881E9D235400679997 /* AlarmSound+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03861E9D235400679997 /* AlarmSound+CoreDataProperties.swift */; };
 		125F038A1E9D23E600679997 /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F03891E9D23E600679997 /* AlarmSound.swift */; };
@@ -117,6 +122,10 @@
 		120915931EB2774100EF0C85 /* CustomViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewCell.swift; sourceTree = "<group>"; };
 		1212F3C91EAD175B006C36E5 /* TravelCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCalculation.swift; sourceTree = "<group>"; };
 		1212F3CC1EAD179E006C36E5 /* TravelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelAPI.swift; sourceTree = "<group>"; };
+		1239B4501EC0C9CB0013BFEE /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = "SpotifyiOS_SDK/ios-sdk/SpotifyAudioPlayback.framework"; sourceTree = "<group>"; };
+		1239B4511EC0C9CB0013BFEE /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = "SpotifyiOS_SDK/ios-sdk/SpotifyAuthentication.framework"; sourceTree = "<group>"; };
+		1239B4521EC0C9CB0013BFEE /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = "SpotifyiOS_SDK/ios-sdk/SpotifyMetadata.framework"; sourceTree = "<group>"; };
+		1239B45E1EC0CB610013BFEE /* SpotifyCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyCore.swift; sourceTree = "<group>"; };
 		125F03851E9D235400679997 /* AlarmSound+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AlarmSound+CoreDataClass.swift"; path = "../AlarmSound+CoreDataClass.swift"; sourceTree = "<group>"; };
 		125F03861E9D235400679997 /* AlarmSound+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AlarmSound+CoreDataProperties.swift"; path = "../AlarmSound+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		125F03891E9D23E600679997 /* AlarmSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSound.swift; sourceTree = "<group>"; };
@@ -188,7 +197,7 @@
 		B726C02B1DCC95FD00E3BB4A /* Standard Alarm Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Standard Alarm Button.png"; path = "Source Files/Buttons/Standard Alarm Button.png"; sourceTree = SOURCE_ROOT; };
 		B74115621E9E025200929BF1 /* landscapeBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = landscapeBackground.jpg; sourceTree = "<group>"; };
 		B742BA561EB1F4B200CEEAFF /* CreateAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAlarmViewController.swift; sourceTree = "<group>"; };
-		B757833F1EA69C680018632F /* AlarmClock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlarmClock-Bridging-Header.h"; sourceTree = "<group>"; };
+		B757833F1EA69C680018632F /* AlarmClock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AlarmClock-Bridging-Header.h"; path = "AlarmClock/AlarmClock-Bridging-Header.h"; sourceTree = "<group>"; };
 		B75783401EA69C690018632F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		B75783411EA69C690018632F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		B75783441EA6A3A40018632F /* AlarmListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmListViewController.swift; sourceTree = "<group>"; };
@@ -214,8 +223,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1239B4551EC0C9CB0013BFEE /* SpotifyMetadata.framework in Frameworks */,
 				12E70DDB1EA108CF00D855FE /* MapKit.framework in Frameworks */,
+				1239B4541EC0C9CB0013BFEE /* SpotifyAuthentication.framework in Frameworks */,
 				7FE3C8AAA9B47434408E04E0 /* Pods_AlarmClock.framework in Frameworks */,
+				1239B4531EC0C9CB0013BFEE /* SpotifyAudioPlayback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +256,14 @@
 				1212F3CC1EAD179E006C36E5 /* TravelAPI.swift */,
 			);
 			name = Travel;
+			sourceTree = "<group>";
+		};
+		1239B44F1EC0C9850013BFEE /* Spotify */ = {
+			isa = PBXGroup;
+			children = (
+				1239B45E1EC0CB610013BFEE /* SpotifyCore.swift */,
+			);
+			name = Spotify;
 			sourceTree = "<group>";
 		};
 		125F038F1E9D26AD00679997 /* FileSound */ = {
@@ -334,6 +354,7 @@
 		4B5B7A0B1DBE08F2006E7C39 = {
 			isa = PBXGroup;
 			children = (
+				B757833F1EA69C680018632F /* AlarmClock-Bridging-Header.h */,
 				4B5B7A161DBE08F2006E7C39 /* AlarmClock */,
 				4B5B7A2E1DBE08F2006E7C39 /* AlarmClockTests */,
 				4B5B7A391DBE08F2006E7C39 /* AlarmClockUITests */,
@@ -395,6 +416,7 @@
 		4B6053A41DD2821E00877B7C /* AlarmSound */ = {
 			isa = PBXGroup;
 			children = (
+				1239B44F1EC0C9850013BFEE /* Spotify */,
 				125F038F1E9D26AD00679997 /* FileSound */,
 				125F03941E9D409100679997 /* SoundPlayer.swift */,
 				125F03851E9D235400679997 /* AlarmSound+CoreDataClass.swift */,
@@ -427,6 +449,7 @@
 				B703A02F1EBD17B4001301DE /* Custom Controls */,
 				B70BCFF01EBCD9C900E0551F /* Basic Flow */,
 				B70BCFEB1EBCD92A00E0551F /* AlarmEditing */,
+				B703A0321EBD17F1001301DE /* Sound Source */,
 				B79854981EBA4B5A00A527BF /* AlarmCreation */,
 				4B5B7A231DBE08F2006E7C39 /* LaunchScreen.storyboard */,
 				4B5B7A1B1DBE08F2006E7C39 /* Main.storyboard */,
@@ -473,6 +496,9 @@
 		84555B74E28B4298BD04F9D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1239B4501EC0C9CB0013BFEE /* SpotifyAudioPlayback.framework */,
+				1239B4511EC0C9CB0013BFEE /* SpotifyAuthentication.framework */,
+				1239B4521EC0C9CB0013BFEE /* SpotifyMetadata.framework */,
 				12E70DDA1EA108CF00D855FE /* MapKit.framework */,
 				D9F5276F803614D4127D5F93 /* Pods_AlarmClock.framework */,
 			);
@@ -526,7 +552,6 @@
 			children = (
 				B75783401EA69C690018632F /* SWRevealViewController.h */,
 				B75783411EA69C690018632F /* SWRevealViewController.m */,
-				B757833F1EA69C680018632F /* AlarmClock-Bridging-Header.h */,
 			);
 			name = "Framework Files";
 			sourceTree = "<group>";
@@ -563,7 +588,6 @@
 		B79854981EBA4B5A00A527BF /* AlarmCreation */ = {
 			isa = PBXGroup;
 			children = (
-				B703A0321EBD17F1001301DE /* Sound Source */,
 				B742BA561EB1F4B200CEEAFF /* CreateAlarmViewController.swift */,
 			);
 			name = AlarmCreation;
@@ -654,6 +678,7 @@
 					};
 					4B5B7A2A1DBE08F2006E7C39 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 6LA3T76LQ3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4B5B7A131DBE08F2006E7C39;
 					};
@@ -788,6 +813,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1239B4601EC0D1E90013BFEE /* AlarmClock-Bridging-Header.h in Sources */,
+				1239B45F1EC0CB610013BFEE /* SpotifyCore.swift in Sources */,
 				B798549C1EBA4B9B00A527BF /* StandardSourceViewController.swift in Sources */,
 				B70BCFED1EBCD94900E0551F /* StandardAlarmEditingViewController.swift in Sources */,
 				126D055B1EB200F100655FD8 /* CalendarViewController.swift in Sources */,
@@ -1001,6 +1028,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6LA3T76LQ3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SpotifyiOS_SDK/ios-sdk",
+				);
 				INFOPLIST_FILE = AlarmClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Alarmclock.penbo.de;
@@ -1021,6 +1052,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6LA3T76LQ3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SpotifyiOS_SDK/ios-sdk",
+				);
 				INFOPLIST_FILE = AlarmClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Alarmclock.penbo.de;
@@ -1036,6 +1071,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6LA3T76LQ3;
 				INFOPLIST_FILE = AlarmClockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.reneUser.AlarmClockTests;
@@ -1050,6 +1086,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6LA3T76LQ3;
 				INFOPLIST_FILE = AlarmClockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.reneUser.AlarmClockTests;
