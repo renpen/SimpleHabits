@@ -68,7 +68,7 @@ func getAppointmentUpToOneDayLater(appointmentNumber: Int,calendar : EKCalendar)
         let todayDate = Date()
         var dateComponents = DateComponents()
         dateComponents.day = 1
-    dateComponents.month = 1
+        //dateComponents.month = 1 HOTFIX at the end of the month. end of the month +1day = start of the current month and not the start of the next month. 31.05 +1day = 01.05
         let userCalendar = Calendar.current
         let to = userCalendar.date(byAdding: dateComponents, to: todayDate, wrappingComponents: true)
         let eventsPredicate = eventStore.predicateForEvents(withStart: todayDate,end: to!,calendars: [calendar])
