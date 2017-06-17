@@ -52,7 +52,10 @@ public class Alarm: NSManagedObject {
         self.save()
         if smartAlarm {
             setSmartAppointment()
-            self.travel?.calculateTravelTime(arrivalTime : Int((self.smartAppointment?.startDate.timeIntervalSince1970)!),closure: prepareSmartAlarm)
+            if let smartAppointment = self.smartAppointment
+            {
+                self.travel?.calculateTravelTime(arrivalTime : Int((self.smartAppointment?.startDate.timeIntervalSince1970)!),closure: prepareSmartAlarm)
+            }
         }
         else
         {

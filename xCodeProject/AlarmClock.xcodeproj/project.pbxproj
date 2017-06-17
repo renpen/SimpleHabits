@@ -10,6 +10,8 @@
 		120915941EB2774100EF0C85 /* CustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120915931EB2774100EF0C85 /* CustomViewCell.swift */; };
 		1212F3CA1EAD175B006C36E5 /* TravelCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212F3C91EAD175B006C36E5 /* TravelCalculation.swift */; };
 		1212F3CD1EAD179E006C36E5 /* TravelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212F3CC1EAD179E006C36E5 /* TravelAPI.swift */; };
+		122F2D681EF41876009CBCC7 /* WeatherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122F2D671EF41876009CBCC7 /* WeatherTest.swift */; };
+		122F2D6A1EF4188B009CBCC7 /* CreateAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122F2D691EF4188B009CBCC7 /* CreateAlarm.swift */; };
 		1239B4531EC0C9CB0013BFEE /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1239B4501EC0C9CB0013BFEE /* SpotifyAudioPlayback.framework */; };
 		1239B4541EC0C9CB0013BFEE /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1239B4511EC0C9CB0013BFEE /* SpotifyAuthentication.framework */; };
 		1239B4551EC0C9CB0013BFEE /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1239B4521EC0C9CB0013BFEE /* SpotifyMetadata.framework */; };
@@ -122,6 +124,8 @@
 		120915931EB2774100EF0C85 /* CustomViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewCell.swift; sourceTree = "<group>"; };
 		1212F3C91EAD175B006C36E5 /* TravelCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelCalculation.swift; sourceTree = "<group>"; };
 		1212F3CC1EAD179E006C36E5 /* TravelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelAPI.swift; sourceTree = "<group>"; };
+		122F2D671EF41876009CBCC7 /* WeatherTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTest.swift; sourceTree = "<group>"; };
+		122F2D691EF4188B009CBCC7 /* CreateAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAlarm.swift; sourceTree = "<group>"; };
 		1239B4501EC0C9CB0013BFEE /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = "SpotifyiOS_SDK/ios-sdk/SpotifyAudioPlayback.framework"; sourceTree = "<group>"; };
 		1239B4511EC0C9CB0013BFEE /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = "SpotifyiOS_SDK/ios-sdk/SpotifyAuthentication.framework"; sourceTree = "<group>"; };
 		1239B4521EC0C9CB0013BFEE /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = "SpotifyiOS_SDK/ios-sdk/SpotifyMetadata.framework"; sourceTree = "<group>"; };
@@ -409,6 +413,8 @@
 			isa = PBXGroup;
 			children = (
 				4B5B7A3C1DBE08F2006E7C39 /* Info.plist */,
+				122F2D671EF41876009CBCC7 /* WeatherTest.swift */,
+				122F2D691EF4188B009CBCC7 /* CreateAlarm.swift */,
 			);
 			path = AlarmClockUITests;
 			sourceTree = "<group>";
@@ -664,7 +670,7 @@
 				TargetAttributes = {
 					4B5B7A131DBE08F2006E7C39 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 6LA3T76LQ3;
+						DevelopmentTeam = TTL5L96WQ5;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -684,6 +690,7 @@
 					};
 					4B5B7A351DBE08F2006E7C39 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4B5B7A131DBE08F2006E7C39;
 					};
@@ -886,6 +893,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				122F2D681EF41876009CBCC7 /* WeatherTest.swift in Sources */,
+				122F2D6A1EF4188B009CBCC7 /* CreateAlarm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,7 +1036,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LA3T76LQ3;
+				DEVELOPMENT_TEAM = TTL5L96WQ5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SpotifyiOS_SDK/ios-sdk",
@@ -1051,7 +1060,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LA3T76LQ3;
+				DEVELOPMENT_TEAM = TTL5L96WQ5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SpotifyiOS_SDK/ios-sdk",
@@ -1100,10 +1109,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AlarmClockUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.reneUser.AlarmClockUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = AlarmClock;
 			};
@@ -1113,6 +1124,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AlarmClockUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.reneUser.AlarmClockUITests;
