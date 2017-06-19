@@ -7,5 +7,20 @@
 //
 
 import Foundation
+import XCTest
+class WeatherTest: XCTestCase
+{
+    var app: XCUIApplication!
+    override func setUp() {
+        app = XCUIApplication()
+        app.launch()
+    }
+    func testWeather() {
+        sleep(2)
+        let goLabel = app.staticTexts.element(matching: .any, identifier: "weatherField").label
+        XCTAssert(goLabel.contains("C"))
+    }
+    
+}
 
 
